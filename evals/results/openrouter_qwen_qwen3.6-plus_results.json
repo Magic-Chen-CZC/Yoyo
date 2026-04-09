@@ -1,0 +1,1541 @@
+[
+  {
+    "query_id": "eng-001",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain why Tiananmen Square matters for first-time visitors to Beijing.",
+    "response_text": "Tiananmen Square is a vital cultural and historical landmark in Beijing, serving as the political and cultural center of China. It has witnessed pivotal events in Chinese history, including the founding ceremony and National Day celebrations, and it hosts significant structures such as the Monument to the People's Heroes and the Great Hall of the People. For visitors, it offers profound insights into China's heritage, modern progress, and the spirit of the Chinese people under the leadership of the Communist Party of China.",
+    "latency_ms": 9635.48795900715,
+    "prompt_tokens": 25,
+    "completion_tokens": 305,
+    "total_tokens": 330,
+    "estimated_input_cost": 5.849999999999999e-06,
+    "estimated_output_cost": 0.0002578875,
+    "total_cost": 0.000602875,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-002",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give a short historical introduction to Tiananmen Square.",
+    "response_text": "Tiananmen Square is a prominent public space located in the heart of Beijing, China, and holds significant historical and cultural importance as a symbol of the nation. It has been the site of major events in Chinese history, including the founding ceremony of the People's Republic of China on October 1, 1949, which marked the establishment of the new government. Over the years, the square has served as a venue for national celebrations, such as National Day military parades, and features important landmarks like the Monument to the People's Heroes and the Great Hall of the People. Today, it remains a widely recognized center for cultural and historical reflection in China.",
+    "latency_ms": 10119.63891700725,
+    "prompt_tokens": 21,
+    "completion_tokens": 291,
+    "total_tokens": 312,
+    "estimated_input_cost": 4.63125e-06,
+    "estimated_output_cost": 0.000332475,
+    "total_cost": 0.000574275,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-003",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain Tiananmen Square in simple English for tourists.",
+    "response_text": "Tiananmen Square is a major landmark in Beijing, China, and one of the largest public squares in the world. It's a popular destination for tourists to experience Chinese history and culture.\n\n1. Location & Significance: Situated in the center of Beijing, it serves as the symbolic heart of China. The square covers an area of about 440,000 square meters and can hold up to one million people for national events.\n\n2. Historical Context: Tiananmen Square has been the site of many important historical events and national celebrations. It's surrounded by significant landmarks including the Monument to the People's Heroes, the Great Hall of the People, and the National Museum of China.\n\n3. For Tourists: Visitors can see the daily flag-raising ceremony, explore nearby attractions like the Forbidden City, and learn about China's rich cultural heritage. It's easily accessible by public transportation, and visitors can find information at official tourism centers.\n\nThe square remains an important place for national celebrations and cultural events, offering tourists a meaningful way to understand Chinese history and contemporary society.",
+    "latency_ms": 16244.348084001103,
+    "prompt_tokens": 22,
+    "completion_tokens": 446,
+    "total_tokens": 468,
+    "estimated_input_cost": 4.55e-06,
+    "estimated_output_cost": 0.0005572125,
+    "total_cost": 0.00087685,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-004",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain why the Forbidden City is important for first-time visitors to Beijing.",
+    "response_text": "For first-time visitors to Beijing, the Forbidden City isn't just another historic site; it's the foundational key to understanding the city, China's imperial past, and traditional Chinese cultural values. Here’s why it holds such importance for newcomers:\n\n### 1. **Historical Anchor of Imperial China**\nBuilt between 1406 and 1420, the Forbidden City served as the political and ceremonial heart of China for nearly 500 years, housing 24 emperors across the Ming and Qing dynasties. For first-time visitors, it offers a direct, immersive encounter with the continuity, rituals, and transformations of Chinese imperial rule. Walking through its gates provides a tangible timeline that makes abstract historical concepts concrete and memorable.\n\n### 2. **Architectural & Cultural Blueprint**\nThe complex is the largest surviving ancient palatial structure in the world and a masterclass in traditional Chinese design. Every element is intentional and symbolic:\n- **Layout & Axis:** Strictly aligned on a north-south central axis, it reflects Confucian hierarchy and the ancient Chinese belief in cosmic order.\n- **Color & Form:** Red walls symbolize prosperity and joy; golden roofs represent imperial authority; intricate stone carvings, bronze lions, and mythological beasts guard thresholds and convey cultural beliefs.\n- **Space & Power:** The progression from public ceremonial halls to private imperial quarters visually demonstrates how space was used to enforce social and political order.\nFirst-timers gain, in one visit, a working vocabulary for decoding temples, gardens, and even modern Chinese urban planning.\n\n### 3. **Geographic & Cognitive Center of Beijing**\nThe Forbidden City literally sits at the core of Beijing’s historic grid. Its central axis extends north to the Drum and Bell Towers and south through Tiananmen Square to the Temple of Heaven. Visiting it early helps newcomers mentally map the city, understand why certain neighborhoods feel historic or modern, and appreciate how Beijing grew outward from this imperial nucleus. It also contextualizes nearby landmarks you'll likely visit on the same trip.\n\n### 4. **Practical Value for First-Time Travelers**\n- **Highly Accessible & Well-Interpreted:** Multilingual signage, audio guides, and clearly marked routes make it navigable even for those unfamiliar with Chinese history.\n- **Efficient Cultural Introduction:** In 2–3 hours, visitors absorb centuries of art, architecture, court life, and imperial symbolism that would otherwise take",
+    "latency_ms": 41953.94270900579,
+    "prompt_tokens": 25,
+    "completion_tokens": 1642,
+    "total_tokens": 1667,
+    "estimated_input_cost": 6.41875e-06,
+    "estimated_output_cost": 0.0012285,
+    "total_cost": 0.003210025,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-005",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give a short historical introduction to the Forbidden City.",
+    "response_text": "The Forbidden City is a vast imperial palace complex in the heart of Beijing that served as China's political and ceremonial center for nearly five centuries. Commissioned by the Yongle Emperor of the Ming Dynasty, construction began in 1406 and was completed in 1420. It subsequently housed 24 emperors from both the Ming (1368–1644) and Qing (1644–1912) dynasties, functioning as their residence, administrative headquarters, and spiritual axis of the empire. \n\nIts name reflects the strict imperial protocol: access was heavily restricted to the emperor, his household, and high officials, while commoners were legally forbidden to enter. Enclosed by 10-meter-high walls and a 52-meter-wide moat, the complex originally contained over 9,000 rooms and adhered to strict cosmological and hierarchical design principles rooted in traditional Chinese philosophy.\n\nFollowing the 1912 abdication of the last emperor, Puyi, the palace was transformed into the Palace Museum in 1925, opening its doors to the public. Designated a UNESCO World Heritage Site in 1987, the Forbidden City today stands as one of the finest preserved examples of traditional Chinese architecture and a premier repository of imperial artifacts, offering a profound window into China's dynastic past.",
+    "latency_ms": 25369.309207992046,
+    "prompt_tokens": 20,
+    "completion_tokens": 1005,
+    "total_tokens": 1025,
+    "estimated_input_cost": 4.79375e-06,
+    "estimated_output_cost": 0.0006196124999999999,
+    "total_cost": 0.00196625,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-006",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain the Forbidden City in simple English for tourists.",
+    "response_text": "### 🏯 The Forbidden City: A Simple Guide for Tourists\n\n**What is it?**  \nThe Forbidden City is a massive palace in the center of Beijing, China. For nearly 500 years (1420–1912), it was the home of China's emperors from the Ming and Qing dynasties.\n\n**Why \"Forbidden\"?**  \nIn the past, ordinary people were not allowed to enter without special permission. Only the emperor, his family, officials, and palace workers could go inside. Hence, \"forbidden\" to the public.\n\n**Quick Facts**  \n📐 **Size:** Over 980 buildings and nearly 9,000 rooms  \n🎨 **Colors:** Red walls (good luck & joy) and yellow roofs (royal power)  \n📍 **Layout:** Buildings are arranged in perfect symmetry along a straight north-south line  \n🛡️ **Protection:** Surrounded by a 52-meter-wide moat and a 10-meter-high wall\n\n**Today**  \nIt is no longer forbidden. Now called the **Palace Museum**, it holds over 1.8 million historical treasures, including art, ceramics, clocks, and imperial furnishings. It is a UNESCO World Heritage site and one of the most popular places to visit in China.\n\n---\n\n### 🎒 Tourist Tips\n✅ **Book tickets early:** Buy them on the official website or app. They often sell out days in advance.  \n📅 **Closed on Mondays:** Plan your visit Tuesday–Sunday.  \n🚶 **Enter south, exit north:** Go in through the Meridian Gate (South) and walk straight to the Gate of Divine Might (North).  \n👟 **Wear comfortable shoes:** You'll walk on large stone courtyards for hours.  \n⏱️ **Time needed:** 2–3 hours for the main areas. A full day if you want to explore every courtyard.  \n🗣️ **Signs & guides:** Most signs are in English. Audio guides and official tour apps are available at the entrance.  \n🚫 **Rules:** No drones, flash photography, or touching artifacts. Keep voices low to respect the historic space.\n\n**Why visit?**  \nIt's not just a palace. It's a living piece of China's history, showing how emperors lived, ruled, and celebrated. Walking through the gates feels like stepping",
+    "latency_ms": 36328.69170799677,
+    "prompt_tokens": 21,
+    "completion_tokens": 1383,
+    "total_tokens": 1404,
+    "estimated_input_cost": 4.7125e-06,
+    "estimated_output_cost": 0.0009608625,
+    "total_cost": 0.002703675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-007",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain why Jingshan Park is worth visiting in Beijing.",
+    "response_text": "Jingshan Park (景山公园) is consistently ranked among Beijing’s most rewarding cultural stops, primarily because it offers a rare combination of historical depth, architectural symbolism, and one of the city’s most iconic vistas, all within a compact, easily accessible space. Here’s why it’s well worth visiting:\n\n### 🔭 1. The Best View of the Forbidden City\nAt just 45 meters high, Jingshan is an artificial hill, but its summit provides the most comprehensive unobstructed panorama of the Forbidden City’s golden roofs, courtyard layout, and symmetrical architecture. From **Wanchun Pavilion (万春亭)** at the peak, you can also see Beijing’s Central Axis stretching north to the Drum and Bell Towers, and south past Tiananmen Square to Yongding Gate. The view is especially striking in the golden hour, making it a favorite for photographers.\n\n### 📜 2. Deep Imperial & Historical Significance\n- **Ming Dynasty Origins**: The hill was constructed in the early 15th century using soil excavated from the Forbidden City’s moat and lake system. It was designed according to traditional *feng shui* principles to shield the palace from northern winds and symbolically \"back\" the imperial seat.\n- **Final Hours of the Ming Dynasty**: In 1644, as rebel forces closed in on Beijing, the last Ming emperor, Chongzhen, hanged himself from a locust tree at the eastern slope of the hill. A plaque marks the site, offering a poignant reminder of China’s dynastic transitions.\n- **Imperial Use**: Throughout the Ming and Qing dynasties, the hill served as an imperial garden, a site for ancestral worship, and a vantage point for reviewing palace ceremonies.\n\n### 🌆 3. Keystone of Beijing’s Central Axis\nJingshan Park sits at the highest point of Beijing’s 7.8-kilometer historic Central Axis, a masterfully planned north-south spine that has guided urban layout for over seven centuries. The axis is currently under active consideration for UNESCO World Heritage status, and Jingshan is widely regarded as its cultural and geometric anchor. Visiting the park gives you a tangible understanding of traditional Chinese urban planning and cosmological design.\n\n### 🌸 4. Beautiful Landscaping & Classical Features\nBeyond the views, the park is thoughtfully landscaped:\n- **Ancient Cypress Trees**: Many are over 30",
+    "latency_ms": 55345.02350000548,
+    "prompt_tokens": 23,
+    "completion_tokens": 1890,
+    "total_tokens": 1913,
+    "estimated_input_cost": 4.46875e-06,
+    "estimated_output_cost": 0.0011188125,
+    "total_cost": 0.003692975,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-008",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give a short historical introduction to Jingshan Park.",
+    "response_text": "**Jingshan Park (景山公园)**, located immediately north of the Forbidden City in Beijing, is a historically significant imperial garden centered on an artificial hill. Its construction began in the early 15th century under the Ming Dynasty's Yongle Emperor, who ordered soil excavated from the Forbidden City's moats and the surrounding city walls to be piled into a mound. Designed to serve as a feng shui \"backing\" mountain for the palace complex and to shield it from cold northern winds, it was originally called *Wansui Shan* (Longevity Hill). \n\nThe hill witnessed one of the most dramatic moments in Chinese history: in 1644, as rebel forces breached Beijing, the last Ming emperor, Chongzhen, hanged himself on a locust tree on its western slope. The Qing Dynasty later rebuilt the site as an exclusive imperial retreat, renamed it *Jingshan* (Prospect Hill), and erected five pavilions along its ridges, with the central Wanchun Pavilion marking the highest point. The Shouhuang Temple was also added at its base to honor past Ming emperors.\n\nFollowing the fall of the Qing Dynasty, Jingshan was opened to the public in 1928. Today, it is a protected cultural heritage site and a popular destination, renowned both for its historical layers and for offering one of the most iconic panoramic views of the Forbidden City and Beijing's historic axis.",
+    "latency_ms": 39873.56033400283,
+    "prompt_tokens": 21,
+    "completion_tokens": 1223,
+    "total_tokens": 1244,
+    "estimated_input_cost": 4.3875e-06,
+    "estimated_output_cost": 0.0006586125,
+    "total_cost": 0.002391675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-009",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain Jingshan Park in simple English for tourists.",
+    "response_text": "**Jingshan Park: Simple Guide for Tourists**\n\n📍 **What & Where**  \nJingshan Park is a calm, historic park in central Beijing. It sits directly north of the Forbidden City, just a short walk from its north gate (Gate of Divine Prowess).\n\n🏔️ **Main Attraction: The Hill & View**  \nThe park is built around a 45-meter man-made hill. It takes about 15–20 minutes to walk up the stone steps. At the top, you will find five small traditional pavilions. The highest pavilion offers **the best skyline view in Beijing**:  \n- Look south: see the golden roofs of the Forbidden City in full  \n- Look north: see Beijing’s modern skyscrapers  \n- Great for photos, especially at sunrise or sunset\n\n📜 **Quick History**  \n- Built over 600 years ago during the Ming Dynasty  \n- The soil came from digging the Forbidden City’s moat  \n- Once called “Coal Hill” because coal was stored here for the palace  \n- Once a private garden for emperors, now a public park\n\n🌸 **What You’ll See & Do**  \n- Old pavilions and a large bronze Buddha statue in a temple  \n- Well-kept gardens (famous for peony flowers in May)  \n- Local life: residents doing tai chi, dancing, singing, playing instruments, or flying kites  \n- Quiet walking paths and shaded benches\n\n🎒 **Practical Tips**  \n- **Hours:** Usually 6:00 AM – 8:30 PM (winter) or 9:00 PM (summer). Check locally as times change slightly by season.  \n- **Ticket:** Very cheap. About 2 RMB for adults. Cash or mobile payment accepted.  \n- **Visit time:** Early morning or late afternoon for best light and cooler weather.  \n- **Getting there:** Subway Line 1 or 2 to Tian’anmen East/West, then walk north ~15 mins. Taxi or bus also easy.  \n- **Wear:** Comfortable walking shoes. There are many stone steps.  \n- **Time needed:** 1–1.5 hours is perfect.\n\n💡 **Why Go?**  \nIt’s fast, affordable, and gives you a unique “big picture” view of Beijing’s old and new. You’ll see imperial history and everyday local life in one",
+    "latency_ms": 38751.62245899264,
+    "prompt_tokens": 22,
+    "completion_tokens": 1527,
+    "total_tokens": 1549,
+    "estimated_input_cost": 4.30625e-06,
+    "estimated_output_cost": 0.0009462375,
+    "total_cost": 0.0029848,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-010",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Why do many Beijing routes visit Tiananmen Square before the Forbidden City?",
+    "response_text": "Most Beijing itineraries visit Tiananmen Square before the Forbidden City due to a combination of **geographical layout, official visitor management policies, and practical tourism logistics**. Here’s a breakdown of the key reasons:\n\n### 1. **Geographic & Architectural Layout**\n- Tiananmen Square sits directly **south** of the Forbidden City. The only public entrance to the Palace Museum is the **Meridian Gate (Wu Men)**, which is located just north of the square.\n- Historically, the imperial approach to the palace followed a northward axis: visitors would pass through the Tiananmen Gate, cross the ceremonial courtyard space, and proceed through Duanmen to the Meridian Gate. Modern routes simply follow this natural spatial progression.\n\n### 2. **One-Way Visitor Policy**\n- The Palace Museum enforces a **strict south-to-north one-way route** for all visitors. You must enter at the Meridian Gate (south) and exit at Shenwu Gate (north). Backtracking is not permitted.\n- Doing Tiananmen Square first aligns perfectly with this flow. Attempting to visit the Forbidden City first would require exiting far north, then doubling back through busy streets to reach the square, which is inefficient and often prohibited for group tours.\n\n### 3. **Ticketing, Security & Scheduling**\n- **Forgotten City tickets** are date- and time-specific, strictly enforced, and frequently sell out weeks in advance. Missing your entry window means no admission.\n- **Tiananmen Square** requires a separate security screening process (no ticket needed, but ID checks and bag scans are mandatory). Screenings can take 15–30+ minutes during peak hours.\n- Tours and independent visitors typically schedule the square first to clear security early, stay on track for their Forbidden City timed entry, and avoid the risk of being locked out.\n\n### 4. **Crowd Management & Infrastructure**\n- Beijing’s tourism authorities and transit system are designed around this sequence. Metro Line 1 stations (Tiananmen East/West) drop visitors near the square, and pedestrian pathways naturally funnel northward toward the Meridian Gate.\n- Routing large groups Square → Palace helps distribute foot traffic, reduces bottlenecks, and aligns with official crowd-control protocols that have been in place for over a decade.\n\n### 5. **Narrative & Tour Design**\n- While secondary to logistics, the sequence also creates a coherent",
+    "latency_ms": 52682.150708991685,
+    "prompt_tokens": 25,
+    "completion_tokens": 1839,
+    "total_tokens": 1864,
+    "estimated_input_cost": 6.174999999999999e-06,
+    "estimated_output_cost": 0.001167075,
+    "total_cost": 0.003594175,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-011",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What is the significance of the central axis around Tiananmen Square and the Forbidden City?",
+    "response_text": "The central axis around Tiananmen Square and the Forbidden City represents the core of Beijing's historical city planning, embodying the wisdom and artistic achievement of traditional Chinese urban layout. This axis, stretching approximately 7.8 kilometers from Yongding Gate in the south to the Drum Tower and Bell Tower in the north, was established during the Ming Dynasty and reflects principles of symmetry, hierarchy, and harmony with nature. The area, which includes Tiananmen Square and the Forbidden City, serves as an important cultural and historical symbol of China, representing the nation's rich heritage and has been inscribed on UNESCO's World Heritage List.",
+    "latency_ms": 14972.90537499066,
+    "prompt_tokens": 28,
+    "completion_tokens": 502,
+    "total_tokens": 530,
+    "estimated_input_cost": 7.475e-06,
+    "estimated_output_cost": 0.000328575,
+    "total_cost": 0.000988,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-012",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Why is Jingshan Park often paired with the Forbidden City in tourist routes?",
+    "response_text": "Jingshan Park and the Forbidden City are routinely paired in tourist routes for a combination of geographical, historical, experiential, and logistical reasons:\n\n1. **Immediate Proximity**: Jingshan Park's south gate sits directly across Jingshan Front Street from the Forbidden City's north exit (Shenwu Gate). The walk between them takes less than two minutes, making it the most natural next stop.\n\n2. **Historical Integration**: Both sites were conceived as part of the same Ming-dynasty imperial complex. Jingshan was originally an imperial garden, and its artificial hill was constructed using earth excavated from the Forbidden City's moat and nearby canal projects. For centuries, it served as the northern protective screen and feng shui anchor of the palace grounds.\n\n3. **Unmatched Panoramic View**: The park's central Wanchun Pavilion (Pavilion of Everlasting Spring) offers the most iconic and unobstructed overlook of the entire Forbidden City. From this vantage point, visitors can fully appreciate the palace's strict symmetry, hierarchical layout, and alignment with Beijing's central axis—perspectives that are impossible to grasp while walking inside the complex.\n\n4. **Complementary Experience**: Inside the Forbidden City, visitors navigate dense courtyards, historical exhibits, and often large crowds. Jingshan provides open green space, tree-lined paths, and a quieter environment to rest, digest what they've seen, and photograph the palace from above. The contrast enhances both sites.\n\n5. **Standardized Tourist Flow**: Visitor routing inside the Forbidden City is strictly south-to-north (enter at the Meridian Gate, exit at Shenwu Gate) to manage crowd control. Exiting directly into Jingshan allows seamless continuation without backtracking, which is why travel agencies, guidebooks, and audio tours consistently bundle them into efficient 3–4 hour itineraries.\n\nIn short, the pairing isn't just convenient; it's culturally and visually symbiotic. The Forbidden City reveals imperial history from within, while Jingshan Park provides the scale, context, and perspective that complete the story.",
+    "latency_ms": 65649.41966699553,
+    "prompt_tokens": 26,
+    "completion_tokens": 1813,
+    "total_tokens": 1839,
+    "estimated_input_cost": 6.174999999999999e-06,
+    "estimated_output_cost": 0.0010359375,
+    "total_cost": 0.0035438,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-013",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give me a 30-second audio-guide style introduction to Tiananmen Square.",
+    "response_text": "Welcome to Tiananmen Square, the symbolic heart of Beijing and the pride of China. Covering an expansive area of 440,000 square meters, it is renowned as one of the world's largest public squares and an enduring emblem of national unity and historical milestones. As you stand in this grand space, you will witness solemn landmarks, including the Monument to the People's Heroes, the Great Hall of the People, and the National Museum of China, all reflecting the nation's rich cultural heritage and enduring spirit. Please maintain order, respect the local regulations, and cherish this profound symbol of China's identity.",
+    "latency_ms": 12370.070624994696,
+    "prompt_tokens": 27,
+    "completion_tokens": 398,
+    "total_tokens": 425,
+    "estimated_input_cost": 5.76875e-06,
+    "estimated_output_cost": 0.0003037125,
+    "total_cost": 0.000784875,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-014",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give me a family-friendly explanation of the Forbidden City.",
+    "response_text": "Imagine stepping through towering red gates into a place so grand and important that, for nearly 500 years, only the emperor, his family, and the people who worked for them could cross the threshold. Welcome to the **Forbidden City** in Beijing, China! Today, it’s open to everyone and stands as one of the most amazing historical treasures on Earth.\n\n### 🏯 Why is it called \"Forbidden\"?\nBack when it was built (between 1406 and 1420), this palace was the heart of China’s royal life. Ordinary citizens weren’t allowed inside unless they had special permission or worked there. The \"forbidden\" part wasn't meant to sound scary—it just meant it was a private, protected space for the emperor and his court. Today, the name is a piece of history, and families from all over the world proudly walk its paths!\n\n### 📏 How Big Is It?\nIt's huge! The palace complex covers an area **larger than 100 football fields** and took over a million workers roughly 14 years to complete. It has **nearly 1,000 buildings** and about **8,700 rooms** arranged in a beautifully balanced, symmetrical layout. In ancient Chinese culture, symmetry represented harmony and order, which were very important values.\n\n### 🎨 The Colors & Architecture You'll Notice\n- **Red walls**: Symbolize happiness, good fortune, and strength.\n- **Golden-yellow roofs**: Yellow was the emperor's official color, representing heaven and imperial power.\n- **Symmetrical design**: Almost everything is mirrored along a central north-south line, guiding visitors from grand ceremonial spaces in the front to private living quarters and gardens in the back.\n\n### 👑 Who Lived Here?\nTwenty-four emperors ruled from this palace across two major Chinese dynasties (the Ming and the Qing). But it wasn't just emperors! The city housed imperial families, royal children, teachers, cooks, healers, guards, artists, and gardeners. Royal kids studied in palace schools, learned calligraphy and philosophy, played in quiet courtyards, and watched grand festivals with lion dances, lanterns, and music.\n\n### 🐉 Fun Facts Kids (and Grown-Ups!) Love\n- **The \"9,999.5 rooms\" legend**: Ancient stories say the emperor ordered 9,999½",
+    "latency_ms": 60694.697457991424,
+    "prompt_tokens": 21,
+    "completion_tokens": 1958,
+    "total_tokens": 1979,
+    "estimated_input_cost": 4.875e-06,
+    "estimated_output_cost": 0.0010573874999999999,
+    "total_cost": 0.003824925,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-015",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give me a photography-focused explanation of Jingshan Park.",
+    "response_text": "Jingshan Park is widely regarded by photographers as one of the most strategically important vantage points in Beijing. While many visitors see it as a historic imperial garden, photographers recognize it as a carefully elevated compositional platform, offering unmatched sightlines, seasonal color palettes, and architectural framing opportunities. Below is a photography-focused breakdown to help you plan and execute shoots effectively.\n\n---\n\n### 📸 **Core Photographic Value**\n- **Elevation & Axis**: The park’s artificial hill rises ~60 meters above sea level, placing the central Wanchun Pavilion directly on Beijing’s historic north-south central axis. This alignment allows for perfectly symmetrical compositions of the Forbidden City, Zhongnanhai, and the modern skyline beyond.\n- **Layered Depth**: The hill’s five peaks create natural foreground/midground/background separation, ideal for depth mapping and atmospheric perspective.\n- **Cultural Context**: Every structure, pathway, and tree placement follows Ming/Qing imperial garden design principles, offering built-in leading lines, framed views, and historical symbolism.\n\n---\n\n### 📍 **Key Vantage Points & Compositions**\n| Location | Best For | Compositional Tips |\n|----------|----------|-------------------|\n| **Wanchun Pavilion (Central Peak)** | Panoramic cityscapes, palace roof compression, sunset alignment | Use 70–200mm to compress the Forbidden City’s golden roofs into layered bands. Frame with pavilion eaves for leading lines. Align center with the Meridian Gate axis. |\n| **Eastern/Western Peaks** | Angled historic views, skyline juxtaposition, fewer crowds | 35–50mm for environmental context. Capture Bell/Drum Towers framing the Forbidden City’s corners. Use diagonal paths as dynamic leading lines. |\n| **Lower Gardens & Courtyards** | Intimate architecture, seasonal details, portraits | Look for circular moon gates, twisted cypress trees, and stone balustrades as natural frames. Shoot at f/2.8–4 to isolate details against soft backgrounds. |\n| **North Slope Staircases** | Elevated perspective, crowd flow, geometric patterns | High-angle vertical compositions work well here. Use converging steps for dramatic depth. |\n\n---\n\n### 🌅 **Optimal Lighting & Timing**\n- **Golden Hour**: \n  - *Sunrise*: Warm light hits the eastern palace roofs. Best for soft, diffused tones and long shadows.\n",
+    "latency_ms": 64462.705625002855,
+    "prompt_tokens": 22,
+    "completion_tokens": 2137,
+    "total_tokens": 2159,
+    "estimated_input_cost": 4.79375e-06,
+    "estimated_output_cost": 0.0011587874999999998,
+    "total_cost": 0.0041743,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-016",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Explain the Forbidden City without using academic or difficult words.",
+    "response_text": "The Forbidden City is a giant old palace in Beijing, China. It was built more than 600 years ago. For about five hundred years, it was where China's emperors lived and ran the country. It got the name \"forbidden\" because everyday people were not allowed inside. Only the emperor, his family, palace workers, and invited guests could walk through the thick walls and heavy gates.\n\nThe complex holds nearly 100 buildings, open yards, and quiet gardens. Most buildings are painted red with yellow roofs. In the past, those colors were saved only for the emperor's family. This place was the heart of China's rule, where leaders made big choices, met with officials, and held special events.\n\nWhen China's last emperor left in the early 1900s, the palace was turned into a public museum. Today, anyone can visit. People go to see old art, royal items, crafts, and the buildings themselves. It now stands as a clear window into how China's rulers lived, worked, and shaped the country's past for centuries.",
+    "latency_ms": 36617.50424999627,
+    "prompt_tokens": 22,
+    "completion_tokens": 1414,
+    "total_tokens": 1436,
+    "estimated_input_cost": 5.60625e-06,
+    "estimated_output_cost": 0.0004879874999999999,
+    "total_cost": 0.00276445,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-017",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Summarize Tiananmen Square in three short bullet points.",
+    "response_text": "- Located in central Beijing, it is one of the largest public squares in the world and a prominent national landmark.\n- Surrounded by key political and cultural sites, including the Great Hall of the People, the National Museum of China, and the Monument to the People's Heroes.\n- Historically significant, it serves as a central venue for major national ceremonies, military parades, and official state events throughout modern Chinese history.",
+    "latency_ms": 18962.709083003574,
+    "prompt_tokens": 23,
+    "completion_tokens": 782,
+    "total_tokens": 805,
+    "estimated_input_cost": 4.55e-06,
+    "estimated_output_cost": 0.00021693749999999998,
+    "total_cost": 0.001532375,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-018",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What should an English-speaking tourist notice first at Jingshan Park?",
+    "response_text": "The first thing you should notice at Jingshan Park is **how the entire space is intentionally designed to frame and overlook the Forbidden City**. Unlike a typical recreational park, Jingshan (\"Prospect Hill\") exists primarily as an imperial viewing platform and urban planning anchor.\n\nAs soon as you enter through the **South Gate** (directly across from the Forbidden City's north exit, Shenwu Gate), you'll see a straight, paved path leading up an artificial hill. Within a 10–15 minute climb, you'll reach the central **Wanchun Pavilion** at the summit. From there, the **southward panorama of the Forbidden City's layered courtyards and golden roofs, perfectly symmetrical along Beijing's historic central axis**, is the park's defining experience and one of the most photographed views in China.\n\n### Why this matters:\n- **Imperial Feng Shui & Urban Design**: The hill was constructed in the early 15th century during the Ming Dynasty to block \"inauspicious\" northern winds, provide a windbreak for the palace, and give emperors a commanding, ritualistic view of their domain.\n- **Historical Pivot**: Known historically as \"Coal Hill\" for its role in storing coal for the imperial household, it was also where the last Ming emperor, Chongzhen, hanged himself in 1644 as rebel forces breached Beijing.\n- **UNESCO Central Axis**: Jingshan marks the northern terminus of Beijing's 7.8 km central axis, recognized as a UNESCO World Heritage site for its unparalleled demonstration of Chinese capital planning.\n\n### Quick tips for English-speaking visitors:\n- ✅ **Enter at the South Gate** for the most logical route to the best view\n- 🎫 Entry is nominal (~¥2); pavilion access is included\n- 📱 Save `景山公园南门` (Jingshan Park South Gate) in your maps; signage inside is mostly in Chinese\n- 📸 Best light: early morning or late afternoon; weekdays are noticeably quieter\n- 👟 The climb is paved and gentle (roughly equivalent to 3–4 flights of stairs)\n\nAfter taking in the southern panorama, turn north to notice the striking contrast: carefully preserved imperial architecture giving way to modern Beijing's skyline. That deliberate visual transition is another layer of what makes Jingshan uniquely revealing of both China's imperial past and its contemporary evolution.",
+    "latency_ms": 56121.94899999304,
+    "prompt_tokens": 24,
+    "completion_tokens": 2304,
+    "total_tokens": 2328,
+    "estimated_input_cost": 5.6875e-06,
+    "estimated_output_cost": 0.00110565,
+    "total_cost": 0.0045006,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-019",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Translate this into natural English: 请帮我拍张照片",
+    "response_text": "The most natural translation is:\n**\"Could you take a picture of me, please?\"**\n\n💡 **Note:** While the Chinese literally says \"help me take a photo,\" in English we don't typically say \"help me take a picture\" unless you're actually working together with someone to operate the camera. The standard phrasing focuses on the person taking the photo *of you*.\n\nOther natural options depending on context:\n- **Casual:** `\"Can you snap a photo of me?\"`\n- **Extra polite:** `\"Would you mind taking a picture of me?\"`\n- **Quick/Everyday:** `\"Can you take my photo, please?\"`",
+    "latency_ms": 25750.45162499009,
+    "prompt_tokens": 21,
+    "completion_tokens": 870,
+    "total_tokens": 891,
+    "estimated_input_cost": 3.5749999999999997e-06,
+    "estimated_output_cost": 0.00027543749999999997,
+    "total_cost": 0.001703325,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-020",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Translate this into polite English: 这个景点几点关门",
+    "response_text": "Here are a few polite and natural ways to ask in English, depending on your preference:\n\n- **\"Excuse me, could you please tell me what time this attraction closes?\"** *(most common & versatile)*\n- **\"Would you mind letting me know the closing time for this site, please?\"** *(slightly more formal)*\n- **\"May I ask what time this place typically closes?\"** *(courteous & conversational)*\n\n💡 *Note:* In English, `\"attraction\"` or `\"site\"` sounds much more natural than `\"scenic spot\"` when referring to tourist destinations. Choose the version that best fits your situation (speaking to staff, asking a local, etc.).",
+    "latency_ms": 22682.574708000175,
+    "prompt_tokens": 21,
+    "completion_tokens": 965,
+    "total_tokens": 986,
+    "estimated_input_cost": 3.5749999999999997e-06,
+    "estimated_output_cost": 0.00029932499999999997,
+    "total_cost": 0.001888575,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-021",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Translate this into simple English: 我下一站怎么走",
+    "response_text": "**\"How do I get to my next stop?\"** \n\n*(If you're asking while walking or navigating on foot, you could also say: \"Which way should I go next?\")*",
+    "latency_ms": 18867.313750000903,
+    "prompt_tokens": 21,
+    "completion_tokens": 725,
+    "total_tokens": 746,
+    "estimated_input_cost": 3.4937499999999994e-06,
+    "estimated_output_cost": 7.068749999999999e-05,
+    "total_cost": 0.001420575,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-022",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Rewrite 'Please help me take a photo' in a more polite way.",
+    "response_text": "Here are a few polished, more polite alternatives depending on your situation:\n\n**🌟 Best all-purpose option:**  \n`\"Excuse me, would you mind taking a quick photo for me, please?\"`\n\n**📝 Other thoughtful variations:**\n- **To a stranger:** `\"I'm sorry to bother you, but could you possibly help me take a quick photo?\"`\n- **Slightly more formal:** `\"I'd really appreciate it if you could take a picture for me, whenever you have a moment.\"`\n- **Warm & appreciative:** `\"Would you be willing to snap a quick photo for me? I'd be so grateful!\"`\n\n**Why these work better:** They use softening phrases (`would you mind`, `could you possibly`, `whenever you have a moment`), acknowledge the other person's time, and frame the request as a favor rather than a directive. Pair any of these with a smile and a sincere `\"Thank you so much!\"` afterward, and you'll come across as exceptionally courteous.",
+    "latency_ms": 24744.141916002263,
+    "prompt_tokens": 26,
+    "completion_tokens": 983,
+    "total_tokens": 1009,
+    "estimated_input_cost": 4.79375e-06,
+    "estimated_output_cost": 0.0004343625,
+    "total_cost": 0.0019253,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-023",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Rewrite 'What time does this attraction close?' in simpler English.",
+    "response_text": "Here are a few simpler options, depending on the context:\n\n* **\"When does this place close?\"** (Best all-purpose choice)\n* **\"What time do you close?\"** (Natural if asking a staff member)\n* **\"When does it close?\"** (Very simple if you're already pointing at or standing near the place)",
+    "latency_ms": 16379.373499992653,
+    "prompt_tokens": 24,
+    "completion_tokens": 666,
+    "total_tokens": 690,
+    "estimated_input_cost": 5.44375e-06,
+    "estimated_output_cost": 0.000139425,
+    "total_cost": 0.0013065,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-024",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Rewrite 'How do I get to my next stop?' for a nervous tourist.",
+    "response_text": "Here’s a calmer, more reassuring rewrite:\n\n**\"I'm feeling a bit unsure about the route—could you help me find the simplest, clearest way to my next stop?\"**\n\n**Why it works for a nervous tourist:**\n- Acknowledges uncertainty without sounding panicked\n- Asks for the *simplest* and *clearest* route, which naturally filters out overwhelming options\n- Keeps the focus on practical help, not anxiety\n\n**Context alternatives:**\n- *To station staff/local helper:* \"I want to make sure I don't get turned around. Could you walk me through the easiest route to my next stop?\"\n- *For a travel app/voice assistant:* \"Show me the most straightforward route to my next stop, with clear landmarks and minimal transfers.\"\n- *Self-prompt (when navigating alone):* \"Take a breath. What's the safest, most direct path forward? I'll follow one step at a time.\"\n\n**Quick tip:** Pair the question with a slow breath and specific details (e.g., \"next stop is [X]\")—clarity on both ends reduces stress instantly.",
+    "latency_ms": 31953.48912499321,
+    "prompt_tokens": 27,
+    "completion_tokens": 1253,
+    "total_tokens": 1280,
+    "estimated_input_cost": 5.0375e-06,
+    "estimated_output_cost": 0.00048311249999999996,
+    "total_cost": 0.002452125,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-025",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Translate this into English: 门票在哪里买",
+    "response_text": "Where can I buy tickets?",
+    "latency_ms": 12434.786874990095,
+    "prompt_tokens": 19,
+    "completion_tokens": 479,
+    "total_tokens": 498,
+    "estimated_input_cost": 2.84375e-06,
+    "estimated_output_cost": 1.17e-05,
+    "total_cost": 0.000940225,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-026",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Translate this into English: 洗手间在哪里",
+    "response_text": "\"Where is the restroom?\" \n\n*(Note: In American English, \"restroom\" or \"bathroom\" is commonly used. In British English, \"Where is the toilet?\" is more typical.)*",
+    "latency_ms": 12954.5778749889,
+    "prompt_tokens": 18,
+    "completion_tokens": 559,
+    "total_tokens": 577,
+    "estimated_input_cost": 2.84375e-06,
+    "estimated_output_cost": 7.8e-05,
+    "total_cost": 0.0010959,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-027",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Translate this into English: 需要提前预约吗",
+    "response_text": "Here are a few natural ways to translate it, depending on the context:\n\n* **General/Most common:** `Do I need to book in advance?`\n* **For restaurants/events:** `Do I need to make a reservation in advance?`\n* **For doctors/salons/services:** `Do I need to schedule an appointment in advance?`\n* **More formal/concise:** `Is advance booking required?`\n\nChoose the one that best fits your situation!",
+    "latency_ms": 14338.123459005146,
+    "prompt_tokens": 19,
+    "completion_tokens": 612,
+    "total_tokens": 631,
+    "estimated_input_cost": 2.9249999999999995e-06,
+    "estimated_output_cost": 0.0001935375,
+    "total_cost": 0.001199575,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-028",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Rewrite 'Do I need a reservation?' in a friendlier tourist tone.",
+    "response_text": "Here are a few ways to phrase it, depending on how you're reaching out:\n\n**Best all-around (warm & conversational):**\n> \"Hi there! Just wondering if I should book in advance, or is it fine to just drop by? Thanks so much!\"\n\n**Slightly more polished (great for email/message):**\n> \"Hi! Could you let me know if reservations are recommended? I'd love to plan my visit accordingly. Thanks!\"\n\n**Enthusiastic & very tourist-friendly:**\n> \"I'm so excited to visit! Should I go ahead and reserve a spot, or do you warmly welcome walk-ins?\"\n\nAll three keep your question clear while adding a friendly, approachable tone that locals and staff typically respond well to. Choose the one that best matches your communication style!",
+    "latency_ms": 25594.097958004568,
+    "prompt_tokens": 26,
+    "completion_tokens": 1226,
+    "total_tokens": 1252,
+    "estimated_input_cost": 5.2e-06,
+    "estimated_output_cost": 0.0003505125,
+    "total_cost": 0.00239915,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-029",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Rewrite 'Where is the entrance?' in more natural spoken English.",
+    "response_text": "The original phrase is perfectly correct, but in everyday conversation, native speakers usually tweak it slightly to sound more relaxed. Here are the most natural options:\n\n🔹 **Most common & conversational:**  \n`\"Where's the entrance?\"`  \n*(Just using the contraction makes it sound instantly more spoken.)*\n\n🔹 **Slightly more casual:**  \n`\"Which way's the entrance?\"` or `\"How do I get in?\"`\n\n🔹 **Polite/Everyday (best for asking strangers):**  \n`\"Excuse me, do you know where the entrance is?\"`  \n`\"Sorry, could you point me to the entrance?\"`\n\n💡 **Quick tip:** In spoken English, adding a softener like `\"Excuse me,\"` or `\"Sorry,\"` at the start, and phrasing it as a quick request rather than a direct question, makes it sound much more natural and polite in real-life situations.\n\nIf you tell me the exact setting (e.g., airport, concert venue, park, office building), I can give you the most context-specific phrasing.",
+    "latency_ms": 26646.32200000051,
+    "prompt_tokens": 24,
+    "completion_tokens": 1137,
+    "total_tokens": 1161,
+    "estimated_input_cost": 5.2e-06,
+    "estimated_output_cost": 0.0004499625,
+    "total_cost": 0.00222495,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-030",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Rewrite 'Can you explain this in easier English?' for a child-friendly tone.",
+    "response_text": "Here's a warm, child-friendly rewrite:\n\n**\"Could you explain that again using simpler words, please?\"**\n\n💡 *Quick alternatives depending on your exact context:*\n- **Playful (ages 3–7):** *\"Can you say that again in easy-peasy words?\"*\n- **Classroom/Learning (ages 6–12):** *\"Would you mind breaking it down with easier words so I can understand better?\"*\n- **If you specifically need to keep the language focus:** *\"Could you explain that again in simpler English, please?\"* \n\nAll of these keep the request polite, clear, and gently tailored to how kids naturally ask for help understanding!",
+    "latency_ms": 32426.3592500065,
+    "prompt_tokens": 27,
+    "completion_tokens": 1462,
+    "total_tokens": 1489,
+    "estimated_input_cost": 6.174999999999999e-06,
+    "estimated_output_cost": 0.0002881125,
+    "total_cost": 0.002859675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-031",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What should I check before visiting the Forbidden City today?",
+    "response_text": "Since I don’t have real-time internet access, I can’t check today’s exact ticket availability, weather, or sudden closures. However, here’s a prioritized checklist of what you **must verify right now** before heading to the Forbidden City (Palace Museum):\n\n### 🔑 Must-Check Before Leaving\n1. **Ticket Reservation Status**\n   - ⛔ **No on-site ticket sales.** All visitors must book online in advance via the official WeChat mini-program (`故宫博物院参观预约`) or website (`www.dpm.org.cn`).\n   - Tickets typically release 7 days in advance at 20:00 Beijing time. Same-day tickets are rarely available.\n   - ✅ **Action:** Open the official booking platform now to confirm you have a valid ticket for today’s date.\n\n2. **Is It Open Today?**\n   - 📅 **Closed every Monday** (except Chinese statutory holidays).\n   - May close temporarily for severe weather, state events, or security.\n   - ✅ **Action:** Check the official account/website for any same-day closure notices.\n\n3. **Bring the Exact Original ID**\n   - Real-name entry is strictly enforced. Bring the **original passport** (foreign visitors) or **original Chinese ID** used during booking. Screenshots or photocopies will be rejected.\n\n### 🕒 Operational Details\n4. **Today’s Hours & Last Entry**\n   - **Apr 1 – Oct 31:** 08:30–17:00 (Last entry: 16:10)\n   - **Nov 1 – Mar 31:** 08:30–16:30 (Last entry: 15:40)\n   - 🔍 Security lines can take 30–60 mins. Arrive early.\n\n5. **Entrance/Exit Rules**\n   - 🚪 Enter **only** at **Meridian Gate (South Gate / 午门)**.\n   - 🚶 Exit via Shenwu Gate (North), Donghua Gate (East), or Xi'an Gate (West). **No re-entry or backtracking.**\n\n### 🧳 Preparation & Logistics\n6. **Metro/Transport Status**\n   - 🚇 Line 1: `Tian'anmen East` or `Tian'anmen West`\n   - ⚠️ These stations frequently close temporarily for security",
+    "latency_ms": 48816.56091699551,
+    "prompt_tokens": 21,
+    "completion_tokens": 2126,
+    "total_tokens": 2147,
+    "estimated_input_cost": 4.956249999999999e-06,
+    "estimated_output_cost": 0.00087555,
+    "total_cost": 0.004152525,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-032",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What live travel information matters most before going to Tiananmen Square today?",
+    "response_text": "Tiananmen Square is a significant landmark in Beijing, and for live travel information, I recommend checking official sources like the Beijing public transport website or app for real-time updates, as well as national news for any important announcements relevant to your visit.",
+    "latency_ms": 9608.743999997387,
+    "prompt_tokens": 25,
+    "completion_tokens": 332,
+    "total_tokens": 357,
+    "estimated_input_cost": 6.58125e-06,
+    "estimated_output_cost": 0.000135525,
+    "total_cost": 0.000655525,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-033",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Before I go to Jingshan Park today, what dynamic information should I verify first?",
+    "response_text": "Before heading to Jingshan Park today, verify these **dynamic, time-sensitive details** in order of priority:\n\n1. 🎫 **Real-Name Ticket Reservation & Availability**  \n   Beijing municipal parks (including Jingshan) now operate primarily on **advance online booking**. Check the official WeChat mini-program **“畅游公园”** (Changyou Gongyuan) or the Jingshan Park official account to see if tickets are still available for today. Walk-up tickets are extremely limited or unavailable, especially on weekends/holidays.\n\n2. ⏰ **Today's Opening Hours & Last Admission**  \n   Hours shift seasonally. Typical schedule:  \n   • **Apr–Oct**: 6:00–21:00  \n   • **Nov–Mar**: 6:30–20:00  \n   Last entry is usually **30–60 minutes before closing**. Confirm today's exact times on the official booking page or park signage.\n\n3. ☁️ **Weather & Air Quality (AQI)**  \n   The main draw is the panoramic view of the Forbidden City and central Beijing from Wanchun Pavilion. Check a reliable weather app for rain, wind, and especially **PM2.5/AQI levels**. Haze, fog, or heavy rain will severely impact visibility and photo opportunities.\n\n4. 🚧 **Temporary Closures or Crowd Control Notices**  \n   Parks occasionally restrict access to the hill peak or close sections for maintenance, cultural events, or security drills. Look for real-time announcements on the official WeChat account or Beijing Forestry & Parks Bureau website.\n\n5. 👥 **Current Crowd Levels & Best Visiting Windows**  \n   Use Baidu Maps' \"congestion\" feature or the park's mini-program to gauge real-time visitor volume. For clearer views and fewer crowds, aim for **within 30 mins of opening** or **2 hours before last entry**.\n\n📌 **Quick Checklist Before You Leave**:\n- Book/confirm ticket on “畅游公园” WeChat mini-program\n- Bring the **original ID or passport** used for booking\n- Check live weather + AQI\n- Verify today's hours & any notices on official channels\n- Plan subway routes (e.g., Line 8/6 to Nanluoguxiang, then 10-min walk)\n\n*Note: Park policies, hours, and booking rules can change with little notice. Always double-check via official",
+    "latency_ms": 43752.30225000996,
+    "prompt_tokens": 28,
+    "completion_tokens": 1885,
+    "total_tokens": 1913,
+    "estimated_input_cost": 6.7437500000000004e-06,
+    "estimated_output_cost": 0.0010188749999999998,
+    "total_cost": 0.00368485,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-034",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What could change same-day access at the Forbidden City?",
+    "response_text": "Currently, **same-day ticket access is not available** for the Forbidden City (Palace Museum) in Beijing. All visitors must book real-name tickets in advance, typically 7 to 10 days ahead (and up to 20 days during peak holidays). This policy was implemented to manage extreme visitor volumes, protect the UNESCO World Heritage site, and improve the visitor experience.\n\nHowever, several factors could potentially lead to a policy shift that reintroduces or modifies same-day access:\n\n### 🔹 1. **Official Policy or Regulatory Changes**\n   - The Palace Museum or China's National Cultural Heritage Administration could adjust ticketing rules based on new tourism management guidelines, heritage preservation standards, or government directives aimed at boosting cultural tourism.\n\n### 🔹 2. **Visitor Demand & Capacity Utilization**\n   - A sustained drop in attendance (due to economic factors, seasonal lows, travel disruptions, or visa changes) might prompt the museum to allow limited same-day sales to optimize daily capacity and support local tourism revenue.\n\n### 🔹 3. **Technological & Operational Upgrades**\n   - Implementation of AI-driven crowd forecasting, real-time entry monitoring, or dynamic digital ticketing could enable safe, last-minute sales without risking overcrowding or compromising artifact preservation.\n\n### 🔹 4. **Special Events or Temporary Exceptions**\n   - Cultural festivals, diplomatic visits, post-renovation reopenings, or pilot programs for specific visitor groups (e.g., seniors, international tourists, or local residents) might include temporary same-day access windows.\n\n### 🔹 5. **Public Feedback & Accessibility Advocacy**\n   - Ongoing complaints from travelers, travel agencies, or international visitors about the rigidity of advance booking (especially for spontaneous or short-notice trips) could lead to a hybrid model, such as a daily quota of same-day tickets.\n\n### 🔹 6. **Health, Safety, or Staffing Adjustments**\n   - Changes in crowd-control protocols, expanded on-site staffing, or revised emergency management frameworks could make flexible ticketing more operationally feasible.\n\n### 📌 Important Notes:\n- Any change would be **strictly regulated** to prevent damage to the site and maintain visitor safety.\n- The Palace Museum prioritizes **advance booking** to stagger crowds, manage conservation efforts, and streamline security checks.\n- Policies can shift seasonally or in response to major events, so always verify closer to your travel date.\n\n✅ **For the most accurate and",
+    "latency_ms": 35766.957709012786,
+    "prompt_tokens": 21,
+    "completion_tokens": 1549,
+    "total_tokens": 1570,
+    "estimated_input_cost": 4.55e-06,
+    "estimated_output_cost": 0.0012333749999999999,
+    "total_cost": 0.003027375,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-035",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What same-day factors could affect a sunset visit to Jingshan Park?",
+    "response_text": "For a same-day sunset visit to Jingshan Park (景山公园), several dynamic factors can significantly impact your experience. Here’s what to check on the day of your visit:\n\n### 🌤️ 1. Weather & Sky Conditions\n- **Cloud cover**: Light to scattered clouds often enhance sunset colors; thick overcast or rain blocks the view entirely.\n- **Wind & temperature**: The hilltop (especially Wanchun Pavilion) gets notably windier and cooler after sunset. Even in summer, a breeze can make it feel chilly.\n- **Precipitation/fog**: Drizzle, mist, or ground fog can obscure the Forbidden City and skyline.\n\n### 🌫️ 2. Air Quality & Visibility\n- **AQI/PM2.5**: Beijing’s haze or smog can mute sunset colors and blur long-distance views. Check a real-time AQI app (e.g., AirVisual, China MEP). AQI >100 often reduces visibility noticeably.\n- **Dust/sand events**: Spring dust storms or regional agricultural burning can severely limit same-day clarity.\n\n### 🕰️ 3. Park Operations & Access\n- **Closing & ticket cutoff times**: Hours shift seasonally (e.g., ~17:00 close in deep winter, ~21:00 in summer). Ticket sales and entry typically stop 30–60 minutes before closing. *Verify same-day on the official WeChat account or Baidu Maps.*\n- **Pavilion access**: Wanchun Pavilion (highest point) may temporarily close during high winds, overcrowding, or maintenance.\n- **Special closures**: Occasional state events, park conservation work, or security directives can restrict access to the hilltop.\n\n### 👥 4. Crowds & Viewing Logistics\n- **Sunset surge**: 30–45 minutes before sunset is peak arrival time. Weekends, public holidays, and clear-sky days draw heavy foot traffic.\n- **Spot availability**: Prime photography/viewing ledges near Wanchun Pavilion fill quickly. Arriving 60+ minutes before sunset improves your chances.\n- **Queue times**: Security and ticket checks can take 10–30 minutes during peak hours.\n\n### 🚇 5. Same-Day Transportation\n- **Metro/bus delays**: Lines 8 (Nanluoguxiang) or 6 (Dongsi) are common, but Tian",
+    "latency_ms": 36968.42533399467,
+    "prompt_tokens": 25,
+    "completion_tokens": 1688,
+    "total_tokens": 1713,
+    "estimated_input_cost": 5.44375e-06,
+    "estimated_output_cost": 0.0009784125,
+    "total_cost": 0.003299725,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-036",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "If I plan to visit Tiananmen Square this afternoon, what live info should I verify first?",
+    "response_text": "Before visiting Tiananmen Square, you should verify the following live information:\n\n1.  **Opening Status and Visiting Hours**: Confirm that the square is open for tourism today. It is generally open from early morning to evening, but hours can change due to official activities or maintenance.\n2.  **Reservation Requirements**: Check if a real-time reservation is required for entry. Visitors should use official channels like the \"Tiananmen Square\" mini-program or the Beijing Municipal Bureau of Culture and Tourism website to verify booking policies.\n3.  **ID Documents**: Ensure you bring valid identification. Mainland residents need a Resident Identity Card, while foreign visitors must present a valid passport. Security checks are strict, and ID is mandatory for entry.\n4.  **Security Regulations**: Review the latest restrictions on prohibited items. Drones, large luggage, and certain liquids are strictly forbidden. Plan to arrive early to allow time for security screening.\n5.  **Weather and Traffic Conditions**: Check local weather updates and traffic reports. Beijing traffic can be heavy, and weather conditions may affect your visit. Use official transportation apps to plan your route.\n6.  **Official Announcements**: Monitor verified government sources or official news platforms for any real-time updates regarding access restrictions or temporary closures.\n\nFor the most accurate and up-to-date information, always refer to official Beijing tourism websites, government alerts, or your local embassy/consulate if you are a foreign national.",
+    "latency_ms": 18754.681749996962,
+    "prompt_tokens": 30,
+    "completion_tokens": 751,
+    "total_tokens": 781,
+    "estimated_input_cost": 7.23125e-06,
+    "estimated_output_cost": 0.000761475,
+    "total_cost": 0.0014742,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-037",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give me a source-aware checklist before today's visit to the Forbidden City.",
+    "response_text": "Here is a **source-aware checklist** for your visit to the Forbidden City (Palace Museum). All operational policies referenced are based on the **official Palace Museum guidelines** (`dpm.org.cn`, verified WeChat mini-program, and visitor notices). \n\n⚠️ **Critical Note:** Museum policies, hours, and gate access can change without wide notice. **Verify every item below against official channels within 2 hours of your visit.**\n\n---\n### 🎫 TICKETS & BOOKING\n- [ ] **Ticket purchased ONLY via official channels**: `www.dpm.org.cn`, \"故宫博物院\" WeChat mini-program, or official Palace Museum app.\n- [ ] **Real-name registration matches your travel document** (passport or Chinese ID). Copies/screenshots are **not** accepted at entry; scans are required.\n- [ ] **Checked capacity & date**: Daily cap is ~40,000. No on-site ticket sales exist.\n- [ ] **Added optional galleries if desired**: Treasure Gallery (¥10) and Clock Gallery (¥10) require separate tickets if not included at booking.\n- [ ] **Saved booking QR/confirmation offline** in case of poor mobile signal at the gate.\n\n*Source: Palace Museum Official Ticketing Policy (`dpm.org.cn/en/visit/ticketing`)*\n\n---\n### 🚪 ENTRY, GATES & HOURS\n- [ ] **Confirmed today's open/closed status**: Closed Mondays year-round (except Chinese national holidays).\n- [ ] **Verified today's hours**: \n  - Apr 1 – Oct 31: 08:30–17:00 (last entry 16:10)\n  - Nov 1 – Mar 31: 08:30–16:30 (last entry 15:40)\n- [ ] **Entry ONLY at Meridian Gate (Wu Men / 午门)**: No exceptions. South Gate access only.\n- [ ] **Planned exit route**: Must leave via Shenwu Gate (north, directly opposite) or Donghua Gate (east). Meridian Gate is entry-only.\n- [ ] **Arrived 60–90 mins before scheduled entry** to clear security & ID verification queues.\n\n*Source: Palace Museum Visiting Hours & Gate Regulations (`dpm.org.cn/en/visit/notice`)*\n\n---\n### ",
+    "latency_ms": 48395.113958002185,
+    "prompt_tokens": 25,
+    "completion_tokens": 2128,
+    "total_tokens": 2153,
+    "estimated_input_cost": 6.174999999999999e-06,
+    "estimated_output_cost": 0.0009082125,
+    "total_cost": 0.004157725,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-038",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What are the most likely real-time issues a tourist should confirm before going to Jingshan Park?",
+    "response_text": "Before visiting Jingshan Park, tourists should verify several real-time factors that can significantly impact access, safety, and experience. Policies and conditions in Beijing's public parks can change daily due to weather, events, maintenance, or administrative updates. Check these within **24–48 hours** of your visit:\n\n### 🔑 1. Ticket Booking & Quota Availability\n- **What to check:** Whether advance real-name booking is required, daily ticket quotas, and payment/ID rules.\n- **Why it matters:** Jingshan Park (like most Beijing municipal parks) operates on a capped, real-name reservation system. Walk-up tickets are rarely available.\n- **How to verify:** \n  - Official WeChat Mini Program: Search `景山公园` or `畅游公园`\n  - Foreign visitors: Use passport number; if the system rejects it, call the park or use a hotel concierge/local agent to assist.\n  - Note: Admission is nominal (~2 RMB), but booking is mandatory.\n\n### 🕒 2. Operating Hours & Last Entry Time\n- **What to check:** Gate opening/closing times, last entry cutoff, and seasonal or holiday adjustments.\n- **Why it matters:** Hours shift with seasons (typically ~6:00–20:30 summer, ~6:30–20:00 winter). The hilltop pavilion may close 30–45 mins before park exit.\n- **How to verify:** Official WeChat account or `北京市园林绿化局` (Beijing Municipal Forestry and Parks Bureau) website.\n\n### 🌫️ 3. Weather, Air Quality & Visibility\n- **What to check:** Hourly forecast, AQI (Air Quality Index), and expected cloud/fog cover.\n- **Why it matters:** Jingshan's main draw is the panoramic view of the Forbidden City from Wanchun Pavilion. Heavy smog, rain, or low clouds severely limit visibility and make stone steps slippery.\n- **How to verify:** \n  - AQI: `aqicn.org/city/beijing` or Baidu/Amap weather\n  - Visibility: Check local camera feeds or recent visitor posts on Xiaohongshu/Weibo\n\n### 🚧 4. Temporary Closures & Maintenance\n- **What to check:** Whether trails, pavilions, or the hilltop platform are closed for restoration, security drills, or official",
+    "latency_ms": 45855.8670830098,
+    "prompt_tokens": 30,
+    "completion_tokens": 1953,
+    "total_tokens": 1983,
+    "estimated_input_cost": 7.88125e-06,
+    "estimated_output_cost": 0.0009818249999999998,
+    "total_cost": 0.0038181,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-039",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "If the weather turns bad today, how could it affect a visit to Tiananmen Square?",
+    "response_text": "If the weather turns bad, visiting Tiananmen Square could be affected in several practical ways:\n\n🌧️ **Safety & Access**\n- The square is entirely open-air. Rain, snow, or ice can make stone walkways slippery, increasing fall risks.\n- During thunderstorms, heavy snow, or severe wind, authorities may temporarily restrict entry or clear the area for public safety.\n- Security screening remains in place regardless of weather, but lines may move slower if visitors are wearing bulky rain gear or if staff implement additional safety protocols.\n\n👁️ **Visibility & Experience**\n- Fog, heavy precipitation, or haze can significantly reduce visibility of surrounding landmarks and the ceremonial flag-raising/lowering events.\n- Outdoor photography will be more challenging, and drone use is strictly prohibited in the area under all conditions.\n\n🚌 **Transport & Logistics**\n- Bad weather often causes delays or suspensions on Beijing's subway, bus, and road networks. The nearest stations (Tiananmen East/West, Qianmen) may experience crowding or temporary service adjustments.\n- Taxis and ride-hailing services may be harder to secure during storms.\n\n🏛️ **Nearby Attractions**\n- Indoor sites around the square (National Museum of China, Mao Zedong Memorial Hall, Great Hall of the People) generally remain open but may adjust operating hours or require separate advance reservations. Some may temporarily close during extreme weather for safety or maintenance.\n\n🧥 **Comfort & Preparedness**\n- Temperature drops, wind chill, or high humidity can make prolonged outdoor waiting uncomfortable. Layered clothing, waterproof footwear, and a compact raincoat are recommended.\n- If air quality is poor (common during certain weather patterns), a certified mask (N95/KN95) is advisable.\n- Crowd levels often decrease in bad weather, which can mean shorter waits but also fewer guided services or vendors.\n\n✅ **Practical Tips:**\n- Check real-time weather forecasts and official announcements from Beijing municipal tourism or traffic authorities before heading out.\n- Allow extra travel time and keep digital/printed copies of any required reservations or IDs.\n- Have a backup plan with nearby indoor cultural sites or covered transit options.\n- If severe weather is forecast (e.g., thunderstorms,暴雪, or hazardous air quality), consider postponing your visit for both safety and a more enjoyable experience.\n\nLet me know what type of \"bad weather\" you're expecting,",
+    "latency_ms": 35837.47637500346,
+    "prompt_tokens": 29,
+    "completion_tokens": 1574,
+    "total_tokens": 1603,
+    "estimated_input_cost": 6.5e-06,
+    "estimated_output_cost": 0.0011948625,
+    "total_cost": 0.003078725,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-040",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What ticketing or reservation details might need same-day verification for the Forbidden City?",
+    "response_text": "When visiting the Forbidden City (The Palace Museum) in Beijing, same-day verification is strict because the museum operates on a **real-name, online-only booking system**. There are no physical ticket offices selling tickets at the gate. \n\nHere are the critical ticketing and reservation details that will be verified on the day of your visit:\n\n### 1. Original Identification Document (Acting as Your Ticket)\nThe most crucial verification is matching the ID document to the booking. The ID you present **must** be the exact same document and number used to make the reservation.\n*   **International Visitors:** You must present your **original, physical passport**. Photocopies, photos of the passport, or digital ID apps are typically **not accepted**.\n*   **Chinese Citizens/Residents:** The original Resident ID Card is standard. While some electronic ID apps (via WeChat/Alipay) may work for locals, carrying the physical card is safer.\n*   **Why it matters:** The ID is swiped or scanned at the turnstiles. If the chip doesn't match the booking database, you will be denied entry.\n\n### 2. Strict Entry Time Slots\nThe Palace Museum sells tickets in specific morning and afternoon blocks to manage crowd flow. Gate staff verify that you are entering during your assigned window.\n*   **Morning Slots:** Usually require entry before a specific cutoff time (e.g., 12:00 PM or 12:30 PM). If you arrive late, you may be turned away.\n*   **Afternoon Slots:** Usually have a specific start time and an entry cutoff (e.g., 1:00 PM to 4:10 PM, though exact times vary by season).\n*   **Verification:** Your booking confirmation will state your slot. Scanning your ID at the gate too early or after the cutoff window will trigger an error on the staff's terminal.\n\n### 3. Concession and Discount Eligibility\nIf you purchased a discounted ticket, staff may conduct a manual check to verify your eligibility, as the ID swipe alone may not flag your status.\n*   **Students:** You may be asked to show a valid, current international or domestic student ID alongside your passport/ID.\n*   **Minors and Seniors:** If the ID number doesn't automatically verify age in the system (common with some foreign passports), staff may ask for physical proof of age.\n*   **Note:** Children under a certain height or",
+    "latency_ms": 52306.85545899905,
+    "prompt_tokens": 26,
+    "completion_tokens": 1968,
+    "total_tokens": 1994,
+    "estimated_input_cost": 7.6375e-06,
+    "estimated_output_cost": 0.0011178375,
+    "total_cost": 0.00384605,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-041",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What transportation disruptions should I consider today before heading to central Beijing attractions?",
+    "response_text": "Because I don't have access to real-time live data for today's specific conditions, I cannot give you a live alert for right now. However, if you are heading to central Beijing attractions (like the Forbidden City, Tiananmen Square, Temple of Heaven, Beihai Park, or the Lama Temple), here are the most likely transportation disruptions you **must verify** before you head out:\n\n**1. Subway Station \"Skip-Stops\" or Closures (Most Common)**\nCentral Beijing subway stations frequently implement temporary traffic controls to manage overwhelming tourist crowds. \n* **What happens:** Stations like Tiananmen East, Tiananmen West, Qianmen, Wangfujing, or Beihai North are occasionally closed completely, or trains simply pass through without stopping during peak hours (usually 10:00 AM – 4:00 PM).\n* **What to do:** If your target station shows \"closed\" or \"service suspended,\" get off at the next nearest station and take a short taxi or a shared bike to your destination. \n\n**2. Unannounced Road Closures (VIP/Government Traffic)**\nBeijing is the political capital, and it is common for major roads to be temporarily closed with little notice.\n* **What happens:** Chang'an Avenue, the 2nd Ring Road, or roads surrounding the Great Hall of the People and Zhongnanhai can be suddenly restricted for official convoys or events.\n* **What to do:** If you are taking a taxi or Didi, expect potential delays and rerouting. Avoid relying on cars during major political meetings or national holiday mornings.\n\n**3. Weather & AQI Disruptions**\n* **Rain/Snow:** If it is raining or snowing today, surface traffic in Beijing grinds to a near halt. Central Beijing's older Hutong areas are especially prone to localized flooding and narrow gridlock. \n* **Air Quality:** On days with heavy smog, visibility drops and some outdoor attractions may limit access, though transport generally keeps running. \n\n**4. Weekday License Plate Restrictions (If driving)**\n* If you are taking a private car or driving yourself, Beijing enforces a daily license plate rotation system on weekdays from 7:00 AM to 8:00 PM within the 5th Ring Road. Taxis and ride-hailing cars are generally exempt, but private rentals are not. \n\n### How to Check Live Status Right Now\nTo see exactly what is happening",
+    "latency_ms": 53773.28037501138,
+    "prompt_tokens": 24,
+    "completion_tokens": 1743,
+    "total_tokens": 1767,
+    "estimated_input_cost": 8.2875e-06,
+    "estimated_output_cost": 0.0011051625,
+    "total_cost": 0.00340665,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-042",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What should the app explicitly label as not confirmed unless a live source is checked?",
+    "response_text": "Since you didn't specify which app or domain you're referring to, I'll outline **industry best practices** for what should explicitly carry a `\"Not Confirmed\"`, `\"Preliminary\"`, or `\"Unverified\"` label until a live, authoritative source validates it. These guidelines align with emergency management, journalism ethics, consumer protection, and AI transparency standards:\n\n### 🔴 Should Be Labeled \"Not Confirmed\" Until Live Source Verification:\n| Category | Examples | Why It Matters |\n|----------|----------|----------------|\n| **🚨 Emergency & Safety Events** | Active threats, evacuations, infrastructure failures, fire/flood spread | Prevents panic, ensures life-safety instructions come from official channels |\n| **📰 Breaking News & Early Reports** | Eyewitness claims, police/fire scanner audio, social media posts | Avoids amplifying misinformation before journalistic or official verification |\n| **🌍 Environmental & Weather Data** | Unverified storm tracks, wildfire perimeters, air quality spikes, earthquake aftershock forecasts | Models & early sensor data often require ground-truth calibration |\n| **🏥 Health & Public Safety** | Disease clusters, contamination alerts, product recalls, symptom trends | Mislabeling can trigger unnecessary fear or dangerous self-treatment |\n| **💰 Financial & Market Rumors** | Unannounced mergers, insider claims, unofficial economic indicators | Regulatory bodies (SEC, FINRA) require clear distinction between rumors and filings |\n| **👥 User/Community-Submitted Reports** | Crowd-sourced incidents, damage photos, crowd counts, traffic jams | Prone to duplication, bias, or outdated info without official cross-check |\n| **🤖 AI-Generated or Algorithmic Outputs** | Predictive summaries, synthesized news, automated translations of developing events | AI can hallucinate or miscontextualize time-sensitive data |\n\n### ✅ How to Label Effectively:\n- **Use clear, non-negotiable UI tags**: `⚠️ Unverified`, `🕒 Preliminary`, `🔍 Awaiting Official Confirmation`\n- **Always show**: Timestamp of report, source type (e.g., `User-submitted`, `AI-generated`, `Scanner audio`), and a button/link to `Check Live Official Sources`\n- **Never**: Auto-push unverified data as actionable advice, use alert banners for unconfirmed info, or imply official endorsement\n- **Update dynamically**: Automatically",
+    "latency_ms": 40021.393916002125,
+    "prompt_tokens": 26,
+    "completion_tokens": 1721,
+    "total_tokens": 1747,
+    "estimated_input_cost": 6.987499999999999e-06,
+    "estimated_output_cost": 0.0011388,
+    "total_cost": 0.0033644,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-043",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Given this itinerary, what should I do after Tiananmen Square?",
+    "response_text": "Since you didn't attach or paste the itinerary in your message, I can't see your specific plans! However, in almost every standard Beijing itinerary, the immediate next step after Tiananmen Square is the **Forbidden City (The Palace Museum)**. \n\nYou can walk directly from the north end of Tiananmen Square through the Meridian Gate to enter the Forbidden City. \n\n**If you'd like, paste your itinerary or let me know what you're interested in, and I can give you a tailored recommendation for what to do next!**",
+    "latency_ms": 18652.834624997922,
+    "prompt_tokens": 24,
+    "completion_tokens": 552,
+    "total_tokens": 576,
+    "estimated_input_cost": 5.0375e-06,
+    "estimated_output_cost": 0.0002491125,
+    "total_cost": 0.0010842,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-044",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What is my next stop and why is it sequenced that way?",
+    "response_text": "I don't have any context about your trip, route, or itinerary, so I can't determine your next stop or the reasoning behind its sequence. To help you accurately, please share:\n\n- Your current location or last stop\n- Your full list of planned destinations (or a general goal/endpoint)\n- What system or tool you're following (e.g., GPS app, delivery routing software, travel itinerary, game/quest log, etc.)\n- Any constraints like time windows, traffic, fuel, appointments, or priority stops\n\nOnce I have those details, I can explain exactly why that stop is sequenced next and how the routing logic works.",
+    "latency_ms": 14069.589833001373,
+    "prompt_tokens": 24,
+    "completion_tokens": 602,
+    "total_tokens": 626,
+    "estimated_input_cost": 4.3875e-06,
+    "estimated_output_cost": 0.0002939625,
+    "total_cost": 0.0011817,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-045",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Summarize the next step in my Beijing route after the Forbidden City.",
+    "response_text": "Since you didn't share your full itinerary, the most geographically seamless and universally recommended next step is **Jingshan Park**:\n\n• **Location:** Directly across the street from the Forbidden City's North Gate (Shenwu Gate).  \n• **Time Needed:** ~30–45 minutes.  \n• **What to Do:** A quick 10-minute walk up a man-made hill to the Wanchun Pavilion.  \n• **Why It's Next:** It offers the only official, head-on panoramic view of the entire Forbidden City and Beijing's central axis. It's also a historic imperial garden with quiet paths and cultural markers.  \n• **Practical Tip:** Enter before 3:30 PM for optimal lighting and to ensure park access. Bring water, and keep your ticket ready if you bought a combo pass.\n\nIf you share your actual route, arrival time, or interests (e.g., hutongs, food, museums, or relaxation), I'll instantly refine this to match your exact schedule!",
+    "latency_ms": 47378.63941700198,
+    "prompt_tokens": 25,
+    "completion_tokens": 1666,
+    "total_tokens": 1691,
+    "estimated_input_cost": 5.60625e-06,
+    "estimated_output_cost": 0.0004329,
+    "total_cost": 0.003256825,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-046",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I am short on time; which stop should I shorten first?",
+    "response_text": "Shorten the stop that delivers the **least value toward your primary goal** and has **no downstream dependencies**. \n\nQuick decision filter:\n⏱️ **Compress first:** Optional/flexible stops, filler activities, or long transitions.  \n📍 **Keep intact:** Must-see/must-complete stops, time-sensitive bookings, or hubs you need to reach.  \n⚠️ **Never shorten:** Stops with fixed reservations, safety needs, or that unlock later steps.\n\nReply with your stops + main objective (1 line) and I'll tell you exactly which to trim.",
+    "latency_ms": 28966.46279100969,
+    "prompt_tokens": 23,
+    "completion_tokens": 1036,
+    "total_tokens": 1059,
+    "estimated_input_cost": 4.3875e-06,
+    "estimated_output_cost": 0.00025252499999999997,
+    "total_cost": 0.002027675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-047",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "If I have only 30 minutes left, how should I adjust the remaining route?",
+    "response_text": "To give you a precise reroute instantly, I need: **your current location, your destination, transport mode, and which stops are mandatory vs. optional.** \n\nWhile you gather that, here’s your immediate 30-minute action plan:\n\n1. **Keep only must-do stops.** Drop everything optional. If a stop isn't critical to your core goal, skip it.\n2. **Open traffic-aware navigation.** Use Google Maps or Waze, enter only your final essential destination, and accept the *fastest* (not shortest) route. Real-time routing will outperform guesswork.\n3. **Factor in arrival friction.** If parking, building entry, or walk-up time will eat 5–10 minutes, leave a buffer. Adjust departure accordingly.\n4. **Communicate & stay safe.** Text/email anyone expecting you with your ETA. Never break traffic laws or take unverified shortcuts to save minutes; the risk isn't worth it.\n\n📍 **Reply with:**  \n`[Current location] → [Destination] | [Car/Walk/Transit/Bike] | Mandatory stops: [X] | Optional stops: [Y]`  \nI’ll instantly give you an optimized route with ETAs and what to drop.",
+    "latency_ms": 25691.7731249996,
+    "prompt_tokens": 28,
+    "completion_tokens": 1109,
+    "total_tokens": 1137,
+    "estimated_input_cost": 5.849999999999999e-06,
+    "estimated_output_cost": 0.00051675,
+    "total_cost": 0.00217165,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-048",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I skipped the current stop; what should I do next?",
+    "response_text": "Don't worry—this happens all the time. Here’s exactly what to do next:\n\n1. **Stay calm & check your location**  \n   Look at the transit map inside, check a transit app, or note the name of the next stop. If you're unsure, politely ask the driver or a station staff member.\n\n2. **Get off at the very next stop**  \n   In almost all systems, you can simply wait for the next vehicle going in the **opposite direction** to get back on track. Don't try to cross tracks or jaywalk to catch a return trip.\n\n3. **Check if your route loops**  \n   Some bus routes are circular or naturally turn back. If yours does, you can stay on until it comes back around to your missed stop or destination.\n\n4. **Use a transit app to reroute**  \n   Open Google Maps, Citymapper, Apple Maps, or your local transit app. It will instantly show your current location, the best way back, and estimated wait times.\n\n5. **Mind fare & transfer rules**  \n   On buses, your existing fare/ticket usually covers the return trip. On trains or subways, you may need a return ticket or transfer, but in most systems, traveling back to your missed stop doesn't cost extra if you don't exit fare control.\n\n6. **Ask for help if unsure**  \n   Drivers, station agents, transit police, or even fellow riders are usually happy to point you in the right direction.\n\n📍 **Want exact steps?** Tell me:\n- What you're riding (bus, subway, commuter train, tram, etc.)\n- Your city or transit system\n- Your original destination stop\n\nI’ll give you a precise reroute and what to expect.",
+    "latency_ms": 44056.32733399398,
+    "prompt_tokens": 22,
+    "completion_tokens": 1302,
+    "total_tokens": 1324,
+    "estimated_input_cost": 4.0625e-06,
+    "estimated_output_cost": 0.00074685,
+    "total_cost": 0.00254605,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-049",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I am tired; give me the least walking-heavy next step.",
+    "response_text": "**Next step (zero walking):** Find a seat or couch, set a 10-minute timer, and close your eyes. If your goal isn't urgent, rest is the actual next step. \n\nIf you *do* need to move something forward right now, tell me **one** specific task or destination you're working toward. I'll instantly map the most desk/couch/phone-based route with zero walking required.",
+    "latency_ms": 29718.148667001515,
+    "prompt_tokens": 23,
+    "completion_tokens": 934,
+    "total_tokens": 957,
+    "estimated_input_cost": 4.3875e-06,
+    "estimated_output_cost": 0.0001759875,
+    "total_cost": 0.001828775,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-050",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I want a quick lunch break between stops; where should I insert it?",
+    "response_text": "I'd love to help you slot it in perfectly, but I'll need a bit more context! Please share:\n- Your planned stops in order\n- Approximate travel times or route\n- How long \"quick lunch\" means for you (30 min? 45?)\n- Any preferences (walkable, near transit, specific food, budget, indoor/outdoor)\n\n**In the meantime, here's how to pick the best insertion point:**\n- ⏱️ **Mid-route**: Aim for the break around the 3–4 hour mark or roughly halfway through your total travel time, when energy and focus naturally dip.\n- 📍 **Near a flexible stop**: Insert it after a stop that doesn't require strict reservations, fixed departure times, or tight entry windows.\n- 🚶 **Logistics-friendly**: Choose a spot within a 5–10 minute walk from your route, parking, or next transit stop.\n- 🕐 **Beat the rush**: If possible, schedule it at 11:00–11:30 or 1:30–2:00 to avoid lines and wait staff delays.\n- 🍱 **Safety nets**: Have a backup \"grab-and-go\" option nearby in case your first choice is full or slow.\n\nDrop your itinerary (even rough) and I'll pinpoint the exact stop, timing, and type of spot to slot it in without derailing your day!",
+    "latency_ms": 28453.684542007977,
+    "prompt_tokens": 25,
+    "completion_tokens": 958,
+    "total_tokens": 983,
+    "estimated_input_cost": 5.44375e-06,
+    "estimated_output_cost": 0.000546975,
+    "total_cost": 0.001876225,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-051",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Which stop in this route is best for photos?",
+    "response_text": "I'd love to help, but you haven't mentioned the route or the stops! Could you please share:\n\n📍 **The name or location of the route**  \n📍 **The list of stops/locations** along the way  \n📍 **What kind of photography you're going for** (e.g., scenic landscapes, architecture, street, wildlife, golden hour/sunsets, night shots, etc.)\n\nOnce I have those details, I’ll gladly rank the stops by photogenic potential, suggest the best times of day to visit them, and even share tips for angles or composition! 📸✨",
+    "latency_ms": 14865.067167003872,
+    "prompt_tokens": 20,
+    "completion_tokens": 545,
+    "total_tokens": 565,
+    "estimated_input_cost": 3.5749999999999997e-06,
+    "estimated_output_cost": 0.0002461875,
+    "total_cost": 0.00106925,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-052",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What is the best order for these two remaining stops if I want an easier pace?",
+    "response_text": "I'd be happy to help, but I'm missing a few key details! To recommend the best order for an easier pace, could you share:\n\n1. **What are the two stops?** (Names/locations or addresses)\n2. **Where are you starting from** (or where will you be right before visiting them)?\n3. **How are you traveling?** (Walking, driving, cycling, public transit, etc.)\n4. **Any notable terrain or timing factors?** (Hills, stairs, traffic patterns, opening hours, expected fatigue, etc.)\n\n**General rule of thumb for an easier pace:**\n- If one stop requires more energy (steep walk, lots of stairs, dense crowds), do it **first** while you're fresh, then hit the easier/more relaxed stop.\n- If travel between points is a big factor, **minimize backtracking** by visiting them in geographic order from your starting point.\n- If one stop has strict hours or crowds to beat, schedule around that to reduce stress.\n\nDrop those details and I'll give you a clear, optimized sequence!",
+    "latency_ms": 20047.236040991265,
+    "prompt_tokens": 27,
+    "completion_tokens": 765,
+    "total_tokens": 792,
+    "estimated_input_cost": 6.3375e-06,
+    "estimated_output_cost": 0.00046751249999999996,
+    "total_cost": 0.001500525,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-053",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I just finished the palace section; what should I do next?",
+    "response_text": "To give you accurate next steps, I'll need to know **which game you're playing**. \"Palace section\" appears in quite a few games (e.g., *Elden Ring*, *The Legend of Zelda: Tears of the Kingdom*, *Final Fantasy VII Rebirth*, *Persona 5*, *Assassin's Creed Mirage*, *Genshin Impact*, *Dark Souls III*, etc.).\n\nReply with:\n1. **Game title** (and platform/version if relevant)\n2. **Spoiler preference**: Do you want quick hints, exact directions, or story-safe guidance?\n\nOnce I know, I’ll map out your next objective, key items to grab, and any traps/optional content to watch out for!",
+    "latency_ms": 17398.68441699946,
+    "prompt_tokens": 23,
+    "completion_tokens": 661,
+    "total_tokens": 684,
+    "estimated_input_cost": 4.7125e-06,
+    "estimated_output_cost": 0.0002832375,
+    "total_cost": 0.001296425,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-054",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "If I am currently at the first stop, what should the app tell me now?",
+    "response_text": "To give you the most accurate answer, I'd need a bit more context (e.g., what kind of app or transport you're using: bus, train, rideshare, tour, delivery, etc.). However, based on standard transit/navigation app design, **when you're at the first stop, a well-built app should tell you**:\n\n1. **Location Confirmation**: `You're at [Stop Name] • Stop 1 of [X]`\n2. **Real-Time Departure Info**: `Next departure: [Time] • In [X] mins` (with delay/status alerts if any)\n3. **Boarding Details**: Platform/gate number, bike/carriage info, or `Boarding open/closed`\n4. **What to Do Right Now**: `Scan your ticket`, `Wait behind the yellow line`, `Tap to validate`, or `Board when the doors open`\n5. **Trip Preview**: Final destination, estimated travel time, and the next 2–3 stops\n6. **Quick Actions**: `Report a delay`, `View live vehicle location`, `Switch to offline mode`, or `Get walking directions to the correct platform`\n\n💡 **If you're already on board**, it should shift to: tracking progress, alerting you before your next stop, and showing remaining time/stops.\n\nReply with your app name, transport mode, and whether you're waiting, boarding, or already on the vehicle, and I'll tell you exactly what it should be displaying right now.",
+    "latency_ms": 28535.6751250074,
+    "prompt_tokens": 27,
+    "completion_tokens": 1148,
+    "total_tokens": 1175,
+    "estimated_input_cost": 5.60625e-06,
+    "estimated_output_cost": 0.0006049875,
+    "total_cost": 0.002247375,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-055",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give me a one-sentence next-action message for a mobile UI.",
+    "response_text": "Tap \"Continue\" to save your progress and proceed to the next step.",
+    "latency_ms": 19621.22349999845,
+    "prompt_tokens": 24,
+    "completion_tokens": 785,
+    "total_tokens": 809,
+    "estimated_input_cost": 4.79375e-06,
+    "estimated_output_cost": 3.2175e-05,
+    "total_cost": 0.00153855,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-056",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Give me a more detailed next-step explanation for the same itinerary.",
+    "response_text": "I’d be glad to give you a detailed, step-by-step next-phase plan! However, I don’t see the original itinerary in this message. Could you please paste it or share a quick summary? Even a rough outline like this will work perfectly:\n\n📍 **Destination(s):**  \n📅 **Travel dates:**  \n👥 **Travelers:** (solo, couple, family, group, etc.)  \n🎯 **Key activities/reservations already made:**  \n📦 **Current planning stage:** (just starting, flights booked, hotels pending, finalizing details, etc.)\n\nOnce I have that, I’ll deliver a customized, timeline-driven next-step breakdown that includes:\n✅ **Immediate actions** (next 7–14 days)  \n✅ **Mid-planning milestones** (2–4 weeks out)  \n✅ **Final prep & logistics** (1–2 weeks before departure)  \n✅ **Day-of execution tips** (transfers, check-ins, backups, contacts)  \n✅ **Destination-specific notes** (visas, transit passes, weather prep, cultural/logistical quirks)\n\nJust drop the itinerary (or fill in the template above) and I’ll map out exactly what to do, when, and how to do it efficiently.",
+    "latency_ms": 24254.268999997294,
+    "prompt_tokens": 23,
+    "completion_tokens": 896,
+    "total_tokens": 919,
+    "estimated_input_cost": 5.60625e-06,
+    "estimated_output_cost": 0.0005045624999999999,
+    "total_cost": 0.001754675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-057",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "What should the app say if the user asks What now? during the route?",
+    "response_text": "When a user asks **\"What now?\"** during active navigation, the app should respond with a **context-aware, safety-first, and concise** update that restores confidence and keeps them moving. Here’s a proven framework:\n\n### 🎯 Core Response Structure (Voice/UI)\n`[Distance/Time] + [Next Maneuver] + [Route Status] + [Optional Reassurance/Next Cue]`\n\n**Example:**  \n> *\"In 400 feet, turn right onto Elm Street. You're on track. I'll call out your next turn.\"*\n\n---\n\n### 🔄 Contextual Variations\n| Situation | Recommended Response |\n|----------|----------------------|\n| **Standard mid-route** | `\"Continue straight for 1.2 miles. Next turn is onto Pine Ave.\"` |\n| **Just completed a maneuver** | `\"Stay in the right lane. Your exit is in 0.8 miles.\"` |\n| **Heavy traffic/delay** | `\"Traffic ahead is slow. Continue on this road; adds ~8 minutes to your trip.\"` |\n| **Off route / missed turn** | `\"You've left the route. Recalculating... Turn around when safe, or I'll find a new path.\"` |\n| **Approaching destination** | `\"Your destination is on the right in 200 feet. Park safely when ready.\"` |\n| **Stopped / waiting** | `\"Navigation paused. Tap 'Resume' or say 'Continue' when ready to drive.\"` |\n\n---\n\n### ✅ Best Practices\n1. **Keep voice ≤ 5 seconds** – Drivers can't process complex info while moving.\n2. **Always confirm route status** – \"You're on track\" reduces anxiety; flag deviations immediately.\n3. **Avoid jargon** – Use \"turn right\" not \"proceed to starboard maneuver\".\n4. **Match user modality** – \n   - 🎧 **Voice**: Ultra-brief, action-first.\n   - 📱 **Screen**: Show progress bar, next 2 maneuvers, ETA, traffic overlay.\n5. **Offer an out** – `\"Say 'details' or tap the route to see full directions.\"`\n6. **Adapt to transport mode** – Walking/cycling/biking need different cues (e.g., \"Cross at the crosswalk ahead\" vs \"Merge onto highway\").\n\n---\n\n### 💡 Why This Works",
+    "latency_ms": 40833.25729100034,
+    "prompt_tokens": 26,
+    "completion_tokens": 1692,
+    "total_tokens": 1718,
+    "estimated_input_cost": 5.5250000000000005e-06,
+    "estimated_output_cost": 0.0009160125,
+    "total_cost": 0.00330785,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-058",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Replace Jingshan Park with another nearby scenic stop.",
+    "response_text": "A great nearby replacement is **Beihai Park (北海公园)**, located just a **5–10 minute walk** west of Jingshan Park. \n\n**Why it works as a swap:**\n- 🌊 **Scenic & Relaxed**: Centered around a large, serene lake with the iconic White Dagoba (Baita) on Qionghua Island. Tree-lined paths, traditional pavilions, and classic imperial garden landscaping.\n- 🚶‍♀️ **Logistically Simple**: Directly adjacent to the same tour loop (Forbidden City → Beihai → Shichahai). No extra transit needed.\n- 📸 **Photogenic & Peaceful**: Less crowded at the north/east shores, with classic Beijing lake-and-pagoda photo ops. You can also take a short rowboat ride if time allows.\n\n**Other nearby options depending on your preferred vibe:**\n- **Shichahai (后海/前海)**: ~15 min walk. More lively, with willow-lined banks, historic hutongs, temple courtyards, and cafés. Great for a slower stroll or evening walk.\n- **Zhongshan Park**: Directly south of the Forbidden City. Quiet, landscaped with ancient cypresses and seasonal flowers, but offers fewer panoramic views than Jingshan.\n\nIf you share your itinerary's pacing or what you liked about Jingshan (views, history, photography, green space, etc.), I can suggest the best fit and adjust timing or entry tips accordingly.",
+    "latency_ms": 36908.2125829882,
+    "prompt_tokens": 21,
+    "completion_tokens": 1323,
+    "total_tokens": 1344,
+    "estimated_input_cost": 4.3875e-06,
+    "estimated_output_cost": 0.0006069375000000001,
+    "total_cost": 0.002586675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-059",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Remove the museum stop and keep the route balanced.",
+    "response_text": "I'd be happy to help adjust your route! To remove the museum stop while keeping everything well-balanced, I'll need a few details about your current plan:\n\n1. **Current stops & order** (names, sequence, and estimated time spent at each)\n2. **Geographic layout** (city/region, or approximate distances/travel times between stops)\n3. **What \"balanced\" means to you** (e.g., even daily pacing, minimized backtracking, consistent mix of activity types, or equal travel vs. on-site time)\n4. **Should the freed-up time be redistributed**, or are you keeping the total route shorter? If redistributing, do you want to extend existing stops, add a new location, or simply leave buffer/rest time?\n\nShare those details and I'll reorganize the route to keep it smooth, logical, and evenly paced.",
+    "latency_ms": 19002.83845899685,
+    "prompt_tokens": 20,
+    "completion_tokens": 773,
+    "total_tokens": 793,
+    "estimated_input_cost": 4.14375e-06,
+    "estimated_output_cost": 0.0003822,
+    "total_cost": 0.00151385,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-060",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Reorder the route so the easiest stop comes first.",
+    "response_text": "I'd be happy to help! Could you please share:\n\n1. **The list of stops** on your route\n2. **What \"easiest\" means** in your context (e.g., shortest distance, least elevation change, most accessible, lowest physical difficulty, quickest to visit, etc.)\n3. **Your starting point** (if different from the first stop)\n\nOnce I have those details, I'll reorder the route with the easiest stop first and can even suggest a logical flow for the rest if needed!",
+    "latency_ms": 13861.367416990106,
+    "prompt_tokens": 21,
+    "completion_tokens": 516,
+    "total_tokens": 537,
+    "estimated_input_cost": 4.0625e-06,
+    "estimated_output_cost": 0.000219375,
+    "total_cost": 0.001013025,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-061",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I want fewer stairs; change the remaining route.",
+    "response_text": "I'd be glad to help you adjust your route to minimize stairs! However, I don't have access to your current location, destination, or real-time navigation data. To give you a precise alternative, please share:\n\n📍 Your starting point & destination  \n🚶 Preferred mode of travel (walking, public transit, etc.)  \n🏙️ City or neighborhood you're in  \n♿ Any specific accessibility needs (e.g., elevator-only, ramp preferred, max number of steps)\n\n**In the meantime, here's how you can quickly find a low-stair route:**\n- **Google Maps:** Tap `Options` → turn on `Wheelchair accessible` → it will automatically prioritize ramps, elevators, and step-free paths.\n- **Apple Maps:** Select `Walking` → tap `Route Options` → enable `Accessibility` features.\n- **Citymapper / Transit apps:** Look for the ♿ or `Step-Free` filter when planning trips with public transport.\n- **Street-level check:** Use Street View to spot ramps, ground-level entrances, or building elevators near key intersections.\n\nReply with your details and I'll map out a customized, low-stair alternative for you!",
+    "latency_ms": 21858.793916995637,
+    "prompt_tokens": 20,
+    "completion_tokens": 883,
+    "total_tokens": 903,
+    "estimated_input_cost": 3.9e-06,
+    "estimated_output_cost": 0.0005221125,
+    "total_cost": 0.00172835,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-062",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Swap the next stop for something more child-friendly.",
+    "response_text": "I'd be glad to help! To give you a spot that's truly a good fit, I just need a few quick details:\n\n1. **Where are you right now** (city, neighborhood, or current stop)?\n2. **What ages are the kids**, and what do they tend to love most? (e.g., animals, hands-on science, playgrounds, gentle boat rides, interactive museums, etc.)\n3. **How much time** do you want to spend at this next stop?\n4. **Indoor vs. outdoor** preference, and any budget/accessibility notes?\n5. **What was the original next stop?** (So I can keep travel time and routing in mind.)\n\nDrop those details and I’ll give you 2-3 highly rated, kid-tested alternatives that slot smoothly into your route.",
+    "latency_ms": 16135.840250004549,
+    "prompt_tokens": 20,
+    "completion_tokens": 734,
+    "total_tokens": 754,
+    "estimated_input_cost": 4.30625e-06,
+    "estimated_output_cost": 0.00032565000000000003,
+    "total_cost": 0.0014378,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-063",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Make this route more photography-focused.",
+    "response_text": "I'd be happy to redesign it for photography! However, I don't see the original route in your message. Could you please share:\n\n1. **The route** (starting point, key stops, ending point, duration/days)\n2. **Location/region** (city, national park, country, etc.)\n3. **Preferred photography style(s)** (landscape, street, architecture, wildlife, astrophotography, macro, etc.)\n4. **Time of year & how many hours/days you have**\n5. **Travel mode** (driving, hiking, public transit, cycling, etc.)\n6. **Any constraints** (mobility/accessibility, gear weight limits, permit requirements, budget)\n\n📸 **Once you provide that, I'll deliver:**\n- ⏱️ Optimized shooting schedule (golden/blue hour, tide/moon phase if relevant)\n- 📍 Exact viewpoint coordinates & lesser-known alternate frames\n- 🌤️ Seasonal lighting/weather notes per stop\n- 🎒 Location-specific gear & lens recommendations\n- ⏸️ Realistic pacing built for composition, not just transit\n- 🚗🚶 Logistics (parking, trail conditions, permits, safety, backup indoor/overcast spots)\n\nPaste the route whenever you're ready, and I'll turn it into a photographer's roadmap!",
+    "latency_ms": 19440.3536250029,
+    "prompt_tokens": 17,
+    "completion_tokens": 909,
+    "total_tokens": 926,
+    "estimated_input_cost": 3.33125e-06,
+    "estimated_output_cost": 0.0005430750000000001,
+    "total_cost": 0.001778075,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-064",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Shorten the itinerary from three stops to two.",
+    "response_text": "I'd be glad to help! Please share the original three-stop itinerary, and I'll streamline it to two while keeping the highlights, logical travel flow, and your priorities in mind. Let me know if you have a preference for which stop to keep or remove!",
+    "latency_ms": 9637.260625007912,
+    "prompt_tokens": 20,
+    "completion_tokens": 391,
+    "total_tokens": 411,
+    "estimated_input_cost": 3.7375e-06,
+    "estimated_output_cost": 0.00012138749999999999,
+    "total_cost": 0.00076895,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-065",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Add one quieter stop after the Forbidden City.",
+    "response_text": "A highly recommended quieter stop is **Zhongshan Park (中山公园)**.\n\n**Why it works:**\n- **Proximity & Flow:** Just a 5–10 minute walk southwest of the Forbidden City's Meridian Gate (exit through Tiananmen Square, turn left at the flagpole, cross Chang'an Avenue, and enter the west gate). Fits naturally without backtracking.\n- **Genuinely quieter:** While the Forbidden City and nearby Beihai/Jingshan draw massive crowds, Zhongshan Park sees mostly locals practicing tai chi, reading, or strolling. Tour buses rarely stop here.\n- **Cultural depth:** Originally the imperial **Altar of Land and Grain (Shejitan)**, it preserves a more contemplative, scholarly atmosphere with ancient cypress groves (some over 500 years old), quiet pavilions, and traditional Chinese landscaping.\n\n**What to do there:**\n- Walk the shaded paths around **Huixin Pond** and the ancient pine-bamboo-cypress groves\n- See the historic **Loyal and Righteous (忠) stone tablet** and the well-preserved altar terraces\n- If visiting in April–May, enjoy the famous peony gardens in near solitude\n\n**Logistics:**\n🎫 Entrance: ~¥3  \n⏰ Hours: 6:00–21:00 (seasonal variations)  \n🚶 Best time for quiet: Weekday afternoons (2–4 PM), right after most tour groups leave the Forbidden City area.\n\nThis gives you a calm, culturally rich buffer between the imperial grandeur and whatever comes next on your day. Let me know your exit gate or next destination, and I can fine-tune the walking route.",
+    "latency_ms": 59348.572292001336,
+    "prompt_tokens": 19,
+    "completion_tokens": 2471,
+    "total_tokens": 2490,
+    "estimated_input_cost": 3.7375e-06,
+    "estimated_output_cost": 0.0007097999999999999,
+    "total_cost": 0.004824625,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-066",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Remove the most crowded stop and keep the rest of the route reasonable.",
+    "response_text": "I'd be happy to help you adjust your route, but I need a bit more context! Could you please share:\n\n1. **The route or itinerary** (e.g., bus/train line, road trip plan, tour stops, etc.)\n2. **The current list of stops/locations**\n3. **How you're measuring \"crowded\"** (e.g., real-time data, typical rush hour, historical visitor volume, etc.)\n4. **What \"reasonable\" means for your adjusted route** (max travel time, walking distance, transit connections, preferred areas, etc.)\n\nOnce you provide those details, I can quickly identify the busiest stop, remove it, and suggest a smooth, logical alternative path for the rest.",
+    "latency_ms": 17242.961291995016,
+    "prompt_tokens": 24,
+    "completion_tokens": 685,
+    "total_tokens": 709,
+    "estimated_input_cost": 5.76875e-06,
+    "estimated_output_cost": 0.0003037125,
+    "total_cost": 0.00134355,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-067",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Make the route slower and less tiring.",
+    "response_text": "I'd be glad to help you adjust your route to be slower and more comfortable! To tailor it properly, I just need a few details:\n\n📍 **Starting point & destination** (city, addresses, or landmarks)  \n🚗 **Travel mode** (walking, cycling, driving, public transit, hiking, etc.)  \n⏱️ **Time you have or preferred pace** (e.g., \"no rush,\" \"max 3 hours,\" \"split over 2 days\")  \n🦽 **Any physical or comfort preferences** (avoid hills/stairs, need frequent rest stops, wheelchair accessible, shade, restrooms, cafes, etc.)  \n🗺️ **Current route** (if you're using a specific one, share it or paste the link)\n\nIn the meantime, here are proven ways to make almost any route slower and less tiring:\n✅ **Break it into shorter segments** with planned rests (e.g., every 0.5–1 mile walking, or 1–2 hours driving)  \n✅ **Choose flatter, dedicated paths** (bike lanes, greenways, boardwalks, or scenic byways)  \n✅ **Avoid steep climbs, heavy traffic, or crowded transit** by routing through quieter neighborhoods or off-peak roads  \n✅ **Add comfort stops** near parks, cafes, benches, or public restrooms  \n✅ **Use mixed transport** (e.g., train for the long stretch, then a short walk) to conserve energy  \n✅ **Pace yourself** by treating travel as part of the experience, not a race\n\nShare your details and I'll generate a customized, low-effort route with exact stop suggestions, pacing tips, and accessibility notes.",
+    "latency_ms": 23650.697417004267,
+    "prompt_tokens": 19,
+    "completion_tokens": 1089,
+    "total_tokens": 1108,
+    "estimated_input_cost": 3.0874999999999997e-06,
+    "estimated_output_cost": 0.0006825,
+    "total_cost": 0.002129725,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-068",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Change the route to prioritize historical landmarks.",
+    "response_text": "I'd be happy to help you reroute to focus on historical landmarks! To give you the most accurate and useful route, I'll need a few details:\n\n📍 **Starting point & destination**  \n🌍 **City, region, or country** you're exploring  \n🚶🚗 **Preferred mode of travel** (walking, driving, cycling, public transit, etc.)  \n⏱️ **Time or distance limits** for the trip  \n🏛️ **Any specific historical interests** (e.g., ancient sites, colonial architecture, WWII history, indigenous heritage, etc.)\n\nOnce you share those details, I'll plot a route that strings together the most significant historical landmarks in a logical order, balancing sightseeing time with efficient travel. Just let me know where you're headed!",
+    "latency_ms": 12968.902791995788,
+    "prompt_tokens": 18,
+    "completion_tokens": 651,
+    "total_tokens": 669,
+    "estimated_input_cost": 4.224999999999999e-06,
+    "estimated_output_cost": 0.00034368749999999997,
+    "total_cost": 0.0012753,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-069",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "Move the park visit to the end of the trip.",
+    "response_text": "I'd be glad to reorder your itinerary! However, I don't have your current trip plan yet. Could you please share your current schedule (days, activities, or locations)? Once I have it, I'll move the park visit to the end of the trip and send you an updated version right away.",
+    "latency_ms": 9085.48070800316,
+    "prompt_tokens": 21,
+    "completion_tokens": 423,
+    "total_tokens": 444,
+    "estimated_input_cost": 3.4937499999999994e-06,
+    "estimated_output_cost": 0.0001340625,
+    "total_cost": 0.000831675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-070",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I have half a day in Beijing and want history, light walking, and good photos. Build around that.",
+    "response_text": "Here’s a tightly paced, 4–4.5 hour route built for **light walking, layered history, and high-yield photo ops**. Everything is flat, paved, and logically sequenced to avoid backtracking.\n\n*(Assumes a morning start. I’ll note afternoon adjustments at the end.)*\n\n---\n\n### 📍 0:00–2:30 | Temple of Heaven (East Gate → South Gate)\n- **Enter East Gate** (`天坛公园东门`). Skip the crowded South Gate. Walk west along the 350m **Imperial Path** lined with 500-year-old cypresses to the **Hall of Prayer for Good Harvests**.\n- **History**: Built 1420 (Ming), expanded in Qing. Emperors performed winter solstice rites here. Architecture encodes Chinese cosmology: circular heaven (blue roof, 28 pillars for constellations), square earth (courtyards, 9-tier terraces).\n- **Light walking**: 100% flat. ~1.2 km total. Benches under trees every 100m. If energy dips, skip the **Circular Mound Altar** (15-min detour, 3 short staircases).\n- **Photo strategy**:\n  - Symmetry shot: Align the Hall’s central axis with the path. Arrive before 10:30 to avoid tour groups.\n  - Detail shots: Bronze door studs, coiled dragon pillars, and the triple-eave roof against blue sky.\n  - Pro tip: Shoot from the west side path for fewer heads in frame and softer backlight.\n\n---\n\n### 🚇 2:30–2:50 | Quick Transit to Hutong Network\n- Walk to **Tiantandongmen Station** (5 min, outside East Gate).\n- Take **Subway Line 5 → Dongsi Station** (1 stop, ~8 min). Exit **C2**.\n- Head west into the alleys around **Baitasi (White Pagoda Temple)**.\n\n---\n\n### 📍 2:50–4:00 | Baitasi Hutong Loop (~1 km, completely flat)\n- **Anchor point**: **White Dagoba Temple** (`妙应寺白塔`), founded 1271 under Kublai Khan. One of the oldest Tibetan Buddhist stūpas in China.",
+    "latency_ms": 89325.38308399671,
+    "prompt_tokens": 32,
+    "completion_tokens": 3580,
+    "total_tokens": 3612,
+    "estimated_input_cost": 7.88125e-06,
+    "estimated_output_cost": 0.0008350875,
+    "total_cost": 0.0069914,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-071",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I want two major attractions, simple English explanations, and not too much walking.",
+    "response_text": "I'd be happy to give you exactly that! To make sure the recommendations fit your trip, **please let me know which city or area you're planning to visit.** \n\nOnce you tell me the location, I’ll send you:\n✅ Two major attractions  \n✅ Short, simple English explanations  \n✅ Tips to visit each with minimal walking",
+    "latency_ms": 13141.106541996123,
+    "prompt_tokens": 26,
+    "completion_tokens": 427,
+    "total_tokens": 453,
+    "estimated_input_cost": 6.825e-06,
+    "estimated_output_cost": 0.0001506375,
+    "total_cost": 0.0008411,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-072",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I am traveling with parents who need frequent breaks; what route style fits best?",
+    "response_text": "For travelers whose parents need frequent breaks, the **hub-and-spoke route style** is strongly recommended. \n\n### Why it fits best:\n- **Minimizes daily travel**: You stay in one comfortable base and take short day trips (ideally ≤2–3 hours driving each way), avoiding long, exhausting stretches on the road.\n- **Consistent routine & amenities**: Same bed, familiar bathroom, reliable Wi-Fi, and easy access to pharmacies or medical care.\n- **Maximum flexibility**: Low-energy days? Skip an outing or swap it for a 30-minute nearby drive to a park or overlook. No packing, unpacking, or hotel check-ins.\n- **Easier to pace activities**: You can plan one main outing per day with built-in stops for coffee, stretching, or shade breaks.\n\n### How to execute it well:\n1. **Pick a strategic hub**: Look for a town/city with accessible lodging, flat or gentle walkability, good dining, and proximity to multiple low-intensity attractions.\n2. **Design \"break-aware\" spokes**: Map day trips that naturally include rest points (visitor centers, scenic pull-offs, cafes, rest areas with ADA facilities).\n3. **Avoid back-to-back travel**: Alternate active days with local/rest days. Even a \"stay in and read\" day can recharge older travelers.\n4. **Pre-vet stops**: Use tools like `iExit`, `Rest Areas Finder`, or `Roadtrippers` to filter for clean restrooms, benches, shade, and step-free access.\n5. **Build in a 30–50% time buffer**: Scenic routes, unexpected bathroom needs, or slower walking pace will naturally extend travel time. Over-scheduling causes fatigue.\n\n### Runner-up option: Scenic/Leisurely Linear Route\nIf you prefer moving forward daily, structure it as a **slow-paced scenic route** with overnight stops every 2–3 hours of driving. Prioritize highways or byways with frequent, well-maintained service plazas and avoid remote or mountainous roads with limited facilities.\n\n📍 *If you share your destination, travel mode (car, train, etc.), and approximate daily window, I can suggest specific hub towns, break-friendly spokes, and routing tools tailored to your trip.*",
+    "latency_ms": 38543.374041008065,
+    "prompt_tokens": 26,
+    "completion_tokens": 1340,
+    "total_tokens": 1366,
+    "estimated_input_cost": 6.58125e-06,
+    "estimated_output_cost": 0.001011075,
+    "total_cost": 0.00262145,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-073",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I prefer scenic views over museums; how should the itinerary change?",
+    "response_text": "To give you precise revisions, I’ll need your **current itinerary** (or at least destination(s), trip length, and how you’re getting around). In the meantime, here’s exactly how to shift any museum-heavy itinerary toward scenic views while keeping it realistic and enjoyable:\n\n### 🔁 Core Swaps & Adjustments\n| Current Element | Scenic Alternative | How to Implement |\n|----------------|-------------------|------------------|\n| 2–3 hr museum visit | Morning viewpoint + short trail or garden walk | Replace with locations under 1-2 hrs from your base. Start early for best light & fewer crowds. |\n| City-center gallery hopping | Coastal, riverside, or ridgeline route | Plan a loop drive or walkway with 3-4 designated photo/view stops. Use offline maps to mark pull-offs. |\n| Indoor historical/cultural exhibits | Open-air heritage sites or natural landmarks | Swap to cliff walks, ancient trails, waterfalls, or volcanic/geological parks set in landscapes. |\n| Guided museum tour | Scenic transport experience | Book a cable car, funicular, river ferry, or scenic railway that covers high-elevation or waterfront vistas. |\n\n### ⚙️ Logistical Shifts\n- **Transport**: Scenic spots are rarely walkable from central hotels. Rent a car, use regional transit with hop-on flexibility, or book local shuttle/day tours.\n- **Timing**: Align your schedule with **golden hours** (sunrise/sunset). Shift lunch earlier so you don’t miss peak light.\n- **Time Buffers**: Add 30–45 mins per major view stop for parking, short walks, tripod setup, or weather changes.\n- **Weather Backup**: Pick 1–2 sheltered scenic spots (greenhouses, covered observation decks, coastal cafés with panoramic windows) for rainy/foggy days.\n- **Reservations**: High-demand nature experiences (national park entry, cable cars, guided scenic hikes) often sell out. Book 1–4 weeks ahead.\n\n### 🗺️ Tools to Find Quality Scenic Stops\n- **AllTrails / Komoot**: Filter by “scenic,” “easy,” or “photo-friendly” trails.\n- **Google Earth + Maps Satellite**: Preview drop-offs, overlooks, and terrain before committing.\n- **Local tourism boards**: Search “[Destination] scenic drive,” “best viewpoints,” or “landscape walks.”\n- **",
+    "latency_ms": 40064.788208997925,
+    "prompt_tokens": 23,
+    "completion_tokens": 1512,
+    "total_tokens": 1535,
+    "estimated_input_cost": 5.5250000000000005e-06,
+    "estimated_output_cost": 0.0010647,
+    "total_cost": 0.002955875,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-074",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I only care about iconic first-time sights; what should the plan optimize for?",
+    "response_text": "Optimize for these five factors, in this order:\n\n1. **Icon Density & Tiered Priority**  \n   Maximize visits to globally recognized, first-tier landmarks. Rank your target sights by \"bucket-list\" status, then build the itinerary around that fixed set. Don't substitute or dilute with \"maybe\" or \"local favorite\" stops.\n\n2. **Geographic Clustering & Routing Efficiency**  \n   Group icons by proximity or transit hub. Optimize daily loops to minimize backtracking and dead transit time. The metric is *minutes moving between icons*, not total sights per day.\n\n3. **Peak Impact Timing**  \n   Schedule each sight for optimal viewing conditions: lighting for photos, lowest crowd density, and guaranteed operational windows. First-time iconic experiences break if you arrive at 2 PM on a rainy Tuesday when tickets are sold out.\n\n4. **Guaranteed Access**  \n   Pre-book timed entry, skip-the-line, and security-priority passes where available. Verify closure days, renovation scaffolds, and weather-dependent visibility. Optimize for *certainty of entry*, not flexibility.\n\n5. **Controlled Pacing (3–4 icons/day max)**  \n   Allocate enough time to actually see, photograph, and absorb each landmark without rushing. Overloading turns iconic sights into checklist items and drains the first-time impact.\n\n**Explicitly deprioritize:** neighborhood exploration, culinary detours, hidden gems, budget optimization (unless it blocks entry), \"vibe\" or wander time, and transit comfort that doesn't directly affect timing or access.\n\n**Execution rule:** Start with a locked list of icons → plot on a map → cluster into geographic days → reverse-plan from timed tickets/crucial opening windows → add 15–30% buffer for security/crowds/photo queues → cut anything that isn't globally iconic or logistically essential to reaching them.",
+    "latency_ms": 40440.76958300138,
+    "prompt_tokens": 26,
+    "completion_tokens": 1511,
+    "total_tokens": 1537,
+    "estimated_input_cost": 6.3375e-06,
+    "estimated_output_cost": 0.0008857874999999999,
+    "total_cost": 0.0029549,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-075",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I want a route that feels calm, not crowded, and easy to understand in English.",
+    "response_text": "To give you a route that’s calm, uncrowded, and easy to follow in English, I just need a few quick details:\n\n📍 **Location** (city, region, or country)  \n🚶 **Route type** (walking, cycling, scenic drive, or public transit)  \n⏱️ **Preferred length** (e.g., 45 min, 2 hours, half-day)  \n🌿 **What you'd like to see** (quiet parks, waterfront, historic streets, nature paths, etc.)\n\n**Example of what I’ll provide once you reply:**\n- Clear step-by-step directions in simple English  \n- Starting point & how to get there using public transit or parking  \n- Distance, time, and difficulty  \n- Why it stays calm & tips to avoid crowds  \n- Landmarks & signs to follow (all in English)\n\nJust share your location and preferences, and I’ll give you a peaceful, straightforward route tailored to you.",
+    "latency_ms": 21572.657708005863,
+    "prompt_tokens": 28,
+    "completion_tokens": 916,
+    "total_tokens": 944,
+    "estimated_input_cost": 6.41875e-06,
+    "estimated_output_cost": 0.0003836625,
+    "total_cost": 0.0017953,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-076",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I am interested in imperial history but not long indoor visits; what should be recommended?",
+    "response_text": "To give you the most relevant recommendations, it helps to know **which empire(s)** interest you and your **preferred region or travel range**. That said, here are four highly curated, outdoor-focused imperial history experiences that keep indoor time brief or optional:\n\n### 🏛️ 1. **Hadrian's Wall Path (Northern England) | Roman Empire**\n- **Why it fits:** Walk the northern frontier of Roman Britain across moors, cliffs, and Roman roads. The landscape itself tells the story of imperial defense, trade, and cultural contact.\n- **Indoor time:** Visitor centres (like Vindolanda or Housesteads) have optional indoor displays. You can easily limit visits to 20–30 mins or skip them entirely and read open-air interpretive panels.\n- **Pro tip:** Hike the Cawfields to Walltown section (5 miles) for ruins, dramatic views, and minimal crowds. Use the official app for offline audio guides that play outdoors.\n\n### ⚓ 2. **Portsmouth & Southsea Coastal Defences (Southern England) | British Naval Empire**\n- **Why it fits:** The Royal Navy was the backbone of British imperial expansion. Walk the dockyard walls, explore open-air warships, and follow coastal battery trails that once projected power globally.\n- **Indoor time:** The Historic Dockyard ticket includes indoor exhibits, but you can focus entirely on exterior ship decks, memorials, and the open-air Spinnaker Tower viewpoint. Book a \"hard hat\" or outdoor-only guided tour to bypass museums.\n- **Pro tip:** Follow the **Round Britain Monument Trail** or join a Portsmouth City Council \"Imperial Ports\" walking route. Most lasts 1.5–2 hours entirely outdoors.\n\n### 🌍 3. **Cape Coast & Elmina Castles (Ghana Coast) | European Imperial & Atlantic Trade**\n- **Why it fits:** These coastal forts were strategic nodes in the Portuguese, Dutch, and British empires. The courtyards, battlements, and ocean vistas vividly illustrate imperial logistics, coercion, and resistance.\n- **Indoor time:** Guided tours include brief indoor sections (dungeons, administrative rooms). You can politely request an exterior-focused commentary or stick to the open courtyards and ramparts.\n- **Pro tip:** Arrive early, book with a local guide who specializes in *outdoor-focused* imperial history, and walk the coastal path",
+    "latency_ms": 57512.90358400729,
+    "prompt_tokens": 27,
+    "completion_tokens": 2249,
+    "total_tokens": 2276,
+    "estimated_input_cost": 7.393749999999999e-06,
+    "estimated_output_cost": 0.0011022375,
+    "total_cost": 0.004394325,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-077",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I want the app to speak in very simple English because I am not fluent.",
+    "response_text": "I understand. I will use very simple English now. \n\nI will:\n- Use short sentences.\n- Use easy, common words.\n- Avoid idioms and slang.\n- Explain any hard word if it comes up.\n\nPlease tell me anytime if something is unclear. I am happy to help. \n\nWhat do you need help with today?",
+    "latency_ms": 12363.007666004705,
+    "prompt_tokens": 26,
+    "completion_tokens": 478,
+    "total_tokens": 504,
+    "estimated_input_cost": 5.76875e-06,
+    "estimated_output_cost": 0.0001360125,
+    "total_cost": 0.00094055,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-078",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I have one afternoon, prefer outdoor stops, and want a good sunset location.",
+    "response_text": "I’d be happy to map that out for you! To give you accurate, actionable stops, I just need to know:\n\n- **City or region** you'll be in? \n- **How you're getting around** (car, transit, walking/biking)?\n- **Preferred vibe** (beach/ocean, mountain overlook, forest/waterfront trail, urban park, etc.)?\n\nOnce I have your location, I’ll build a tight 3-hour itinerary with 2-3 outdoor stops, realistic walk/drive times, and an exact sunset viewpoint (facing west, unobstructed horizon, and best arrival time). What area are we working with?",
+    "latency_ms": 17970.59425000043,
+    "prompt_tokens": 26,
+    "completion_tokens": 805,
+    "total_tokens": 831,
+    "estimated_input_cost": 6.174999999999999e-06,
+    "estimated_output_cost": 0.000260325,
+    "total_cost": 0.0015782,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-079",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I want a route that works well for solo travel and photos.",
+    "response_text": "To give you the most useful route, I’ll need a few quick details:\n📍 **Which region/country are you open to?**  \n🎒 **Trip length & pace?** (e.g., 7 days relaxed, 14 days fast-paced)  \n📸 **Photography style?** (landscapes, street/architecture, culture, wildlife, night/astrophotography, etc.)  \n💰 **Budget tier & travel style?** (hostels/mid/lux, public transit/car rental, social vs. quiet)\n\nIn the meantime, here are **3 highly rated solo + photography routes** across different vibes and continents. Each is chosen for safety, navigability, infrastructure, and consistent photo opportunities.\n\n---\n\n### 🇯🇵 1. Japan: Osaka → Kyoto → Nara → Koyasan (7–10 days)\n**Why it works solo:** Extremely safe, English-friendly transit, solo-dining culture, compact trains, reliable Wi-Fi/pocket routers.  \n**Why it works for photos:** Seamless blend of neon street life, centuries-old temples, misty forests, and seasonal light (cherry blossoms, autumn colors, winter snow).  \n**Key photo moments:**\n- Fushimi Inari at dawn or late evening (avoid 9am–4pm)\n- Arashiyama Bamboo Grove + Okochi Sanso garden light/shadow play\n- Nara Park deer in golden hour (wide lens recommended)\n- Osaka’s Dotonbori & Shinsekai for neon street photography\n- Koyasan’s Okunoin cemetery at sunrise (fog, moss, lanterns)\n**Solo/Photo Pro Tips:** \n- Shoot during Japanese \"magic hours\" (winter: 5–7pm, summer: 5–8pm)\n- Use IC cards (Suica/Pasmo) + Hyperdia/NAVITIME for transit\n- Tripods allowed in most public shrines, but check signs at commercial spots\n- Join a morning photo walk or temple stay for local insights\n\n---\n\n### 🇮🇸 2. Iceland: Reykjavik → South Coast → East Fjords → Snæfellsnes Ring Road (10–14 days)\n**Why it works solo:** English widely spoken, low crime, well-marked Ring Road, excellent solo road-trip infrastructure, hostels/guesthouses with social kitchens.  \n**",
+    "latency_ms": 51757.030249995296,
+    "prompt_tokens": 23,
+    "completion_tokens": 1822,
+    "total_tokens": 1845,
+    "estimated_input_cost": 4.7125e-06,
+    "estimated_output_cost": 0.00090285,
+    "total_cost": 0.003560375,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-080",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I do not want ticket complexity or reservation risk; what route strategy fits best?",
+    "response_text": "The best strategy for your constraints is a **non-stop flight on a single ticket with one operating airline**.\n\n### Why this fits:\n- **Zero ticket complexity:** One itinerary, one PNR, one set of fare rules, one customer service contact.\n- **Near-zero reservation risk:** No connections to miss, no baggage re-checks, no transit visa requirements, and the airline assumes 100% responsibility for delays/cancellations (rebooking, hotels, meals if applicable).\n- **Simplified logistics:** Arrive at the airport, check in once, board, disembark at your destination.\n\n### How to ensure it stays that way:\n1. **Filter for \"Non-stop only\"** (avoid \"Direct,\" which can sometimes mean a plane change or technical stop).\n2. **Book directly with the airline** (or a highly reputable OTA with clear single-ticket guarantees).\n3. **Verify the operating carrier** is the same throughout (avoid multi-airline itineraries unless fully codeshare/alliance-backed on one ticket).\n4. **Avoid:** separate tickets, self-transfers, open-jaw, multi-city, hidden-city, or overnight layovers.\n\n### If non-stops aren't available on your route:\nYour next best option is a **single-ticket connection on the same airline** where the airline officially guarantees the connection and handles all disruption re-routes. While slightly more complex, risk remains managed and contained within one reservation.\n\nStick to non-stop + single airline + single ticket, and you'll eliminate the complexity and reservation risk you're looking to avoid.",
+    "latency_ms": 30723.811791991466,
+    "prompt_tokens": 26,
+    "completion_tokens": 1248,
+    "total_tokens": 1274,
+    "estimated_input_cost": 6.7437500000000004e-06,
+    "estimated_output_cost": 0.0007356374999999999,
+    "total_cost": 0.00244205,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-081",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "prompt": "I care most about culture, views, and low confusion while navigating—what should the app infer?",
+    "response_text": "Based on your stated priorities, the app should infer the following about your travel behavior and cognitive preferences, then adapt accordingly:\n\n### 🔍 What the App Should Infer\n1. **Experience > Efficiency**: You value rich, meaningful routes over the fastest or shortest path. Slight detours are acceptable if they deliver cultural depth or scenic payoff.\n2. **Context Reduces Friction**: You process navigation better when directions are tied to recognizable landmarks, visual cues, and purpose (e.g., *\"Head toward the cliff overlook; you'll pass a centuries-old tea market en route\"*).\n3. **Cognitive Load Sensitivity**: You become disoriented or stressed by ambiguous turns, complex transit transfers, underground routing, or information-dense UI. Clarity and predictability are non-negotiable.\n\n### 📱 How the App Should Respond\n| Inference | App Behavior / Feature |\n|-----------|------------------------|\n| Culture-first | Prioritize POIs: historic districts, local artisans, community spaces, heritage trails. Suppress generic commercial/tourist traps unless culturally significant. |\n| View-driven | Route along scenic corridors, elevation points, architectural highlights, and natural overlooks. Offer \"photo/vista\" markers with best-angle tips. |\n| Low confusion navigation | Use landmark-based cues, minimize turns/transfers, avoid poorly marked or high-traffic mazes. Default to daylight-safe, well-signposted paths. |\n| Pace & flexibility | Support \"explorer rhythm\": easy pause/resume, gentle rerouting, and optional micro-detours that don't break route continuity. |\n| Contextual navigation | Embed short cultural/scenic notes directly into turn-by-turn flow (1-2 lines max). No pop-ups or dense text blocks. |\n\n### 🚫 What the App Should Avoid\n- Optimizing purely for speed/distance\n- Abstract coordinate-based directions\n- Multi-modal routing with 3+ transfers or underground segments\n- Overloading the map with POIs or promotional content\n- Complex gesture/UI patterns during active navigation\n\n### ✅ Quick Validation Question for the App\n*“If a slightly longer route passes through a historic neighborhood with three clear viewpoints and uses well-lit, straight roads instead of a faster but confusing shortcut, should it be recommended as the default?”*  \n→ Your priorities say **yes**.\n\nThis inference profile lets the app act as a *curated guide* rather than a pure navigation engine, keeping you culturally engaged, visually rewarded,",
+    "latency_ms": 47264.80241600075,
+    "prompt_tokens": 30,
+    "completion_tokens": 2018,
+    "total_tokens": 2048,
+    "estimated_input_cost": 7.71875e-06,
+    "estimated_output_cost": 0.0011987625,
+    "total_cost": 0.00394485,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  }
+]

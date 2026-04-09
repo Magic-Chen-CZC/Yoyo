@@ -1,0 +1,1541 @@
+[
+  {
+    "query_id": "eng-001",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain why Tiananmen Square matters for first-time visitors to Beijing.",
+    "response_text": "Tiananmen Square matters for first-time visitors to Beijing because it is one of the city’s most iconic and politically significant places, and it gives you a strong introduction to modern China.\n\nWhy it stands out:\n\n- **It’s a historic symbol of China.** The square has been the site of major state events, public celebrations, and key moments in Chinese history.\n- **It’s right next to important landmarks.** From the square, you can easily visit the **Forbidden City**, **Mao Zedong’s Mausoleum**, the **National Museum of China**, and **Tiananmen Gate**.\n- **It helps you understand Beijing’s layout and scale.** The square is enormous and very central, so it gives visitors a sense of the city’s grand civic design.\n- **It’s a place of national identity.** For many Chinese people, it represents the center of the country’s political and cultural life.\n- **It’s often part of a first visit itinerary.** Even if you’re not deeply interested in politics, it’s one of the most recognizable places in Beijing and is useful for orienting yourself in the city.\n\nA practical note: security around the area is strict, so first-time visitors should expect ID checks and possibly queues.\n\nIf you want, I can also explain **what to see around Tiananmen Square in a 2–3 hour visit**.",
+    "latency_ms": 4220.694457995705,
+    "prompt_tokens": 20,
+    "completion_tokens": 287,
+    "total_tokens": 307,
+    "estimated_input_cost": 1.35e-05,
+    "estimated_output_cost": 0.0014355,
+    "total_cost": 0.0013065,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-002",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give a short historical introduction to Tiananmen Square.",
+    "response_text": "Tiananmen Square, in the heart of Beijing, is one of the world’s largest public squares and a major symbol of modern China. Built near the Forbidden City, it takes its name from Tiananmen, the “Gate of Heavenly Peace,” which stands to the north of the square.\n\nThe area developed in its modern form in the 20th century, especially after the founding of the People’s Republic of China in 1949, when it became a central site for state ceremonies, political rallies, and national celebrations. Over time, it has also become known internationally as a place associated with major political events and public protest, most notably the 1989 demonstrations and their violent suppression.",
+    "latency_ms": 3096.1852909968,
+    "prompt_tokens": 17,
+    "completion_tokens": 144,
+    "total_tokens": 161,
+    "estimated_input_cost": 1.06875e-05,
+    "estimated_output_cost": 0.000765,
+    "total_cost": 0.00066075,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-003",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain Tiananmen Square in simple English for tourists.",
+    "response_text": "Tiananmen Square is a very large public square in the center of Beijing, China.\n\nFor tourists, it is important because:\n\n- It is one of the biggest squares in the world.\n- It is a famous historical and political place in China.\n- Many important buildings are nearby, such as the Forbidden City, the Great Hall of the People, and the National Museum of China.\n\nWhat you can do there:\n- Walk around and take photos.\n- Visit nearby famous sites.\n- See the large open space and monuments.\n\nGood to know:\n- Security is usually very strict.\n- You may need to show your passport or go through checks.\n- It can be very crowded, especially on holidays and weekends.\n\nSimple idea:\n- Tiananmen Square is a very famous and important place in Beijing.\n- Many tourists visit it because it is close to other major attractions.\n\nIf you want, I can also give you:\n1. a very short version,\n2. a version in easy Chinese, or\n3. travel tips for visiting there.",
+    "latency_ms": 2659.312208008487,
+    "prompt_tokens": 17,
+    "completion_tokens": 214,
+    "total_tokens": 231,
+    "estimated_input_cost": 1.0500000000000001e-05,
+    "estimated_output_cost": 0.0010563749999999998,
+    "total_cost": 0.00097575,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-004",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain why the Forbidden City is important for first-time visitors to Beijing.",
+    "response_text": "The Forbidden City is important for first-time visitors to Beijing because it gives you a direct window into China’s imperial history and is one of the city’s most iconic landmarks.\n\nWhy it stands out:\n- **Historical significance:** It was the imperial palace for Ming and Qing emperors for nearly 500 years.\n- **Cultural value:** It showcases traditional Chinese architecture, symbolism, and palace design at a huge scale.\n- **Must-see landmark:** It’s one of Beijing’s most famous attractions, so visiting it helps you understand the city’s identity.\n- **UNESCO World Heritage site:** Its global recognition reflects its importance beyond China.\n- **Great starting point:** For first-time visitors, it provides context for many other Beijing sites, like Tiananmen Square and Jingshan Park nearby.\n\nIn short, if it’s your first trip to Beijing, the Forbidden City is important because it’s both a historic centerpiece and a defining experience of the city.",
+    "latency_ms": 2324.2543340020347,
+    "prompt_tokens": 20,
+    "completion_tokens": 195,
+    "total_tokens": 215,
+    "estimated_input_cost": 1.4812500000000001e-05,
+    "estimated_output_cost": 0.0010766249999999999,
+    "total_cost": 0.0008925,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-005",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give a short historical introduction to the Forbidden City.",
+    "response_text": "The Forbidden City is a vast imperial palace complex in the center of Beijing, built in the early 15th century during the Ming dynasty under the Yongle Emperor. It served as the political and ceremonial heart of China for nearly 500 years, housing 24 emperors of the Ming and Qing dynasties. Its name reflects the fact that access was once strictly restricted to the imperial family, officials, and approved attendants. Today, it is one of China’s most famous historical sites and a UNESCO World Heritage Site.",
+    "latency_ms": 1721.3348330114968,
+    "prompt_tokens": 16,
+    "completion_tokens": 108,
+    "total_tokens": 124,
+    "estimated_input_cost": 1.10625e-05,
+    "estimated_output_cost": 0.0005737499999999999,
+    "total_cost": 0.000498,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-006",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain the Forbidden City in simple English for tourists.",
+    "response_text": "The **Forbidden City** is a very famous old palace in **Beijing, China**. It was the home of Chinese emperors for almost **500 years**.\n\n### Simple facts:\n- It was built in the **1400s**.\n- It has **many halls, gates, courtyards, and gardens**.\n- The buildings are mostly **red and yellow**.\n- Only the emperor, his family, and important workers could enter long ago.\n- Ordinary people were **not allowed** inside, which is why it was called “Forbidden.”\n\n### Why tourists visit:\n- It is one of the **largest palace complexes in the world**.\n- You can see beautiful old Chinese architecture.\n- It gives you a look at how emperors lived in the past.\n\n### Helpful tip:\n- The Forbidden City is now also called the **Palace Museum**.\n- It can take **several hours** to walk through, so wear comfortable shoes.\n\nIf you want, I can also give you a **very short tour guide version** or a **map-style explanation**.",
+    "latency_ms": 4051.9266669871286,
+    "prompt_tokens": 16,
+    "completion_tokens": 223,
+    "total_tokens": 239,
+    "estimated_input_cost": 1.0875e-05,
+    "estimated_output_cost": 0.001020375,
+    "total_cost": 0.0010155,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-007",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain why Jingshan Park is worth visiting in Beijing.",
+    "response_text": "Jingshan Park is worth visiting in Beijing because it offers one of the best panoramic views of the city, especially of the Forbidden City right across the street. From the top of the central hill, you can see Beijing’s old imperial layout and get a real sense of the city’s history and scale.\n\nA few reasons people like it:\n- **Great viewpoint:** It’s one of the highest points in central Beijing, with excellent views, especially at sunrise or sunset.\n- **Historic significance:** The park has strong ties to imperial history and was once part of the grounds of the Forbidden City.\n- **Peaceful atmosphere:** It’s a calm, green escape from Beijing’s busy streets.\n- **Easy to combine with other sights:** It’s right next to the Forbidden City and Beihai Park, so it fits well into a day of sightseeing.\n- **Local life:** You may see Beijing residents dancing, singing, or exercising there, which adds a nice cultural feel.\n\nIf you’re visiting Beijing and want a short but memorable stop with history, scenery, and a classic city view, Jingshan Park is a very good choice.",
+    "latency_ms": 2848.501332991873,
+    "prompt_tokens": 18,
+    "completion_tokens": 233,
+    "total_tokens": 251,
+    "estimated_input_cost": 1.03125e-05,
+    "estimated_output_cost": 0.0012071249999999999,
+    "total_cost": 0.001062,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-008",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give a short historical introduction to Jingshan Park.",
+    "response_text": "Jingshan Park is a historic imperial park in central Beijing, located just north of the Forbidden City. Its origins go back to the Yuan dynasty, but it took shape during the Ming dynasty, when a large artificial hill was built from the earth excavated to create the palace moat and lakes. This hill became a strategic and symbolic overlook for the imperial city. Today, the park is known both for its imperial history and for offering one of the best panoramic views of Beijing.",
+    "latency_ms": 2359.3417500087526,
+    "prompt_tokens": 17,
+    "completion_tokens": 99,
+    "total_tokens": 116,
+    "estimated_input_cost": 1.0125e-05,
+    "estimated_output_cost": 0.0005377499999999999,
+    "total_cost": 0.00045825,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-009",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain Jingshan Park in simple English for tourists.",
+    "response_text": "Jingshan Park is a famous park in the center of Beijing, China, just north of the Forbidden City.\n\n### Why tourists like it:\n- **Great view of the Forbidden City**: The park has a small hill, and from the top you can see the whole Forbidden City very clearly.\n- **Beautiful gardens**: There are trees, flowers, and quiet walking paths.\n- **Historic place**: It used to be part of the imperial area, so it has a long history.\n- **Good for photos**: The view from the top is one of the best photo spots in Beijing.\n\n### What to do there:\n- Walk up the hill\n- Enjoy the city view\n- Take photos\n- Relax in the park\n\n### Simple tip:\nIf you visit the Forbidden City, Jingshan Park is a great place to go next. It is only a short walk away.",
+    "latency_ms": 2674.640457989881,
+    "prompt_tokens": 17,
+    "completion_tokens": 185,
+    "total_tokens": 202,
+    "estimated_input_cost": 9.9375e-06,
+    "estimated_output_cost": 0.0008246249999999999,
+    "total_cost": 0.00084525,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-010",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Why do many Beijing routes visit Tiananmen Square before the Forbidden City?",
+    "response_text": "Many Beijing itineraries go to Tiananmen Square before the Forbidden City mainly because of **geography, security, and historical context**:\n\n1. **They’re adjacent**\n   Tiananmen Square sits directly south of the Forbidden City, so if you’re walking through central Beijing, it’s the most natural approach.\n\n2. **It mirrors the historical axis**\n   Beijing was designed around a strong north-south central axis. Many tours follow that axis in order: **Tiananmen Square → Gate of Heavenly Peace → Forbidden City**. It reflects how the imperial center is entered from the south.\n\n3. **Security and access control**\n   Tiananmen Square is an open civic space, while the Forbidden City has controlled entry points. Visiting the square first often fits how tour groups are managed and screened.\n\n4. **Political and symbolic importance**\n   Tiananmen Square is one of China’s most important modern symbolic spaces. Many itineraries include it first to provide context before moving into the imperial palace complex.\n\n5. **Practical routing**\n   Tour buses and group routes are usually planned to minimize backtracking and to align with entrance and ticketing procedures.\n\nSo it’s not that the square is “more important” than the Forbidden City in a historical sense—it’s just the most logical and organized way to approach the palace complex.",
+    "latency_ms": 3225.740374997258,
+    "prompt_tokens": 21,
+    "completion_tokens": 274,
+    "total_tokens": 295,
+    "estimated_input_cost": 1.425e-05,
+    "estimated_output_cost": 0.001503,
+    "total_cost": 0.00124875,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-011",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What is the significance of the central axis around Tiananmen Square and the Forbidden City?",
+    "response_text": "The central axis of Beijing running through Tiananmen Square and the Forbidden City is significant because it is the city’s main symbolic and spatial spine.\n\nKey meanings:\n\n- **Imperial authority and order:** In traditional Chinese urban design, the central axis represented political power centered on the emperor. The Forbidden City sits on this axis as the core of imperial rule.\n- **Cosmic harmony:** The layout reflects traditional Chinese ideas of balance, hierarchy, and harmony between heaven, earth, and the ruler.\n- **National symbolism:** Tiananmen Square, located just south of the Forbidden City, later became a major public and political space, linking the imperial past with modern state identity.\n- **Urban planning importance:** The axis organizes Beijing’s historical core and is one of the clearest examples of planned symmetry in Chinese city design.\n\nSo, it is important both as a **historical expression of imperial power** and as a **defining feature of Beijing’s urban and cultural identity**.",
+    "latency_ms": 2947.2438750090078,
+    "prompt_tokens": 24,
+    "completion_tokens": 200,
+    "total_tokens": 224,
+    "estimated_input_cost": 1.725e-05,
+    "estimated_output_cost": 0.0011441249999999997,
+    "total_cost": 0.000918,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-012",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Why is Jingshan Park often paired with the Forbidden City in tourist routes?",
+    "response_text": "Jingshan Park is often paired with the Forbidden City because it’s right next door and offers the best panoramic view of the palace complex.\n\nMain reasons:\n\n- **Direct location:** Jingshan sits immediately north of the Forbidden City, so it’s an easy add-on after visiting the palace.\n- **Best overlook:** From Jingshan’s hilltop, you can see the full layout of the Forbidden City, which is hard to appreciate from inside the grounds.\n- **Historical connection:** The park was once part of the imperial landscape and is closely tied to Beijing’s old palace axis.\n- **Efficient sightseeing:** Since both are in the same area, tourists can visit them in one route without extra travel.\n\nIn short, people visit the Forbidden City for the history and Jingshan Park for the view of it.",
+    "latency_ms": 2345.8812090102583,
+    "prompt_tokens": 22,
+    "completion_tokens": 169,
+    "total_tokens": 191,
+    "estimated_input_cost": 1.425e-05,
+    "estimated_output_cost": 0.0008774999999999999,
+    "total_cost": 0.000777,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-013",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give me a 30-second audio-guide style introduction to Tiananmen Square.",
+    "response_text": "Welcome to Tiananmen Square, the vast heart of Beijing and one of the most iconic public spaces in China. Stretching across the center of the city, it has witnessed centuries of imperial history, revolutionary change, and major national events. As you stand here, look around at the impressive landmarks that frame the square, including the Monument to the People’s Heroes, the Great Hall of the People, and Tiananmen Gate to the north. More than just a square, this is a powerful symbol of China’s past, present, and national identity.",
+    "latency_ms": 3322.2173749963986,
+    "prompt_tokens": 22,
+    "completion_tokens": 121,
+    "total_tokens": 143,
+    "estimated_input_cost": 1.3312499999999998e-05,
+    "estimated_output_cost": 0.000603,
+    "total_cost": 0.000561,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-014",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give me a family-friendly explanation of the Forbidden City.",
+    "response_text": "The **Forbidden City** is a huge, old palace complex in the center of **Beijing, China**. It was once home to Chinese emperors and their families, and it was called “forbidden” because regular people were not allowed to go inside unless they had permission.\n\nHere’s a family-friendly way to think about it:\n\n- It was like a **giant royal home** for emperors.\n- It has **many buildings, courtyards, and gates** all inside one big walled area.\n- For hundreds of years, it was the **center of China’s government and royal life**.\n- Today, it is a **museum and famous historical site** where people can visit and learn about Chinese history.\n\nA fun fact: it’s **enormous**—more like a small city than just one palace!\n\nIf you want, I can also give you:\n1. a **kid-friendly version**, or  \n2. a **one-minute history summary**.",
+    "latency_ms": 2496.2937499949476,
+    "prompt_tokens": 17,
+    "completion_tokens": 204,
+    "total_tokens": 221,
+    "estimated_input_cost": 1.1249999999999999e-05,
+    "estimated_output_cost": 0.0009236249999999999,
+    "total_cost": 0.00093075,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-015",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give me a photography-focused explanation of Jingshan Park.",
+    "response_text": "Jingshan Park in Beijing is a great photography location because it combines **elevation, symmetry, history, and classic city views** in one compact place.\n\n### Why photographers like it\n- **Panoramic city views:** The park sits on a hill directly north of the Forbidden City, so it’s one of the best spots for photographing the palace complex from above.\n- **Balanced composition:** The main overlook gives you a very symmetrical, iconic frame of Beijing’s historic center.\n- **Strong light at golden hour:** Sunrise and sunset can create warm tones over the rooftops, making the yellow palace roofs and surrounding trees stand out beautifully.\n- **Seasonal variety:**  \n  - **Spring:** fresh greenery and blossoms  \n  - **Summer:** dense, vivid foliage  \n  - **Autumn:** especially photogenic with red and gold leaves  \n  - **Winter:** more minimal, with clear architectural lines and often atmospheric haze or snow\n- **Cultural details:** The park itself has traditional pavilions, stone steps, old trees, and local life, which add foreground interest and storytelling elements to landscape shots.\n\n### Best shots to look for\n- **The view over the Forbidden City** from the hilltop pavilion\n- **Layered cityscapes** with palace roofs in the foreground and modern Beijing in the distance\n- **Tree-framed compositions** using branches or park paths to lead the eye toward the skyline\n- **Detail shots** of pavilions, carved railings, and textured stonework\n\n### Practical photography tip\nFor the classic wide shot, go **early in the morning** or **late afternoon** to avoid harsh glare and crowds. A **short telephoto lens** can help compress the scene and make the Forbidden City look more dramatic.\n\nIf you want, I can also give you:\n1. the **best photo spots inside Jingshan Park**, or  \n2. a **shot list by time of day**.",
+    "latency_ms": 4222.785457997816,
+    "prompt_tokens": 18,
+    "completion_tokens": 400,
+    "total_tokens": 418,
+    "estimated_input_cost": 1.10625e-05,
+    "estimated_output_cost": 0.00205425,
+    "total_cost": 0.0018135,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-016",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Explain the Forbidden City without using academic or difficult words.",
+    "response_text": "The Forbidden City is a huge old palace in Beijing, China. It was home to Chinese emperors for almost 500 years.\n\nIt got its name because normal people were not allowed to go in. Only the emperor, his family, and certain workers could enter.\n\nThe place has many halls, rooms, courtyards, and gates. It is surrounded by tall walls and a deep moat, which made it feel very safe and closed off.\n\nThe buildings are painted red and have yellow roofs. These colors were important and showed power and honor.\n\nToday, the Forbidden City is no longer a home for emperors. It is a museum, and people from all over the world can visit it and learn about Chinese history.",
+    "latency_ms": 2169.9335830053315,
+    "prompt_tokens": 17,
+    "completion_tokens": 148,
+    "total_tokens": 165,
+    "estimated_input_cost": 1.2937500000000001e-05,
+    "estimated_output_cost": 0.000741375,
+    "total_cost": 0.00067875,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-017",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Summarize Tiananmen Square in three short bullet points.",
+    "response_text": "- **Tiananmen Square** is a large public square in **central Beijing, China**, near major government buildings and historic landmarks.  \n- It became famous worldwide for the **1989 pro-democracy protests** and the violent crackdown that followed.  \n- Today, it is a **high-security, highly symbolic site** in China, often associated with national ceremonies and political history.",
+    "latency_ms": 2836.2722910096636,
+    "prompt_tokens": 19,
+    "completion_tokens": 82,
+    "total_tokens": 101,
+    "estimated_input_cost": 1.0500000000000001e-05,
+    "estimated_output_cost": 0.0004275,
+    "total_cost": 0.00038325,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-018",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What should an English-speaking tourist notice first at Jingshan Park?",
+    "response_text": "An English-speaking tourist will most immediately notice **the park’s central hill and the panoramic view from the top**, especially the famous lookout over **the Forbidden City** and central Beijing.\n\nIf you mean what stands out on arrival, it’s usually:\n- the **elevated landscape** right in the middle of the city,\n- the **historic atmosphere** of a former imperial park,\n- and, for many visitors, the **unobstructed city view** from the summit.\n\nIf you want, I can also give a “first-timer’s checklist” for visiting Jingshan Park.",
+    "latency_ms": 2342.4382080120267,
+    "prompt_tokens": 20,
+    "completion_tokens": 124,
+    "total_tokens": 144,
+    "estimated_input_cost": 1.3125000000000002e-05,
+    "estimated_output_cost": 0.0006007499999999999,
+    "total_cost": 0.000573,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "attraction_explain",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-019",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Translate this into natural English: 请帮我拍张照片",
+    "response_text": "“Please help me take a photo.”",
+    "latency_ms": 2740.7661660108715,
+    "prompt_tokens": 18,
+    "completion_tokens": 12,
+    "total_tokens": 30,
+    "estimated_input_cost": 8.249999999999999e-06,
+    "estimated_output_cost": 3.3749999999999994e-05,
+    "total_cost": 6.75e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-020",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Translate this into polite English: 这个景点几点关门",
+    "response_text": "What time does this attraction close?",
+    "latency_ms": 1499.5162499981234,
+    "prompt_tokens": 19,
+    "completion_tokens": 11,
+    "total_tokens": 30,
+    "estimated_input_cost": 8.249999999999999e-06,
+    "estimated_output_cost": 4.1624999999999995e-05,
+    "total_cost": 6.375e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-021",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Translate this into simple English: 我下一站怎么走",
+    "response_text": "“How do I get to the next stop?”",
+    "latency_ms": 1226.9482909905491,
+    "prompt_tokens": 17,
+    "completion_tokens": 13,
+    "total_tokens": 30,
+    "estimated_input_cost": 8.0625e-06,
+    "estimated_output_cost": 3.6e-05,
+    "total_cost": 7.125e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-022",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Rewrite 'Please help me take a photo' in a more polite way.",
+    "response_text": "Certainly — a more polite version would be:\n\n**“Would you please help me take a photo?”**\n\nA slightly softer alternative is:\n\n**“Could you please help me take a photo?”**",
+    "latency_ms": 1274.028208994423,
+    "prompt_tokens": 21,
+    "completion_tokens": 43,
+    "total_tokens": 64,
+    "estimated_input_cost": 1.10625e-05,
+    "estimated_output_cost": 0.00019125,
+    "total_cost": 0.00020925,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-023",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Rewrite 'What time does this attraction close?' in simpler English.",
+    "response_text": "A simpler way to say it is: **“What time does this place close?”**",
+    "latency_ms": 1754.4719170109602,
+    "prompt_tokens": 19,
+    "completion_tokens": 22,
+    "total_tokens": 41,
+    "estimated_input_cost": 1.25625e-05,
+    "estimated_output_cost": 7.425e-05,
+    "total_cost": 0.00011325,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-024",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Rewrite 'How do I get to my next stop?' for a nervous tourist.",
+    "response_text": "Here’s a calmer, more tourist-friendly version:\n\n**“Can you help me find my way to the next stop?”**\n\nA few other gentle options:\n- **“What’s the best way to get to my next stop?”**\n- **“Could you please help me get to my next stop?”**\n- **“I’m a bit lost—how do I get to my next stop?”**\n\nIf you want, I can also make it sound more **polite, casual, or very simple**.",
+    "latency_ms": 1716.1895419994835,
+    "prompt_tokens": 22,
+    "completion_tokens": 107,
+    "total_tokens": 129,
+    "estimated_input_cost": 1.1625e-05,
+    "estimated_output_cost": 0.000414,
+    "total_cost": 0.000498,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-025",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Translate this into English: 门票在哪里买",
+    "response_text": "“门票在哪里买” means **“Where can I buy tickets?”**",
+    "latency_ms": 1313.8091250002617,
+    "prompt_tokens": 14,
+    "completion_tokens": 19,
+    "total_tokens": 33,
+    "estimated_input_cost": 6.562500000000001e-06,
+    "estimated_output_cost": 5.0625e-05,
+    "total_cost": 9.6e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-026",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Translate this into English: 洗手间在哪里",
+    "response_text": "“洗手间在哪里” means **“Where is the bathroom?”**",
+    "latency_ms": 1222.3941660049604,
+    "prompt_tokens": 16,
+    "completion_tokens": 19,
+    "total_tokens": 35,
+    "estimated_input_cost": 6.562500000000001e-06,
+    "estimated_output_cost": 4.837499999999999e-05,
+    "total_cost": 9.75e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-027",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Translate this into English: 需要提前预约吗",
+    "response_text": "“Do I need to make an appointment in advance?”",
+    "latency_ms": 2347.704707994126,
+    "prompt_tokens": 16,
+    "completion_tokens": 15,
+    "total_tokens": 31,
+    "estimated_input_cost": 6.75e-06,
+    "estimated_output_cost": 5.175e-05,
+    "total_cost": 7.95e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-028",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Rewrite 'Do I need a reservation?' in a friendlier tourist tone.",
+    "response_text": "“Do I need to make a reservation?”",
+    "latency_ms": 1555.495916007203,
+    "prompt_tokens": 21,
+    "completion_tokens": 13,
+    "total_tokens": 34,
+    "estimated_input_cost": 1.2e-05,
+    "estimated_output_cost": 3.825e-05,
+    "total_cost": 7.425e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-029",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Rewrite 'Where is the entrance?' in more natural spoken English.",
+    "response_text": "A more natural spoken version is:\n\n**“Where’s the entrance?”**\n\nYou could also say:\n- **“Where do you go in?”**\n- **“Which way is the entrance?”**",
+    "latency_ms": 1281.1049579904648,
+    "prompt_tokens": 19,
+    "completion_tokens": 44,
+    "total_tokens": 63,
+    "estimated_input_cost": 1.2e-05,
+    "estimated_output_cost": 0.00016424999999999998,
+    "total_cost": 0.00021225,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-030",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Rewrite 'Can you explain this in easier English?' for a child-friendly tone.",
+    "response_text": "Sure — a child-friendly rewrite could be:\n\n**“Can you say this in simpler words?”**\n\nOther friendly options:\n- **“Can you explain this in a way that’s easier to understand?”**\n- **“Can you make this easier to read?”**\n- **“Can you tell me this in simple words?”**",
+    "latency_ms": 1394.1874169977382,
+    "prompt_tokens": 22,
+    "completion_tokens": 70,
+    "total_tokens": 92,
+    "estimated_input_cost": 1.425e-05,
+    "estimated_output_cost": 0.00029587499999999997,
+    "total_cost": 0.0003315,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "translation",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-031",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What should I check before visiting the Forbidden City today?",
+    "response_text": "Before you go to the Forbidden City today, it’s smart to check a few practical things:\n\n1. **Opening hours**\n   - Confirm today’s opening and last entry times.\n   - Hours can vary by season or special events.\n\n2. **Ticket availability**\n   - Check whether tickets are still available for your preferred time slot.\n   - The Forbidden City often requires advance booking, and same-day tickets may be limited or unavailable.\n\n3. **Closed areas or route changes**\n   - Look for any temporary closures, renovation zones, or special exhibition restrictions.\n\n4. **Weather**\n   - Beijing weather can affect comfort a lot, since you’ll be walking outdoors for a while.\n   - Check rain, wind, heat, or air quality.\n\n5. **Identification needed**\n   - Bring your passport or the ID used for booking, since entry is usually tied to it.\n\n6. **Security rules**\n   - Avoid bringing restricted items, and be ready for bag checks.\n   - Check what’s allowed before you arrive.\n\n7. **Crowd levels**\n   - Weekends and holidays can be very busy.\n   - If possible, go early in the day.\n\n8. **Nearby transport**\n   - Confirm your route by subway, taxi, or walking.\n   - Some nearby streets may have traffic controls or entrance limitations.\n\nIf you want, I can also give you a **quick today-specific checklist for Beijing weather, ticket booking, and transport**.",
+    "latency_ms": 3295.7555829925695,
+    "prompt_tokens": 17,
+    "completion_tokens": 297,
+    "total_tokens": 314,
+    "estimated_input_cost": 1.14375e-05,
+    "estimated_output_cost": 0.0015075,
+    "total_cost": 0.00134925,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-032",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What live travel information matters most before going to Tiananmen Square today?",
+    "response_text": "Before going to Tiananmen Square **today**, the most important live travel information to check is:\n\n1. **Security / access status**\n   - Whether the square is **open to visitors** right now\n   - Any **special restrictions, closures, or ID/passport requirements**\n   - If **ticketing or advance reservation** is needed\n\n2. **Entry queue / wait times**\n   - Security screening lines can be long, especially on weekends, holidays, and political anniversaries\n\n3. **Weather and air quality**\n   - Beijing can have **heat, cold, rain, wind, or smog** that changes comfort and visibility quickly\n\n4. **Nearby traffic and transit disruptions**\n   - Check for **subway station exits closed**, road closures, or rerouted buses\n   - Allow extra time because the area is heavily controlled\n\n5. **Public events or state ceremonies**\n   - Any official events may cause **partial closure** or major access limits\n\n6. **Opening hours for the square and nearby sights**\n   - For example, the **Forbidden City, National Museum, Mausoleum**, and surrounding areas may have separate schedules or closures\n\n7. **Local safety / crowd advisories**\n   - Crowd density, pickpocket risk, and any police guidance\n\nIf you want, I can also give you a **quick checklist of exactly what to verify in the next 10 minutes** before you leave.",
+    "latency_ms": 5789.54741700727,
+    "prompt_tokens": 21,
+    "completion_tokens": 293,
+    "total_tokens": 314,
+    "estimated_input_cost": 1.5187500000000002e-05,
+    "estimated_output_cost": 0.00147375,
+    "total_cost": 0.00133425,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-033",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Before I go to Jingshan Park today, what dynamic information should I verify first?",
+    "response_text": "Before going to **Jingshan Park** today, it’s smart to verify these **dynamic, day-of information items** first:\n\n1. **Opening hours**\n   - Parks can have seasonal or special-day schedule changes.\n\n2. **Ticketing / entry rules**\n   - Check whether admission is free or if you need a reservation, ID, or QR code.\n\n3. **Weather and air quality**\n   - Important for comfort and visibility, especially if you want the hilltop view over the Forbidden City.\n\n4. **Crowd level / peak times**\n   - Weekends, holidays, and late-morning hours can be very busy.\n\n5. **Any temporary closures or restricted areas**\n   - Paths, viewpoints, or facilities may be closed for maintenance, events, or security.\n\n6. **Nearby transport status**\n   - Check subway/bus service, station exits, and whether any road closures affect access.\n\n7. **Security / visitor policy updates**\n   - For example, bag checks, prohibited items, or special rules during major events.\n\n8. **Facilities availability**\n   - Restrooms, water, café/snack stands, and whether they’re open today.\n\nIf you want, I can also help you make a **quick pre-visit checklist for Jingshan Park** or suggest the **best time of day to go**.",
+    "latency_ms": 2858.4926250041462,
+    "prompt_tokens": 24,
+    "completion_tokens": 276,
+    "total_tokens": 300,
+    "estimated_input_cost": 1.5562500000000002e-05,
+    "estimated_output_cost": 0.0013275,
+    "total_cost": 0.00126,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-034",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What could change same-day access at the Forbidden City?",
+    "response_text": "Same-day access at the Forbidden City could be changed by a few practical factors, such as:\n\n- **Ticket availability**: same-day tickets may sell out quickly, especially during busy seasons or holidays.\n- **Security or crowd-control measures**: entry rules can be tightened if visitor numbers are high.\n- **Weather or emergency conditions**: severe weather, safety incidents, or other disruptions can limit access.\n- **Special closures or events**: parts of the site may be closed for maintenance, ceremonies, or official events.\n- **Policy changes**: the museum/city administration may adjust same-day entry rules, hours, or reservation requirements.\n\nIf you want, I can also help you with the **current same-day ticket situation** or explain **how to maximize your chances of getting in**.",
+    "latency_ms": 2151.2524580030004,
+    "prompt_tokens": 17,
+    "completion_tokens": 164,
+    "total_tokens": 181,
+    "estimated_input_cost": 1.0500000000000001e-05,
+    "estimated_output_cost": 0.0008898749999999999,
+    "total_cost": 0.00075075,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-035",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What same-day factors could affect a sunset visit to Jingshan Park?",
+    "response_text": "For a same-day sunset visit to **Jingshan Park** in Beijing, these factors can affect how good the experience will be:\n\n- **Weather / visibility**: Clear skies give the best sunset views. Haze, smog, clouds, or rain can block the horizon and reduce color.\n- **Air quality**: Even on a clear day, poor AQI can make the skyline look washed out.\n- **Sunset time**: It changes by season, so you may need to arrive earlier in winter and later in summer.\n- **Crowds**: Sunset is a popular time, so weekends, holidays, and good-weather days can be busy and limit the best viewing spots.\n- **Park opening hours**: Make sure the park is open long enough for sunset; hours can vary by season.\n- **Ticketing / entry rules**: Some parks or areas may require tickets or close entry earlier than sunset, so confirm same-day access.\n- **Temperature and wind**: It can get chilly on the hill after dark, especially in colder months or if it’s windy.\n- **Photography conditions**: Direction of light, cloud cover, and haze all affect how dramatic the photos will be.\n\nIf you want, I can also give you a quick **same-day checklist** for deciding whether sunset at Jingshan Park is worth going.",
+    "latency_ms": 2934.7378329985077,
+    "prompt_tokens": 21,
+    "completion_tokens": 277,
+    "total_tokens": 298,
+    "estimated_input_cost": 1.25625e-05,
+    "estimated_output_cost": 0.001321875,
+    "total_cost": 0.00126225,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-036",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "If I plan to visit Tiananmen Square this afternoon, what live info should I verify first?",
+    "response_text": "Before heading to Tiananmen Square this afternoon, verify these **live updates first**:\n\n1. **Security / access status**\n   - Check whether the square is **open to the public today**\n   - Look for **temporary closures, entry limits, or special security measures**\n\n2. **Ticket / reservation requirements**\n   - Confirm whether you need an **advance reservation or timed entry**\n   - Check if your **ID/passport** must match the booking\n\n3. **Queue and checkpoint conditions**\n   - See current **wait times** at entrances and nearby security checkpoints\n   - Confirm what items are **prohibited** to bring\n\n4. **Transportation disruptions**\n   - Verify **subway station closures, exit restrictions, road blocks, or detours**\n   - Check whether taxis/rideshares can **drop off nearby** or need to use designated zones\n\n5. **Weather and air quality**\n   - Confirm the **forecast, temperature, rain, wind, and AQI**\n   - This matters because the square is very exposed and queues can be outdoors\n\n6. **Nearby site hours**\n   - If you also plan to visit the **National Museum of China, Mausoleum, Forbidden City area, or other nearby attractions**, check their live hours and reservation status too\n\n7. **Official notices / events**\n   - Look for **public events, ceremonies, or commemorations** that may affect access\n\nBest sources to check:\n- **Official Tiananmen Square / Beijing tourism notices**\n- **Beijing subway app or official transit updates**\n- **Weather app with hourly forecast**\n- **Local map app for road closures and station exits**\n\nIf you want, I can also give you a **quick checklist for same-day visit planning** or help you find the **most reliable official sources**.",
+    "latency_ms": 3983.4619169996586,
+    "prompt_tokens": 26,
+    "completion_tokens": 369,
+    "total_tokens": 395,
+    "estimated_input_cost": 1.66875e-05,
+    "estimated_output_cost": 0.0018944999999999997,
+    "total_cost": 0.00168,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-037",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give me a source-aware checklist before today's visit to the Forbidden City.",
+    "response_text": "Here’s a **source-aware checklist** for a visit to the **Forbidden City (Palace Museum, Beijing)** today. I’m basing this on the Palace Museum’s official visitor guidance and common same-day practical considerations.\n\n## Before you go\n- **Book tickets in advance** through the **official Palace Museum ticketing channels**; same-day tickets are often limited or unavailable.  \n- **Bring your passport/ID** — entry is tied to identity verification.\n- **Check today’s opening hours** and any temporary closures or crowd-control notices on the official site before leaving.\n- **Plan your route to the correct entrance**:\n  - **Meridian Gate (Wumen)** is typically the main visitor entrance.\n  - Exits are usually different from the entrance, so don’t assume you’ll leave the same way.\n- **Pack light**: large bags, prohibited items, and oversized luggage may not be allowed.\n- **Wear comfortable shoes** — you’ll be walking on large stone courtyards and through extensive grounds.\n- **Carry water and weather protection**:\n  - In hot weather: hat, sunscreen, water\n  - In rain/cold: umbrella or jacket\n- **Allow extra time for security checks and crowds**, especially on weekends, holidays, and peak hours.\n- **Download or save your ticket confirmation offline** in case mobile data is unreliable.\n\n## What to bring\n- Passport/ID used for booking\n- Ticket confirmation / QR code\n- Phone with battery charged\n- Water\n- Comfortable shoes\n- Weather-appropriate clothing\n- Small bag only\n- Cashless payment options if you plan to buy refreshments or souvenirs\n\n## What to verify last-minute\n- Whether **your booked time slot** is still valid\n- Whether the **museum has any special notice today** (crowds, weather, maintenance, security)\n- Whether **audio guide or official app** availability matters to you\n- Whether certain areas/exhibitions require **separate reservation or extra ticket**\n\n## Good to know\n- The Forbidden City is huge; if you’re short on time, decide in advance whether you want a **general highlights route** or a **slower full visit**.\n- Food options inside may be limited compared with outside the museum, so eating beforehand can help.\n- Photography rules can vary by area; follow posted signs and staff instructions.\n\nIf you want, I can also give you a **very short “leave-the-hotel-now” checklist** or a **half-day route",
+    "latency_ms": 5013.258874998428,
+    "prompt_tokens": 20,
+    "completion_tokens": 512,
+    "total_tokens": 532,
+    "estimated_input_cost": 1.425e-05,
+    "estimated_output_cost": 0.0026313749999999996,
+    "total_cost": 0.002319,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-038",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What are the most likely real-time issues a tourist should confirm before going to Jingshan Park?",
+    "response_text": "Before going to **Jingshan Park** in Beijing, a tourist should quickly confirm these **real-time issues**:\n\n1. **Opening hours**\n   - Hours can change by season or for special events.\n   - Confirm the **latest opening and closing time** for the day you plan to visit.\n\n2. **Ticket / entry status**\n   - Check whether tickets are needed, whether they’re sold on-site or online, and whether same-day entry is still available.\n\n3. **Temporary closures or partial access**\n   - Parks may close areas because of maintenance, weather, crowd control, or official events.\n   - Make sure the park itself and the main viewpoints are open.\n\n4. **Weather conditions**\n   - Rain, heavy wind, smog, or extreme heat/cold can affect the visit, especially since the park is known for views from the hilltop.\n\n5. **Air quality**\n   - Since the main attraction is the panoramic view over the Forbidden City and Beijing, haze or pollution may reduce visibility a lot.\n\n6. **Crowd levels**\n   - Peak tourist hours, weekends, and holidays can mean long lines and very crowded paths/viewpoints.\n   - Check if it’s a busy day before heading there.\n\n7. **Security or special restrictions**\n   - Nearby central Beijing areas sometimes have extra security checks, traffic restrictions, or ID requirements.\n\n8. **Nearby transit status**\n   - Confirm the closest subway/bus routes are operating normally, especially during holidays or road works.\n\n9. **Payment and booking methods**\n   - Verify whether cashless payment, WeChat Pay/Alipay, or passport-based ticket purchase is needed if you’re a foreign visitor.\n\n10. **Seasonal features**\n   - If you’re hoping to see flowers, autumn foliage, or sunset views, confirm the current conditions so you don’t arrive at the wrong time.\n\nIf you want, I can also give you a **quick checklist in order of importance** or help you find the **best live sources to verify these before you go**.",
+    "latency_ms": 4376.317916990956,
+    "prompt_tokens": 26,
+    "completion_tokens": 417,
+    "total_tokens": 443,
+    "estimated_input_cost": 1.81875e-05,
+    "estimated_output_cost": 0.002142,
+    "total_cost": 0.001896,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-039",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "If the weather turns bad today, how could it affect a visit to Tiananmen Square?",
+    "response_text": "Bad weather today could make a visit to Tiananmen Square less comfortable or even less enjoyable in a few ways:\n\n- **Rain or snow:** You may get wet, and walking around the large open area can be unpleasant.\n- **Strong wind or sand:** Visibility and comfort can drop, especially in an open square.\n- **Cold or heat:** Extreme temperatures can make being outdoors difficult since much of the visit is outside.\n- **Reduced visibility:** Fog, haze, or heavy rain can make photos and sightseeing less clear.\n- **Possible access or crowd issues:** Bad weather may affect transport or cause some visitors to change plans, though the square itself is generally still open unless authorities announce restrictions.\n\nIf you’re planning to go, it’s a good idea to check the forecast, bring weather-appropriate clothing, and have a backup plan in case conditions worsen.",
+    "latency_ms": 3024.788458002149,
+    "prompt_tokens": 25,
+    "completion_tokens": 176,
+    "total_tokens": 201,
+    "estimated_input_cost": 1.5e-05,
+    "estimated_output_cost": 0.0009663749999999999,
+    "total_cost": 0.00081075,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-040",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What ticketing or reservation details might need same-day verification for the Forbidden City?",
+    "response_text": "For the Forbidden City, same-day verification may be needed for:\n\n- **Real-name ticket information**: The name and ID/passport number used for booking may need to match the visitor exactly.\n- **Booking confirmation / QR code**: You may need to show the electronic ticket or reservation code on entry.\n- **Date-specific reservation**: Tickets are often valid only for the reserved date, so same-day entry timing may be checked.\n- **Time slot / entry window**: If your ticket has a designated entry time, staff may verify that you arrive within that window.\n- **Document used for booking**: A passport or other ID may be required for foreign visitors, especially if the reservation was made with passport details.\n- **Group or special-access permits**: If you booked a group visit, guided tour, or special exhibition access, those details may be checked on the day.\n\nIf you want, I can also give you a **quick checklist for same-day entry** to the Forbidden City.",
+    "latency_ms": 3012.3422909964575,
+    "prompt_tokens": 22,
+    "completion_tokens": 206,
+    "total_tokens": 228,
+    "estimated_input_cost": 1.7625e-05,
+    "estimated_output_cost": 0.0010811249999999998,
+    "total_cost": 0.0009435,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-041",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What transportation disruptions should I consider today before heading to central Beijing attractions?",
+    "response_text": "Before heading to central Beijing attractions today, the main transportation disruptions to watch for are usually:\n\n- **Heavy traffic congestion** on major roads, especially around the **Second, Third, and Fourth Ring Roads** and routes into the city center.\n- **Subway crowding and delays** during **morning and evening rush hours**.\n- **Possible station exits or nearby streets temporarily restricted** near major government, event, or construction areas.\n- **Air quality issues** on some days, which can affect visibility and make walking or cycling less comfortable.\n\nIf you’re planning to visit places like **Tiananmen, the Forbidden City, Wangfujing, or the Temple of Heaven**, the safest approach is to:\n- use the **Beijing Subway** if possible,\n- leave extra travel time,\n- check live traffic and transit updates before you go,\n- and avoid driving if you can.\n\nIf you want, I can also help you with a **route-by-route transit plan** for a specific attraction.",
+    "latency_ms": 2540.4739579971647,
+    "prompt_tokens": 20,
+    "completion_tokens": 208,
+    "total_tokens": 228,
+    "estimated_input_cost": 1.9125e-05,
+    "estimated_output_cost": 0.0010878749999999999,
+    "total_cost": 0.000951,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-042",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What should the app explicitly label as not confirmed unless a live source is checked?",
+    "response_text": "The app should explicitly label **anything it has not verified against a live source** as **“not confirmed”** — especially facts that may have changed, such as:\n\n- **Current prices**\n- **Availability / stock / open status**\n- **Schedules / times / deadlines**\n- **Breaking or recent events**\n- **Current policies / rules**\n- **Real-time stats or rankings**\n- **Any claim based only on memory, training data, or unsourced input**\n\nA good rule is: **if the app did not check a live source during this interaction, it should not present the information as confirmed.**",
+    "latency_ms": 1980.5684580060188,
+    "prompt_tokens": 22,
+    "completion_tokens": 128,
+    "total_tokens": 150,
+    "estimated_input_cost": 1.6125e-05,
+    "estimated_output_cost": 0.0006356249999999999,
+    "total_cost": 0.0005925,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "live_info",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-043",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Given this itinerary, what should I do after Tiananmen Square?",
+    "response_text": "I can help, but I don’t see the itinerary yet.\n\nPlease paste the itinerary, and I’ll tell you the best next stop after Tiananmen Square based on:\n- location/logistics\n- time of day\n- pacing\n- nearby attractions\n\nIf you want, I can also suggest the most efficient route for the whole day.",
+    "latency_ms": 1688.9662080066046,
+    "prompt_tokens": 20,
+    "completion_tokens": 73,
+    "total_tokens": 93,
+    "estimated_input_cost": 1.1625e-05,
+    "estimated_output_cost": 0.000322875,
+    "total_cost": 0.0003435,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-044",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What is my next stop and why is it sequenced that way?",
+    "response_text": "I can help, but I need the route or stop list first.\n\nIf you paste any of these, I can tell you:\n- your next stop\n- the sequencing logic\n- whether it’s based on distance, time windows, priorities, or constraints\n\nSend one of:\n1. the full stop order,\n2. a route map / itinerary,\n3. a screenshot or text of the current schedule,\n4. or the data behind the stops.\n\nIf you want, I can also infer the next stop from a list like:\n- Stop A → Stop B → Stop C\n- with ETA or priority info",
+    "latency_ms": 1938.4531249961583,
+    "prompt_tokens": 20,
+    "completion_tokens": 127,
+    "total_tokens": 147,
+    "estimated_input_cost": 1.0125e-05,
+    "estimated_output_cost": 0.0005366249999999999,
+    "total_cost": 0.0005865,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-045",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Summarize the next step in my Beijing route after the Forbidden City.",
+    "response_text": "I don’t have your specific Beijing route yet. If you share the stops on your itinerary, I can tell you the next one after the Forbidden City.\n\nIf you just want a common next step, a typical follow-up is:\n- **Jingshan Park** — right north of the Forbidden City, great for panoramic views.\n\nIf you paste your route, I’ll summarize it in one sentence.",
+    "latency_ms": 1667.2177500004182,
+    "prompt_tokens": 21,
+    "completion_tokens": 90,
+    "total_tokens": 111,
+    "estimated_input_cost": 1.2937500000000001e-05,
+    "estimated_output_cost": 0.0003914999999999999,
+    "total_cost": 0.00042075,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-046",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I am short on time; which stop should I shorten first?",
+    "response_text": "Do you mean **“shot”** rather than **“stop”**?\n\nIf so, the usual rule is:\n\n- **Shorten the most recent shot first** if you’re short on time.\n- If you mean a **camera shot list**, cut:\n  1. **Repetitive coverage**  \n  2. **Shots that don’t advance the story**\n  3. **Setup-heavy shots** that take longest to change\n  4. **Anything nonessential to continuity**\n\nIf you meant something else by “stop,” tell me the context and I’ll answer directly.",
+    "latency_ms": 2161.2291670026025,
+    "prompt_tokens": 19,
+    "completion_tokens": 132,
+    "total_tokens": 151,
+    "estimated_input_cost": 1.0125e-05,
+    "estimated_output_cost": 0.0004994999999999999,
+    "total_cost": 0.00060825,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-047",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "If I have only 30 minutes left, how should I adjust the remaining route?",
+    "response_text": "If you only have 30 minutes left, you should usually **simplify the route aggressively**:\n\n1. **Keep only the highest-priority stop(s)**  \n   - Drop anything optional, low-value, or out of the way.\n   - Focus on the one destination that matters most.\n\n2. **Cut travel time, not just stop time**  \n   - Choose the **closest feasible stop** or the one that best fits your current location.\n   - Avoid backtracking, loops, or long detours.\n\n3. **Use a direct return plan**  \n   - If you need to get back somewhere, make that the final leg.\n   - Don’t add any extra stops unless they are on the direct path.\n\n4. **Add a buffer for delays**  \n   - Don’t plan all 30 minutes exactly.\n   - Leave a few minutes for parking, walking, or unexpected slowdown.\n\n5. **If the current route won’t fit, switch to “best possible completion”**  \n   - Complete only the most essential segment.\n   - Mark the rest for later rather than trying to squeeze everything in.\n\nIf you want, I can help you **re-optimize the route** if you share the current stops, travel times, and priorities.",
+    "latency_ms": 3109.8969580052653,
+    "prompt_tokens": 23,
+    "completion_tokens": 258,
+    "total_tokens": 281,
+    "estimated_input_cost": 1.35e-05,
+    "estimated_output_cost": 0.0011981249999999998,
+    "total_cost": 0.00117825,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-048",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I skipped the current stop; what should I do next?",
+    "response_text": "If you’ve already skipped the current stop, the next step depends on what you’re using:\n\n- **Ride-share / shuttle / transit app:** Check the app for the **next stop** or **route progress**. If there’s an option, **select the next stop** or **contact the driver/support** to confirm where you should get off.\n- **Train/bus:** Look at the **next scheduled stop** and prepare to get off there. If you missed your stop, **stay calm** and **disembark at the next safe stop**, then backtrack.\n- **Navigation app:** Recalculate the route to your destination and follow the **next turn/stop**.\n\nIf you tell me **what app or vehicle you’re on** (bus, train, ride-share, etc.), I can give more specific steps.",
+    "latency_ms": 2208.1239169929177,
+    "prompt_tokens": 18,
+    "completion_tokens": 173,
+    "total_tokens": 191,
+    "estimated_input_cost": 9.375000000000001e-06,
+    "estimated_output_cost": 0.0007863749999999999,
+    "total_cost": 0.000792,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-049",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I am tired; give me the least walking-heavy next step.",
+    "response_text": "If you’re tired, the least walking-heavy next step is: **sit down or lie down for 5–10 minutes, drink some water, and decide one tiny next action from where you are.**\n\nIf you want, I can help you pick the **lowest-effort next step** for whatever you’re doing right now.",
+    "latency_ms": 1502.0224999898346,
+    "prompt_tokens": 19,
+    "completion_tokens": 71,
+    "total_tokens": 90,
+    "estimated_input_cost": 1.0125e-05,
+    "estimated_output_cost": 0.00030375,
+    "total_cost": 0.00033375,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-050",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I want a quick lunch break between stops; where should I insert it?",
+    "response_text": "I can help, but I need a bit more context: what are the stops or the route you’re referring to?\n\nIf you paste the list of stops (or a map/itinerary), I can tell you the best place to insert a quick lunch break based on timing, location, and likely meal options.",
+    "latency_ms": 1834.7102090046974,
+    "prompt_tokens": 21,
+    "completion_tokens": 67,
+    "total_tokens": 88,
+    "estimated_input_cost": 1.25625e-05,
+    "estimated_output_cost": 0.000293625,
+    "total_cost": 0.00031725,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-051",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Which stop in this route is best for photos?",
+    "response_text": "I can help, but I need to see the route first.\n\nPlease send either:\n- the route map/image, or\n- the list of stops in order, or\n- a link to the route\n\nThen I can tell you which stop is likely best for photos, and why.",
+    "latency_ms": 1344.9311669974122,
+    "prompt_tokens": 16,
+    "completion_tokens": 68,
+    "total_tokens": 84,
+    "estimated_input_cost": 8.249999999999999e-06,
+    "estimated_output_cost": 0.00024299999999999997,
+    "total_cost": 0.000318,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-052",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What is the best order for these two remaining stops if I want an easier pace?",
+    "response_text": "I can help, but I need a bit more context first.\n\nPlease send:\n- the **two remaining stops**\n- your **current route or starting point**\n- any **time constraints**\n- whether “easier pace” means:\n  - less driving,\n  - less walking,\n  - fewer hills/stairs,\n  - fewer crowds,\n  - or avoiding traffic.\n\nIf you want, you can just paste the two stop names and I’ll suggest the better order.",
+    "latency_ms": 2249.1940000036266,
+    "prompt_tokens": 23,
+    "completion_tokens": 99,
+    "total_tokens": 122,
+    "estimated_input_cost": 1.4625e-05,
+    "estimated_output_cost": 0.000430875,
+    "total_cost": 0.00046275,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-053",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I just finished the palace section; what should I do next?",
+    "response_text": "If you’ve just finished **the palace section** in **Persona 5 Royal**, the usual next step is to:\n\n1. **Return to the real world and save**\n2. **Finish any remaining Confidant work** you care about\n3. **Proceed to the next story segment / secure the route deadline**\n4. **Focus on the upcoming Palace deadline if it’s not already cleared**\n\nIf you mean a specific game or chapter, tell me **which “palace”** you just finished and **what game** you’re playing, and I can tell you the exact next steps without spoilers.",
+    "latency_ms": 2397.9152499960037,
+    "prompt_tokens": 19,
+    "completion_tokens": 127,
+    "total_tokens": 146,
+    "estimated_input_cost": 1.0875e-05,
+    "estimated_output_cost": 0.000581625,
+    "total_cost": 0.00058575,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-054",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "If I am currently at the first stop, what should the app tell me now?",
+    "response_text": "If you’re already at the first stop, the app should usually tell you that you’ve arrived and that the trip is starting there.\n\nA good message would be something like:\n\n**“You are at the first stop. Stay here for boarding and departure details.”**\n\nIf you want, I can also help craft a version that sounds:\n- more formal,\n- more friendly,\n- or tailored for a transit app UI.",
+    "latency_ms": 1700.094749990967,
+    "prompt_tokens": 23,
+    "completion_tokens": 88,
+    "total_tokens": 111,
+    "estimated_input_cost": 1.2937500000000001e-05,
+    "estimated_output_cost": 0.00041962499999999997,
+    "total_cost": 0.00041325,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-055",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give me a one-sentence next-action message for a mobile UI.",
+    "response_text": "Tap to continue.",
+    "latency_ms": 1017.4408329912694,
+    "prompt_tokens": 20,
+    "completion_tokens": 8,
+    "total_tokens": 28,
+    "estimated_input_cost": 1.10625e-05,
+    "estimated_output_cost": 1.8e-05,
+    "total_cost": 5.1e-05,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-056",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Give me a more detailed next-step explanation for the same itinerary.",
+    "response_text": "Sure — please paste the itinerary you want expanded, and I’ll turn it into a more detailed next-step version. If you want, I can also format it as:\n\n- a step-by-step checklist\n- a day-by-day action plan\n- or a travel/tour style narrative",
+    "latency_ms": 1718.5398750007153,
+    "prompt_tokens": 19,
+    "completion_tokens": 61,
+    "total_tokens": 80,
+    "estimated_input_cost": 1.2937500000000001e-05,
+    "estimated_output_cost": 0.000266625,
+    "total_cost": 0.00028875,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-057",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "What should the app say if the user asks What now? during the route?",
+    "response_text": "If the user asks **“What now?”** during the route, the app should respond with the **next immediate navigation action** in a short, natural way.\n\nA good pattern is:\n\n- **If there’s a turn coming up:**  \n  “In 200 meters, turn left onto Main Street.”\n- **If the user is currently approaching the maneuver:**  \n  “Turn left onto Main Street.”\n- **If there’s nothing immediate:**  \n  “Continue straight for 1.2 miles.”\n\nIn general, the reply should:\n1. **State the next maneuver**\n2. **Include distance if helpful**\n3. **Be brief and actionable**\n\nIf you want, I can help you write the exact app copy for different route situations.",
+    "latency_ms": 2116.81537500408,
+    "prompt_tokens": 22,
+    "completion_tokens": 155,
+    "total_tokens": 177,
+    "estimated_input_cost": 1.2750000000000002e-05,
+    "estimated_output_cost": 0.0007076249999999999,
+    "total_cost": 0.000714,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "trip_assistant",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-058",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Replace Jingshan Park with another nearby scenic stop.",
+    "response_text": "Sure — a good nearby scenic replacement for **Jingshan Park** is **Beihai Park**.\n\nIt’s close by, very scenic, and offers:\n- a beautiful lake and garden landscapes\n- classic Chinese pavilions and bridges\n- a more relaxed atmosphere for a stroll\n\nIf you want, I can also suggest:\n- a **more historic** replacement\n- a **more nature-focused** replacement\n- or an **even closer** scenic stop depending on your route.",
+    "latency_ms": 1783.6033329949714,
+    "prompt_tokens": 17,
+    "completion_tokens": 103,
+    "total_tokens": 120,
+    "estimated_input_cost": 1.0125e-05,
+    "estimated_output_cost": 0.0004646249999999999,
+    "total_cost": 0.00047625,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-059",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Remove the museum stop and keep the route balanced.",
+    "response_text": "Sure — I can do that, but I need the current route details first.\n\nPlease paste the route or itinerary, and I’ll:\n1. remove the museum stop, and\n2. rebalance the remaining stops so the route still feels even.",
+    "latency_ms": 1559.408874993096,
+    "prompt_tokens": 16,
+    "completion_tokens": 54,
+    "total_tokens": 70,
+    "estimated_input_cost": 9.5625e-06,
+    "estimated_output_cost": 0.00023399999999999997,
+    "total_cost": 0.000255,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-060",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Reorder the route so the easiest stop comes first.",
+    "response_text": "Sure — please paste the route/stops you want reordered, and I’ll put the easiest stop first.",
+    "latency_ms": 1145.411834004335,
+    "prompt_tokens": 17,
+    "completion_tokens": 25,
+    "total_tokens": 42,
+    "estimated_input_cost": 9.375000000000001e-06,
+    "estimated_output_cost": 0.0001035,
+    "total_cost": 0.00012525,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-061",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I want fewer stairs; change the remaining route.",
+    "response_text": "I can help, but I need a bit more context: what route are you referring to?\n\nIf you mean a walking/driving/transit route, send:\n- the current route or map screenshot\n- start and destination\n- whether you want the **least stairs**, **accessible route**, or just **fewer stairs**\n\nIf you want, I can also help rewrite the route instructions to avoid stairs.",
+    "latency_ms": 1561.5611669927603,
+    "prompt_tokens": 16,
+    "completion_tokens": 85,
+    "total_tokens": 101,
+    "estimated_input_cost": 9e-06,
+    "estimated_output_cost": 0.00039937499999999994,
+    "total_cost": 0.0003945,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-062",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Swap the next stop for something more child-friendly.",
+    "response_text": "I can help with that, but I need a bit more context.\n\nWhat is the current “next stop” you want to replace, and what kind of trip is this—travel itinerary, train/bus route, or a list of activities? If you share the original stop, I can suggest a more child-friendly alternative.",
+    "latency_ms": 1441.7359579965705,
+    "prompt_tokens": 16,
+    "completion_tokens": 69,
+    "total_tokens": 85,
+    "estimated_input_cost": 9.9375e-06,
+    "estimated_output_cost": 0.000311625,
+    "total_cost": 0.0003225,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-063",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Make this route more photography-focused.",
+    "response_text": "Sure — I can do that. Please paste the route details you want adjusted, and I’ll rewrite it to emphasize photography opportunities.\n\nIf helpful, I can tailor it for:\n- **Landscape/scenic photography**\n- **City/street photography**\n- **Wildlife photography**\n- **Golden hour / sunrise / sunset timing**\n- **Easy stops vs. best-photo detours**\n\nIf you already have the route, send it over and I’ll make it more photography-focused.",
+    "latency_ms": 1988.6835000070278,
+    "prompt_tokens": 13,
+    "completion_tokens": 99,
+    "total_tokens": 112,
+    "estimated_input_cost": 7.6875e-06,
+    "estimated_output_cost": 0.000482625,
+    "total_cost": 0.00045525,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-064",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Shorten the itinerary from three stops to two.",
+    "response_text": "Sure — please paste the current itinerary, and I’ll shorten it from three stops to two.",
+    "latency_ms": 1432.3793750081677,
+    "prompt_tokens": 16,
+    "completion_tokens": 23,
+    "total_tokens": 39,
+    "estimated_input_cost": 8.625e-06,
+    "estimated_output_cost": 9.787499999999998e-05,
+    "total_cost": 0.0001155,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-065",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Add one quieter stop after the Forbidden City.",
+    "response_text": "Certainly — here’s a quieter stop you can add right after the Forbidden City:\n\n**Jingshan Park**  \nJust north of the Forbidden City, Jingshan Park is a peaceful spot with tree-lined paths, hilltop views over the palace roofs, and far fewer crowds than the major sights. It’s a great place to slow down for a bit before continuing on.\n\nIf you want, I can also suggest **2–3 other quieter options** depending on whether you want a park, temple, or café break.",
+    "latency_ms": 1755.361792005715,
+    "prompt_tokens": 15,
+    "completion_tokens": 109,
+    "total_tokens": 124,
+    "estimated_input_cost": 8.625e-06,
+    "estimated_output_cost": 0.0005141249999999999,
+    "total_cost": 0.00050175,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-066",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Remove the most crowded stop and keep the rest of the route reasonable.",
+    "response_text": "I can do that, but I need the route details first.\n\nPlease send one of these:\n- the full stop list for the route, with crowding/load if you have it, or\n- a map/CSV/table of stops, or\n- the route name and the stop counts by stop\n\nOnce I have it, I’ll remove the most crowded stop and suggest the best adjusted route while keeping the rest reasonable.",
+    "latency_ms": 1594.8967080039438,
+    "prompt_tokens": 20,
+    "completion_tokens": 89,
+    "total_tokens": 109,
+    "estimated_input_cost": 1.3312499999999998e-05,
+    "estimated_output_cost": 0.00039262499999999996,
+    "total_cost": 0.0004155,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-067",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Make the route slower and less tiring.",
+    "response_text": "I can help, but I need a bit more context.\n\nWhat route are you referring to?\n- a walking route\n- a cycling route\n- a driving route\n- a running/training route\n- a map/GPX route you want edited\n\nIf you share the route details or upload the route file, I can suggest changes to make it:\n- slower\n- flatter\n- with fewer hills/stairs\n- with more rest points\n- less intense overall\n\nIf you want, paste the route here and I’ll revise it.",
+    "latency_ms": 1818.7256669916678,
+    "prompt_tokens": 14,
+    "completion_tokens": 114,
+    "total_tokens": 128,
+    "estimated_input_cost": 7.125e-06,
+    "estimated_output_cost": 0.00048374999999999997,
+    "total_cost": 0.0005235,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-068",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Change the route to prioritize historical landmarks.",
+    "response_text": "Sure — I can do that, but I need the current route details first.\n\nPlease send one of these:\n- the route steps you want changed\n- a map/link\n- the city or area you’re traveling in\n- the current stops or waypoints\n\nThen I’ll revise it to prioritize historical landmarks.",
+    "latency_ms": 1410.4635829862673,
+    "prompt_tokens": 14,
+    "completion_tokens": 67,
+    "total_tokens": 81,
+    "estimated_input_cost": 9.75e-06,
+    "estimated_output_cost": 0.000302625,
+    "total_cost": 0.000312,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-069",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "Move the park visit to the end of the trip.",
+    "response_text": "Sure — I can do that.  \nPlease share the current trip itinerary, and I’ll move the park visit to the end.",
+    "latency_ms": 1113.1029169919202,
+    "prompt_tokens": 17,
+    "completion_tokens": 30,
+    "total_tokens": 47,
+    "estimated_input_cost": 8.0625e-06,
+    "estimated_output_cost": 0.00011812499999999998,
+    "total_cost": 0.00014775,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-070",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I have half a day in Beijing and want history, light walking, and good photos. Build around that.",
+    "response_text": "Here’s a **half-day Beijing plan** built for **history + light walking + great photos**, keeping transit efficient and the pacing relaxed.\n\n## Best option: Central Beijing history loop\nThis gives you iconic sights without too much walking.\n\n### 1) Tiananmen area + Forbidden City exterior\n**Why:** Big-history Beijing, classic photo ops, easy to combine.\n\n- Start at **Tiananmen Square** for the scale and political history.\n- Walk north to the **Forbidden City / Palace Museum** area.\n- Even if you don’t enter the museum, the **Meridian Gate exterior, moat, and red walls** make excellent photos.\n\n**Photo tips:**\n- Best light is usually **early morning** or **late afternoon**.\n- Shoot the **red walls + golden roofs** with a wide shot.\n- For fewer crowds, avoid midday if you can.\n\n### 2) Jingshan Park\n**Why:** Best panoramic view of central Beijing and a very manageable walk.\n\n- From the north gate of the Forbidden City area, head to **Jingshan Park**.\n- The climb is short but a bit steep; still very doable and worth it.\n- From the top, you get a **classic skyline view over the Forbidden City**.\n\n**Photo tip:**  \nThis is one of the best places in Beijing for a **high, symmetrical city view**, especially on a clear day.\n\n### 3) Shichahai / Houhai\n**Why:** Relaxed historic atmosphere, easy walking, nice water views.\n\n- After Jingshan, take a short taxi or subway ride to **Shichahai/Houhai**.\n- Stroll along the lakeside, old lanes, and traditional courtyard areas.\n- Good for photos of **hutong life, boats, reflections, and old-style street scenes**.\n\n**If you have energy:**  \nWalk a little into the **hutongs** nearby for more local atmosphere.\n\n---\n\n## Suggested half-day timing\n### Option A: Morning\n- **8:00–9:00** Tiananmen / Forbidden City exterior\n- **9:30–10:30** Jingshan Park\n- **11:00–12:30** Shichahai / Houhai lunch and walk\n\n### Option B: Afternoon into sunset\n- **2:00–3:00** Forbidden City exterior / Tiananmen area\n- **3:30–4:30** Jingshan Park\n- **5",
+    "latency_ms": 4908.639832996414,
+    "prompt_tokens": 28,
+    "completion_tokens": 512,
+    "total_tokens": 540,
+    "estimated_input_cost": 1.81875e-05,
+    "estimated_output_cost": 0.0022319999999999996,
+    "total_cost": 0.002325,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-071",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I want two major attractions, simple English explanations, and not too much walking.",
+    "response_text": "Sure — I can do that.\n\nPlease tell me **which city or area** you’re visiting, and I’ll give you:\n- **2 major attractions**\n- **simple English explanations**\n- **an easy plan with not too much walking**\n\nIf you want, I can also make it:\n- **good for one day**\n- **good for families**\n- **good for older travelers**\n- **easy by bus/train/taxi**",
+    "latency_ms": 3630.821875005495,
+    "prompt_tokens": 22,
+    "completion_tokens": 92,
+    "total_tokens": 114,
+    "estimated_input_cost": 1.575e-05,
+    "estimated_output_cost": 0.00038475,
+    "total_cost": 0.0004305,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-072",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I am traveling with parents who need frequent breaks; what route style fits best?",
+    "response_text": "For travelers who need frequent breaks, the best route style is usually:\n\n- **Short, direct segments**\n- **Low-speed roads** instead of long highway stretches, if they allow more frequent stops\n- **Routes with regular rest areas, gas stations, cafes, or towns**\n- **Flexible itinerary routes** rather than packed point-to-point driving\n\nIf you’re using a map or navigation app, look for options like:\n- **“Avoid highways”** if you want more stop opportunities\n- **“Scenic route”** only if it still has frequent services and isn’t too long\n- **Routes with waypoints** so you can intentionally build in break stops every 1–2 hours\n\nBest overall: **a route planned in short legs with planned rest stops**, rather than the fastest continuous drive.\n\nIf you want, I can help you pick the best route style for **driving, train travel, or walking**, depending on your trip.",
+    "latency_ms": 2491.2573330075247,
+    "prompt_tokens": 22,
+    "completion_tokens": 197,
+    "total_tokens": 219,
+    "estimated_input_cost": 1.5187500000000002e-05,
+    "estimated_output_cost": 0.00097425,
+    "total_cost": 0.000903,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-073",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I prefer scenic views over museums; how should the itinerary change?",
+    "response_text": "If you prefer scenic views over museums, I’d shift the itinerary toward viewpoints, waterfronts, parks, neighborhoods with great architecture, and day trips into nature.\n\nA good rule of thumb:\n- Cut most museum time\n- Add sunrise/sunset viewpoints\n- Replace indoor stops with walking routes, parks, gardens, and scenic transit\n- Leave room for spontaneous photo stops and cafés with views\n\nA sample structure for a city trip could be:\n- Morning: scenic walk or viewpoint\n- Late morning: neighborhood exploration\n- Afternoon: park, riverfront, coastal drive, or cable car\n- Evening: sunset spot and dinner with a view\n\nIf you want, I can rewrite your actual itinerary into a more scenic version—just paste it here and I’ll swap out the museum-heavy parts.",
+    "latency_ms": 2964.3710420059506,
+    "prompt_tokens": 19,
+    "completion_tokens": 164,
+    "total_tokens": 183,
+    "estimated_input_cost": 1.2750000000000002e-05,
+    "estimated_output_cost": 0.0008482499999999999,
+    "total_cost": 0.00075225,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-074",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I only care about iconic first-time sights; what should the plan optimize for?",
+    "response_text": "Optimize for **arrival impact**: fewer places, more “wow.”\n\n### What to prioritize\n- **Iconic landmarks over neighborhoods**\n  - Go for the instantly recognizable: skyline views, famous monuments, signature architecture, legendary vistas.\n- **First-look moments**\n  - Try to see each major sight from the angle that creates the strongest reveal first.\n- **Daytime + golden hour**\n  - Many icons look best when you can appreciate scale and detail, then revisit at sunset/night if they’re lit up.\n- **One standout per day**\n  - Don’t overload the itinerary. Build around the single most memorable visual anchor.\n- **Low-friction logistics**\n  - Minimize transit, queues, and unnecessary stops so the best moments aren’t diluted by fatigue.\n- **Elevated viewpoints**\n  - Prioritize rooftops, hills, towers, ferries, or bridges—anything that gives a cinematic overview.\n- **Signature reveals**\n  - Plan for “the first time you turn the corner” or “the first time the skyline appears.”\n\n### What to deprioritize\n- Long museum blocks\n- Repeated church/interior visits unless truly unique\n- Generic shopping streets\n- “Maybe interesting” stops that don’t deliver a strong visual payoff\n\n### A simple rule of thumb\nIf a stop doesn’t create a **postcard-worthy memory**, cut it.\n\nIf you want, I can turn this into a **trip-planning checklist** or a **sample iconic-sights-only itinerary** for a specific city.",
+    "latency_ms": 4139.597959001549,
+    "prompt_tokens": 22,
+    "completion_tokens": 314,
+    "total_tokens": 336,
+    "estimated_input_cost": 1.4625e-05,
+    "estimated_output_cost": 0.0015749999999999998,
+    "total_cost": 0.0014295,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-075",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I want a route that feels calm, not crowded, and easy to understand in English.",
+    "response_text": "Sure — I can help with that.\n\nHere are a few simple, natural ways to say it in English:\n\n- **I want a route that is calm, not crowded, and easy to understand.**\n- **I’m looking for a quiet, uncrowded route that’s easy to follow.**\n- **I want a peaceful route that’s easy to understand in English.**\n\nIf you mean a **walking, driving, or travel route**, I can make it even more natural for that situation.",
+    "latency_ms": 1715.0943750020815,
+    "prompt_tokens": 24,
+    "completion_tokens": 105,
+    "total_tokens": 129,
+    "estimated_input_cost": 1.4812500000000001e-05,
+    "estimated_output_cost": 0.0004545,
+    "total_cost": 0.0004905,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-076",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I am interested in imperial history but not long indoor visits; what should be recommended?",
+    "response_text": "If you like **imperial history** but want to avoid **long indoor museum visits**, I’d recommend focusing on **outdoor or lightly indoor sites** such as:\n\n- **Historic palaces and their gardens**  \n  You can enjoy the architecture and grounds without spending hours inside.\n\n- **Fortresses, walls, and citadels**  \n  These often have strong imperial-era connections and are best experienced walking around the exterior.\n\n- **Old imperial capitals or districts**  \n  City walks through former palace areas, ceremonial avenues, and monuments can give you a lot of history with minimal indoor time.\n\n- **Outdoor ruins and archaeological parks**  \n  Great for imperial history, especially if you want to explore at your own pace.\n\n- **Monuments, triumphal arches, columns, and memorials**  \n  These are usually quick stops but rich in imperial symbolism.\n\n- **Open-air museums or heritage parks**  \n  They can cover imperial-era life and politics without requiring a long indoor stay.\n\nIf you tell me **which country or city you’ll be in**, I can suggest **specific places** that match your preference.",
+    "latency_ms": 3103.7864170066314,
+    "prompt_tokens": 23,
+    "completion_tokens": 231,
+    "total_tokens": 254,
+    "estimated_input_cost": 1.70625e-05,
+    "estimated_output_cost": 0.001234125,
+    "total_cost": 0.00105675,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-077",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I want the app to speak in very simple English because I am not fluent.",
+    "response_text": "Sure — I will use very simple English.\n\nI can:\n- use short sentences\n- avoid hard words\n- explain things step by step\n\nIf you want, I can also:\n- make answers shorter\n- use bullet points\n- translate into another language",
+    "latency_ms": 1889.6363749954617,
+    "prompt_tokens": 22,
+    "completion_tokens": 56,
+    "total_tokens": 78,
+    "estimated_input_cost": 1.3312499999999998e-05,
+    "estimated_output_cost": 0.0002475,
+    "total_cost": 0.0002685,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-078",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I have one afternoon, prefer outdoor stops, and want a good sunset location.",
+    "response_text": "Absolutely — I can help, but I need one key detail first:\n\n**What city or area are you in (or visiting)?**\n\nIf you want, I can then build a **one-afternoon itinerary** with:\n- mostly **outdoor stops**\n- minimal transit\n- a **great sunset viewpoint**\n- optional food/drink stop nearby\n\nIf you’re not sure how specific to be, just send:\n- **city + neighborhood**, or\n- **hotel/starting point**, or\n- **what you’re interested in** (views, parks, waterfront, easy walking, etc.)\n\n",
+    "latency_ms": 2659.612791991094,
+    "prompt_tokens": 22,
+    "completion_tokens": 124,
+    "total_tokens": 146,
+    "estimated_input_cost": 1.425e-05,
+    "estimated_output_cost": 0.0005355,
+    "total_cost": 0.0005745,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-079",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I want a route that works well for solo travel and photos.",
+    "response_text": "Absolutely — I can help with that. To suggest a route that’s great for **solo travel and photography**, I need a bit more info:\n\n1. **Where are you starting from?**  \n   City/country, or “I’m flexible.”\n\n2. **How long do you have?**  \n   A weekend, 1 week, 2–3 weeks, etc.\n\n3. **What kind of scenery/photos do you want most?**  \n   - Cities/architecture  \n   - Mountains/lakes  \n   - Coastlines/beaches  \n   - Countryside/villages  \n   - Street photography/culture  \n   - Wildlife\n\n4. **Budget level?**  \n   Budget / mid-range / comfortable\n\n5. **Preferred pace?**  \n   Relaxed with fewer stops, or a packed route with lots of locations?\n\nIf you want, I can also just give you a few **ready-made solo photo-friendly routes** by region, for example:\n- **Japan:** Tokyo → Kanazawa → Kyoto → Osaka\n- **Portugal:** Lisbon → Sintra → Porto → Douro Valley\n- **Italy:** Venice → Bologna → Florence → Cinque Terre\n- **Iceland:** Reykjavík → South Coast → Vík → Jökulsárlón\n- **Vietnam:** Hanoi → Ninh Binh → Huế → Hội An\n\nIf you tell me your starting point and time frame, I’ll build a route that’s safe, efficient, and especially good for photography.",
+    "latency_ms": 3183.625416990253,
+    "prompt_tokens": 19,
+    "completion_tokens": 308,
+    "total_tokens": 327,
+    "estimated_input_cost": 1.0875e-05,
+    "estimated_output_cost": 0.0012869999999999997,
+    "total_cost": 0.00140025,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-080",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I do not want ticket complexity or reservation risk; what route strategy fits best?",
+    "response_text": "If your goal is **minimizing complexity and reservation risk**, the best strategy is usually:\n\n### Best fit: **simple, direct, fully booked route**\nChoose a route that has:\n- **Nonstop or one simple connection**\n- **High-frequency service**  \n- **No tight layovers**\n- **No complicated ticket combinations**\n- **One single reservation / one carrier if possible**\n\n### Why this works\n- Fewer segments = fewer chances for missed connections\n- One booking = less risk of split-ticket issues\n- High-frequency routes = easier rebooking if something changes\n- Direct routes = simpler baggage handling and fewer disruption points\n\n### If you’re choosing between options\nPrefer:\n1. **Direct over connecting**\n2. **One carrier over multiple carriers**\n3. **Flexible standard fare over self-transfer or separate tickets**\n4. **Major hub routes over obscure connections**\n5. **Longer but stable connection over short risky connection**\n\n### Avoid if you want low risk\n- Self-transfer itineraries\n- Separate reservations\n- Tight connections\n- Routes with multiple changes of transport\n- Peak-time or weather-sensitive transfers if avoidable\n\nIf you want, I can also help you choose a route strategy based on your exact trip type: **train, flight, or mixed travel**.",
+    "latency_ms": 3181.9316250039265,
+    "prompt_tokens": 22,
+    "completion_tokens": 267,
+    "total_tokens": 289,
+    "estimated_input_cost": 1.5562500000000002e-05,
+    "estimated_output_cost": 0.0014096249999999999,
+    "total_cost": 0.001218,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  },
+  {
+    "query_id": "eng-081",
+    "provider": "openrouter",
+    "model": "openai/gpt-5.4-mini",
+    "prompt": "I care most about culture, views, and low confusion while navigating—what should the app infer?",
+    "response_text": "The app should infer that your top priorities are:\n\n1. **Cultural richness / local atmosphere**\n   - You want places and routes that feel authentic, interesting, and culturally meaningful.\n\n2. **Good views / scenic experience**\n   - You prefer routes or destinations with attractive scenery, landmarks, or visual appeal.\n\n3. **Low navigation confusion**\n   - You want clear, simple, easy-to-follow directions with minimal ambiguity, backtracking, or complex turns.\n\nIf the app is choosing between options, it should probably favor:\n- **scenic, culturally significant routes**\n- **well-marked paths and straightforward navigation**\n- **less emphasis on speed if it reduces confusion or removes interesting surroundings**\n\nIf you want, I can also turn this into a **preference profile** the app could use directly.",
+    "latency_ms": 2354.465041993535,
+    "prompt_tokens": 26,
+    "completion_tokens": 166,
+    "total_tokens": 192,
+    "estimated_input_cost": 1.78125e-05,
+    "estimated_output_cost": 0.0009135,
+    "total_cost": 0.0007665,
+    "parameter_size": "not_public",
+    "metadata": {
+      "category": "planner_handoff",
+      "language": "en"
+    }
+  }
+]

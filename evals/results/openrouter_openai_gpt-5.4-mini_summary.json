@@ -1,0 +1,13 @@
+{
+  "provider": "openrouter",
+  "model": "openai/gpt-5.4-mini",
+  "total_queries": 81,
+  "avg_latency_ms": 2415.2634294935715,
+  "estimated_total_input_cost": 0.000985125,
+  "estimated_total_output_cost": 0.05877224999999999,
+  "estimated_total_cost": 0.0557355,
+  "avg_prompt_tokens": 19.604938271604937,
+  "avg_completion_tokens": 149.64197530864197,
+  "avg_total_tokens": 169.2469135802469,
+  "avg_score": 3.382716049382716
+}

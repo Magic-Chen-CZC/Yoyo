@@ -1,0 +1,731 @@
+[
+  {
+    "query_id": "eng-001",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'beijing']"
+  },
+  {
+    "query_id": "eng-002",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'important', 'beijing']"
+  },
+  {
+    "query_id": "eng-003",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'important', 'beijing']"
+  },
+  {
+    "query_id": "eng-004",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-005",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-006",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-007",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-008",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-009",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['history', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-010",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-011",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'important', 'beijing']"
+  },
+  {
+    "query_id": "eng-012",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-013",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'beijing']"
+  },
+  {
+    "query_id": "eng-014",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'important', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-015",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'important', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-016",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['beijing']"
+  },
+  {
+    "query_id": "eng-017",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'history', 'beijing']"
+  },
+  {
+    "query_id": "eng-018",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "attraction_explain",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['historical', 'imperial', 'beijing']"
+  },
+  {
+    "query_id": "eng-019",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['translation', 'english']"
+  },
+  {
+    "query_id": "eng-020",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['english']"
+  },
+  {
+    "query_id": "eng-021",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-022",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['phrase']"
+  },
+  {
+    "query_id": "eng-023",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-024",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-025",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-026",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['english']"
+  },
+  {
+    "query_id": "eng-027",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['translate']"
+  },
+  {
+    "query_id": "eng-028",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['phrase']"
+  },
+  {
+    "query_id": "eng-029",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['english', 'phrase']"
+  },
+  {
+    "query_id": "eng-030",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "translation",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['english']"
+  },
+  {
+    "query_id": "eng-031",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['today']"
+  },
+  {
+    "query_id": "eng-032",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['source', 'travel information']"
+  },
+  {
+    "query_id": "eng-033",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['today']"
+  },
+  {
+    "query_id": "eng-034",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-035",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-036",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['live info', 'today', 'source']"
+  },
+  {
+    "query_id": "eng-037",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['today', 'source']"
+  },
+  {
+    "query_id": "eng-038",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-039",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-040",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 1.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-041",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['today']"
+  },
+  {
+    "query_id": "eng-042",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "live_info",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['source']"
+  },
+  {
+    "query_id": "eng-043",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['itinerary', 'next']"
+  },
+  {
+    "query_id": "eng-044",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'itinerary', 'route', 'next']"
+  },
+  {
+    "query_id": "eng-045",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['itinerary', 'route', 'next']"
+  },
+  {
+    "query_id": "eng-046",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop']"
+  },
+  {
+    "query_id": "eng-047",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'route']"
+  },
+  {
+    "query_id": "eng-048",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'route', 'next']"
+  },
+  {
+    "query_id": "eng-049",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['route', 'next']"
+  },
+  {
+    "query_id": "eng-050",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'itinerary', 'route', 'next']"
+  },
+  {
+    "query_id": "eng-051",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'route']"
+  },
+  {
+    "query_id": "eng-052",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop']"
+  },
+  {
+    "query_id": "eng-053",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['next']"
+  },
+  {
+    "query_id": "eng-054",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'next']"
+  },
+  {
+    "query_id": "eng-055",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 2.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['next']"
+  },
+  {
+    "query_id": "eng-056",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 3.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['itinerary', 'next']"
+  },
+  {
+    "query_id": "eng-057",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "trip_assistant",
+    "score": 4.0,
+    "max_score": 5.0,
+    "rationale": "Matched rubric keywords: ['stop', 'route', 'next']"
+  },
+  {
+    "query_id": "eng-058",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-059",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-060",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-061",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-062",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-063",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-064",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-065",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-066",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-067",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-068",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-069",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-070",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-071",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-072",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-073",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-074",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-075",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-076",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-077",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-078",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-079",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-080",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  },
+  {
+    "query_id": "eng-081",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.6-plus",
+    "category": "planner_handoff",
+    "score": 5.0,
+    "max_score": 5.0,
+    "rationale": "No rubric keywords matched; baseline score applied."
+  }
+]

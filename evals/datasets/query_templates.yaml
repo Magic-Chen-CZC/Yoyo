@@ -1,0 +1,26 @@
+categories:
+  attraction_explain:
+    - "Explain why {poi_name} is important for first-time visitors to Beijing."
+    - "Give me a short historical introduction to {poi_name}."
+    - "Explain {poi_name} in simple English for tourists."
+  translation:
+    - "Translate this travel phrase into English: {phrase}"
+    - "Rewrite this travel phrase in simpler English: {phrase}"
+  live_info:
+    - "What should I check before visiting {poi_name} today?"
+    - "What live travel information matters most before going to {poi_name}?"
+  trip_assistant:
+    - "Given this itinerary, what should I do next after {poi_name}?"
+    - "Summarize the next step in my Beijing route after {poi_name}."
+poi_names:
+  - Tiananmen Square
+  - Forbidden City
+  - Jingshan Park
+phrases:
+  - 请帮我拍张照片
+  - 这个景点几点关门
+  - 我下一站怎么走
+languages:
+  - en
+  - zh
+  - es
