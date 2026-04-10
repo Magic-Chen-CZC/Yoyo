@@ -34,6 +34,7 @@ Backend-first FastAPI project for the Yoyo Beijing tour intelligent guide system
 - Previous todo snapshot lives in `docs/todo-archive-v1.md`
 - Model evaluation plan lives in `docs/model-evaluation.md`
 - Teammate setup guide lives in `docs/dev-setup-for-teammates.md`
+- A-track branch summary lives in `docs/a-track-branch-notes.md`
 
 ## Current team workflow
 - A and B should first finish the shared overlap contracts in `docs/contracts.md`
