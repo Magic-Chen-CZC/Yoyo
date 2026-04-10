@@ -45,7 +45,8 @@ Current agreed shape:
       "category": "museum",
       "latitude": 39.9163,
       "longitude": 116.3972,
-      "recommended_duration_minutes": 180
+      "recommended_duration_minutes": 180,
+      "arrival_threshold_meters": 200
     }
   ]
 }
@@ -56,6 +57,7 @@ Rules:
 - A owns production of this payload.
 - B consumes it for QA and guide generation.
 - The fields `id`, `name`, `category`, `latitude`, `longitude`, and `recommended_duration_minutes` are now part of the active contract.
+- `arrival_threshold_meters` is the runtime geofence hint used by session/gps logic and is now part of the implemented stop payload.
 
 ### 2. `guide_generation_job.result_json`
 Current agreed shape:
@@ -112,6 +114,8 @@ Current agreed shape:
   "itinerary_version_id": "...",
   "status": "active",
   "playback_state": "playing",
+  "current_stop_index": 0,
+  "has_next_stop": true,
   "current_stop": {},
   "next_stop": {},
   "current_position": {},
@@ -129,7 +133,9 @@ Current agreed sequence:
 1. A computes arrival using geofence/distance logic.
 2. A updates `guide_session.context_json` with `current_position` and `last_arrived_stop_id`.
 3. If the session was `not_triggered`, arrival moves playback state to `triggered`.
-4. B then maps later user/player actions to `playing`, `played`, or `skipped`.
+4. GPS arrival does not advance `current_stop_index`.
+5. B then maps later user/player actions to `playing`, `played`, or `skipped`.
+6. On `complete` or `skip`, if the current stop has already arrived and a next stop exists, runtime advances `current_stop_index` and resets playback to `not_triggered`.
 
 ### 6. `planner_handoff` payload
 Current agreed shape:
@@ -155,3 +161,13 @@ Rules:
 - Only one person should finalize Alembic migrations at a time.
 - Avoid frequent simultaneous edits to `api/router.py`.
 - If any shared contract changes, update `docs/contracts.md` and this file together.
+
+---
+
+## Runtime behaviors now implemented
+- Route edits now happen through a single planning edit endpoint and always branch from the current active itinerary version.
+- Each route edit creates a new `itinerary_version`, archives the old active version, and switches `itinerary.current_version_id`.
+- Active `guide_session` records follow the new itinerary version automatically and remap `current_stop_index` by stop id when possible.
+- Session current and map payloads are both derived from `current_stop_index`; they no longer assume the first stop is always current.
+- Map session payload now exposes stable `markers`, `polyline`, and `navigation_summary` structures for frontend navigation rendering.
+- GPS arrival uses haversine distance against each stop's `arrival_threshold_meters` and only triggers playback; it does not auto-advance stops.

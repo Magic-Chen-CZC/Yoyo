@@ -1,11 +1,18 @@
-from datetime import datetime, timezone
+from __future__ import annotations
+
+from datetime import UTC, datetime
+from typing import TYPE_CHECKING
 from uuid import uuid4
 
-from sqlalchemy import DateTime, Enum, ForeignKey, JSON, String
+from sqlalchemy import JSON, DateTime, ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from yoyo.db.base import Base
+from yoyo.db.enums import db_enum
 from yoyo.modules.shared.enums import GuidePlaybackState, GuideSessionStatus
+
+if TYPE_CHECKING:
+    from yoyo.db.models.qa import QAMessage
 
 
 class GuideSession(Base):
@@ -23,22 +30,22 @@ class GuideSession(Base):
         nullable=False,
     )
     status: Mapped[GuideSessionStatus] = mapped_column(
-        Enum(GuideSessionStatus, name="guide_session_status"),
+        db_enum(GuideSessionStatus, name="guide_session_status"),
         default=GuideSessionStatus.ACTIVE,
         nullable=False,
     )
     playback_state: Mapped[GuidePlaybackState] = mapped_column(
-        Enum(GuidePlaybackState, name="guide_playback_state"),
+        db_enum(GuidePlaybackState, name="guide_playback_state"),
         default=GuidePlaybackState.NOT_TRIGGERED,
         nullable=False,
     )
     context_json: Mapped[dict] = mapped_column(JSON, nullable=False, default=dict)
     started_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False
+        DateTime(timezone=True), default=lambda: datetime.now(UTC), nullable=False
     )
     ended_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
-    qa_messages: Mapped[list["QAMessage"]] = relationship(
+    qa_messages: Mapped[list[QAMessage]] = relationship(
         back_populates="guide_session",
         cascade="all, delete-orphan",
     )

@@ -1,11 +1,22 @@
-from datetime import datetime, timezone
+from __future__ import annotations
+
+from datetime import UTC, datetime
+from typing import TYPE_CHECKING
 from uuid import uuid4
 
-from sqlalchemy import DateTime, Enum, ForeignKey, JSON, String, Text
+from sqlalchemy import JSON, DateTime, ForeignKey, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from yoyo.db.base import Base
-from yoyo.modules.shared.enums import AssetStatus, GuideGenerationJobStatus, GuideGenerationJobType
+from yoyo.db.enums import db_enum
+from yoyo.modules.shared.enums import (
+    AssetStatus,
+    GuideGenerationJobStatus,
+    GuideGenerationJobType,
+)
+
+if TYPE_CHECKING:
+    from yoyo.db.models.itinerary import ItineraryVersion
 
 
 class GuideGenerationJob(Base):
@@ -18,17 +29,17 @@ class GuideGenerationJob(Base):
         nullable=False,
     )
     job_type: Mapped[GuideGenerationJobType] = mapped_column(
-        Enum(GuideGenerationJobType, name="guide_generation_job_type"),
+        db_enum(GuideGenerationJobType, name="guide_generation_job_type"),
         default=GuideGenerationJobType.GUIDE_BUNDLE,
         nullable=False,
     )
     status: Mapped[GuideGenerationJobStatus] = mapped_column(
-        Enum(GuideGenerationJobStatus, name="guide_generation_job_status"),
+        db_enum(GuideGenerationJobStatus, name="guide_generation_job_status"),
         default=GuideGenerationJobStatus.PENDING,
         nullable=False,
     )
     asset_status: Mapped[AssetStatus] = mapped_column(
-        Enum(AssetStatus, name="asset_status"),
+        db_enum(AssetStatus, name="asset_status"),
         default=AssetStatus.PENDING,
         nullable=False,
     )
@@ -40,7 +51,9 @@ class GuideGenerationJob(Base):
     started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False
+        DateTime(timezone=True), default=lambda: datetime.now(UTC), nullable=False
     )
 
-    itinerary_version: Mapped["ItineraryVersion"] = relationship(back_populates="guide_generation_jobs")
+    itinerary_version: Mapped[ItineraryVersion] = relationship(
+        back_populates="guide_generation_jobs"
+    )

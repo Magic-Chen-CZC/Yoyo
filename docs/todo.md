@@ -21,37 +21,37 @@ This is the active todo list after splitting work into A/B tracks.
 ## A track: Planner / Session / Map / GPS
 
 ### A1. Route editing and version management
-- [ ] Add route edit request schema
-- [ ] Implement replace stop operation
-- [ ] Implement remove stop operation
-- [ ] Implement reorder stop operation
-- [ ] Implement shorten route operation
-- [ ] Create new `itinerary_version` on each edit
-- [ ] Switch active itinerary version after edit
-- [ ] Keep prior versions queryable
-- [ ] Add tests for version switching
+- [x] Add route edit request schema
+- [x] Implement replace stop operation
+- [x] Implement remove stop operation
+- [x] Implement reorder stop operation
+- [x] Implement shorten route operation
+- [x] Create new `itinerary_version` on each edit
+- [x] Switch active itinerary version after edit
+- [x] Keep prior versions queryable
+- [x] Add tests for version switching
 
 ### A2. Session runtime state
-- [ ] Add `current_stop_index` to session runtime model
-- [ ] Stop assuming current stop is always the first stop
-- [ ] Compute current stop from session state
-- [ ] Compute next stop from session state
-- [ ] Add tests for session progression
+- [x] Add `current_stop_index` to session runtime model
+- [x] Stop assuming current stop is always the first stop
+- [x] Compute current stop from session state
+- [x] Compute next stop from session state
+- [x] Add tests for session progression
 
 ### A3. GPS and geofence
-- [ ] Add first distance calculation helper
-- [ ] Add per-stop arrival threshold
-- [ ] Mark arrived when user enters threshold
-- [ ] Update session runtime when arriving at a stop
-- [ ] Prepare trigger signal for guide playback
-- [ ] Add tests for geofence logic
+- [x] Add first distance calculation helper
+- [x] Add per-stop arrival threshold
+- [x] Mark arrived when user enters threshold
+- [x] Update session runtime when arriving at a stop
+- [x] Prepare trigger signal for guide playback
+- [x] Add tests for geofence logic
 
 ### A4. Map payload improvements
-- [ ] Guarantee stable marker fields
-- [ ] Guarantee stable polyline fields
-- [ ] Align current/next stop with `current_stop_index`
-- [ ] Expose frontend-friendly navigation summary
-- [ ] Add map payload tests
+- [x] Guarantee stable marker fields
+- [x] Guarantee stable polyline fields
+- [x] Align current/next stop with `current_stop_index`
+- [x] Expose frontend-friendly navigation summary
+- [x] Add map payload tests
 
 ### A5. Contract hygiene
 - [x] Ensure every stop has `name/category/latitude/longitude/recommended_duration_minutes`

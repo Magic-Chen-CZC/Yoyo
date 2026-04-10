@@ -6,6 +6,7 @@ __pycache__/
 .ruff_cache/
 .coverage
 htmlcov/
+tests/reports/
 .venv/
 .env
 .env.local
