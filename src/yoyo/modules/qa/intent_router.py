@@ -112,6 +112,12 @@ def score_intent(query: str, dialogue_history: list[dict[str, Any]] | None = Non
         candidates["planner_handoff"] += 0.18
         signals["planner_handoff"].append("route_edit_signal")
 
+    if any(token in lowered for token in ["attraction", "景点"]) and not any(
+        token in lowered for token in ["replace", "swap", "remove", "delete", "reorder", "move", "shorten", "换一个", "删掉"]
+    ):
+        candidates["attraction_explain"] += 0.14
+        signals["attraction_explain"].append("explicit_attraction_signal")
+
     if candidates["planner_handoff"] > 0 and candidates["trip_assistant"] > 0:
         candidates["planner_handoff"] += 0.14
         signals["planner_handoff"].append("route_edit_priority_over_trip")

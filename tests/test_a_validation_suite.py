@@ -3,6 +3,8 @@ from pathlib import Path
 import pytest
 from httpx import AsyncClient
 
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
 
 async def _patch_planner_job_pool(monkeypatch) -> None:
     class FakeRedis:
@@ -358,8 +360,8 @@ async def test_a5_contract_fields_exist_in_runtime_payloads(
 
 
 def test_a5_contract_docs_match_runtime_field_names() -> None:
-    architecture_doc = Path("docs/architecture.md").read_text(encoding="utf-8")
-    contracts_doc = Path("docs/contracts.md").read_text(encoding="utf-8")
+    architecture_doc = (PROJECT_ROOT / "docs/architecture.md").read_text(encoding="utf-8")
+    contracts_doc = (PROJECT_ROOT / "docs/contracts.md").read_text(encoding="utf-8")
 
     for required_field in [
         "arrival_threshold_meters",

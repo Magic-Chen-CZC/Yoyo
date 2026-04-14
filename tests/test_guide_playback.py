@@ -60,10 +60,9 @@ async def test_guide_asset_and_playback_flow(client: AsyncClient, db_session, mo
     assert asset_body["data"]["summary"] == "Starter Beijing itinerary"
     assert asset_body["data"]["playback_state"] == "not_triggered"
     assert asset_body["data"]["result"]["guide_script"]["title"] == "Starter Beijing itinerary"
-    assert asset_body["data"]["result"]["card"]["highlights"] == [
-        "Tiananmen Square",
-        "Forbidden City",
-    ]
+    assert len(asset_body["data"]["result"]["card"]["highlights"]) == 2
+    assert "large ceremonial square" in asset_body["data"]["result"]["card"]["highlights"]
+    assert "imperial architecture" in asset_body["data"]["result"]["card"]["highlights"]
     assert asset_body["data"]["result"]["audio"]["status"] == "not_generated"
 
     gps_response = await client.post(

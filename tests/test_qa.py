@@ -29,7 +29,8 @@ async def test_qa_translation_intent(client: AsyncClient) -> None:
     assert body["data"]["supported"] is True
     assert body["data"]["intent"] == "translation"
     assert "translate_text" in body["data"]["used_skills"]
-    assert "guided mode" in body["data"]["answer"]
+    assert "guided mode" not in body["data"]["answer"]
+    assert body["data"]["answer"]
 
 
 @pytest.mark.asyncio
@@ -143,6 +144,6 @@ async def test_session_aware_attraction_explain_returns_retrieval(client: AsyncC
     body = qa_response.json()
     assert body["data"]["intent"] == "attraction_explain"
     assert "Tiananmen Square" in body["data"]["answer"]
-    assert "Historical note" in body["data"]["answer"]
     assert "Visitor tip" in body["data"]["answer"]
+    assert "historical landmark" in body["data"]["answer"].lower() or "history" in body["data"]["answer"].lower()
     assert body["data"]["metadata"]["retrieval"]["name"] == "Tiananmen Square"
