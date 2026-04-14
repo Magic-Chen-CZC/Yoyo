@@ -23,6 +23,8 @@ class SessionCurrentRead(BaseModel):
     itinerary_version_id: str
     status: str
     playback_state: str
+    current_stop_index: int
+    has_next_stop: bool
     current_stop: dict[str, Any] | None
     next_stop: dict[str, Any] | None
     current_position: dict[str, float] | None
@@ -38,5 +40,8 @@ class GPSUpdateRequest(BaseModel):
 class GPSUpdateRead(BaseModel):
     guide_session_id: str
     current_position: dict[str, float]
+    current_stop_index: int
     current_stop: dict[str, Any] | None
+    distance_to_current_stop_meters: float | None
+    arrival_threshold_meters: float | None
     arrived: bool

@@ -20,5 +20,10 @@ async def get_map_session(
 
     plan = await get_itinerary_version_plan(session, current.itinerary_version_id)
     stops = plan.get("stops", []) if plan else []
-    payload = build_map_payload(guide_session_id, stops, current.current_position)
+    payload = build_map_payload(
+        guide_session_id,
+        stops,
+        current.current_position,
+        current.current_stop_index,
+    )
     return success_response(payload.model_dump())

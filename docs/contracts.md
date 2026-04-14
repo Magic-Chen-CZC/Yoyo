@@ -33,7 +33,8 @@ This is the source of truth for route structure.
       "category": "museum",
       "latitude": 39.9163,
       "longitude": 116.3972,
-      "recommended_duration_minutes": 180
+      "recommended_duration_minutes": 180,
+      "arrival_threshold_meters": 200
     }
   ]
 }
@@ -45,6 +46,7 @@ This is the source of truth for route structure.
 - B may read this structure but should not reinterpret the meaning of fields ad hoc.
 - Map/session/gps/QA should all treat this as the canonical route payload.
 - The fields `id`, `name`, `category`, `latitude`, `longitude`, and `recommended_duration_minutes` are now part of the active contract.
+- `arrival_threshold_meters` is now implemented as the per-stop geofence threshold used by runtime state.
 
 ### Why it is shared
 - A needs it for current/next stop, route edits, map, gps.
@@ -148,6 +150,8 @@ This is the runtime bridge between gps/session progression and guide playback / 
   "itinerary_version_id": "...",
   "status": "active",
   "playback_state": "playing",
+  "current_stop_index": 0,
+  "has_next_stop": true,
   "current_stop": {},
   "next_stop": {},
   "current_position": {},
@@ -176,7 +180,9 @@ A decides whether the user has arrived at the current stop. B decides how playba
 1. A computes arrival using geofence/distance logic.
 2. A updates session runtime state.
 3. A emits a guide trigger condition (for now via session/runtime state; later can become explicit event).
-4. B maps trigger -> playback state transition.
+4. GPS arrival does not advance `current_stop_index`.
+5. B maps trigger -> playback state transition.
+6. On `complete` or `skip`, runtime advances `current_stop_index` only if the current stop has already arrived and a next stop exists.
 
 ### Why it is shared
 This is the most important runtime/content handoff in the trip flow.

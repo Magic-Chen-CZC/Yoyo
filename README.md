@@ -44,6 +44,8 @@ Note:
 - Teammate setup guide lives in `docs/dev-setup-for-teammates.md`
 - Current B-side implementation overview lives in `docs/b-stack-implementation-overview.md`
 - Future real-data preparation checklist lives in `docs/b-stack-preparation-checklist.md`
+- A-track branch summary lives in `docs/a-track-branch-notes.md`
+- A-track module explainer lives in `docs/a-track-modules-explained.md`
 
 ## Current team workflow
 - A and B should first finish the shared overlap contracts in `docs/contracts.md`
