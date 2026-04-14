@@ -12,10 +12,18 @@ categories:
   trip_assistant:
     - "Given this itinerary, what should I do next after {poi_name}?"
     - "Summarize the next step in my Beijing route after {poi_name}."
+  planner_handoff:
+    - "Replace {poi_name} with a more scenic stop and make the route easier."
+    - "Shorten the route after {poi_name} and reduce walking."
+  guide_generation_quality:
+    - "Create a concise guide script for {poi_name} that fits a family-friendly Beijing route."
+    - "Write a short route card summary for {poi_name} with practical visitor tips."
 poi_names:
   - Tiananmen Square
   - Forbidden City
   - Jingshan Park
+  - Temple of Heaven
+  - Summer Palace
 phrases:
   - 请帮我拍张照片
   - 这个景点几点关门

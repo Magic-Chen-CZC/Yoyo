@@ -1,0 +1,19 @@
+queries:
+  - id: multilingual-attraction-1
+    category: attraction_explain
+    language: zh
+    prompt: "请用中文简要介绍故宫为什么值得第一次来北京的游客去看。"
+    metadata:
+      focus: multilingual_attraction
+  - id: multilingual-translation-1
+    category: translation
+    language: zh
+    prompt: "Translate this into polite English: 这个景点几点关门"
+    metadata:
+      focus: multilingual_translation
+  - id: multilingual-trip-1
+    category: trip_assistant
+    language: es
+    prompt: "Después de Tiananmen Square, ¿cuál debería ser mi siguiente parada en esta ruta de Beijing?"
+    metadata:
+      focus: multilingual_trip_assistant

@@ -1,0 +1,158 @@
+queries:
+  - id: A1
+    category: attraction_explain
+    language: en
+    prompt: "Tell me more about the Forbidden City and why it matters for first-time visitors."
+    metadata:
+      title: "Attraction explanation"
+      mode: single_turn
+      expected_intent: attraction_explain
+      expected_data_source: sql
+      scoring_focus:
+        - routing_quality
+        - sql_grounding
+        - answer_usefulness
+
+  - id: A2
+    category: live_info
+    language: en
+    prompt: "What should I verify today before going to the Forbidden City?"
+    metadata:
+      title: "Live info intent"
+      mode: single_turn
+      expected_intent: live_info
+      expected_data_source: live_search
+      scoring_focus:
+        - intent_routing
+        - uncertainty_handling
+        - live_info_wording
+
+  - id: A3
+    category: planner_handoff
+    language: en
+    prompt: "Replace the next stop with something more scenic and easier."
+    metadata:
+      title: "Route-edit intent"
+      mode: single_turn
+      expected_intent: planner_handoff
+      expected_data_source: sql
+      scoring_focus:
+        - route_edit_understanding
+        - intent_routing
+
+  - id: B1
+    category: attraction_explain
+    language: en
+    prompt: "Turn 1: Tell me more about Tiananmen Square. Turn 2: Why is it important historically? Answer only for Turn 2 using Turn 1 as context."
+    metadata:
+      title: "Follow-up attraction explanation"
+      mode: multi_turn
+      expected_intent: attraction_explain
+      expected_data_source: sql_history
+      scoring_focus:
+        - memory_continuity
+        - referent_resolution
+
+  - id: B2
+    category: trip_assistant
+    language: en
+    prompt: "Turn 1: What is my next stop after Tiananmen Square? Turn 2: What should I pay attention to there? Answer only for Turn 2 using Turn 1 as context."
+    metadata:
+      title: "Follow-up next-stop guidance"
+      mode: multi_turn
+      expected_intent: trip_assistant
+      expected_data_source: sql_history
+      scoring_focus:
+        - route_continuity
+        - follow_up_memory
+
+  - id: B3
+    category: planner_handoff
+    language: en
+    prompt: "Turn 1: Replace Jingshan Park with a more family-friendly stop. Turn 2: Also make the route shorter. Answer only for Turn 2 while preserving the route-edit context from Turn 1."
+    metadata:
+      title: "Route-edit memory continuation"
+      mode: multi_turn
+      expected_intent: planner_handoff
+      expected_data_source: sql_history
+      scoring_focus:
+        - route_edit_continuity
+        - context_carryover
+
+  - id: C1
+    category: translation
+    language: en
+    prompt: "Help me translate this."
+    metadata:
+      title: "Ambiguous translation clarification"
+      mode: single_turn
+      expected_intent: translation
+      expected_data_source: none
+      scoring_focus:
+        - clarification_quality
+        - restraint
+
+  - id: C2
+    category: planner_handoff
+    language: en
+    prompt: "Change the route to make it better."
+    metadata:
+      title: "Ambiguous route-edit clarification"
+      mode: single_turn
+      expected_intent: planner_handoff
+      expected_data_source: sql
+      scoring_focus:
+        - clarification_quality
+        - anti_hallucination
+
+  - id: D1
+    category: live_info
+    language: en
+    prompt: "Is the Temple of Heaven likely to have any same-day access issues today?"
+    metadata:
+      title: "Dynamic access check"
+      mode: single_turn
+      expected_intent: live_info
+      expected_data_source: live_search
+      scoring_focus:
+        - live_info_behavior
+        - same_day_uncertainty
+
+  - id: D2
+    category: live_info
+    language: en
+    prompt: "Give me the latest real-time guidance for visiting Jingshan Park right now."
+    metadata:
+      title: "Source-aware live guidance"
+      mode: single_turn
+      expected_intent: live_info
+      expected_data_source: live_search
+      scoring_focus:
+        - source_awareness
+        - uncertainty_honesty
+
+  - id: E1
+    category: attraction_explain
+    language: en
+    prompt: "Tell me about the next stop on my route. The user profile prefers English, history, photography, light walking, and medium answer length."
+    metadata:
+      title: "Profile-aware attraction explanation"
+      mode: single_turn
+      expected_intent: attraction_explain
+      expected_data_source: sql_profile
+      scoring_focus:
+        - sql_grounding
+        - profile_awareness
+
+  - id: F1
+    category: planner_handoff
+    language: en
+    prompt: "Replace Jingshan Park with a more scenic stop and make the route easier."
+    metadata:
+      title: "Structured planner handoff"
+      mode: single_turn
+      expected_intent: planner_handoff
+      expected_data_source: sql
+      scoring_focus:
+        - route_edit_structure
+        - constraint_capture

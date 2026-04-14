@@ -1,3 +1,5 @@
+# schemas.py 定义 Guide 模块的输入输出结构。
+# 阅读这份文件有助于你先建立“这个模块传什么数据”的感觉。
 from typing import Any
 
 from pydantic import BaseModel, Field

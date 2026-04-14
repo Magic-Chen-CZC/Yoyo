@@ -1,4 +1,6 @@
-from sqlalchemy import select
+from datetime import datetime, timezone
+
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from yoyo.db.models.guide import GuideGenerationJob
@@ -8,6 +10,9 @@ from yoyo.modules.guide.schemas import GuideAssetRead, GuidePlaybackUpdateRead
 from yoyo.modules.shared.enums import AssetStatus, GuideGenerationJobStatus
 
 
+# 这个文件负责两件事：
+# 1) 读取当前 guide session 真正应该展示的导览素材
+# 2) 更新播放状态（trigger / play / complete / skip）
 async def get_active_guide_asset(
     session: AsyncSession, guide_session_id: str
 ) -> GuideAssetRead | None:
@@ -19,7 +24,11 @@ async def get_active_guide_asset(
         select(GuideGenerationJob)
         .where(GuideGenerationJob.itinerary_version_id == guide_session.itinerary_version_id)
         .where(GuideGenerationJob.status == GuideGenerationJobStatus.SUCCEEDED)
-        .order_by(GuideGenerationJob.created_at.desc())
+        .where(GuideGenerationJob.asset_status == AssetStatus.READY)
+        .order_by(
+            func.coalesce(GuideGenerationJob.finished_at, GuideGenerationJob.created_at).desc(),
+            GuideGenerationJob.created_at.desc(),
+        )
         .limit(1)
     )
     job = result.scalar_one_or_none()
@@ -54,10 +63,14 @@ async def update_playback_state(
 
     guide_session.playback_state = next_playback_state(action)
     context = dict(guide_session.context_json)
-    if action in {"play", "complete", "skip"}:
+    context["playback_state"] = guide_session.playback_state.value
+    if action in {"trigger", "play", "complete", "skip"}:
         context["last_playback_action"] = action
+        context["last_playback_updated_at"] = datetime.now(timezone.utc).isoformat()
     if action == "play":
         context["last_played_stop_id"] = context.get("last_arrived_stop_id")
+        if isinstance(context.get("current_stop_index"), int):
+            context["last_played_stop_index"] = context.get("current_stop_index")
     guide_session.context_json = context
     await session.commit()
     await session.refresh(guide_session)

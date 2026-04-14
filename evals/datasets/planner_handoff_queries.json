@@ -1,0 +1,25 @@
+{
+  "queries": [
+    {
+      "id": "planner-handoff-1",
+      "category": "planner_handoff",
+      "language": "en",
+      "prompt": "Replace Jingshan Park with a more scenic stop and make the route easier.",
+      "metadata": {"focus": "replace_stop"}
+    },
+    {
+      "id": "planner-handoff-2",
+      "category": "planner_handoff",
+      "language": "en",
+      "prompt": "Remove the last stop after the Forbidden City and shorten the route.",
+      "metadata": {"focus": "remove_stop"}
+    },
+    {
+      "id": "planner-handoff-3",
+      "category": "planner_handoff",
+      "language": "zh",
+      "prompt": "把景山公园换成一个更轻松、风景更好的点。",
+      "metadata": {"focus": "mixed_language_extraction"}
+    }
+  ]
+}

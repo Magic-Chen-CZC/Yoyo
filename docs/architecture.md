@@ -16,6 +16,41 @@ See the Feishu revision document for the full narrative version. This repo file 
 - `guide_generation_job`: async work unit for script/audio/card generation
 - `asset_status`: readiness and staleness state for generated guide assets
 
+## Current B-side knowledge architecture
+- Current phase is **SQL-first**, not RAG-first.
+- PostgreSQL stores attraction facts, attraction introduction fields, user profile fields, and other structured B-side knowledge.
+- Live search is reserved for same-day or fast-changing travel facts such as opening hours, closures, weather, transport, or ticket changes.
+- RAG remains a future evolution path only if SQL-backed knowledge becomes too limited for longer-form explanation needs.
+
+### Shared retrieval direction
+- Guide generation and QA should share one SQL-first knowledge access layer.
+- They should not share one monolithic generator/orchestrator.
+- Guide generation remains an async content-building path.
+- QA remains an online, intent-routed answer path.
+
+### QA memory model for the current phase
+- Runtime trip state comes from `guide_session.context_json`.
+- Short-term dialogue memory should come from `qa_messages` linked to the current `guide_session_id`.
+- Longer-term personalization should come from a user-profile table in PostgreSQL.
+
+### Current source-of-truth split
+- SQL: attraction basics, attraction introduction, user profiles, session-aware structured context
+- Live search: dynamic same-day facts
+- Future RAG: long-form or document-heavy attraction knowledge if SQL fields are no longer sufficient
+
+### Prompt field boundary for the current phase
+- SQL records are the source of truth, but not every SQL field should be exposed to the model prompt.
+- Attraction prompting should stay within user-facing guide fields such as intro/history/highlights/tips.
+- `family_friendly_notes` is currently stored but excluded from prompt-safe projection.
+- Profile prompting should stay within personalization fields such as language/interests/style/walking/pace/audience/answer-length plus `guide_style_preference`.
+- Internal-only fields, operational notes, account identifiers, moderation/debug fields, and similar data should remain outside prompt construction.
+
+### Current guide style preference buckets
+- `NF`: idealist / meaning and emotional resonance
+- `NT`: rational / logic and systems
+- `SJ`: guardian / practical clarity and order
+- `SP`: artisan / vivid, immediate, sensory experience
+
 ## State model
 - `session_state`
 - `navigation_state`

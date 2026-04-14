@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+# export_summary.py 是一个批量导出辅助脚本。
+# 它会遍历模型列表，把每个模型的 summary 单独写出来。
 import json
 from pathlib import Path
 

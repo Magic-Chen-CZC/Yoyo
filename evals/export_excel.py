@@ -6,10 +6,12 @@ from pathlib import Path
 from openpyxl import Workbook
 
 
+
 def load_json(path: Path) -> list[dict]:
     if not path.exists():
         return []
     return json.loads(path.read_text(encoding="utf-8"))
+
 
 
 def export_results_to_excel(results_dir: Path, output_path: Path) -> None:
@@ -49,14 +51,35 @@ def export_results_to_excel(results_dir: Path, output_path: Path) -> None:
         "parameter_size",
         "category",
         "language",
-        "poi_name",
-        "phrase",
+        "title",
+        "mode",
+        "expected_intent",
+        "expected_data_source",
     ]
     result_sheet.append(result_headers)
 
     score_sheet = workbook.create_sheet("scores")
     score_headers = ["query_id", "provider", "model", "category", "score", "max_score", "rationale"]
     score_sheet.append(score_headers)
+
+    judge_sheet = workbook.create_sheet("judge_scores")
+    judge_headers = [
+        "query_id",
+        "provider",
+        "model",
+        "category",
+        "judge_provider",
+        "judge_model",
+        "judge_version",
+        "rubric_version",
+        "overall_score",
+        "decision",
+        "confidence",
+        "judge_latency_ms",
+        "judge_total_tokens",
+        "judge_total_cost",
+    ]
+    judge_sheet.append(judge_headers)
 
     for summary_file in sorted(results_dir.glob("*_summary.json")):
         summary = json.loads(summary_file.read_text(encoding="utf-8"))
@@ -82,14 +105,20 @@ def export_results_to_excel(results_dir: Path, output_path: Path) -> None:
                     item.get("parameter_size"),
                     metadata.get("category"),
                     metadata.get("language"),
-                    metadata.get("poi_name"),
-                    metadata.get("phrase"),
+                    metadata.get("title"),
+                    metadata.get("mode"),
+                    metadata.get("expected_intent"),
+                    metadata.get("expected_data_source"),
                 ]
             )
 
     for score_file in sorted(results_dir.glob("*_scores.json")):
         for item in load_json(score_file):
             score_sheet.append([item.get(header) for header in score_headers])
+
+    for judge_file in sorted(results_dir.glob("*_judge_scores.json")):
+        for item in load_json(judge_file):
+            judge_sheet.append([item.get(header) for header in judge_headers])
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     workbook.save(output_path)

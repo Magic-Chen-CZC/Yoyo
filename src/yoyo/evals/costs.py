@@ -1,3 +1,5 @@
+# costs.py 维护模型的成本估算配置。
+# 当前不是读取供应商实时计费，而是基于预设单价做近似估算。
 MODEL_METADATA: dict[tuple[str, str], dict[str, str | float]] = {
     ("openrouter", "openai/gpt-5.4"): {
         "parameter_size": "not_public",

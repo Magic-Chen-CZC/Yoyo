@@ -5,6 +5,7 @@ from pydantic import BaseModel, Field
 
 class QAAskRequest(BaseModel):
     guide_session_id: str | None = None
+    user_id: str | None = None
     query: str
     language: str = "en"
     context: dict[str, Any] = Field(default_factory=dict)
@@ -15,6 +16,7 @@ class SessionAwareContext(BaseModel):
     itinerary_version_id: str | None
     current_stop_name: str | None = None
     stop_count: int | None = None
+    user_id: str | None = None
 
 
 class PlannerHandoffPayload(BaseModel):

@@ -91,6 +91,14 @@ B owns the content and model-facing path:
 - what guide assets exist
 - how guide playback state changes
 - how models are evaluated and compared
+- how SQL-first attraction/profile knowledge is accessed for Guide and QA
+- how short-term QA dialogue memory is managed
+
+### Current implementation direction
+- Current phase is SQL-first: attraction knowledge and user profiles should live in PostgreSQL.
+- Live search remains for real-time changes only.
+- RAG is deferred for now and can be introduced later if SQL-backed knowledge becomes insufficient.
+- B should own the shared SQL-first knowledge access layer used by both Guide generation and QA.
 
 ### Main modules
 - `src/yoyo/modules/guide/`

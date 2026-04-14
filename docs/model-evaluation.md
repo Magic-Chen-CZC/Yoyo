@@ -19,10 +19,14 @@ We should compare multiple providers and models on Yoyo-specific tasks before fi
 - Structured extraction reliability
 - Intent classification quality
 - Route-edit instruction understanding
+- SQL grounding quality
+- Live-info uncertainty handling
+- Profile-aware guide generation quality
 - Hallucination rate on tourism questions
 - Cost
 - Latency
 - Context handling
+- Multi-turn dialogue continuity
 
 ## Language-region guidance to test
 ### English-first markets
@@ -48,6 +52,9 @@ Current dataset covers:
 2. translation
 3. live info
 4. trip assistant
+5. planner handoff / route-edit extraction
+6. profile-aware guide generation quality
+7. multilingual QA samples
 
 For each model capture:
 - model name
@@ -66,16 +73,24 @@ For each model capture:
 ## Current scoring support
 We now have:
 - rubric-based automatic scoring
+- SQL grounding-aware evaluation dimensions
+- planner handoff extraction evaluation dimensions
+- profile-aware guide generation evaluation dimensions
 - per-result score output
 - summary average score per model
 - batch multi-model evaluation via `evals/models.yaml`
 
+## Current reporting direction
+- overall ranking
+- category breakdown
+- language breakdown
+- provider/model comparison in markdown output
+
 ## Next improvements
-- strengthen rubrics beyond keyword heuristics
-- add more tourism-specific multilingual datasets
-- add route-edit and planner extraction scenarios
-- add CSV/markdown report output
-- add side-by-side comparative report generation
+- further strengthen rubrics beyond rule-based heuristics
+- expand tourism-specific multilingual datasets
+- deepen route-edit and planner extraction coverage
+- add richer report exports if needed
 
 ## Engineering requirement
 Keep provider/model selection configurable through env and a model abstraction layer. Do not bind business logic directly to one SDK.

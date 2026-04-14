@@ -1,0 +1,120 @@
+queries:
+  - id: R2-A1
+    category: attraction_explain
+    language: en
+    prompt: "Turn 1: Tell me more about the Forbidden City. Turn 2: Why was it so important politically? Answer only for Turn 2 using Turn 1 as context."
+    metadata:
+      title: "Pronoun carryover after attraction explanation"
+      mode: multi_turn
+      expected_data_source: sql_history
+      scoring_focus:
+        - memory_continuity
+        - attraction_grounding
+
+  - id: R2-A2
+    category: trip_assistant
+    language: en
+    prompt: "Turn 1: What is my next stop after Tiananmen Square? Turn 2: What should I pay attention to when I get there? Answer only for Turn 2 using Turn 1 as context."
+    metadata:
+      title: "Route continuity across turns"
+      mode: multi_turn
+      expected_data_source: sql_history
+      scoring_focus:
+        - route_continuity
+        - memory_retention
+
+  - id: R2-A3
+    category: planner_handoff
+    language: en
+    prompt: "Turn 1: Replace Jingshan Park with a more scenic stop. Turn 2: Also make it easier for light walking. Answer only for Turn 2 while preserving the route-edit context from Turn 1."
+    metadata:
+      title: "Route-edit follow-up continuity"
+      mode: multi_turn
+      expected_data_source: sql_history
+      scoring_focus:
+        - route_edit_continuity
+        - planner_context_retention
+
+  - id: R2-B1
+    category: translation
+    language: en
+    prompt: "Can you translate this for me?"
+    metadata:
+      title: "Translation clarification"
+      mode: single_turn
+      expected_data_source: none
+      scoring_focus:
+        - clarification_quality
+        - restraint
+
+  - id: R2-B2
+    category: planner_handoff
+    language: en
+    prompt: "Make the route better."
+    metadata:
+      title: "Ambiguous route-edit clarification"
+      mode: single_turn
+      expected_data_source: sql
+      scoring_focus:
+        - clarification_usefulness
+        - anti_hallucination
+
+  - id: R2-C1
+    category: planner_handoff
+    language: en
+    prompt: "Replace Jingshan Park with something more scenic and easier for light walking."
+    metadata:
+      title: "Replace + style + walking"
+      mode: single_turn
+      expected_data_source: sql
+      scoring_focus:
+        - structure_clarity
+        - constraint_capture
+
+  - id: R2-C2
+    category: planner_handoff
+    language: en
+    prompt: "Please shorten the route and avoid crowded places."
+    metadata:
+      title: "Shorten route without explicit target"
+      mode: single_turn
+      expected_data_source: sql
+      scoring_focus:
+        - restraint
+        - structured_extraction_discipline
+
+  - id: R2-D1
+    category: attraction_explain
+    language: en
+    prompt: "Tell me why the Temple of Heaven matters. The user profile prefers NF-style guidance with interests in history and culture."
+    metadata:
+      title: "NF style attraction explanation"
+      mode: single_turn
+      expected_data_source: sql_profile
+      scoring_focus:
+        - style_control
+        - factual_grounding
+
+  - id: R2-D2
+    category: guide_generation_quality
+    language: en
+    prompt: "Generate a short guide-style explanation for the Forbidden City. The user profile prefers NT-style guidance and is interested in architecture and systems."
+    metadata:
+      title: "NT style guide snippet"
+      mode: single_turn
+      expected_data_source: sql_profile
+      scoring_focus:
+        - style_control
+        - guide_usefulness
+
+  - id: R2-E1
+    category: attraction_explain
+    language: en
+    prompt: "Explain why Jingshan Park is worth visiting, but keep it practical."
+    metadata:
+      title: "Stay within provided attraction facts"
+      mode: single_turn
+      expected_data_source: sql
+      scoring_focus:
+        - grounding_discipline
+        - anti_hallucination

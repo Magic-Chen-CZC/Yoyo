@@ -7,9 +7,12 @@ from yoyo.modules.guide.asset_service import get_active_guide_asset, update_play
 from yoyo.modules.guide.schemas import CreateGuideGenerationJobRequest, GuidePlaybackUpdateRequest
 from yoyo.modules.guide.service import create_guide_generation_job, get_guide_generation_job
 
+# Guide API 的入口文件。
+# 如果你想从“前端/调用方能做什么”开始读，这个文件最适合先看。
 router = APIRouter(prefix="/guide")
 
 
+# 1. 创建一个导览生成任务。创建后，后台 worker 会继续把行程转成 guide 结果。
 @router.post("/jobs", status_code=status.HTTP_201_CREATED)
 async def create_guide_job_endpoint(
     payload: CreateGuideGenerationJobRequest,

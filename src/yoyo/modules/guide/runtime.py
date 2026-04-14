@@ -1,3 +1,5 @@
+# runtime.py 负责 guide generation job 在运行期的状态更新。
+# 可以把它看成后台任务的状态切换助手。
 from datetime import datetime, timezone
 
 from sqlalchemy.ext.asyncio import AsyncSession

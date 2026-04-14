@@ -17,6 +17,7 @@ from yoyo.modules.shared.enums import (
 async def create_itinerary(session: AsyncSession, payload: CreateItineraryRequest) -> ItineraryRead:
     planner_input = {
         "questionnaire_submission_id": payload.questionnaire_submission_id,
+        "user_id": payload.user_id,
         "preferences": payload.preferences,
     }
     plan = build_default_plan(payload.preferences)

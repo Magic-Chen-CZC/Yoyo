@@ -42,3 +42,10 @@ Then inspect the current code and continue the next unchecked item in `docs/todo
 - Keep model provider/model name configurable via env
 - We will later evaluate Qwen, Gemini, and others across English and multilingual tourism tasks
 - Do not hardcode business logic to any specific model SDK yet
+
+## Current continuation point
+- Shared overlap contracts are already stabilized in `docs/contracts.md`
+- Continue from `docs/todo.md`, primarily along the **B track** unless the user says otherwise
+- First-round benchmark artifacts are in `evals/results/`
+- Excel export is at project root: `benchmark_results.xlsx`
+- Latest benchmark comparison report has been written to Feishu separately

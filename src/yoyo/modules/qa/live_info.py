@@ -6,6 +6,8 @@ from urllib.parse import urlparse
 from yoyo.modules.qa.live_search import get_live_search_provider
 
 
+# 这个文件负责把“实时信息”类问题组织成统一输出。
+# 它不直接决定用户问题是什么类型，而是在 orchestrator 已经判断出 intent == live_info 后被调用。
 async def build_live_info_payload(query: str, current_stop_name: str | None) -> dict[str, object]:
     subject = current_stop_name or "current attraction"
     provider = get_live_search_provider()

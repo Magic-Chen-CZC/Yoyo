@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+# query_generator.py 负责把评测数据集展开成一条条具体问题。
+# 它支持两种形式：直接给出 queries，或者用模板批量生成 queries。
 import itertools
 import uuid
 from pathlib import Path

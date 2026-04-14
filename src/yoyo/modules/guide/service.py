@@ -8,6 +8,8 @@ from yoyo.modules.guide.schemas import CreateGuideGenerationJobRequest, GuideGen
 from yoyo.modules.shared.enums import AssetStatus, GuideGenerationJobStatus, GuideGenerationJobType
 
 
+# Guide service 负责“管理导览生成任务”。
+# 可以把它理解成：API 进来以后，先在这里创建 job，后面再由后台任务真正生成内容。
 async def create_guide_generation_job(
     session: AsyncSession, payload: CreateGuideGenerationJobRequest
 ) -> GuideGenerationJobRead:

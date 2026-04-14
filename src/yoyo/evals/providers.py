@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+# providers.py 封装不同模型供应商的调用方式。
+# 当前阶段把 provider 扩展为注册表模式，便于后续继续补模型来源。
 from typing import Any, Protocol
 
 import httpx
@@ -87,10 +89,106 @@ class OpenRouterEvalProvider:
             }
 
 
-def get_provider(provider: str, model: str) -> EvalProvider:
-    if provider == "anthropic":
-        return AnthropicEvalProvider(model)
-    if provider == "openrouter":
-        return OpenRouterEvalProvider(model)
+class GeminiEvalProvider:
+    def __init__(self, model: str, api_key: str | None = None) -> None:
+        settings = get_settings()
+        self.model = model
+        self.api_key = api_key or settings.eval_google_api_key
 
-    raise ValueError(f"unsupported eval provider: {provider}")
+    async def generate(self, prompt: str) -> dict[str, Any]:
+        if not self.api_key:
+            return {"text": f"[mock gemini response] {prompt}", "usage": None}
+
+        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent?key={self.api_key}"
+        async with httpx.AsyncClient(timeout=60) as client:
+            response = await client.post(
+                endpoint,
+                json={
+                    "contents": [
+                        {
+                            "parts": [{"text": prompt}],
+                        }
+                    ]
+                },
+            )
+            response.raise_for_status()
+            payload = response.json()
+            candidates = payload.get("candidates", [])
+            text = ""
+            if candidates:
+                parts = candidates[0].get("content", {}).get("parts", [])
+                text = " ".join(str(part.get("text", "")) for part in parts).strip()
+            usage = payload.get("usageMetadata", {})
+            return {
+                "text": text or "[empty gemini response]",
+                "usage": {
+                    "prompt_tokens": usage.get("promptTokenCount"),
+                    "completion_tokens": usage.get("candidatesTokenCount"),
+                    "total_tokens": usage.get("totalTokenCount"),
+                },
+            }
+
+
+class OpenAICompatibleEvalProvider:
+    def __init__(self, model: str, api_key: str | None, base_url: str, label: str) -> None:
+        self.model = model
+        self.api_key = api_key
+        self.base_url = base_url.rstrip("/")
+        self.label = label
+
+    async def generate(self, prompt: str) -> dict[str, Any]:
+        if not self.api_key:
+            return {"text": f"[mock {self.label} response] {prompt}", "usage": None}
+
+        async with httpx.AsyncClient(timeout=60) as client:
+            response = await client.post(
+                f"{self.base_url}/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": self.model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 512,
+                },
+            )
+            response.raise_for_status()
+            payload = response.json()
+            usage = payload.get("usage", {})
+            return {
+                "text": payload["choices"][0]["message"]["content"],
+                "usage": {
+                    "prompt_tokens": usage.get("prompt_tokens"),
+                    "completion_tokens": usage.get("completion_tokens"),
+                    "total_tokens": usage.get("total_tokens"),
+                },
+            }
+
+
+class QwenCompatibleEvalProvider(OpenAICompatibleEvalProvider):
+    def __init__(self, model: str, api_key: str | None = None) -> None:
+        settings = get_settings()
+        super().__init__(
+            model=model,
+            api_key=api_key or settings.eval_dashscope_api_key,
+            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            label="qwen-compatible",
+        )
+
+
+_PROVIDER_REGISTRY = {
+    "anthropic": lambda model: AnthropicEvalProvider(model),
+    "openrouter": lambda model: OpenRouterEvalProvider(model),
+    "google": lambda model: GeminiEvalProvider(model),
+    "gemini": lambda model: GeminiEvalProvider(model),
+    "dashscope": lambda model: QwenCompatibleEvalProvider(model),
+    "qwen-compatible": lambda model: QwenCompatibleEvalProvider(model),
+}
+
+
+def get_provider(provider: str, model: str) -> EvalProvider:
+    factory = _PROVIDER_REGISTRY.get(provider)
+    if factory is None:
+        raise ValueError(f"unsupported eval provider: {provider}")
+    return factory(model)
