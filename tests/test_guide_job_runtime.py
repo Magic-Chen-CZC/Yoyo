@@ -1,3 +1,5 @@
+# 这份测试聚焦后台任务 run_guide_generation_job。
+# 重点是确认：job 状态会更新、result_json 结构符合预期。
 from sqlalchemy.ext.asyncio import AsyncSession
 import pytest
 

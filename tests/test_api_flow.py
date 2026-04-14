@@ -1,3 +1,5 @@
+# test_api_flow.py 更像一份“接口层使用说明”。
+# 它通过真实 API 调用来验证核心流程能否串起来。
 import pytest
 
 

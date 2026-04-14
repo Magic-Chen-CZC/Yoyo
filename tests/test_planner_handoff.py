@@ -1,3 +1,4 @@
+# 这份测试只关注一件事：用户说“改路线”时，QA 能不能产出结构化 handoff 数据。
 from httpx import AsyncClient
 import pytest
 

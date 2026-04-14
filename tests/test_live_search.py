@@ -1,3 +1,4 @@
+# 这份测试验证 live search / live info 在异常或占位场景下是否还能返回稳定结构。
 import pytest
 
 from yoyo.modules.qa.live_info import build_live_info_payload

@@ -1,3 +1,5 @@
+# 这份测试最适合用来理解 Guide 的端到端流程：
+# itinerary -> guide session -> guide asset -> playback state。
 from httpx import AsyncClient
 import pytest
 

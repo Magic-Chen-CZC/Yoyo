@@ -1,3 +1,5 @@
+# test_qa.py 是 QA 模块最重要的行为测试之一。
+# 它覆盖了 QA 支持的几条主要路径，适合当成“QA 能做什么”的说明书来看。
 from httpx import AsyncClient
 import pytest
 
