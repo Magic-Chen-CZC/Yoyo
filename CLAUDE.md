@@ -32,10 +32,14 @@ When starting a new session, read in this order:
 4. `docs/contracts.md`
 5. `docs/collaboration.md`
 6. `docs/todo.md`
-7. `docs/model-evaluation.md`
+7. `docs/b-stack-implementation-overview.md`
+8. `docs/model-evaluation.md`
+9. `docs/round1-model-selection-summary.md`
+10. `docs/gemini-round2-summary.md`
 
-Before broad QA verification, finish the shared overlap contracts listed in `docs/contracts.md` and the Shared / coordination section of `docs/todo.md`.
-Then inspect the current code and continue the next unchecked item in `docs/todo.md`.
+The repository is now on an integrated A+B path rather than the earlier split-phase plan.
+A track is already complete on the integration branch.
+When continuing, inspect the current code and continue the next unchecked item in `docs/todo.md`, focusing on B-side follow-up work such as real data integration, evaluation hardening, prompt optimization, and final test coverage.
 
 ## Model strategy
 - Initial default model target for product experiments: Claude Sonnet 4.6
@@ -45,7 +49,9 @@ Then inspect the current code and continue the next unchecked item in `docs/todo
 
 ## Current continuation point
 - Shared overlap contracts are already stabilized in `docs/contracts.md`
-- Continue from `docs/todo.md`, primarily along the **B track** unless the user says otherwise
-- First-round benchmark artifacts are in `evals/results/`
-- Excel export is at project root: `benchmark_results.xlsx`
-- Latest benchmark comparison report has been written to Feishu separately
+- A track has been merged and completed on the integration branch
+- Continue from `docs/todo.md`, focusing on the remaining unchecked B-side follow-up items
+- Round 1 benchmark artifacts are available in `evals/results_round1_real/`
+- Gemini round 2 artifacts are available in `evals/results_gemini_round2_200/`
+- Excel exports exist at project root, including `benchmark_results_round1_real.xlsx` and `benchmark_results_gemini_round2_200.xlsx`
+- Local summary docs exist for model selection and Gemini deep evaluation; Feishu sync may still need fresh MCP user authorization
