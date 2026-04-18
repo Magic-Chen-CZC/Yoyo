@@ -1,10 +1,9 @@
-# 这份测试只关注一件事：用户说“改路线”时，QA 能不能产出结构化 handoff 数据。
 from httpx import AsyncClient
 import pytest
 
 
 @pytest.mark.asyncio
-async def test_planner_handoff_returns_structured_payload(client: AsyncClient) -> None:
+async def test_route_edit_query_redirects_to_manual_planning_flow(client: AsyncClient) -> None:
     response = await client.post(
         "/api/v1/qa/ask",
         json={
@@ -15,9 +14,7 @@ async def test_planner_handoff_returns_structured_payload(client: AsyncClient) -
 
     assert response.status_code == 200
     body = response.json()
-    assert body["data"]["intent"] == "planner_handoff"
-    handoff = body["data"]["metadata"]["planner_handoff"]
-    assert handoff["operation"] == "replace_stop"
-    assert handoff["target"] == "Jingshan Park"
-    assert handoff["constraints"]["theme"] == "scenic"
-    assert handoff["constraints"]["walking"] == "lighter"
+    assert body["data"]["intent"] == "trip_assistant"
+    assert body["data"]["metadata"]["manual_route_edit_redirect"] is True
+    assert "manual itinerary editing flow" in body["data"]["answer"]
+    assert "planner_handoff" not in body["data"]["metadata"]

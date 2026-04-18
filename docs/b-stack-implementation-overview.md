@@ -8,7 +8,7 @@ The current B implementation has been intentionally narrowed to a **SQL-first ar
 - PostgreSQL is the main knowledge store for B-side attraction and profile data.
 - Attraction introduction content is currently expected to live in SQL fields.
 - Live search is still used, but only for fast-changing travel facts such as opening hours, closures, weather, transport, or ticket changes.
-- RAG is **not** part of the current implementation and is deferred to a future phase.
+- QA now has a **first-phase SQL-first + RAG fallback path** for deeper attraction explanation cases, while Guide remains SQL-first for now.
 
 This phase covers:
 - Guide generation
@@ -206,11 +206,12 @@ Still rules-first, but improved.
 - more English phrasing
 - some Chinese trigger words
 - follow-up phrasing in multi-turn dialogue
-- stronger planner-handoff priority
+- route/trip guidance without reintroducing QA-driven route editing
 
 ### Important note
 This is **not** a full LLM intent classifier.
 It is still a controlled routing system, which is consistent with the project’s backend-first design.
+Current route changes are manual-only and should stay outside the QA runtime path.
 
 ---
 
@@ -223,37 +224,21 @@ Changed file:
 - trip assistant answers include current/next/remaining context and pacing hints
 - attraction explain answers use a more guide-like structure
 - live-info answers explicitly remind users to verify same-day information
-- planner handoff answers expose operation/target/constraints more clearly
+- route-change requests are redirected to the manual itinerary editing flow instead of being executed or handed off by QA
 
 ---
 
-## 2.10 planner_handoff extraction is broader now
-Changed files:
-- `src/yoyo/modules/qa/planner_handoff.py`
-- `src/yoyo/modules/qa/schemas.py`
-
-### Supported operation coverage now includes
-- `replace_stop`
-- `remove_stop`
-- `reorder_stops`
-- `shorten_route`
-- `update_route`
-
-### Constraints can now include
-- `theme`
-- `walking`
-- `pace`
-- `audience`
-- `crowd`
-- `time_budget`
-- `position_hint`
+## 2.10 QA route-edit handoff is no longer part of the active product path
+Current status:
+- `planner_handoff` has been removed from the active QA runtime path
+- route changes are manual-only through `POST /api/v1/planning/itineraries/{itinerary_id}/edits`
+- the retained QA behavior is to keep trip guidance route-aware while redirecting route-change requests to the manual editing UI
 
 ### Contract note
-This still preserves the existing shared top-level shape:
-- `intent`
-- `operation`
-- `target`
-- `constraints`
+This boundary is intentional for the current phase:
+- QA remains an online question-answering path
+- planner payload authority stays in rules/code and planning APIs
+- route-edit assistance can only be reconsidered later as a separately scoped feature
 
 ---
 
@@ -271,6 +256,7 @@ Guide generation used to be mostly a route summary transformer.
 Guide generation now uses:
 - route data
 - attraction SQL-style content
+- multi-segment SQL guide content per attraction
 - user profile context
 
 ### Current output still preserves the shared top-level contract
@@ -297,6 +283,11 @@ Each stop may include:
 - `why_it_matters`
 - `visitor_tip`
 - `recommended_duration_minutes`
+- `guide_segments`
+- `segment_count`
+- `more_content_available`
+
+This now enables a lightweight Guide-side content cycle where the product can request “more” or “another version” from SQL-backed segments without introducing Guide-side RAG.
 
 `card` now includes:
 - `headline`
@@ -405,8 +396,11 @@ Currently from:
 ### 3) attraction retrieval source
 Currently goes through mock SQL-style retrieval rather than real PostgreSQL queries
 
-### 4) no current RAG pipeline
-The system is intentionally SQL-first in this phase
+### 4) first-phase QA RAG path is still transitional
+- Current QA RAG fallback already has a first-phase retrieval path.
+- It is evolving toward a fuller LlamaIndex + pgvector-backed retriever while keeping final answer generation in the existing QA orchestrator.
+- A pgvector extension migration, backend readiness checks, document builders, query path, indexing script, and index-run admin/status layer now exist, and the rebuild path already supports selective/mock-friendly runs. The vector backend is still disabled/degraded by default until env/config and ingestion are fully enabled.
+- Guide generation is still intentionally SQL-first in this phase.
 
 ### 5) tests were intentionally deferred
 This implementation phase focused on architecture and core flows, not full regression coverage
@@ -495,6 +489,7 @@ These areas are intentionally not finished in this phase:
 - RAG / vector retrieval
 - LLM-based intent classification
 - A-side runtime semantics such as real stop progression or route edit execution
+- reintroducing QA-driven route-edit handoff into the active product path
 
 ---
 
@@ -503,14 +498,24 @@ These areas are intentionally not finished in this phase:
 Recommended next steps from here:
 1. connect the knowledge layer to real PostgreSQL queries
 2. confirm production-safe field exposure rules
-3. decide whether QA should keep only recent dialogue turns or also add conversation summaries later
-4. add focused tests for:
-   - multi-turn QA
-   - planner_handoff extraction
-   - profile-aware guide generation
-   - playback metadata
+3. productionize the LlamaIndex + pgvector QA RAG path: finish backend-enabled retrieval, ingestion lifecycle, and operational indexing while keeping final answer generation in the existing QA orchestrator
+4. remove in-scope QA hardcoded/template fallback paths where product answers should come from runtime LLM generation, and convert failures to explicit degraded-mode behavior instead of placeholder wording
+5. tighten live-info failure behavior so provider/config errors return explicit unavailable responses rather than placeholder summaries
+6. reduce or disable silent mock attraction/profile fallback in production-oriented paths once real PostgreSQL data is connected
+7. add structured-output validation and stronger post-processing for runtime QA / Guide LLM responses
+8. add focused module-level tests for:
+   - intent routing for the retained QA categories
+   - prompt-safe projection and real-data / no-data behavior
+   - runtime LLM response parsing, structured-output validation, and fallback/degraded handling
+   - profile-aware guide generation and guide asset selection
+   - playback metadata and state transitions
    - eval datasets and scoring behavior
-5. only after SQL-backed knowledge becomes insufficient, discuss whether to reintroduce RAG
+9. add end-to-end integration flows for:
+   - itinerary creation -> guide job execution -> GPS trigger -> playback transition -> session current/map consistency
+   - session-aware QA after guide/session state changes
+   - manual route edit -> itinerary_version switch -> session remap
+10. decide whether QA should keep only recent dialogue turns or also add conversation summaries later
+11. only after SQL-backed knowledge becomes insufficient, discuss whether to reintroduce RAG
 
 ---
 
@@ -532,7 +537,6 @@ Recommended next steps from here:
 - `src/yoyo/modules/qa/intent_router.py`
 - `src/yoyo/modules/qa/domain_guard.py`
 - `src/yoyo/modules/qa/formatters.py`
-- `src/yoyo/modules/qa/planner_handoff.py`
 - `src/yoyo/modules/qa/validators.py`
 - `src/yoyo/modules/qa/retrieval.py`
 

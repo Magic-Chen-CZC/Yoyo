@@ -5,6 +5,22 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 
+class GuideStopScriptStructured(BaseModel):
+    stop_name: str
+    narration: str
+    why_it_matters: str
+    visitor_tip: str
+
+
+class GuideBundleStructured(BaseModel):
+    intro: str
+    outro: str
+    card_headline: str
+    card_highlights: list[str] = Field(default_factory=list)
+    card_practical_tips: list[str] = Field(default_factory=list)
+    stop_scripts: list[GuideStopScriptStructured] = Field(default_factory=list)
+
+
 class CreateGuideGenerationJobRequest(BaseModel):
     itinerary_version_id: str
     payload: dict[str, Any] = Field(default_factory=dict)
@@ -38,3 +54,27 @@ class GuidePlaybackUpdateRequest(BaseModel):
 class GuidePlaybackUpdateRead(BaseModel):
     guide_session_id: str
     playback_state: str
+
+
+class GuideSegmentActionRequest(BaseModel):
+    action: str
+
+
+class GuideAudioSegmentRead(BaseModel):
+    stop_id: str | None = None
+    stop_name: str | None = None
+    segment_index: int
+    status: str
+    url: str | None = None
+
+
+class GuideSegmentCycleRead(BaseModel):
+    guide_session_id: str
+    stop_id: str | None = None
+    stop_name: str | None = None
+    action: str
+    segments: list[str] = Field(default_factory=list)
+    audio_segments: list[GuideAudioSegmentRead] = Field(default_factory=list)
+    segment_count: int = 0
+    more_content_available: bool = False
+    guide_style: str | None = None

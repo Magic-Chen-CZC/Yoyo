@@ -1,150 +1,267 @@
 # Yoyo Todo
 
-This is the active todo list after splitting work into A/B tracks.
+This is the active implementation plan for the current integrated branch.
+
+It replaces the older A/B split checklist as the primary working todo.
+Current scope is no longer “build missing modules from scratch”; it is:
+- lock the first-phase product boundary
+- make frontend/backend parallel development possible
+- remove deferred route-edit intelligence from QA
+- harden manual route editing with runtime-aware constraints
+- continue productionization of the SQL-first + RAG-fallback backend
 
 ---
 
-## Shared / coordination
-- [x] Write shared overlap contracts into `docs/contracts.md`
-- [x] Freeze shared `itinerary_version.plan_json` contract in `docs/architecture.md`
-- [x] Freeze shared `guide_generation_job.result_json` contract in `docs/architecture.md`
-- [x] Freeze shared `guide_session.context_json` field ownership in `docs/architecture.md`
-- [x] Freeze `session current` response contract in `docs/architecture.md`
-- [x] Define GPS -> guide trigger handoff behavior in `docs/architecture.md`
-- [x] Define `planner_handoff` structured payload contract in `docs/architecture.md`
-- [x] Decide migration ownership rule for the next schema changes
-- [x] Keep `api/router.py` wiring changes small and late
-- [x] Finish all remaining shared contracts above before broad QA verification
+## 0. Product decisions locked for the current phase
+- [x] Keep the map as a **cognitive map**, not a full rendered map product.
+- [x] Keep Amap as a **route engine only**, not the map renderer.
+- [x] Keep Guide **SQL-first**, not Guide-RAG.
+- [x] Keep QA on **SQL-first + RAG fallback**.
+- [x] Keep Guide refresh as one unified user-facing action (`cycle_content`).
+- [x] Use guest quick entry + fixed questionnaire as the first-phase onboarding path.
+- [x] Keep first-phase itinerary entry types as `template`, `manual_poi`, and `ai_recommendation_selected`.
+- [x] Keep explicit trip lifecycle states: `pending`, `active`, `finished`.
+- [x] Remove the current “QA changes route” product path and keep **manual route edit only** for now.
+- [x] Lock route editing to **unfinished itinerary segments only**:
+  - completed stops are frozen
+  - the current stop is still editable
+  - future stops are editable
 
 ---
 
-## A track: Planner / Session / Map / GPS
+## 1. What is already complete on this branch
 
-### A1. Route editing and version management
-- [x] Add route edit request schema
-- [x] Implement replace stop operation
-- [x] Implement remove stop operation
-- [x] Implement reorder stop operation
-- [x] Implement shorten route operation
-- [x] Create new `itinerary_version` on each edit
-- [x] Switch active itinerary version after edit
-- [x] Keep prior versions queryable
-- [x] Add tests for version switching
+### 1.1 Onboarding and profile setup
+- [x] Guest quick-entry API
+- [x] Fixed versioned questionnaire flow (`v1`, 7 questions)
+- [x] Guide-role choice mapped onto `guide_style_preference`
+- [x] Questionnaire submission validation and profile mapping
 
-### A2. Session runtime state
-- [x] Add `current_stop_index` to session runtime model
-- [x] Stop assuming current stop is always the first stop
-- [x] Compute current stop from session state
-- [x] Compute next stop from session state
-- [x] Add tests for session progression
+### 1.2 Planning and route creation
+- [x] Itinerary creation supports `template`, `manual_poi`, `ai_recommendation_selected`
+- [x] Route template listing
+- [x] AI recommendation endpoint
+- [x] Manual POI selection input
+- [x] Versioned itinerary model with active version switching
 
-### A3. GPS and geofence
-- [x] Add first distance calculation helper
-- [x] Add per-stop arrival threshold
-- [x] Mark arrived when user enters threshold
-- [x] Update session runtime when arriving at a stop
-- [x] Prepare trigger signal for guide playback
-- [x] Add tests for geofence logic
+### 1.3 Session, GPS, and cognitive map
+- [x] `current_stop_index`-based session runtime
+- [x] GPS arrival detection with per-stop thresholds
+- [x] Playback trigger behavior on arrival
+- [x] Stable session current response
+- [x] Stable cognitive-map payload with markers/polyline/navigation summary
+- [x] Stop knowledge summaries in map payload
+- [x] Stop comment stats in map payload
 
-### A4. Map payload improvements
-- [x] Guarantee stable marker fields
-- [x] Guarantee stable polyline fields
-- [x] Align current/next stop with `current_stop_index`
-- [x] Expose frontend-friendly navigation summary
-- [x] Add map payload tests
+### 1.4 Guide, QA, and content generation
+- [x] Async guide generation job path
+- [x] SQL-backed multi-segment guide content
+- [x] Unified `cycle_content` action for guide refresh
+- [x] QA SQL-first + RAG fallback scaffold
+- [x] Runtime LLM path for QA and Guide wording
+- [x] Live-info provider abstraction and source-bearing responses
 
-### A5. Contract hygiene
-- [x] Ensure every stop has `name/category/latitude/longitude/recommended_duration_minutes`
-- [x] Update `docs/architecture.md` when stop contract changes
+### 1.5 Social and sharing
+- [x] Stop-level comments API
+- [x] Finished-trip share-card aggregation
 
----
-
-## B track: Guide / QA / Retrieval / Eval
-
-### B1. QA quality upgrades
-- [x] Make `planner_handoff` return structured route-edit intent
-- [x] Strengthen `trip_assistant` route-aware answers
-- [x] Strengthen `attraction_explain` answer formatting
-- [x] Improve `translation` outputs beyond placeholder mode
-- [x] Add category-specific answer formatting tests
-
-### B2. Live-info provider integration
-- [x] Introduce live-info provider abstraction
-- [x] Add provider-backed source records
-- [x] Preserve `updated_at` and source metadata in responses
-- [x] Add graceful failure / not-confirmed behavior
-- [x] Add tests for source-bearing live-info responses
-
-### B3. Guide generation enrichment
-- [x] Expand `result_json` to include guide script payload
-- [x] Expand `result_json` to include card payload
-- [x] Prepare TTS-ready output fields
-- [x] Add tests for enriched guide generation output
-
-### B4. Playback and guide asset improvements
-- [x] Connect gps trigger action to playback transitions
-- [x] Add `trigger` flow coverage in tests
-- [x] Add richer playback metadata in session context
-- [x] Ensure active guide asset always reflects latest successful version
-
-### B5. Model evaluation improvements
-- [x] Batch query generation
-- [x] Multi-provider eval runner
-- [x] Cost/latency summary
-- [x] Basic rubric scoring
-- [x] Batch multi-model run support
-- [x] English 81-query dataset
-- [x] Add stronger rubrics per category
-- [x] Add comparative markdown report generation
-- [x] Add category breakdown report
-- [x] Add per-model ranking output
-- [x] Run first real benchmark on selected models
-
-### B6. First real benchmark execution
-- [x] Prepare `.env` with provider keys
-- [x] Confirm first benchmark matrix
-- [x] Run English 81-query batch for shortlisted models
-- [x] Save results to `evals/results/`
-- [x] Summarize latency/cost/score comparison
+### 1.6 Ops and evaluation
+- [x] RAG rebuild/latest admin endpoints
+- [x] LlamaIndex + pgvector scaffold
+- [x] Batch eval / judge / comparative reporting baseline
 
 ---
 
-## B track: SQL-first completion phase
-- [x] Adopt PostgreSQL as the SQL-first knowledge store for B stack
-- [x] Seed 50 mock PostgreSQL records for attractions and user profiles
-- [x] Add shared SQL-first knowledge layer for QA and Guide generation
-- [x] Add PostgreSQL seed script and make retrievers prefer database reads with mock fallback
-- [x] Move attraction knowledge from static catalog to PostgreSQL-backed retrieval
-- [x] Add profile-aware guide generation
-- [x] Add hybrid retrieval for QA (SQL + live info)
-- [x] Connect `qa_messages` into multi-turn QA memory
-- [x] Extend planner_handoff extraction coverage
-- [x] Enrich guide generation output with per-stop script content
-- [x] Upgrade playback metadata while keeping A/B ownership boundaries stable
-- [x] Update eval architecture to reflect the SQL-first phase
-- [x] Update README with the current SQL-first local run flow and seed step
-- [x] Add a compact round-1 model-selection test case document for B track
-- [x] Add round-1 model shortlist and test-case field definitions to the selection doc
-- [x] Add execution order and per-case result template to the round-1 model-selection doc
-- [x] Add a dedicated round-1 model matrix and executable dataset for automated evaluation
-- [x] Document prompt-safe SQL field exposure boundaries for future real-data integration
-- [x] Add prompt-safe projection rules to code and introduce guide style preference control
-- [x] Add a shared runtime LLM layer for product QA and Guide generation
-- [x] Connect Guide generation text fields to runtime LLM with deterministic fallback
-- [x] Connect QA attraction/trip/live/translation responses to runtime LLM with rule fallback
-- [x] Fix project-root .env loading so eval and runtime model calls can read configured keys reliably
-- [x] Re-run round1 model evaluation with real key loading and export final Excel
-- [x] Add a focused round-2 Gemini test-case document based on round1 findings
-- [x] Add executable Gemini round-2 model matrix and dataset files
-- [x] Expand Gemini round-2 dataset to ~200 queries with judge-friendly metadata
-- [x] Add hard-check scoring structure before judge integration
-- [x] Add gpt-5.4-mini judge path and judge result artifacts
-- [x] Extend reporting and Excel export for rule + judge results
-- [x] Add a Chinese reference version of the todo document for Feishu/internal sharing
+## 2. P0 — Current boundary reset and frontend contract closure
 
-## Current recommendation
-- A continues on route/runtime state and version progression
-- B is now in a SQL-first completion phase
-- Current phase uses PostgreSQL for attraction/profile knowledge and keeps live search only for real-time changes
-- RAG is deferred for now and can be added later if SQL-backed knowledge becomes insufficient
-- After each completed B implementation part, update this todo before continuing
+### 2.1 Replace the old split-phase working docs with current-phase docs
+- [x] Rewrite `docs/todo.md` into the current integrated implementation plan
+- [x] Keep `docs/todo.zh-CN.md` aligned with the new todo structure
+- [x] Update `README.md` so it points to the current frontend/backend contract docs
+- [x] Update `docs/contracts.md` so active contracts match the current product scope
+- [x] Update `docs/architecture.md` with the new manual route-edit semantics
+- [x] Update `docs/collaboration.md` to remove obsolete A/B route-edit handoff language
+- [x] Update `docs/current-session-summary.md` so it no longer presents QA route edit as an active continuation point
+- [x] Update `docs/b-stack-implementation-overview.md` so deferred items reflect the new scope
+
+### 2.2 Add a full frontend/backend API definition document
+- [x] Add `docs/api-contracts-fullstack.md`
+- [x] Document the common API envelope (`code`, `message`, `data`)
+- [x] Document all first-phase frontend-consumed endpoints:
+  - guest
+  - questionnaire
+  - planning
+  - session
+  - gps
+  - guide
+  - map
+  - comments
+  - share-card
+  - qa
+  - rag
+- [x] Add request/response examples for each endpoint
+- [x] Add state semantics and error behavior for each endpoint
+- [x] Add a dedicated route-edit integration section for frontend developers
+- [x] Mark which fields are stable contracts vs first-phase provisional fields
+
+### 2.3 Remove the QA route-edit product path
+- [x] Remove `planner_handoff` from the active QA runtime path
+- [x] Remove `planner_handoff` from QA response metadata
+- [x] Remove `planner_handoff`-specific skill/validator/formatter/schema code
+- [x] Remove or rewrite QA tests that still expect structured route-edit handoff
+- [x] Remove active product docs that still describe QA route editing as part of the current flow
+
+### 2.4 Keep only manual route editing for now
+- [x] Make `POST /api/v1/planning/itineraries/{itinerary_id}/edits` the only route-edit entry point in current docs
+- [x] Define the current product rule clearly in code and docs:
+  - completed stops are frozen
+  - current stop editable
+  - future stops editable
+- [x] Ensure a completed itinerary cannot be edited further
+
+---
+
+## 3. P0 — Runtime-aware manual route editing
+
+### 3.1 Route-edit eligibility rules
+- [x] Compute route-edit boundaries from session progress
+- [x] Use `current_stop_index` as the primary edit boundary for active trips
+- [x] Ensure GPS arrival alone does **not** freeze the current stop
+- [x] Ensure playback `complete` / `skip` marks stop progression correctly for editability
+- [x] Handle last-stop completion correctly so the final stop becomes non-editable when the trip segment is done
+
+### 3.2 Enforce edit constraints in planning service
+- [x] Reject `replace_stop` on completed stops
+- [x] Reject `remove_stop` on completed stops
+- [x] Reject reorder requests that change the completed route prefix
+- [x] Reject `shorten_route` when it would cut off the current stop or completed prefix
+- [x] Keep `add_stop` limited to the editable portion of the trip (first-phase default: append to tail)
+- [x] Align the public route-edit schema with actual supported operations (including deciding the status of `optimize_route`)
+
+### 3.3 Expose editability to frontend-facing runtime payloads
+- [x] Extend `session current` payload with editability fields
+- [x] Extend map marker payloads with completed/editable state
+- [x] Extend navigation summary with completed/editable boundary information
+- [x] Keep session/map/frontend route state consistent after version switches
+  - [x] clear stale playback/guide refresh context on active-session version switch
+  - [x] make QA reuse session-current route context after version switch
+  - [x] add full session/map version-switch consistency assertions
+
+### 3.4 Preserve versioning and session remap behavior
+- [x] Keep route edits version-based rather than in-place mutation
+- [x] Preserve current-stop remap when the current editable stop changes
+- [x] Reset playback state when the active current stop changes after edit
+- [x] Keep completed prefix stable across route edits
+
+---
+
+## 4. P1 — QA/Guide productionization after the boundary reset
+
+### 4.1 Remove hardcoded QA fallback behavior in user-facing paths
+- [x] Replace `translation` phrase-map fallback with runtime-LLM-first behavior + explicit degraded responses
+- [x] Replace deterministic `trip_assistant` fallback templates with stronger route-aware generation + degraded behavior
+- [x] Remove transitional user-facing wording from `attraction_explain`
+- [x] Make `live_info` return explicit unavailable/degraded responses when config/upstream fails
+- [x] Tighten attraction/profile fallback so production-oriented paths do not silently mix mock data
+
+### 4.2 Structured output and post-processing hardening
+- [x] Add structured-output validation for runtime QA responses
+  - [x] first step: translation structured-output parsing + validation
+  - [x] first step: live_info structured-output parsing + validation
+  - [x] align `trip_assistant` structured schema + JSON-only prompt contract
+  - [x] align `attraction_explain` structured schema + JSON-only prompt contract
+  - [x] wire `trip_assistant` generator/orchestrator/validator structured-output handling
+  - [x] wire `attraction_explain` generator/orchestrator/validator structured-output handling
+  - [x] add targeted valid/malformed structured-output tests for both intents
+- [x] Add structured-output validation for runtime Guide responses
+  - [x] add internal Guide bundle schema + generator-level structured validation
+  - [x] make guide generation consume only validated LLM bundle output before fallback builder merge
+  - [x] add focused valid/malformed Guide runtime tests
+- [x] Add safer post-processing for malformed LLM output
+  - [x] add shared lightweight sanitize helper for user-visible LLM text
+  - [x] sanitize QA structured answers before returning them
+  - [x] sanitize Guide bundle text fields before builder merge/fallback selection
+  - [x] remove Guide high-risk first/last brace JSON rescue in favor of stricter fenced-object parsing
+  - [x] add focused malformed post-processing tests for QA and Guide
+- [x] Keep degraded-mode responses explicit rather than placeholder-like
+- [x] Define a minimal-impact QA structured-output plan for:
+  - `translation`
+  - `live_info`
+  - `trip_assistant`
+  - `attraction_explain`
+  while keeping the user-facing `answer` field free-form and using structured fields only for backend validation/state
+
+### 4.3 Guide content and asset productionization
+- [x] Improve `cycle_content` selection using:
+  - `answer_length_preference`
+  - `interests`
+  - `guide_style_preference`
+- [x] Decide whether frontend should receive “remaining content” counters
+  - current decision: frontend does not need a displayed remaining-content count; keep `more_content_available` as the user-facing signal for this phase
+- [x] Replace `audio` placeholder semantics with a real TTS/media asset flow
+  - current decision: connect one real TTS model, with API key configured later
+  - latency requirement: do not block each `cycle_content` click on full-stop audio generation; prefer prioritized current-stop / current-batch generation and async background completion
+
+---
+
+## 5. P1 — QA RAG productionization
+- [x] Complete backend-enabled pgvector retrieval in a real configured environment
+  - verified locally with pgvector-enabled PostgreSQL, successful rebuild/latest responses, and ready backend state after fixing migration and PGVectorStore runtime compatibility issues
+- [x] Validate embedding -> indexing -> query end-to-end
+  - verified end-to-end through rebuild -> latest -> deep `/api/v1/qa/ask`; QA metadata now shows `retrieval_strategy = sql_then_rag`, `rag_backend_ready = true`, and `rag_query_status = ok`
+- [x] Harden ingestion lifecycle and rebuild behavior
+- [x] Clarify operational rebuild/index-run semantics for admins
+- [x] Ensure QA metadata reflects real retrieval state correctly in configured and degraded modes
+
+---
+
+## 6. P1 — Test and verification hardening
+
+### 6.1 Route/session/map verification
+- [x] Add tests proving completed stops cannot be edited
+- [x] Add tests proving the current stop can still be edited
+- [x] Add tests proving reorder can only touch the editable suffix
+- [x] Add tests proving last-stop completion freezes the remaining route
+- [x] Add tests for session current editability fields
+- [x] Add tests for map marker completed/editable fields
+
+### 6.2 QA/Guide failure-mode coverage
+- [x] Add module-level tests for `qa`, `knowledge`, `live_info`, `guide`, and runtime-LLM post-processing
+- [x] Add degradation/failure-mode tests for:
+  - [x] missing provider config
+  - [x] LLM failure
+  - [x] malformed structured output
+  - [x] missing real data
+  - [x] upstream provider errors
+
+### 6.3 End-to-end integration flows
+- [x] Add integration flow: itinerary -> guide job -> GPS/playback -> session current/map
+- [x] Add integration flow: manual route edit -> version switch -> session remap -> map/session consistency
+- [x] Add integration flow: session-aware QA after route/session state changes
+- [x] Make benchmark runs fail fast or mark invalid when required API keys are missing
+  - missing-key behavior is now explicit in eval providers/batch execution; broader benchmark test redesign is deferred to a later pass
+
+---
+
+## 7. P2 — Later product work after current closure
+- [ ] Replace the fixed starter planner source with a more realistic planner source when planning scope resumes
+- [ ] Decide whether multi-turn QA should remain recent-turn-only or add conversation summaries
+- [ ] Revisit whether route-edit assistance should return to QA later as a new scoped feature, only after manual route editing is stable and fully verified
+
+---
+
+## 8. Current recommended execution order
+1. Rewrite active docs (`todo`, `contracts`, `architecture`, `README`, collaboration docs)
+2. Add the full frontend/backend API contract document
+3. Remove QA route-edit runtime behavior
+4. Implement manual route-edit freezing rules
+5. Expose editability state in session/map payloads
+6. Add/repair tests for the new route-edit semantics
+7. Continue QA/Guide/RAG productionization work
+
+---
+
+## 9. Working rule for future sessions
+- Read `CLAUDE.md`, `README.md`, `docs/architecture.md`, `docs/contracts.md`, and this file before continuing implementation.
+- Do not reintroduce QA route-edit execution into the current product path unless the product decision changes.
+- After each completed implementation part, update this todo before continuing.

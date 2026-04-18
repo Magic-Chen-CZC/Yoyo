@@ -5,7 +5,7 @@ from sqlalchemy import engine_from_config, pool
 
 from yoyo.core.config import get_settings
 from yoyo.db.base import Base
-from yoyo.db.models import attraction, guide, itinerary, profile, qa, questionnaire, session  # noqa: F401
+from yoyo.db.models import attraction, comment, guest, guide, itinerary, profile, qa, questionnaire, rag, session  # noqa: F401
 
 config = context.config
 settings = get_settings()

@@ -115,6 +115,30 @@ _LANGUAGES = ["en", "zh", "es"]
 _GUIDE_STYLES = ["NF", "NT", "SJ", "SP"]
 
 
+def _build_guide_segments(base: dict[str, object]) -> list[str]:
+    name = str(base["name"])
+    short_intro = str(base["short_intro"])
+    history = str(base["history"])
+    highlights = [str(item) for item in list(base["highlights"])]
+    visitor_tips = [str(item) for item in list(base["visitor_tips"])]
+    practical_notes = [str(item) for item in list(base["practical_notes"])]
+    family_notes = [str(item) for item in list(base["family_friendly_notes"])]
+    photo_notes = [str(item) for item in list(base["photo_spot_notes"])]
+    raw_segments = [
+        f"{name} overview: {short_intro}",
+        f"{name} historical frame: {history}",
+        f"Key highlight 1: {highlights[0] if highlights else short_intro}",
+        f"Key highlight 2: {highlights[1] if len(highlights) > 1 else history}",
+        f"Visitor tip 1: {visitor_tips[0] if visitor_tips else 'Take your time through the site.'}",
+        f"Visitor tip 2: {visitor_tips[1] if len(visitor_tips) > 1 else practical_notes[0] if practical_notes else short_intro}",
+        f"Practical note 1: {practical_notes[0] if practical_notes else history}",
+        f"Practical note 2: {practical_notes[1] if len(practical_notes) > 1 else short_intro}",
+        f"Photo spot note: {photo_notes[0] if photo_notes else short_intro}",
+        f"Family angle: {family_notes[0] if family_notes else visitor_tips[0] if visitor_tips else short_intro}",
+    ]
+    return raw_segments
+
+
 def build_mock_seed_bundle(attraction_count: int = 50, profile_count: int = 50) -> MockSeedBundle:
     attractions: list[AttractionContext] = []
     for index in range(attraction_count):
@@ -137,6 +161,7 @@ def build_mock_seed_bundle(attraction_count: int = 50, profile_count: int = 50) 
                 practical_notes=base["practical_notes"],
                 family_friendly_notes=base["family_friendly_notes"],
                 photo_spot_notes=base["photo_spot_notes"],
+                guide_segments=_build_guide_segments(base),
                 source="mock_postgres",
             )
         )

@@ -5,11 +5,17 @@ from yoyo.api.deps import get_db_session
 from yoyo.api.responses import success_response
 from yoyo.modules.questionnaire.schemas import (
     QuestionnaireSubmissionCreate,
-    QuestionnaireSubmissionRead,
+    build_questionnaire_flow_read,
 )
 from yoyo.modules.questionnaire.service import create_questionnaire_submission
 
 router = APIRouter(prefix="/questionnaire")
+
+
+@router.get("/flows/current")
+async def get_current_questionnaire_flow() -> dict[str, object]:
+    flow = build_questionnaire_flow_read()
+    return success_response(flow.model_dump())
 
 
 @router.post("/submissions", status_code=status.HTTP_201_CREATED)

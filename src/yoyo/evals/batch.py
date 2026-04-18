@@ -9,6 +9,7 @@ from pathlib import Path
 import yaml
 
 from yoyo.evals.progress import write_progress
+from yoyo.evals.providers import MissingEvalAPIKeyError
 from yoyo.evals.reporting import (
     build_category_breakdown,
     build_comparative_markdown,
@@ -50,9 +51,34 @@ async def _run_model(item: dict[str, str], dataset_path: Path, output_root: Path
         )
         write_summary(summary_path, summary)
         return summary
+    except MissingEvalAPIKeyError as error:
+        error_path.write_text(
+            json.dumps(
+                {
+                    "provider": provider,
+                    "model": model,
+                    "error": str(error),
+                    "status": "invalid",
+                    "reason": "missing_api_key",
+                },
+                ensure_ascii=False,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        return None
     except Exception as error:
         error_path.write_text(
-            json.dumps({"provider": provider, "model": model, "error": str(error)}, ensure_ascii=False, indent=2),
+            json.dumps(
+                {
+                    "provider": provider,
+                    "model": model,
+                    "error": str(error),
+                    "status": "error",
+                },
+                ensure_ascii=False,
+                indent=2,
+            ),
             encoding="utf-8",
         )
         return None

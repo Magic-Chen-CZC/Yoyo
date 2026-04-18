@@ -35,6 +35,7 @@ async def seed_mock_knowledge() -> None:
                     practical_notes_json=attraction.practical_notes,
                     family_friendly_notes_json=attraction.family_friendly_notes,
                     photo_spot_notes_json=attraction.photo_spot_notes,
+                    guide_segments_json=attraction.guide_segments,
                 )
             )
 

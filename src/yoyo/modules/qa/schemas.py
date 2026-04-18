@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -19,11 +19,37 @@ class SessionAwareContext(BaseModel):
     user_id: str | None = None
 
 
-class PlannerHandoffPayload(BaseModel):
-    intent: str = "planner_handoff"
-    operation: str
-    target: str | None = None
-    constraints: dict[str, Any] = Field(default_factory=dict)
+class QAAskStructuredBase(BaseModel):
+    answer: str
+    status: Literal["ok", "degraded", "unavailable", "clarification", "redirect"]
+    reason: str | None = None
+
+
+class TranslationStructuredAnswer(QAAskStructuredBase):
+    mode: Literal["direct_translation", "needs_phrase", "degraded"]
+
+
+class LiveInfoStructuredAnswer(QAAskStructuredBase):
+    not_confirmed: bool = True
+    confidence: Literal["low", "medium", "high"] = "low"
+
+
+class TripAssistantStructuredAnswer(QAAskStructuredBase):
+    route_focus: Literal[
+        "current_stop",
+        "next_stop",
+        "route_overview",
+        "manual_edit_redirect",
+        "general_guidance",
+    ]
+    references_current_stop: bool = False
+    references_next_stop: bool = False
+
+
+class AttractionExplainStructuredAnswer(QAAskStructuredBase):
+    grounding: Literal["sql", "rag", "sql_then_rag", "limited"]
+    includes_history: bool = False
+    includes_tips: bool = False
 
 
 class QAAskResponse(BaseModel):

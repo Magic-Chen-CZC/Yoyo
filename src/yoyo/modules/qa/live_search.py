@@ -21,14 +21,16 @@ class TavilyLiveSearchProvider:
     async def search(self, query: str) -> dict[str, object]:
         if not self.api_key:
             return {
-                "summary": f"Live info placeholder for query: {query}",
+                "summary": "",
                 "sources": [
                     {
-                        "type": "placeholder",
+                        "type": "error",
                         "name": "tavily_missing_key",
                         "updated_at": None,
                     }
                 ],
+                "status": "unavailable",
+                "reason": "missing_provider_config",
             }
 
         async with httpx.AsyncClient(timeout=60) as client:
@@ -57,10 +59,12 @@ class TavilyLiveSearchProvider:
                         }
                         for item in results
                     ],
+                    "status": "available",
+                    "reason": None,
                 }
             except Exception as error:
                 return {
-                    "summary": f"Live search failed: {error}",
+                    "summary": "",
                     "sources": [
                         {
                             "type": "error",
@@ -68,6 +72,8 @@ class TavilyLiveSearchProvider:
                             "updated_at": None,
                         }
                     ],
+                    "status": "degraded",
+                    "reason": "provider_request_failed",
                 }
 
 

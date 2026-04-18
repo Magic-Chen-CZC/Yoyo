@@ -31,7 +31,7 @@ class GuideSession(Base):
     )
     status: Mapped[GuideSessionStatus] = mapped_column(
         db_enum(GuideSessionStatus, name="guide_session_status"),
-        default=GuideSessionStatus.ACTIVE,
+        default=GuideSessionStatus.PENDING,
         nullable=False,
     )
     playback_state: Mapped[GuidePlaybackState] = mapped_column(

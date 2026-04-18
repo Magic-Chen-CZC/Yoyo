@@ -13,6 +13,10 @@ class EvalProvider(Protocol):
     async def generate(self, prompt: str) -> dict[str, Any]: ...
 
 
+class MissingEvalAPIKeyError(RuntimeError):
+    pass
+
+
 class AnthropicEvalProvider:
     def __init__(self, model: str, api_key: str | None = None) -> None:
         settings = get_settings()
@@ -21,7 +25,7 @@ class AnthropicEvalProvider:
 
     async def generate(self, prompt: str) -> dict[str, Any]:
         if not self.api_key:
-            return {"text": f"[mock anthropic response] {prompt}", "usage": None}
+            raise MissingEvalAPIKeyError("missing anthropic eval api key")
 
         async with httpx.AsyncClient(timeout=60) as client:
             response = await client.post(
@@ -58,7 +62,7 @@ class OpenRouterEvalProvider:
 
     async def generate(self, prompt: str) -> dict[str, Any]:
         if not self.api_key:
-            return {"text": f"[mock openrouter response] {prompt}", "usage": None}
+            raise MissingEvalAPIKeyError("missing openrouter eval api key")
 
         async with httpx.AsyncClient(timeout=60) as client:
             response = await client.post(
@@ -97,7 +101,7 @@ class GeminiEvalProvider:
 
     async def generate(self, prompt: str) -> dict[str, Any]:
         if not self.api_key:
-            return {"text": f"[mock gemini response] {prompt}", "usage": None}
+            raise MissingEvalAPIKeyError("missing google eval api key")
 
         endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent?key={self.api_key}"
         async with httpx.AsyncClient(timeout=60) as client:
@@ -138,7 +142,7 @@ class OpenAICompatibleEvalProvider:
 
     async def generate(self, prompt: str) -> dict[str, Any]:
         if not self.api_key:
-            return {"text": f"[mock {self.label} response] {prompt}", "usage": None}
+            raise MissingEvalAPIKeyError(f"missing {self.label} eval api key")
 
         async with httpx.AsyncClient(timeout=60) as client:
             response = await client.post(

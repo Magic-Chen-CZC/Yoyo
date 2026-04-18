@@ -18,6 +18,8 @@ class UserProfile(Base):
     audience_type: Mapped[str] = mapped_column(String(64), default="general", nullable=False)
     answer_length_preference: Mapped[str] = mapped_column(String(64), default="medium", nullable=False)
     guide_style_preference: Mapped[str] = mapped_column(String(16), default="SJ", nullable=False)
+    profile_source: Mapped[str] = mapped_column(String(64), default="questionnaire_flow", nullable=False)
+    profile_version: Mapped[str] = mapped_column(String(32), default="v1", nullable=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False
     )

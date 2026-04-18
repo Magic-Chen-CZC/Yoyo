@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from yoyo.core.config import get_settings
 from yoyo.modules.knowledge.schemas import AttractionContext
 from yoyo.modules.knowledge.seed_postgres import MOCK_SEED_BUNDLE
 from yoyo.modules.knowledge.sql_retriever import fetch_attraction_by_name, filter_by_name
@@ -23,6 +24,11 @@ def list_mock_attractions(limit: int | None = None) -> list[AttractionContext]:
     return list(MOCK_SEED_BUNDLE.attractions[:limit])
 
 
+def allow_mock_knowledge_fallback() -> bool:
+    settings = get_settings()
+    return settings.app_env in {"local", "test"}
+
+
 async def get_attraction_context(name: str | None, session: AsyncSession | None = None) -> AttractionContext | None:
     if not name:
         return None
@@ -31,6 +37,9 @@ async def get_attraction_context(name: str | None, session: AsyncSession | None 
         attraction = await fetch_attraction_by_name(session, name)
         if attraction is not None:
             return attraction
+
+    if not allow_mock_knowledge_fallback():
+        return None
 
     exact = next((item for item in MOCK_SEED_BUNDLE.attractions if item.name == name), None)
     if exact is not None:

@@ -3,9 +3,10 @@ from __future__ import annotations
 import json
 
 from yoyo.modules.guide.prompts import build_guide_generation_request
+from yoyo.modules.shared_text_sanitizer import extract_fenced_json_object
+from yoyo.modules.guide.schemas import GuideBundleStructured
 from yoyo.modules.knowledge.schemas import AttractionContext, ProfileContext
 from yoyo.modules.llm.factory import get_llm_runtime
-from yoyo.modules.llm.schemas import LLMResponse
 
 
 async def generate_guide_text_blocks(
@@ -40,19 +41,40 @@ async def generate_guide_text_blocks(
         return None, metadata
 
     parsed = _parse_json_payload(response.text)
-    return parsed, metadata
+    structured = _parse_guide_bundle(parsed)
+    if structured is None:
+        metadata["llm"]["structured_output_valid"] = False
+        metadata["llm"]["structured_output_type"] = "guide_bundle"
+        return None, metadata
+    metadata["llm"]["structured_output_valid"] = True
+    metadata["llm"]["structured_output_type"] = "guide_bundle"
+    metadata["llm"]["structured_output"] = structured.model_dump()
+    return structured.model_dump(), metadata
+
+
+
+def _parse_guide_bundle(payload: dict[str, object] | None) -> GuideBundleStructured | None:
+    if payload is None:
+        return None
+    try:
+        structured = GuideBundleStructured.model_validate(payload)
+    except Exception:
+        return None
+    if not structured.intro.strip() or not structured.outro.strip():
+        return None
+    if any(not stop.stop_name.strip() or not stop.narration.strip() for stop in structured.stop_scripts):
+        return None
+    return structured
 
 
 
 def _parse_json_payload(text: str) -> dict[str, object] | None:
     try:
-        return json.loads(text)
+        payload = json.loads(text)
     except Exception:
-        start = text.find("{")
-        end = text.rfind("}")
-        if start == -1 or end == -1 or end <= start:
+        payload = extract_fenced_json_object(text)
+        if payload is None:
             return None
-        try:
-            return json.loads(text[start : end + 1])
-        except Exception:
-            return None
+    if not isinstance(payload, dict):
+        return None
+    return payload

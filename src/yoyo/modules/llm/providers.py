@@ -71,6 +71,7 @@ class OpenRouterRuntimeProvider:
     def __init__(self, api_key: str | None = None) -> None:
         settings = get_settings()
         self.api_key = api_key or settings.openrouter_api_key or settings.eval_openrouter_api_key
+        self.base_url = settings.openrouter_base_url.rstrip("/")
 
     async def generate(self, request: LLMRequest) -> LLMResponse:
         if not self.api_key:
@@ -78,7 +79,7 @@ class OpenRouterRuntimeProvider:
 
         async with httpx.AsyncClient(timeout=request.options.timeout_seconds) as client:
             response = await client.post(
-                "https://openrouter.ai/api/v1/chat/completions",
+                f"{self.base_url}/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self.api_key}",
                     "Content-Type": "application/json",

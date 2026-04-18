@@ -13,4 +13,6 @@ async def get_live_info_context(query: str, attraction_name: str | None) -> Live
         confidence=str(payload.get("confidence") or "low"),
         not_confirmed=bool(payload.get("not_confirmed")),
         source="live_search",
+        status=str(payload.get("status") or "available"),
+        reason=payload.get("reason"),
     )

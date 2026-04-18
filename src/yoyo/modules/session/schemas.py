@@ -17,6 +17,12 @@ class GuideSessionRead(BaseModel):
     context: dict[str, Any]
 
 
+class GuideSessionLifecycleRead(BaseModel):
+    guide_session_id: str
+    status: str
+    playback_state: str
+
+
 class SessionCurrentRead(BaseModel):
     guide_session_id: str
     itinerary_id: str
@@ -29,6 +35,10 @@ class SessionCurrentRead(BaseModel):
     next_stop: dict[str, Any] | None
     current_position: dict[str, float] | None
     stop_count: int
+    completed_stop_count: int
+    editable_from_stop_index: int
+    frozen_stop_ids: list[str] = Field(default_factory=list)
+    editable_stop_ids: list[str] = Field(default_factory=list)
     plan_summary: str | None
 
 

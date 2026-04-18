@@ -94,6 +94,7 @@ def _to_attraction_context(attraction: Attraction) -> AttractionContext:
         practical_notes=list(attraction.practical_notes_json or []),
         family_friendly_notes=list(attraction.family_friendly_notes_json or []),
         photo_spot_notes=list(attraction.photo_spot_notes_json or []),
+        guide_segments=list(attraction.guide_segments_json or []),
         source="postgresql",
     )
 

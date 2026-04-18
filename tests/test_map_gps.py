@@ -33,6 +33,9 @@ async def test_session_current_map_and_gps_flow(client: AsyncClient, monkeypatch
     )
     guide_session_id = guide_session_response.json()["data"]["id"]
 
+    start_response = await client.post(f"/api/v1/session/guide/{guide_session_id}/start")
+    assert start_response.status_code == 200
+
     current_response = await client.get(f"/api/v1/session/{guide_session_id}/current")
     assert current_response.status_code == 200
     current_body = current_response.json()
@@ -52,13 +55,21 @@ async def test_session_current_map_and_gps_flow(client: AsyncClient, monkeypatch
     assert map_body["data"]["markers"][0]["id"] == "stop-tiananmen-square"
     assert map_body["data"]["markers"][0]["order"] == 0
     assert map_body["data"]["markers"][0]["is_current"] is True
+    assert map_body["data"]["markers"][0]["short_intro"]
+    assert isinstance(map_body["data"]["markers"][0]["highlights"], list)
+    assert "comment_count" in map_body["data"]["markers"][0]
     assert map_body["data"]["current_stop"]["name"] == "Tiananmen Square"
+    assert map_body["data"]["current_stop"]["short_intro"]
     assert map_body["data"]["navigation_summary"] == {
         "current_stop_index": 0,
         "stop_count": 2,
         "remaining_stop_count": 1,
+        "completed_stop_count": 0,
+        "editable_from_stop_index": 0,
         "has_next_stop": True,
     }
+    assert map_body["data"]["markers"][0]["is_completed"] is False
+    assert map_body["data"]["markers"][0]["is_editable"] is True
 
     gps_far_response = await client.post(
         f"/api/v1/gps/update/{guide_session_id}",
@@ -98,3 +109,9 @@ async def test_session_current_map_and_gps_flow(client: AsyncClient, monkeypatch
     assert current_after_gps_response.status_code == 200
     current_after_gps_body = current_after_gps_response.json()
     assert current_after_gps_body["data"]["playback_state"] == "triggered"
+    assert current_after_gps_body["data"]["completed_stop_count"] == 0
+    assert current_after_gps_body["data"]["editable_from_stop_index"] == 0
+    assert current_after_gps_body["data"]["editable_stop_ids"] == [
+        "stop-tiananmen-square",
+        "stop-forbidden-city",
+    ]

@@ -9,7 +9,15 @@ async def test_questionnaire_submission_flow(client) -> None:
         "/api/v1/questionnaire/submissions",
         json={
             "user_id": "user-1",
-            "payload": {"travel_pace": "balanced", "preferred_poi_count": 2},
+            "role_choice": "balanced_storyteller",
+            "answers": {
+                "preferred_language": "en",
+                "interests": ["history", "culture"],
+                "travel_style": "balanced",
+                "walking_preference": "moderate",
+                "audience_type": "general",
+                "answer_length_preference": "medium",
+            },
         },
     )
 
@@ -18,7 +26,9 @@ async def test_questionnaire_submission_flow(client) -> None:
     assert body["code"] == 0
     assert body["message"] == "created"
     assert body["data"]["user_id"] == "user-1"
-    assert body["data"]["payload"]["preferred_poi_count"] == 2
+    assert body["data"]["payload"]["flow_version"] == "v1"
+    assert body["data"]["payload"]["role_choice"] == "balanced_storyteller"
+    assert body["data"]["payload"]["answers"]["guide_role"] == "balanced_storyteller"
 
 
 @pytest.mark.asyncio

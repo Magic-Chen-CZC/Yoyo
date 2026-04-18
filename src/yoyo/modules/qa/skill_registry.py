@@ -5,7 +5,6 @@ INTENT_SKILLS: dict[str, list[str]] = {
     "trip_assistant": ["get_trip_context", "get_navigation_summary", "get_current_poi"],
     "live_info": ["search_live_info", "get_attraction_info"],
     "translation": ["translate_text"],
-    "planner_handoff": ["handoff_to_planner"],
 }
 
 

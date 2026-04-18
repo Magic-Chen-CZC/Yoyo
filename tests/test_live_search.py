@@ -2,7 +2,7 @@
 import pytest
 
 from yoyo.modules.qa.live_info import build_live_info_payload
-from yoyo.modules.qa.live_search import TavilyLiveSearchProvider
+from yoyo.modules.qa.live_search import TavilyLiveSearchProvider, get_live_search_provider
 
 
 @pytest.mark.asyncio
@@ -29,6 +29,16 @@ async def test_tavily_provider_http_error_returns_structured_error(monkeypatch) 
     assert "summary" in result
     assert "sources" in result
     assert result["sources"][0]["type"] == "error"
+
+
+def test_get_live_search_provider_rejects_unsupported_provider(monkeypatch) -> None:
+    class FakeSettings:
+        live_search_provider = "unknown"
+
+    monkeypatch.setattr("yoyo.modules.qa.live_search.get_settings", lambda: FakeSettings())
+
+    with pytest.raises(ValueError, match="unsupported live search provider"):
+        get_live_search_provider()
 
 
 @pytest.mark.asyncio

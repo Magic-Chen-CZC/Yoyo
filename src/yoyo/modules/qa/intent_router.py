@@ -21,22 +21,6 @@ _LIVE_INFO_HINTS = [
     "开放",
     "门票",
 ]
-_PLANNER_HINTS = [
-    "replace",
-    "swap",
-    "remove",
-    "delete",
-    "change route",
-    "reorder",
-    "move",
-    "shorten",
-    "fewer",
-    "less walking",
-    "easier route",
-    "换一个",
-    "删掉",
-    "调整路线",
-]
 _TRIP_HINTS = [
     "next stop",
     "next",
@@ -61,7 +45,6 @@ _ATTRACTION_HINTS = [
 _FOLLOW_UP_HINTS = ["what about", "that one", "it", "tell me more", "more about it", "and next", "那这个", "它"]
 
 _INTENT_PRIORITY = {
-    "planner_handoff": 5,
     "live_info": 4,
     "translation": 3,
     "trip_assistant": 2,
@@ -83,7 +66,6 @@ def score_intent(query: str, dialogue_history: list[dict[str, Any]] | None = Non
     candidates: dict[str, float] = {
         "translation": _score_from_patterns(lowered, _TRANSLATION_HINTS, 0.34),
         "live_info": _score_from_patterns(lowered, _LIVE_INFO_HINTS, 0.28),
-        "planner_handoff": _score_from_patterns(lowered, _PLANNER_HINTS, 0.32),
         "trip_assistant": _score_from_patterns(lowered, _TRIP_HINTS, 0.18),
         "attraction_explain": _score_from_patterns(lowered, _ATTRACTION_HINTS, 0.16),
     }
@@ -91,12 +73,11 @@ def score_intent(query: str, dialogue_history: list[dict[str, Any]] | None = Non
     signals: dict[str, list[str]] = {
         "translation": _matched_patterns(lowered, _TRANSLATION_HINTS),
         "live_info": _matched_patterns(lowered, _LIVE_INFO_HINTS),
-        "planner_handoff": _matched_patterns(lowered, _PLANNER_HINTS),
         "trip_assistant": _matched_patterns(lowered, _TRIP_HINTS),
         "attraction_explain": _matched_patterns(lowered, _ATTRACTION_HINTS),
     }
 
-    if _matches_any(lowered, _FOLLOW_UP_HINTS) and last_intent in {"attraction_explain", "trip_assistant", "planner_handoff"}:
+    if _matches_any(lowered, _FOLLOW_UP_HINTS) and last_intent in {"attraction_explain", "trip_assistant"}:
         candidates[last_intent] += 0.18
         signals[last_intent].append("follow_up_from_history")
 
@@ -108,19 +89,15 @@ def score_intent(query: str, dialogue_history: list[dict[str, Any]] | None = Non
         candidates["live_info"] += 0.16
         signals["live_info"].append("same_day_signal")
 
-    if any(token in lowered for token in ["replace", "swap", "remove", "shorten", "less walking", "easier route", "换一个", "删掉"]):
-        candidates["planner_handoff"] += 0.18
-        signals["planner_handoff"].append("route_edit_signal")
+    if any(token in lowered for token in ["replace", "swap", "remove", "delete", "change route", "reorder", "move", "shorten", "fewer", "less walking", "easier route", "换一个", "删掉", "调整路线"]):
+        candidates["trip_assistant"] += 0.16
+        signals["trip_assistant"].append("manual_route_edit_redirect")
 
     if any(token in lowered for token in ["attraction", "景点"]) and not any(
         token in lowered for token in ["replace", "swap", "remove", "delete", "reorder", "move", "shorten", "换一个", "删掉"]
     ):
         candidates["attraction_explain"] += 0.14
         signals["attraction_explain"].append("explicit_attraction_signal")
-
-    if candidates["planner_handoff"] > 0 and candidates["trip_assistant"] > 0:
-        candidates["planner_handoff"] += 0.14
-        signals["planner_handoff"].append("route_edit_priority_over_trip")
 
     if candidates["live_info"] > 0 and candidates["attraction_explain"] > 0:
         candidates["live_info"] += 0.08

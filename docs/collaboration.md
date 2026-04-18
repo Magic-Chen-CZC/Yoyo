@@ -114,7 +114,7 @@ B owns the content and model-facing path:
 1. Strengthen QA retrieval and live-info
    - replace placeholder sources with provider-backed source records
    - add better category-specific answer generation
-   - make `planner_handoff` emit structured route-edit intent
+   - keep QA focused on explanation / trip guidance / translation / live-info rather than route-edit execution
 2. Enrich guide generation output
    - include guide script text
    - include card-like summary payloads
@@ -187,7 +187,7 @@ Prefer to finish module-local changes first, then wire new routes in one small f
 B should continue from the current repo state with:
 1. stronger evaluation rubrics and comparative reports
 2. richer guide generation payloads
-3. refine and extend the structured `planner_handoff` output for route-edit execution
+3. continue QA-side productionization work without reintroducing route-edit execution into the current QA path
 
 This matches the current momentum of the project and avoids blocking A on route/runtime work.
 
@@ -197,4 +197,4 @@ This matches the current momentum of the project and avoids blocking A on route/
 - shared `guide_session.context_json` ownership is frozen
 - `session current` payload is frozen
 - GPS -> guide trigger handoff is frozen
-- `planner_handoff` payload contract is frozen
+- manual route-edit eligibility semantics are frozen

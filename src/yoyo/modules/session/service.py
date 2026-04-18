@@ -1,31 +1,40 @@
+from datetime import UTC, datetime
+
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from yoyo.db.models.itinerary import ItineraryVersion
+from yoyo.db.models.itinerary import Itinerary, ItineraryVersion
 from yoyo.db.models.session import GuideSession
 from yoyo.modules.session.runtime import (
     distance_to_stop_meters,
     get_arrival_threshold_meters,
+    get_completed_stop_count,
     get_current_and_next_stop,
     get_current_stop_index,
+    get_editable_from_stop_index,
+    get_editable_stop_ids,
+    get_frozen_stop_ids,
     get_runtime_context,
     get_stops,
 )
 from yoyo.modules.session.schemas import (
     CreateGuideSessionRequest,
     GPSUpdateRead,
+    GuideSessionLifecycleRead,
     GuideSessionRead,
     SessionCurrentRead,
 )
-from yoyo.modules.shared.enums import GuidePlaybackState
+from yoyo.modules.shared.enums import GuidePlaybackState, GuideSessionStatus, ItineraryStatus
 
 
 async def create_guide_session(
     session: AsyncSession, payload: CreateGuideSessionRequest
 ) -> GuideSessionRead:
     context = get_runtime_context(payload.context)
+    context.setdefault("trip_state", "pending")
     guide_session = GuideSession(
         itinerary_id=payload.itinerary_id,
         itinerary_version_id=payload.itinerary_version_id,
+        status=GuideSessionStatus.PENDING,
         playback_state=GuidePlaybackState.NOT_TRIGGERED,
         context_json=context,
     )
@@ -58,7 +67,12 @@ async def get_guide_session_current(
     context = get_runtime_context(guide_session.context_json)
     current_position = context.get("current_position")
     current_stop_index = get_current_stop_index(context, len(stops))
-    current_stop, next_stop = get_current_and_next_stop(stops, current_stop_index)
+    editable_from_stop_index = get_editable_from_stop_index(current_stop_index, len(stops))
+    current_stop, next_stop = get_current_and_next_stop(stops, editable_from_stop_index)
+
+    completed_stop_count = get_completed_stop_count(current_stop_index, len(stops))
+    frozen_stop_ids = get_frozen_stop_ids(stops, current_stop_index)
+    editable_stop_ids = get_editable_stop_ids(stops, current_stop_index)
 
     return SessionCurrentRead(
         guide_session_id=guide_session.id,
@@ -72,7 +86,65 @@ async def get_guide_session_current(
         next_stop=next_stop,
         current_position=current_position,
         stop_count=len(stops),
+        completed_stop_count=completed_stop_count,
+        editable_from_stop_index=editable_from_stop_index,
+        frozen_stop_ids=frozen_stop_ids,
+        editable_stop_ids=editable_stop_ids,
         plan_summary=plan.get("summary") if plan else None,
+    )
+
+
+async def start_guide_session(
+    session: AsyncSession, guide_session_id: str
+) -> GuideSessionLifecycleRead | None:
+    guide_session = await session.get(GuideSession, guide_session_id)
+    if guide_session is None:
+        return None
+
+    guide_session.status = GuideSessionStatus.ACTIVE
+    guide_session.started_at = datetime.now(UTC)
+    context = get_runtime_context(guide_session.context_json)
+    context["trip_state"] = "active"
+    context["trip_started_at"] = guide_session.started_at.isoformat()
+    guide_session.context_json = context
+
+    itinerary = await session.get(Itinerary, guide_session.itinerary_id)
+    if itinerary is not None:
+        itinerary.status = ItineraryStatus.ACTIVE
+
+    await session.commit()
+    await session.refresh(guide_session)
+    return GuideSessionLifecycleRead(
+        guide_session_id=guide_session.id,
+        status=guide_session.status.value,
+        playback_state=guide_session.playback_state.value,
+    )
+
+
+async def finish_guide_session(
+    session: AsyncSession, guide_session_id: str
+) -> GuideSessionLifecycleRead | None:
+    guide_session = await session.get(GuideSession, guide_session_id)
+    if guide_session is None:
+        return None
+
+    guide_session.status = GuideSessionStatus.FINISHED
+    guide_session.ended_at = datetime.now(UTC)
+    context = get_runtime_context(guide_session.context_json)
+    context["trip_state"] = "finished"
+    context["trip_finished_at"] = guide_session.ended_at.isoformat()
+    guide_session.context_json = context
+
+    itinerary = await session.get(Itinerary, guide_session.itinerary_id)
+    if itinerary is not None:
+        itinerary.status = ItineraryStatus.COMPLETED
+
+    await session.commit()
+    await session.refresh(guide_session)
+    return GuideSessionLifecycleRead(
+        guide_session_id=guide_session.id,
+        status=guide_session.status.value,
+        playback_state=guide_session.playback_state.value,
     )
 
 
@@ -138,5 +210,6 @@ def _serialize_guide_session(guide_session: GuideSession) -> GuideSessionRead:
         context={
             **context,
             "playback_state": guide_session.playback_state.value,
+            "trip_state": guide_session.status.value,
         },
     )

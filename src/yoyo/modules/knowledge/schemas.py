@@ -19,6 +19,7 @@ class AttractionContext(BaseModel):
     practical_notes: list[str] = Field(default_factory=list)
     family_friendly_notes: list[str] = Field(default_factory=list)
     photo_spot_notes: list[str] = Field(default_factory=list)
+    guide_segments: list[str] = Field(default_factory=list)
     source: str = "sql"
 
 
@@ -42,12 +43,29 @@ class LiveInfoContext(BaseModel):
     confidence: str = "low"
     not_confirmed: bool = False
     source: str = "live_search"
+    status: str = "available"
+    reason: str | None = None
+
+
+class RAGChunk(BaseModel):
+    chunk_id: str
+    text: str
+    source: str
+    score: float | None = None
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class RAGContext(BaseModel):
+    chunks: list[RAGChunk] = Field(default_factory=list)
+    retrieval_mode: str = "disabled"
+    fallback_used: bool = False
 
 
 class HybridContext(BaseModel):
     attraction: AttractionContext | None = None
     profile: ProfileContext | None = None
     live_info: LiveInfoContext | None = None
+    rag: RAGContext | None = None
     prompt_safe_attraction: dict[str, Any] = Field(default_factory=dict)
     prompt_safe_profile: dict[str, Any] = Field(default_factory=dict)
     session_context: dict[str, Any] = Field(default_factory=dict)

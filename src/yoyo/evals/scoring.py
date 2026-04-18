@@ -60,9 +60,6 @@ def run_hard_checks(result: EvalResult) -> HardCheckResult:
     if category == "live_info" and not _contains_any(response, ["verify", "check", "official", "today", "same-day"]):
         failed_checks.append("missing_same_day_verification")
         score_cap = 2 if score_cap is None else min(score_cap, 2)
-    if category == "planner_handoff" and not _contains_any(response, ["operation", "target", "constraints", "replace", "remove", "reorder", "shorten"]):
-        failed_checks.append("missing_planner_structure")
-        score_cap = 2 if score_cap is None else min(score_cap, 2)
     if category == "translation" and _contains_any(response, ["translation:", "guided mode", "this means", "you can say"]):
         failed_checks.append("translation_meta_explanation")
         score_cap = 3 if score_cap is None else min(score_cap, 3)
@@ -119,17 +116,6 @@ def _score_trip_assistant(response: str) -> list[tuple[str, bool]]:
     ]
 
 
-
-def _score_planner_handoff(response: str) -> list[tuple[str, bool]]:
-    return [
-        ("identifies a route-edit operation", _contains_any(response, ["replace", "remove", "reorder", "shorten", "add", "swap", "move", "operation"])),
-        ("mentions the route target or affected stop", _contains_any(response, ["stop", "route", "itinerary", "jingshan", "forbidden city", "tiananmen", "park", "museum", "target"])),
-        ("captures user constraints or preferences", _contains_any(response, ["scenic", "walking", "child", "photo", "crowded", "history", "outdoor", "calm", "stairs", "tiring", "sunset", "views", "constraints"])),
-        ("uses structured intent-like wording", _contains_any(response, ["operation", "target", "constraints"]) or "{" in response or ":" in response),
-    ]
-
-
-
 def _score_guide_generation(response: str) -> list[tuple[str, bool]]:
     return [
         ("mentions stop-level guide content", _contains_any(response, ["stop", "narration", "visitor tip", "highlight"])),
@@ -140,7 +126,7 @@ def _score_guide_generation(response: str) -> list[tuple[str, bool]]:
 
 
 
-def _score_generic(response: str) -> list[tuple[str, bool]]:
+def _score_generic(prompt: str, response: str) -> list[tuple[str, bool]]:
     return [("returns a non-empty response", bool(response.strip()))]
 
 
@@ -149,7 +135,6 @@ CATEGORY_SCORERS = {
     "translation": _score_translation,
     "live_info": lambda prompt, response: _score_live_info(response),
     "trip_assistant": lambda prompt, response: _score_trip_assistant(response),
-    "planner_handoff": lambda prompt, response: _score_planner_handoff(response),
     "guide_generation_quality": lambda prompt, response: _score_guide_generation(response),
 }
 

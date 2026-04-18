@@ -20,10 +20,24 @@ async def test_guide_asset_and_playback_flow(client: AsyncClient, db_session, mo
 
     monkeypatch.setattr("yoyo.modules.planner.service.get_job_pool", fake_get_job_pool)
 
+    class FakeResponse:
+        def __init__(self) -> None:
+            self.text = '{"intro":"Tiananmen Square opens this route with a clear historical frame.","outro":"This finishes the route with a compact takeaway.","card_headline":"Historic Beijing Walk","card_highlights":["large ceremonial square","imperial architecture"],"card_practical_tips":["Start early"],"stop_scripts":[{"stop_name":"Tiananmen Square","narration":"Tiananmen Square is the ceremonial opening of the route.","why_it_matters":"It anchors the political symbolism of modern Beijing.","visitor_tip":"Pause for the broad north-south axis."},{"stop_name":"Forbidden City","narration":"The Forbidden City expands the imperial story.","why_it_matters":"It shows how imperial power was spatially organized.","visitor_tip":"Budget extra time for the main halls."}]}'
+            self.provider = "openrouter"
+            self.model = "google/gemini-2.5-flash-lite"
+            self.latency_ms = 12.0
+            self.usage = type("Usage", (), {"model_dump": lambda self: {}})()
+            self.error = None
+
+    class FakeRuntime:
+        async def generate(self, request):
+            return FakeResponse()
+
     async def fake_new_session():
         return db_session
 
     monkeypatch.setattr("yoyo.jobs.tasks.guide_generation.new_session", fake_new_session)
+    monkeypatch.setattr("yoyo.modules.guide.generator.get_llm_runtime", lambda: FakeRuntime())
 
     itinerary_response = await client.post(
         "/api/v1/planning/itineraries",
@@ -63,7 +77,8 @@ async def test_guide_asset_and_playback_flow(client: AsyncClient, db_session, mo
     assert len(asset_body["data"]["result"]["card"]["highlights"]) == 2
     assert "large ceremonial square" in asset_body["data"]["result"]["card"]["highlights"]
     assert "imperial architecture" in asset_body["data"]["result"]["card"]["highlights"]
-    assert asset_body["data"]["result"]["audio"]["status"] == "not_generated"
+    assert asset_body["data"]["result"]["audio"]["status"] in {"unavailable", "pending"}
+    assert asset_body["data"]["result"]["audio"]["voice"] == "Cherry"
 
     gps_response = await client.post(
         f"/api/v1/gps/update/{guide_session_id}",
@@ -93,6 +108,9 @@ async def test_guide_asset_and_playback_flow(client: AsyncClient, db_session, mo
     assert current_body["data"]["playback_state"] == "not_triggered"
     assert current_body["data"]["current_stop_index"] == 1
     assert current_body["data"]["current_stop"]["id"] == "stop-forbidden-city"
+    assert current_body["data"]["completed_stop_count"] == 1
+    assert current_body["data"]["frozen_stop_ids"] == ["stop-tiananmen-square"]
+    assert current_body["data"]["editable_stop_ids"] == ["stop-forbidden-city"]
 
 
 @pytest.mark.asyncio
@@ -111,10 +129,24 @@ async def test_last_stop_completion_keeps_terminal_playback_state(
 
     monkeypatch.setattr("yoyo.modules.planner.service.get_job_pool", fake_get_job_pool)
 
+    class FakeResponse:
+        def __init__(self) -> None:
+            self.text = '{"intro":"Tiananmen Square opens this route with a clear historical frame.","outro":"This finishes the route with a compact takeaway.","card_headline":"Historic Beijing Walk","card_highlights":["large ceremonial square","imperial architecture"],"card_practical_tips":["Start early"],"stop_scripts":[{"stop_name":"Tiananmen Square","narration":"Tiananmen Square is the ceremonial opening of the route.","why_it_matters":"It anchors the political symbolism of modern Beijing.","visitor_tip":"Pause for the broad north-south axis."},{"stop_name":"Forbidden City","narration":"The Forbidden City expands the imperial story.","why_it_matters":"It shows how imperial power was spatially organized.","visitor_tip":"Budget extra time for the main halls."}]}'
+            self.provider = "openrouter"
+            self.model = "google/gemini-2.5-flash-lite"
+            self.latency_ms = 12.0
+            self.usage = type("Usage", (), {"model_dump": lambda self: {}})()
+            self.error = None
+
+    class FakeRuntime:
+        async def generate(self, request):
+            return FakeResponse()
+
     async def fake_new_session():
         return db_session
 
     monkeypatch.setattr("yoyo.jobs.tasks.guide_generation.new_session", fake_new_session)
+    monkeypatch.setattr("yoyo.modules.guide.generator.get_llm_runtime", lambda: FakeRuntime())
 
     itinerary_response = await client.post(
         "/api/v1/planning/itineraries",
@@ -158,5 +190,14 @@ async def test_last_stop_completion_keeps_terminal_playback_state(
     current_response = await client.get(f"/api/v1/session/{guide_session_id}/current")
     assert current_response.status_code == 200
     current_body = current_response.json()["data"]
-    assert current_body["current_stop_index"] == 1
+    assert current_body["current_stop_index"] == 2
     assert current_body["playback_state"] == "played"
+    assert current_body["completed_stop_count"] == 2
+    assert current_body["editable_from_stop_index"] == 2
+    assert current_body["current_stop"] is None
+    assert current_body["next_stop"] is None
+    assert current_body["frozen_stop_ids"] == [
+        "stop-tiananmen-square",
+        "stop-forbidden-city",
+    ]
+    assert current_body["editable_stop_ids"] == []

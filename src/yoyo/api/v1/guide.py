@@ -3,8 +3,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from yoyo.api.deps import get_db_session
 from yoyo.api.responses import success_response
-from yoyo.modules.guide.asset_service import get_active_guide_asset, update_playback_state
-from yoyo.modules.guide.schemas import CreateGuideGenerationJobRequest, GuidePlaybackUpdateRequest
+from yoyo.modules.guide.asset_service import cycle_guide_segments, get_active_guide_asset, update_playback_state
+from yoyo.modules.guide.schemas import CreateGuideGenerationJobRequest, GuidePlaybackUpdateRequest, GuideSegmentActionRequest
 from yoyo.modules.guide.service import create_guide_generation_job, get_guide_generation_job
 
 # Guide API 的入口文件。
@@ -57,3 +57,15 @@ async def update_playback_state_endpoint(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="guide session not found")
 
     return success_response(playback.model_dump())
+
+
+@router.post("/content/{guide_session_id}")
+async def cycle_guide_content_endpoint(
+    guide_session_id: str,
+    payload: GuideSegmentActionRequest,
+    session: AsyncSession = Depends(get_db_session),
+) -> dict[str, object]:
+    content = await cycle_guide_segments(session, guide_session_id, payload.action)
+    if content is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="guide content not available")
+    return success_response(content.model_dump())

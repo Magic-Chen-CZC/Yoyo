@@ -3,9 +3,11 @@ from __future__ import annotations
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from yoyo.modules.knowledge.attraction_retriever import get_attraction_context
+from yoyo.modules.knowledge.fallback_router import should_use_rag_fallback
 from yoyo.modules.knowledge.live_retriever import get_live_info_context
 from yoyo.modules.knowledge.profile_retriever import get_profile_context
 from yoyo.modules.knowledge.prompt_projection import project_attraction_for_prompt, project_profile_for_prompt
+from yoyo.modules.knowledge.rag_retriever import get_rag_context
 from yoyo.modules.knowledge.schemas import HybridContext
 
 
@@ -25,10 +27,15 @@ async def build_hybrid_context(
     if intent == "live_info":
         live_info = await get_live_info_context(query, attraction.name if attraction else attraction_name)
 
+    rag_context = None
+    if should_use_rag_fallback(intent=intent, query=query, attraction=attraction):
+        rag_context = await get_rag_context(query=query, attraction=attraction)
+
     return HybridContext(
         attraction=attraction,
         profile=profile,
         live_info=live_info,
+        rag=rag_context,
         prompt_safe_attraction=project_attraction_for_prompt(attraction),
         prompt_safe_profile=project_profile_for_prompt(profile),
         session_context=session_context,

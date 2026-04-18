@@ -29,7 +29,8 @@ async def run_guide_generation_job(ctx: dict, guide_generation_job_id: str) -> d
 
             stops = version.plan_json.get("stops", [])
             planner_input = version.planner_input_json or {}
-            profile = await get_profile_context(planner_input.get("user_id"), session=session)
+            profile_user_id = planner_input.get("user_id")
+            profile = await get_profile_context(profile_user_id, session=session)
             attractions = []
             for stop in stops:
                 stop_name = stop.get("name")
@@ -45,13 +46,17 @@ async def run_guide_generation_job(ctx: dict, guide_generation_job_id: str) -> d
                 attractions=attractions,
                 profile=profile,
             )
+            validated_llm_bundle = llm_bundle if ((llm_metadata.get("llm") or {}).get("structured_output_valid") is True) else None
             result = build_guide_bundle(
                 summary=version.plan_json.get("summary"),
                 attractions=attractions,
                 profile=profile,
-                llm_bundle=llm_bundle,
+                llm_bundle=validated_llm_bundle,
             )
-            result["generation_metadata"] = llm_metadata
+            result["generation_metadata"] = {
+                **llm_metadata,
+                "profile_user_id": profile_user_id,
+            }
             await mark_job_succeeded(session, job, result)
             return {
                 "guide_generation_job_id": guide_generation_job_id,

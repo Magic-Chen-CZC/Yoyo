@@ -8,7 +8,9 @@ class QuestionnaireSubmissionStatus(StrEnum):
 
 class ItineraryStatus(StrEnum):
     DRAFT = "draft"
+    READY = "ready"
     ACTIVE = "active"
+    COMPLETED = "completed"
 
 
 class ItineraryVersionStatus(StrEnum):
@@ -39,6 +41,7 @@ class AssetStatus(StrEnum):
 
 
 class GuideSessionStatus(StrEnum):
+    PENDING = "pending"
     ACTIVE = "active"
     FINISHED = "finished"
 

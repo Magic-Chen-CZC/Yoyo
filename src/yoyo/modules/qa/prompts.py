@@ -33,17 +33,46 @@ def build_qa_generation_request(
 def _build_system_prompt(intent: str, language: str) -> str:
     base = (
         "You are a Beijing tour guide assistant. "
-        "Use only the provided SQL-grounded attraction/profile facts, session context, dialogue history, and live-info context if present. "
+        "Use SQL-grounded attraction/profile facts first, then use retrieved RAG snippets only as supporting context when they are present. "
         "Do not invent attractions, route state, or real-time facts. "
+        "If SQL and RAG disagree, stay conservative and prefer the structured SQL facts unless the RAG snippet clearly adds historical/background detail. "
         "If facts are uncertain, say so clearly. "
         f"Respond in {language}."
     )
     if intent == "translation":
-        return base + " Return a direct translation when possible, without extra meta explanation."
+        return base + (
+            " Return only a JSON object with keys: answer, status, reason, mode. "
+            "Allowed status values: ok, clarification, degraded. "
+            "Allowed mode values: direct_translation, needs_phrase, degraded. "
+            "If the exact phrase is missing, return clarification. "
+            "Do not add markdown fences or extra text."
+        )
     if intent == "live_info":
-        return base + " For live info, remind the user to verify same-day official information."
+        return base + (
+            " Return only a JSON object with keys: answer, status, reason, not_confirmed, confidence. "
+            "Allowed status values: ok, degraded, unavailable. "
+            "Allowed confidence values: low, medium, high. "
+            "If live info is unavailable or degraded, state that clearly instead of sounding confident. "
+            "Do not add markdown fences or extra text."
+        )
     if intent == "trip_assistant":
-        return base + " For trip guidance, keep the route progression explicit and practical."
+        return base + (
+            " Return only a JSON object with keys: answer, status, reason, route_focus, references_current_stop, references_next_stop. "
+            "Allowed status values: ok, degraded, clarification, redirect. "
+            "Allowed route_focus values: current_stop, next_stop, route_overview, manual_edit_redirect, general_guidance. "
+            "Keep the route progression explicit, practical, and action-oriented. "
+            "Do not suggest that QA can execute route edits. "
+            "Do not add markdown fences or extra text."
+        )
+    if intent == "attraction_explain":
+        return base + (
+            " Return only a JSON object with keys: answer, status, reason, grounding, includes_history, includes_tips. "
+            "Allowed status values: ok, degraded, unavailable, clarification. "
+            "Allowed grounding values: sql, rag, sql_then_rag, limited. "
+            "Keep the explanation concise, grounded, and user-facing. "
+            "Prefer SQL-grounded facts and use RAG only as supporting context. "
+            "Do not add markdown fences or extra text."
+        )
     return base + " Keep the explanation concise, grounded, and user-facing."
 
 
@@ -63,6 +92,8 @@ def _build_user_prompt(intent: str, query: str, hybrid_context: HybridContext) -
     ]
     if hybrid_context.live_info is not None:
         sections.append(f"Live info context: {hybrid_context.live_info.model_dump()}")
+    if hybrid_context.rag is not None:
+        sections.append(f"RAG retrieval context: {hybrid_context.rag.model_dump()}")
     style = describe_guide_style(profile.get("guide_style_preference")) if profile else "guardian"
     sections.append(f"Guide/answer style preference: {style}")
     return "\n\n".join(sections)

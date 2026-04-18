@@ -27,6 +27,7 @@ class Attraction(Base):
     practical_notes_json: Mapped[list[str]] = mapped_column(JSON, nullable=False, default=list)
     family_friendly_notes_json: Mapped[list[str]] = mapped_column(JSON, nullable=False, default=list)
     photo_spot_notes_json: Mapped[list[str]] = mapped_column(JSON, nullable=False, default=list)
+    guide_segments_json: Mapped[list[str]] = mapped_column(JSON, nullable=False, default=list)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False
     )

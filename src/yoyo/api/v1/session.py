@@ -4,7 +4,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from yoyo.api.deps import get_db_session
 from yoyo.api.responses import success_response
 from yoyo.modules.session.schemas import CreateGuideSessionRequest
-from yoyo.modules.session.service import create_guide_session, get_guide_session, get_guide_session_current
+from yoyo.modules.session.service import (
+    create_guide_session,
+    finish_guide_session,
+    get_guide_session,
+    get_guide_session_current,
+    start_guide_session,
+)
 
 router = APIRouter(prefix="/session")
 
@@ -28,6 +34,30 @@ async def get_guide_session_endpoint(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="guide session not found")
 
     return success_response(guide_session.model_dump())
+
+
+@router.post("/guide/{guide_session_id}/start")
+async def start_guide_session_endpoint(
+    guide_session_id: str,
+    session: AsyncSession = Depends(get_db_session),
+) -> dict[str, object]:
+    lifecycle = await start_guide_session(session, guide_session_id)
+    if lifecycle is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="guide session not found or not startable")
+
+    return success_response(lifecycle.model_dump())
+
+
+@router.post("/guide/{guide_session_id}/finish")
+async def finish_guide_session_endpoint(
+    guide_session_id: str,
+    session: AsyncSession = Depends(get_db_session),
+) -> dict[str, object]:
+    lifecycle = await finish_guide_session(session, guide_session_id)
+    if lifecycle is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="guide session not found")
+
+    return success_response(lifecycle.model_dump())
 
 
 @router.get("/{guide_session_id}/current")

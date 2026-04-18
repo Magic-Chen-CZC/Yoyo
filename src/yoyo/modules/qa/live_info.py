@@ -14,12 +14,24 @@ async def build_live_info_payload(query: str, current_stop_name: str | None) -> 
     raw = await provider.search(f"{query} Beijing attraction context: {subject}")
     cleaned_sources = _normalize_sources(raw.get("sources", []))
 
+    status = str(raw.get("status") or "available")
+    reason = raw.get("reason")
+    summary = str(raw.get("summary") or "").strip()
+    if status == "unavailable":
+        summary = f"I can't confirm live details for {subject} right now"
+    elif status == "degraded":
+        summary = f"I found limited live detail for {subject}, so I can't fully confirm the latest update right now"
+    elif not summary:
+        summary = f"I couldn't find a reliable live update for {subject} right now"
+
     return {
-        "summary": raw.get("summary") or f"No live information available for {subject}.",
+        "summary": summary,
         "sources": cleaned_sources,
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "not_confirmed": any(source.get("type") in {"error", "placeholder"} for source in cleaned_sources),
+        "not_confirmed": status != "available" or any(source.get("type") in {"error", "placeholder"} for source in cleaned_sources),
         "confidence": _build_confidence(cleaned_sources),
+        "status": status,
+        "reason": reason,
     }
 
 

@@ -8,7 +8,31 @@ This file defines the overlap between A and B. These contracts should be treated
 The purpose of these contracts is to let:
 - A continue route/session/map/gps work safely
 - B continue guide/qa/live-info/eval work safely
+- the onboarding/planning flow evolve toward guest entry + profile questionnaire + multi-entry route selection without contract churn
 - both sides integrate quickly and run QA verification without rework
+
+---
+
+## Pre-contract: guest onboarding and questionnaire flow
+
+### Current first-phase shape
+- Guest entry is handled through a lightweight guest session rather than full auth.
+- The onboarding questionnaire is now a fixed versioned flow (`v1`) with 7 choice-based questions.
+- The first question is a guide-role choice that is currently mapped onto `user_profiles.guide_style_preference`.
+- Questionnaire submissions should carry:
+  - `flow_version`
+  - `role_choice`
+  - `answers`
+- Planner creation should now be aware of an `entry_type` such as:
+  - `template`
+  - `manual_poi`
+  - `ai_recommendation_selected`
+  - `starter_default`
+
+### Rules
+- Do not treat questionnaire submissions as arbitrary free-form payloads anymore when implementing new onboarding work.
+- The onboarding role choice is currently a product-facing alias over `guide_style_preference`; if a dedicated role system is added later, update this contract and `docs/architecture.md` together.
+- New planner entry types must be documented here before frontend and backend both depend on them.
 
 ---
 
@@ -47,10 +71,12 @@ This is the source of truth for route structure.
 - Map/session/gps/QA should all treat this as the canonical route payload.
 - The fields `id`, `name`, `category`, `latitude`, `longitude`, and `recommended_duration_minutes` are now part of the active contract.
 - `arrival_threshold_meters` is now implemented as the per-stop geofence threshold used by runtime state.
+- First-phase planner output may now also include `route_meta` and `polyline` as route-engine products for the cognitive map.
 
 ### Why it is shared
 - A needs it for current/next stop, route edits, map, gps.
 - B needs it for trip assistant, attraction explain context, guide generation.
+- Frontend also now uses it as the backbone of the cognitive map, including stop-level knowledge, comment aggregation, and route-engine polyline output.
 
 ---
 
@@ -164,6 +190,8 @@ This is the runtime bridge between gps/session progression and guide playback / 
 - A owns the runtime correctness of this endpoint.
 - B can rely on this shape for trip assistant answers and guide behavior.
 - New fields can be added, but existing fields should remain stable.
+- First-phase product flow now tracks `guide_session.status` as a lifecycle state: `pending` before explicit travel start, `active` during the trip, and `finished` after trip completion.
+- The session/map contract now supports a cognitive-map product view rather than assuming a full real-world base map provider.
 
 ---
 
@@ -189,38 +217,47 @@ This is the most important runtime/content handoff in the trip flow.
 
 ---
 
-## Contract 6: `planner_handoff` intent payload
+## Contract 6: manual route-edit eligibility
 
 ### Owner
-- **B owns intent extraction**
-- **A owns execution of route edits**
+- **Primary owner:** A runtime/planning path
+- **Primary consumers:** frontend route editor, session/map views
 
 ### Meaning
-When QA identifies that a user request is really a route-edit request, B should return a structured intent payload that A can execute.
+In the current product phase, route edits are **manual only**. QA does not execute or hand off route changes. The active route-edit entry point is:
+- `POST /api/v1/planning/itineraries/{itinerary_id}/edits`
 
-### Current agreed shape
-```json
-{
-  "intent": "planner_handoff",
-  "operation": "replace_stop",
-  "target": "Jingshan Park",
-  "constraints": {
-    "theme": "scenic",
-    "walking": "lighter"
-  }
-}
-```
+### Current rule
+For an active trip, route edit eligibility is defined by runtime progress:
+- stops with `index < current_stop_index` are completed/frozen
+- the stop at `current_stop_index` is still editable
+- stops with `index > current_stop_index` are editable
 
-This structure is now implemented in the QA path and should be treated as the active contract for A to consume.
-
-### Rules
-- B should standardize operation names.
-- A should consume only agreed operation names.
-- Any new operation must be documented here before implementation on both sides.
+### Shared implications
+- GPS arrival alone does not freeze the current stop.
+- Playback `complete` / `skip` remains the progression trigger that moves the completed boundary forward.
+- Reorder/replace/remove/shorten must preserve the completed prefix of the route.
+- Frontend should use `session current` and map runtime payloads to determine editability.
 
 ---
 
-## Contract 7: Schema / migration ownership
+## Contract 7: share-card read model
+
+### Owner
+- **Primary owner:** B aggregation layer
+- **Primary consumers:** frontend share flow
+
+### Meaning
+This is the finished-trip share view. It is a read model that aggregates session lifecycle, guide card copy, route preview, and social/comment summary without mutating the underlying guide asset contract.
+
+### Rules
+- The share-card response may reuse fields from `guide_generation_job.result_json.card`, but it is a separate frontend-facing contract.
+- `guide_session.status == finished` is the primary signal that a trip is shareable.
+- The first-phase implementation may compute this payload on read rather than persisting a `share_cards` table.
+
+---
+
+## Contract 8: Schema / migration ownership
 
 ### Rule
 Only one person should create/finalize Alembic migrations at a time.
@@ -235,7 +272,7 @@ Only one person should create/finalize Alembic migrations at a time.
 
 ---
 
-## Contract 8: Router wiring ownership
+## Contract 9: Router wiring ownership
 
 ### Rule
 Avoid editing `src/yoyo/api/router.py` early and often.
@@ -255,7 +292,7 @@ Before we say QA is ready for meaningful verification, the following overlap ite
 3. `guide_session.context_json` field ownership is frozen
 4. `session current` payload is frozen
 5. GPS -> guide trigger handoff behavior is defined
-6. `planner_handoff` structured payload shape is defined
+6. manual route-edit eligibility semantics are defined
 
 Recommended order:
 1. finish these shared overlap items first

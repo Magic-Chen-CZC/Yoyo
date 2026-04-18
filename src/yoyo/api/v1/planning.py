@@ -3,6 +3,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from yoyo.api.deps import get_db_session
 from yoyo.api.responses import success_response
+from yoyo.modules.planner.recommendation_schemas import RecommendationRead, RecommendationRequest
+from yoyo.modules.planner.recommendation_service import build_route_recommendations
 from yoyo.modules.planner.schemas import CreateItineraryRequest, RouteEditRequest
 from yoyo.modules.planner.service import (
     create_itinerary,
@@ -10,8 +12,25 @@ from yoyo.modules.planner.service import (
     get_itinerary,
     list_itinerary_versions,
 )
+from yoyo.modules.planner.template_repository import list_route_templates
 
 router = APIRouter(prefix="/planning")
+
+
+@router.get("/templates")
+async def list_route_templates_endpoint() -> dict[str, object]:
+    return success_response(list_route_templates())
+
+
+@router.post("/recommendations")
+async def create_route_recommendations_endpoint(
+    payload: RecommendationRequest,
+) -> dict[str, object]:
+    recommendations = [
+        RecommendationRead.model_validate(item).model_dump()
+        for item in build_route_recommendations(payload.preferences)
+    ]
+    return success_response(recommendations)
 
 
 @router.post("/itineraries", status_code=status.HTTP_201_CREATED)

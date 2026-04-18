@@ -33,10 +33,31 @@ def get_stops(plan: dict[str, Any] | None) -> list[dict[str, Any]]:
 
 
 def get_current_stop_index(context_json: dict[str, Any] | None, stop_count: int) -> int:
-    return clamp_stop_index(
-        normalize_stop_index((context_json or {}).get("current_stop_index")),
-        stop_count,
-    )
+    if stop_count <= 0:
+        return 0
+    return max(0, min(normalize_stop_index((context_json or {}).get("current_stop_index")), stop_count))
+
+
+def get_completed_stop_count(current_stop_index: int, stop_count: int) -> int:
+    if stop_count <= 0:
+        return 0
+    return max(0, min(current_stop_index, stop_count))
+
+
+def get_editable_from_stop_index(current_stop_index: int, stop_count: int) -> int:
+    if stop_count <= 0:
+        return 0
+    return max(0, min(current_stop_index, stop_count))
+
+
+def get_frozen_stop_ids(stops: list[dict[str, Any]], current_stop_index: int) -> list[str]:
+    completed_stop_count = get_completed_stop_count(current_stop_index, len(stops))
+    return [str(stop.get("id")) for stop in stops[:completed_stop_count] if stop.get("id") is not None]
+
+
+def get_editable_stop_ids(stops: list[dict[str, Any]], current_stop_index: int) -> list[str]:
+    editable_from = get_editable_from_stop_index(current_stop_index, len(stops))
+    return [str(stop.get("id")) for stop in stops[editable_from:] if stop.get("id") is not None]
 
 
 def get_current_and_next_stop(
@@ -44,6 +65,9 @@ def get_current_and_next_stop(
     current_stop_index: int,
 ) -> tuple[dict[str, Any] | None, dict[str, Any] | None]:
     if not stops:
+        return None, None
+
+    if current_stop_index >= len(stops):
         return None, None
 
     current_stop = stops[current_stop_index]
