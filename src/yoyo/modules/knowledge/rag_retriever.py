@@ -21,7 +21,7 @@ async def get_rag_context(
     query_result = await query_pgvector_documents(
         query=query,
         similarity_top_k=3,
-        metadata_filters=_build_metadata_filters(query, attraction.name),
+        metadata_filters=_build_metadata_filters(query, attraction),
     )
     if query_result["status"] == "ok" and query_result["documents"]:
         ranked_documents = list(query_result["documents"])
@@ -61,12 +61,12 @@ async def get_rag_context(
 
 
 
-def _build_metadata_filters(query: str, poi_name: str) -> dict[str, object]:
-    filters: dict[str, object] = {"poi_name": poi_name}
+def _build_metadata_filters(query: str, attraction: AttractionContext) -> dict[str, object]:
+    filters: dict[str, object] = {"poi_name": attraction.name}
     lowered = query.lower()
-    if any(token in lowered for token in ["history", "background", "story", "meaning", "背景", "意义"]):
-        filters["doc_type"] = "history"
-    filters["language"] = "en"
+    if any(token in lowered for token in ["history", "background", "story", "meaning", "背景", "意义", "象征", "中轴线", "建筑"]):
+        filters["doc_type"] = ["history", "symbolism", "architecture", "curation"]
+    elif any(token in lowered for token in ["practical", "tips", "注意", "安排", "路线", "预约"]):
+        filters["doc_type"] = ["practical_notes", "family_notes"]
+    filters["language"] = ["zh", "en"]
     return filters
-
-

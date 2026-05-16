@@ -1,0 +1,442 @@
+queries:
+- id: G2-TR-001
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into English: 这个景点几点关门'"
+  metadata:
+    title: "Basic travel phrase translation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-002
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into polite English: 请帮我拍张照片'"
+  metadata:
+    title: "Polite English translation"
+    mode: "single_turn"
+    scenario_type: "tone_control"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "polite"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-003
+  category: translation
+  language: en
+  prompt: "'Rewrite this travel phrase in simpler English: Could you tell me whether"
+  metadata:
+    title: "Simpler English rewrite"
+    mode: "single_turn"
+    scenario_type: "rewrite"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-004
+  category: translation
+  language: en
+  prompt: "'Turn this into natural tourist English: 我下一站怎么走'"
+  metadata:
+    title: "Tourist English phrasing"
+    mode: "single_turn"
+    scenario_type: "rewrite"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-005
+  category: translation
+  language: en
+  prompt: "Can you translate this for me?"
+  metadata:
+    title: "Ambiguous translation clarification"
+    mode: "single_turn"
+    scenario_type: "clarification"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vague"
+    grounding_requirement: "clarify_if_missing"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-006
+  category: translation
+  language: zh
+  prompt: "把这句话翻成礼貌英文：这个景点今天还开放吗"
+  metadata:
+    title: "中文到礼貌英文询问"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "polite"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-007
+  category: translation
+  language: es
+  prompt: "'Translate this into friendly English: ¿Dónde está mi próxima parada?'"
+  metadata:
+    title: "Spanish to English travel translation"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "friendly"
+    grounding_requirement: "minimal"
+    input_language: "es"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-008
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into English: 帮我找一个不那么累的路线'"
+  metadata:
+    title: "Route comfort phrase translation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-009
+  category: translation
+  language: mixed
+  prompt: "请用 polite English 改写：我想换一个更轻松的景点。"
+  metadata:
+    title: "Mixed-language polite rewrite"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "minimal"
+    input_language: "mixed"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-010
+  category: translation
+  language: en
+  prompt: "'Rewrite this for a tourist who sounds nervous: Where do I need to go next?'"
+  metadata:
+    title: "Nervous tourist rewrite"
+    mode: "single_turn"
+    scenario_type: "tone_control"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "supportive"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-011
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into English, but keep it very short: 我想休息一下再走'"
+  metadata:
+    title: "Very short translation"
+    mode: "single_turn"
+    scenario_type: "constrained_length"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "minimal"
+    answer_length_target: "short"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-012
+  category: translation
+  language: en
+  prompt: "'Help me say this in English: 这个地方适合拍照吗'"
+  metadata:
+    title: "Photo-friendly translation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-013
+  category: translation
+  language: zh
+  prompt: "把这句话改成更简单的英文：Could you share the current official guidance for visiting"
+  metadata:
+    title: "英文简化表达（中文说明）"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-014
+  category: translation
+  language: es
+  prompt: "'Translate this into polite English: ¿Me puede decir a qué hora cierra este"
+  metadata:
+    title: "Spanish polite translation"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "polite"
+    grounding_requirement: "minimal"
+    input_language: "es"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-015
+  category: translation
+  language: mixed
+  prompt: "'Translate this into simple English: 这个景点 today 开放吗？'"
+  metadata:
+    title: "Mixed-language opening question"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "minimal"
+    input_language: "mixed"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-016
+  category: translation
+  language: en
+  prompt: "'Turn this into a friendlier travel sentence: Please proceed to the next"
+  metadata:
+    title: "Friendlier travel rewrite"
+    mode: "single_turn"
+    scenario_type: "rewrite"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "friendly"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-017
+  category: translation
+  language: zh
+  prompt: "请把这句话翻成自然的英文：我想先去风景更好的地方。"
+  metadata:
+    title: "自然英文路线偏好表达"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-018
+  category: translation
+  language: en
+  prompt: "Could you translate this? I forgot to paste the text."
+  metadata:
+    title: "Missing source text clarification"
+    mode: "single_turn"
+    scenario_type: "clarification"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vague"
+    grounding_requirement: "clarify_if_missing"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-019
+  category: translation
+  language: en
+  prompt: "'Rewrite this for a child-friendly travel context: Please stay close to"
+  metadata:
+    title: "Child-friendly travel rewrite"
+    mode: "single_turn"
+    scenario_type: "tone_control"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "child_friendly"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-020
+  category: translation
+  language: es
+  prompt: "'Reescribe esta frase en inglés más simple para turistas: How do I get to"
+  metadata:
+    title: "Spanish instruction, English simplified output"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "minimal"
+    input_language: "es"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-TR-021
+  category: translation
+  language: en
+  prompt: "Translate this into natural English: 可以帮我拍一张合影吗"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-022
+  category: translation
+  language: en
+  prompt: "Translate this into polite English: 我们现在应该往哪边走"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-023
+  category: translation
+  language: en
+  prompt: "Rewrite this in simpler English: Could you please tell me where the nearest restroom is?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-024
+  category: translation
+  language: en
+  prompt: "Rewrite this for a nervous tourist: Do I need to show my passport here?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-025
+  category: translation
+  language: zh
+  prompt: "把这句话翻译成自然中文：Where is the ticket entrance?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TR-026
+  category: translation
+  language: en
+  prompt: "Translate this into concise English: 这个地方适合小朋友吗"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-027
+  category: translation
+  language: en
+  prompt: "Translate this into polite English: 我可以在这里休息十分钟吗"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-028
+  category: translation
+  language: en
+  prompt: "Rewrite this in warmer tourist English: Is the line usually long?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-029
+  category: translation
+  language: zh
+  prompt: "把这句话翻译成自然中文：Please verify today's opening hours before you go."
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TR-030
+  category: translation
+  language: en
+  prompt: "Translate this into natural English: 需要提前预约还是现场买票就可以"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"

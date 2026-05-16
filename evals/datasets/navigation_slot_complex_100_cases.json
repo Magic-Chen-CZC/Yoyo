@@ -1,0 +1,2412 @@
+{
+  "dataset_name": "navigation_slot_complex_100_cases",
+  "dataset_version": "2026-05-15",
+  "notes": "Complex mixed-utterance navigation slot benchmark with scenic comments, chatter, long contexts, GPS/current-stop origins, multi-leg routes, and boundary negatives.",
+  "cases": [
+    {
+      "case_id": "NAVC-NS-001",
+      "category": "complex_next_stop",
+      "query": "故宫好美啊，我们刚在午门那边拍完照也休息了一下，下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-002",
+      "category": "complex_next_stop",
+      "query": "刚才这段讲解挺有意思，老人也坐了一会儿，现在体力还行，下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.91635,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-003",
+      "category": "complex_next_stop",
+      "query": "我已经从展厅出来了，孩子还想继续往前逛，接下来怎么走比较省心？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9164,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-004",
+      "category": "complex_next_stop",
+      "query": "这里人有点多但还能接受，我们先不改路线，接下来怎么去下一站？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.91645,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-005",
+      "category": "complex_next_stop",
+      "query": "拍照结束了，水也买好了，不用讲历史了，去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9165,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-006",
+      "category": "complex_next_stop",
+      "query": "故宫好美啊，我们刚在午门那边拍完照也休息了一下，下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.91655,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-007",
+      "category": "complex_next_stop",
+      "query": "刚才这段讲解挺有意思，老人也坐了一会儿，现在体力还行，下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9166,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-008",
+      "category": "complex_next_stop",
+      "query": "我已经从展厅出来了，孩子还想继续往前逛，接下来怎么走比较省心？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.91665,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-009",
+      "category": "complex_next_stop",
+      "query": "这里人有点多但还能接受，我们先不改路线，接下来怎么去下一站？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9167,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-010",
+      "category": "complex_next_stop",
+      "query": "拍照结束了，水也买好了，不用讲历史了，去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.91675,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-011",
+      "category": "complex_next_stop",
+      "query": "故宫好美啊，我们刚在午门那边拍完照也休息了一下，下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9168,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-012",
+      "category": "complex_next_stop",
+      "query": "刚才这段讲解挺有意思，老人也坐了一会儿，现在体力还行，下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.91685,
+          "longitude": 116.3972
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-013",
+      "category": "complex_next_stop",
+      "query": "我已经从展厅出来了，孩子还想继续往前逛，接下来怎么走比较省心？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-014",
+      "category": "complex_next_stop",
+      "query": "这里人有点多但还能接受，我们先不改路线，接下来怎么去下一站？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-015",
+      "category": "complex_next_stop",
+      "query": "拍照结束了，水也买好了，不用讲历史了，去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-016",
+      "category": "complex_next_stop",
+      "query": "故宫好美啊，我们刚在午门那边拍完照也休息了一下，下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-017",
+      "category": "complex_next_stop",
+      "query": "刚才这段讲解挺有意思，老人也坐了一会儿，现在体力还行，下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-018",
+      "category": "complex_next_stop",
+      "query": "我已经从展厅出来了，孩子还想继续往前逛，接下来怎么走比较省心？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-019",
+      "category": "complex_next_stop",
+      "query": "这里人有点多但还能接受，我们先不改路线，接下来怎么去下一站？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-NS-020",
+      "category": "complex_next_stop",
+      "query": "拍照结束了，水也买好了，不用讲历史了，去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混入游览反馈/体力/否定改路线后，仍是下一站导航。"
+    },
+    {
+      "case_id": "NAVC-DGPS-001",
+      "category": "complex_destination_gps",
+      "query": "故宫确实很好看，我们不想在这里继续停太久了，等会想去景山，从我这儿怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-002",
+      "category": "complex_destination_gps",
+      "query": "刚才拍照花了点时间，下面准备去天坛，麻烦给我一段文字路线，不要讲背景。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-003",
+      "category": "complex_destination_gps",
+      "query": "孩子有点累但还想看下一个点，我想去颐和园，怎么走比较直接？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Summer Palace"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "summer_palace"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-004",
+      "category": "complex_destination_gps",
+      "query": "先不查开放时间，也不用推荐别的景点，导航到圆明园入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-005",
+      "category": "complex_destination_gps",
+      "query": "我们在附近喝完水了，接着去北海公园怎么走，尽量说清楚步行方向。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-006",
+      "category": "complex_destination_gps",
+      "query": "故宫确实很好看，我们不想在这里继续停太久了，等会想去什刹海，从我这儿怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-007",
+      "category": "complex_destination_gps",
+      "query": "刚才拍照花了点时间，下面准备去南锣鼓巷，麻烦给我一段文字路线，不要讲背景。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-008",
+      "category": "complex_destination_gps",
+      "query": "孩子有点累但还想看下一个点，我想去雍和宫，怎么走比较直接？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-009",
+      "category": "complex_destination_gps",
+      "query": "先不查开放时间，也不用推荐别的景点，导航到恭王府入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Prince Gong's Mansion"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "prince_gong_mansion"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-010",
+      "category": "complex_destination_gps",
+      "query": "我们在附近喝完水了，接着去正阳门怎么走，尽量说清楚步行方向。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-011",
+      "category": "complex_destination_gps",
+      "query": "故宫确实很好看，我们不想在这里继续停太久了，等会想去天安门，从我这儿怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-012",
+      "category": "complex_destination_gps",
+      "query": "刚才拍照花了点时间，下面准备去故宫，麻烦给我一段文字路线，不要讲背景。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-013",
+      "category": "complex_destination_gps",
+      "query": "孩子有点累但还想看下一个点，我想去景山，怎么走比较直接？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-014",
+      "category": "complex_destination_gps",
+      "query": "先不查开放时间，也不用推荐别的景点，导航到天坛入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-015",
+      "category": "complex_destination_gps",
+      "query": "我们在附近喝完水了，接着去颐和园怎么走，尽量说清楚步行方向。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Summer Palace"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "summer_palace"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-016",
+      "category": "complex_destination_gps",
+      "query": "故宫确实很好看，我们不想在这里继续停太久了，等会想去圆明园，从我这儿怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-017",
+      "category": "complex_destination_gps",
+      "query": "刚才拍照花了点时间，下面准备去北海公园，麻烦给我一段文字路线，不要讲背景。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-018",
+      "category": "complex_destination_gps",
+      "query": "孩子有点累但还想看下一个点，我想去什刹海，怎么走比较直接？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-019",
+      "category": "complex_destination_gps",
+      "query": "先不查开放时间，也不用推荐别的景点，导航到南锣鼓巷入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DGPS-020",
+      "category": "complex_destination_gps",
+      "query": "我们在附近喝完水了，接着去雍和宫怎么走，尽量说清楚步行方向。",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "混合闲聊后的目的地型导航，GPS 起点优先。"
+    },
+    {
+      "case_id": "NAVC-DCTX-001",
+      "category": "complex_destination_current_stop",
+      "query": "刚才在故宫这一段看得挺慢，现在手机定位不太准，但我还在当前站，想去颐和园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Summer Palace"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "summer_palace"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-002",
+      "category": "complex_destination_current_stop",
+      "query": "我不想改行程，只是想从现在这个站继续过去，下面到圆明园怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-003",
+      "category": "complex_destination_current_stop",
+      "query": "这里信号一般，先按我当前站点算，等会去北海公园怎么走，给文字步骤就行。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-004",
+      "category": "complex_destination_current_stop",
+      "query": "别推荐路线替换方案，我还是照原计划走，接着去什刹海怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-005",
+      "category": "complex_destination_current_stop",
+      "query": "已经逛完这一站了，想直接去南锣鼓巷，怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-006",
+      "category": "complex_destination_current_stop",
+      "query": "刚才在故宫这一段看得挺慢，现在手机定位不太准，但我还在当前站，想去雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-007",
+      "category": "complex_destination_current_stop",
+      "query": "我不想改行程，只是想从现在这个站继续过去，下面到恭王府怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Prince Gong's Mansion"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "prince_gong_mansion"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-008",
+      "category": "complex_destination_current_stop",
+      "query": "这里信号一般，先按我当前站点算，等会去正阳门怎么走，给文字步骤就行。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-009",
+      "category": "complex_destination_current_stop",
+      "query": "别推荐路线替换方案，我还是照原计划走，接着去天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-DCTX-010",
+      "category": "complex_destination_current_stop",
+      "query": "已经逛完这一站了，想直接去故宫，怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "无 GPS 时用 current_stop 作为 destination-only 起点。"
+    },
+    {
+      "case_id": "NAVC-EXP-001",
+      "category": "complex_explicit_route",
+      "query": "我们上午时间有点赶，但这段还是想自己走，请告诉我从天安门到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-002",
+      "category": "complex_explicit_route",
+      "query": "不用考虑我现在定位，我问的是两个点之间的路，从故宫怎么走到景山？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-003",
+      "category": "complex_explicit_route",
+      "query": "如果只看这两个景点之间的步行路线，从天坛前往正阳门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-004",
+      "category": "complex_explicit_route",
+      "query": "先不讲北海公园和什刹海的历史关系，给我从北海公园到什刹海的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-005",
+      "category": "complex_explicit_route",
+      "query": "我在整理明天路线，想提前确认一下，从南锣鼓巷到雍和宫怎么走比较直观？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Nanluoguxiang",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "nanluoguxiang",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-006",
+      "category": "complex_explicit_route",
+      "query": "我们上午时间有点赶，但这段还是想自己走，请告诉我从颐和园到圆明园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-007",
+      "category": "complex_explicit_route",
+      "query": "不用考虑我现在定位，我问的是两个点之间的路，从正阳门怎么走到天安门？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Zhengyangmen",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "zhengyangmen",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-008",
+      "category": "complex_explicit_route",
+      "query": "如果只看这两个景点之间的步行路线，从恭王府前往北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-009",
+      "category": "complex_explicit_route",
+      "query": "先不讲什刹海和南锣鼓巷的历史关系，给我从什刹海到南锣鼓巷的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Shichahai",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "shichahai",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-010",
+      "category": "complex_explicit_route",
+      "query": "我在整理明天路线，想提前确认一下，从雍和宫到天坛怎么走比较直观？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Yonghe Temple",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "yonghe_temple",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-011",
+      "category": "complex_explicit_route",
+      "query": "我们上午时间有点赶，但这段还是想自己走，请告诉我从天安门到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-012",
+      "category": "complex_explicit_route",
+      "query": "不用考虑我现在定位，我问的是两个点之间的路，从故宫怎么走到景山？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-013",
+      "category": "complex_explicit_route",
+      "query": "如果只看这两个景点之间的步行路线，从天坛前往正阳门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-014",
+      "category": "complex_explicit_route",
+      "query": "先不讲北海公园和什刹海的历史关系，给我从北海公园到什刹海的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-EXP-015",
+      "category": "complex_explicit_route",
+      "query": "我在整理明天路线，想提前确认一下，从南锣鼓巷到雍和宫怎么走比较直观？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9,
+          "longitude": 116.39
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Nanluoguxiang",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "nanluoguxiang",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "显式起终点不受当前 GPS 覆盖。"
+    },
+    {
+      "case_id": "NAVC-MULTI-001",
+      "category": "complex_multi_leg",
+      "query": "我想把这几段路先看清楚，不是要改路线：从天安门到故宫再到景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-002",
+      "category": "complex_multi_leg",
+      "query": "明天可能带父母走这一串点，先确认文字路线，从天坛到正阳门再去天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-003",
+      "category": "complex_multi_leg",
+      "query": "我们想少走冤枉路，但顺序先不变，从北海公园到什刹海再到南锣鼓巷再到雍和宫给我分段路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-004",
+      "category": "complex_multi_leg",
+      "query": "不用讲每个景点故事，单纯看路，从颐和园到圆明园再到北海公园怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-005",
+      "category": "complex_multi_leg",
+      "query": "我想把这几段路先看清楚，不是要改路线：从恭王府到北海公园再到景山再到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-006",
+      "category": "complex_multi_leg",
+      "query": "明天可能带父母走这一串点，先确认文字路线，从天安门到故宫再去景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-007",
+      "category": "complex_multi_leg",
+      "query": "我们想少走冤枉路，但顺序先不变，从天坛到正阳门再到天安门给我分段路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-008",
+      "category": "complex_multi_leg",
+      "query": "不用讲每个景点故事，单纯看路，从北海公园到什刹海再到南锣鼓巷再到雍和宫怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-009",
+      "category": "complex_multi_leg",
+      "query": "我想把这几段路先看清楚，不是要改路线：从颐和园到圆明园再到北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-010",
+      "category": "complex_multi_leg",
+      "query": "明天可能带父母走这一串点，先确认文字路线，从恭王府到北海公园再去景山再到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-011",
+      "category": "complex_multi_leg",
+      "query": "我们想少走冤枉路，但顺序先不变，从天安门到故宫再到景山给我分段路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-012",
+      "category": "complex_multi_leg",
+      "query": "不用讲每个景点故事，单纯看路，从天坛到正阳门再到天安门怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-013",
+      "category": "complex_multi_leg",
+      "query": "我想把这几段路先看清楚，不是要改路线：从北海公园到什刹海再到南锣鼓巷再到雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-014",
+      "category": "complex_multi_leg",
+      "query": "明天可能带父母走这一串点，先确认文字路线，从颐和园到圆明园再去北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-015",
+      "category": "complex_multi_leg",
+      "query": "我们想少走冤枉路，但顺序先不变，从恭王府到北海公园再到景山再到故宫给我分段路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-016",
+      "category": "complex_multi_leg",
+      "query": "不用讲每个景点故事，单纯看路，从天安门到故宫再到景山怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-017",
+      "category": "complex_multi_leg",
+      "query": "我想把这几段路先看清楚，不是要改路线：从天坛到正阳门再到天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-018",
+      "category": "complex_multi_leg",
+      "query": "明天可能带父母走这一串点，先确认文字路线，从北海公园到什刹海再去南锣鼓巷再到雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-019",
+      "category": "complex_multi_leg",
+      "query": "我们想少走冤枉路，但顺序先不变，从颐和园到圆明园再到北海公园给我分段路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-MULTI-020",
+      "category": "complex_multi_leg",
+      "query": "不用讲每个景点故事，单纯看路，从恭王府到北海公园再到景山再到故宫怎么走比较清楚？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "复杂前缀与否定改路线后的多段导航。"
+    },
+    {
+      "case_id": "NAVC-GPS-001",
+      "category": "complex_current_location",
+      "query": "我从故宫出来以后有点分不清方向，现在就按手机定位算，从这里到景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "这里/我这儿/当前位置 应解析为 GPS origin。"
+    },
+    {
+      "case_id": "NAVC-GPS-002",
+      "category": "complex_current_location",
+      "query": "我们站在路边等家人，别按当前站名字估算了，从我这儿到天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "这里/我这儿/当前位置 应解析为 GPS origin。"
+    },
+    {
+      "case_id": "NAVC-GPS-003",
+      "category": "complex_current_location",
+      "query": "刚出门口，地图上定位已经有了，想从当前位置到正阳门，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "这里/我这儿/当前位置 应解析为 GPS origin。"
+    },
+    {
+      "case_id": "NAVC-GPS-004",
+      "category": "complex_current_location",
+      "query": "我不确定自己在景区哪个门，但 GPS 应该是准的，从这里到北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "这里/我这儿/当前位置 应解析为 GPS origin。"
+    },
+    {
+      "case_id": "NAVC-GPS-005",
+      "category": "complex_current_location",
+      "query": "拍完照以后方向感有点乱，直接用我这儿的位置，去南锣鼓巷怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.9163,
+          "longitude": 116.3972
+        },
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "这里/我这儿/当前位置 应解析为 GPS origin。"
+    },
+    {
+      "case_id": "NAVC-BND-001",
+      "category": "complex_boundary_negative",
+      "query": "故宫好美啊，我们刚拍完照也休息了一下，下面要去哪里比较顺？不用给我具体怎么走。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "trip_assistant",
+      "notes": "问下一步安排，不是要导航步骤。"
+    },
+    {
+      "case_id": "NAVC-BND-002",
+      "category": "complex_boundary_negative",
+      "query": "天坛这段比想象中大，老人有点累，下面去哪会轻松一点？先别给路线。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "trip_assistant",
+      "notes": "行程策略问法。"
+    },
+    {
+      "case_id": "NAVC-BND-003",
+      "category": "complex_boundary_negative",
+      "query": "景山看完夕阳挺值的，后面要不要还去北海公园？先帮我判断顺不顺。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "trip_assistant",
+      "notes": "问是否顺路，不是导航。"
+    },
+    {
+      "case_id": "NAVC-BND-004",
+      "category": "complex_boundary_negative",
+      "query": "我觉得今天走太多了，把后面路线改轻松一点，别直接给我导航。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "manual_route_edit_redirect",
+      "notes": "明确改路线。"
+    },
+    {
+      "case_id": "NAVC-BND-005",
+      "category": "complex_boundary_negative",
+      "query": "孩子累了，把雍和宫删掉或者换成近一点的点吧，不是问怎么走。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "manual_route_edit_redirect",
+      "notes": "删点/换点。"
+    },
+    {
+      "case_id": "NAVC-BND-006",
+      "category": "complex_boundary_negative",
+      "query": "故宫附近现在堵不堵，我想判断打车会不会很慢。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "out_of_scope",
+      "notes": "泛交通拥堵边界。"
+    },
+    {
+      "case_id": "NAVC-BND-007",
+      "category": "complex_boundary_negative",
+      "query": "正阳门讲得挺有意思，能不能顺便讲讲它和前门名字的关系？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "attraction_explain",
+      "notes": "景点解释，不是导航。"
+    },
+    {
+      "case_id": "NAVC-BND-008",
+      "category": "complex_boundary_negative",
+      "query": "刚才那段路线说清楚了，谢谢，先不用继续导航。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "smalltalk",
+      "notes": "结束/感谢。"
+    },
+    {
+      "case_id": "NAVC-BND-009",
+      "category": "complex_boundary_negative",
+      "query": "帮我把'How do I get to the north gate?'翻成中文给工作人员看，不是真的要导航。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "translation",
+      "notes": "显式翻译优先。"
+    },
+    {
+      "case_id": "NAVC-BND-010",
+      "category": "complex_boundary_negative",
+      "query": "如果从故宫到天坛坐地铁，具体几号线换乘？我不是问步行路线。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "公交/地铁换乘已支持，且否定的是步行路线，不应拒答。",
+      "expected_mode": "transit"
+    }
+  ]
+}

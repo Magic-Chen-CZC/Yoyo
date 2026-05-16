@@ -1,0 +1,172 @@
+{
+  "dataset_name": "navigation_hard_cases",
+  "dataset_version": "v1",
+  "cases": [
+    {
+      "case_id": "NAV-NS-001",
+      "category": "next_stop",
+      "query": "下一站怎么去？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Tiananmen Square", "next_stop_name": "Forbidden City"},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Forbidden City"],
+      "expected_source": "rule",
+      "notes": "标准 next-stop 规则命中"
+    },
+    {
+      "case_id": "NAV-NS-002",
+      "category": "next_stop",
+      "query": "接下来怎么走？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Forbidden City", "next_stop_name": "Jingshan Park"},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": ["Jingshan Park"],
+      "expected_source": "rule",
+      "notes": "接下来 规则命中"
+    },
+    {
+      "case_id": "NAV-DEST-001",
+      "category": "destination_only",
+      "query": "去故宫怎么走？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Tiananmen Square", "next_stop_name": "Forbidden City"},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Forbidden City"],
+      "expected_source": "rule",
+      "notes": "destination-only"
+    },
+    {
+      "case_id": "NAV-DEST-002",
+      "category": "destination_only",
+      "query": "到天坛怎么走？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Tiananmen Square", "next_stop_name": "Forbidden City"},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Temple of Heaven"],
+      "expected_source": "rule",
+      "notes": "destination-only 别的景点"
+    },
+    {
+      "case_id": "NAV-ROUTE-001",
+      "category": "explicit_route",
+      "query": "从天安门到故宫怎么走？",
+      "language": "zh",
+      "session_context": {},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Forbidden City"],
+      "expected_source": "rule",
+      "notes": "显式起终点"
+    },
+    {
+      "case_id": "NAV-ROUTE-002",
+      "category": "explicit_route",
+      "query": "从故宫到景山公园怎么走？",
+      "language": "zh",
+      "session_context": {},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": ["Jingshan Park"],
+      "expected_source": "rule",
+      "notes": "显式起终点 2"
+    },
+    {
+      "case_id": "NAV-MULTI-001",
+      "category": "multi_leg",
+      "query": "从天安门到故宫再到景山怎么走？",
+      "language": "zh",
+      "session_context": {},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Forbidden City", "Jingshan Park"],
+      "expected_source": "rule",
+      "notes": "多段导航"
+    },
+    {
+      "case_id": "NAV-MULTI-002",
+      "category": "multi_leg",
+      "query": "去故宫再去景山怎么走？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Tiananmen Square", "next_stop_name": "Forbidden City"},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Forbidden City", "Jingshan Park"],
+      "expected_source": "rule",
+      "notes": "destination-only 多段"
+    },
+    {
+      "case_id": "NAV-ALIAS-001",
+      "category": "alias",
+      "query": "去紫禁城怎么走？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Tiananmen Square", "next_stop_name": "Forbidden City"},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": ["Forbidden City"],
+      "expected_source": "rule",
+      "notes": "alias canonicalization"
+    },
+    {
+      "case_id": "NAV-ALIAS-002",
+      "category": "alias",
+      "query": "从故宫博物院到景山公园怎么走？",
+      "language": "zh",
+      "session_context": {},
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": ["Jingshan Park"],
+      "expected_source": "rule",
+      "notes": "长别名 canonicalization"
+    },
+    {
+      "case_id": "NAV-BOUNDARY-EDIT-001",
+      "category": "route_edit_boundary",
+      "query": "把下一站删掉。",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Tiananmen Square", "next_stop_name": "Forbidden City"},
+      "expected_intent": "manual_route_edit_redirect",
+      "notes": "route-edit 边界"
+    },
+    {
+      "case_id": "NAV-BOUNDARY-EDIT-002",
+      "category": "route_edit_boundary",
+      "query": "把后面路线改轻松一点。",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Forbidden City", "next_stop_name": "Jingshan Park"},
+      "expected_intent": "manual_route_edit_redirect",
+      "notes": "soft route-edit 边界"
+    },
+    {
+      "case_id": "NAV-BOUNDARY-TRIP-001",
+      "category": "trip_assistant_boundary",
+      "query": "接下来怎么安排？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Forbidden City", "next_stop_name": "Jingshan Park"},
+      "expected_intent": "trip_assistant",
+      "notes": "trip assistant 边界"
+    },
+    {
+      "case_id": "NAV-BOUNDARY-TRIP-002",
+      "category": "trip_assistant_boundary",
+      "query": "故宫之后去哪会比较顺？",
+      "language": "zh",
+      "session_context": {"current_stop_name": "Forbidden City", "next_stop_name": "Jingshan Park"},
+      "expected_intent": "trip_assistant",
+      "notes": "trip assistant 边界 2"
+    }
+  ]
+}

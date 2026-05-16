@@ -62,6 +62,7 @@ async def get_guide_session_current(
     if guide_session is None:
         return None
 
+    itinerary = await session.get(Itinerary, guide_session.itinerary_id)
     plan = await get_itinerary_version_plan(session, guide_session.itinerary_version_id)
     stops = get_stops(plan)
     context = get_runtime_context(guide_session.context_json)
@@ -78,6 +79,7 @@ async def get_guide_session_current(
         guide_session_id=guide_session.id,
         itinerary_id=guide_session.itinerary_id,
         itinerary_version_id=guide_session.itinerary_version_id,
+        city_code=itinerary.city_code if itinerary else None,
         status=guide_session.status.value,
         playback_state=guide_session.playback_state.value,
         current_stop_index=current_stop_index,

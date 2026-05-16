@@ -27,6 +27,7 @@ class SessionCurrentRead(BaseModel):
     guide_session_id: str
     itinerary_id: str
     itinerary_version_id: str
+    city_code: str | None = None
     status: str
     playback_state: str
     current_stop_index: int

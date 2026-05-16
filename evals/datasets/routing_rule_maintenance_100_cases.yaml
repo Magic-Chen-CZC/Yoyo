@@ -1,0 +1,730 @@
+dataset_name: routing_rule_maintenance_100_cases
+dataset_version: "2026-05-15"
+notes: >
+  Daily QA intent rule maintenance benchmark. Cases use Chinese canonical
+  queries after translator pivot. raw_query is kept for multilingual traceability
+  but the router-only benchmark scores the Chinese query field.
+cases:
+  - case_id: RRM-ST-001
+    bucket: smalltalk_only
+    language: zh
+    query: "你好"
+    expected_intent: smalltalk
+    conflict_type: none
+    label_rationale: "纯寒暄，无任务内容。"
+  - case_id: RRM-ST-002
+    bucket: smalltalk_only
+    language: zh
+    query: "谢谢"
+    expected_intent: smalltalk
+    conflict_type: none
+    label_rationale: "纯致谢。"
+  - case_id: RRM-ST-003
+    bucket: smalltalk_only
+    language: zh
+    query: "你是谁"
+    expected_intent: smalltalk
+    conflict_type: none
+    label_rationale: "问助手身份。"
+  - case_id: RRM-ST-004
+    bucket: smalltalk_only
+    language: zh
+    query: "你能做什么"
+    expected_intent: smalltalk
+    conflict_type: none
+    label_rationale: "问能力范围。"
+  - case_id: RRM-ST-005
+    bucket: smalltalk_task_prefix
+    language: zh
+    raw_query: "hello, tell me about the Forbidden City history"
+    query: "你好，讲讲故宫的历史"
+    expected_intent: attraction_explain
+    conflict_type: smalltalk_vs_task
+    label_rationale: "礼貌前缀后仍有景点讲解任务。"
+  - case_id: RRM-ST-006
+    bucket: smalltalk_task_prefix
+    language: zh
+    raw_query: "hi, is the Temple of Heaven open today?"
+    query: "你好，天坛今天开放吗"
+    expected_intent: live_info
+    conflict_type: smalltalk_vs_task
+    label_rationale: "礼貌前缀后是实时开放问题。"
+  - case_id: RRM-ST-007
+    bucket: smalltalk_task_prefix
+    language: zh
+    raw_query: "thank you, where should I go next?"
+    query: "谢谢，下一站去哪"
+    expected_intent: trip_assistant
+    conflict_type: smalltalk_vs_task
+    label_rationale: "致谢后有行程状态问题。"
+  - case_id: RRM-ST-008
+    bucket: smalltalk_task_prefix
+    language: zh
+    raw_query: "excuse me, how do I get to the Forbidden City?"
+    query: "请问，怎么去故宫"
+    expected_intent: navigation_text
+    conflict_type: smalltalk_vs_task
+    label_rationale: "礼貌前缀后是导航问题。"
+
+  - case_id: RRM-AT-001
+    bucket: attraction_explain_history
+    language: zh
+    query: "故宫有什么历史？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "明确询问景点历史。"
+  - case_id: RRM-AT-002
+    bucket: attraction_explain_history
+    language: zh
+    query: "讲讲天坛为什么重要"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "明确讲解景点重要性。"
+  - case_id: RRM-AT-003
+    bucket: attraction_explain_highlight
+    language: zh
+    query: "景山最值得看的地方是什么？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "问景点看点。"
+  - case_id: RRM-AT-004
+    bucket: attraction_explain_highlight
+    language: zh
+    query: "正阳门在中轴线里有什么意义？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "问历史文化意义。"
+  - case_id: RRM-AT-005
+    bucket: attraction_explain_colloquial
+    language: zh
+    query: "天安门除了拍照还有什么值得看？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "问景点价值和看点。"
+  - case_id: RRM-AT-006
+    bucket: attraction_explain_colloquial
+    language: zh
+    query: "故宫背后有什么故事？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "问故事线，属于讲解。"
+  - case_id: RRM-AT-007
+    bucket: attraction_explain_negative_route
+    language: zh
+    query: "别给我安排路线，直接介绍一下天坛"
+    expected_intent: attraction_explain
+    conflict_type: trip_vs_explain
+    label_rationale: "显式排除路线，要求景点介绍。"
+  - case_id: RRM-AT-008
+    bucket: attraction_explain_negative_translation
+    language: zh
+    query: "英文讲解里说的中轴线是什么意思？"
+    expected_intent: attraction_explain
+    conflict_type: translation_vs_explain
+    label_rationale: "不是翻译请求，而是解释术语含义。"
+  - case_id: RRM-AT-009
+    bucket: attraction_explain_first_time
+    language: zh
+    query: "第一次去故宫，最该理解的是什么？"
+    expected_intent: attraction_explain
+    conflict_type: trip_vs_explain
+    label_rationale: "核心是景点理解，不是路线。"
+  - case_id: RRM-AT-010
+    bucket: attraction_explain_value
+    language: zh
+    query: "天坛到底特别在哪？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "问景点特殊性。"
+  - case_id: RRM-AT-011
+    bucket: attraction_explain_alias
+    language: zh
+    query: "故宫博物院最核心的看点是什么？"
+    expected_intent: attraction_explain
+    conflict_type: none
+    label_rationale: "景点别名 + 看点。"
+  - case_id: RRM-AT-012
+    bucket: attraction_explain_alias_gap
+    language: zh
+    query: "颐和园的建筑有什么特点？"
+    expected_intent: attraction_explain
+    conflict_type: entity_alias_gap
+    label_rationale: "景点别名/实体覆盖应支持常见北京景点。"
+
+  - case_id: RRM-LI-001
+    bucket: live_info_open
+    language: zh
+    query: "故宫今天开放吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "同日开放状态。"
+  - case_id: RRM-LI-002
+    bucket: live_info_open
+    language: zh
+    query: "天坛现在开放吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "当前开放状态。"
+  - case_id: RRM-LI-003
+    bucket: live_info_ticket
+    language: zh
+    query: "景山今天还能买票吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "同日票务。"
+  - case_id: RRM-LI-004
+    bucket: live_info_reservation
+    language: zh
+    query: "正阳门今天需要预约吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "同日预约信息。"
+  - case_id: RRM-LI-005
+    bucket: live_info_closure
+    language: zh
+    query: "天坛今天有没有闭馆通知？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "同日闭馆通知。"
+  - case_id: RRM-LI-006
+    bucket: live_info_open_time
+    language: zh
+    query: "故宫几点关门？"
+    expected_intent: live_info
+    conflict_type: none
+    label_rationale: "运营时间。"
+  - case_id: RRM-LI-007
+    bucket: live_info_can_enter
+    language: zh
+    query: "故宫现在能进去吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "口语化当前入园状态。"
+  - case_id: RRM-LI-008
+    bucket: live_info_can_enter
+    language: zh
+    query: "天坛现在还能进去吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "口语化当前入园状态。"
+  - case_id: RRM-LI-009
+    bucket: live_info_notice
+    language: zh
+    query: "景山今天有什么临时公告吗？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "同日官方公告。"
+  - case_id: RRM-LI-010
+    bucket: live_info_ticket
+    language: zh
+    query: "天安门今天门票怎么预约？"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "同日预约/门票。"
+  - case_id: RRM-LI-011
+    bucket: live_info_mixed_explain
+    language: zh
+    query: "故宫今天开放吗，顺便讲讲它为什么值得去"
+    expected_intent: live_info
+    conflict_type: live_vs_explain
+    label_rationale: "主请求是当天开放，讲解是次要混合诉求。"
+  - case_id: RRM-LI-012
+    bucket: live_info_pivot
+    language: zh
+    raw_query: "Apakah Forbidden City buka hari ini?"
+    query: "故宫今天开放吗？"
+    expected_intent: live_info
+    conflict_type: pivot_then_route
+    label_rationale: "印尼语经 pivot 后是开放问题。"
+
+  - case_id: RRM-WE-001
+    bucket: weather_basic
+    language: zh
+    query: "北京今天天气怎么样？"
+    expected_intent: weather_info
+    conflict_type: none
+    label_rationale: "明确天气查询。"
+  - case_id: RRM-WE-002
+    bucket: weather_rain
+    language: zh
+    query: "故宫今天会下雨吗？"
+    expected_intent: weather_info
+    conflict_type: weather_vs_live
+    label_rationale: "地点 + 降雨。"
+  - case_id: RRM-WE-003
+    bucket: weather_temperature
+    language: zh
+    query: "天坛现在多少度？"
+    expected_intent: weather_info
+    conflict_type: weather_vs_live
+    label_rationale: "地点 + 温度。"
+  - case_id: RRM-WE-004
+    bucket: weather_umbrella
+    language: zh
+    query: "去故宫今天要不要带伞？"
+    expected_intent: weather_info
+    conflict_type: weather_vs_explain
+    label_rationale: "带伞是天气意图。"
+  - case_id: RRM-WE-005
+    bucket: weather_umbrella
+    language: zh
+    query: "天坛今天要不要带伞？"
+    expected_intent: weather_info
+    conflict_type: weather_vs_explain
+    label_rationale: "带伞是天气意图。"
+  - case_id: RRM-WE-006
+    bucket: weather_suitability
+    language: zh
+    query: "故宫今天适合去吗？"
+    expected_intent: weather_info
+    conflict_type: ambiguous_suitability
+    label_rationale: "产品口径下这类同日适合游览优先看天气，但可进入 fallback。"
+  - case_id: RRM-WE-007
+    bucket: weather_suitability
+    language: zh
+    query: "今天去景山会不会太冷？"
+    expected_intent: weather_info
+    conflict_type: weather_vs_explain
+    label_rationale: "冷暖判断是天气。"
+  - case_id: RRM-WE-008
+    bucket: weather_forecast
+    language: zh
+    query: "明天北京天气预报怎么样？"
+    expected_intent: weather_info
+    conflict_type: none
+    label_rationale: "明确天气预报。"
+  - case_id: RRM-WE-009
+    bucket: weather_pivot
+    language: zh
+    raw_query: "พรุ่งนี้ปักกิ่งฝนจะตกไหม"
+    query: "明天北京会下雨吗？"
+    expected_intent: weather_info
+    conflict_type: pivot_then_route
+    label_rationale: "泰语经 pivot 后是天气问题。"
+  - case_id: RRM-WE-010
+    bucket: weather_live_negative
+    language: zh
+    query: "故宫今天有没有天气预警？"
+    expected_intent: weather_info
+    conflict_type: weather_vs_live
+    label_rationale: "天气预警不是景点运营公告。"
+
+  - case_id: RRM-NAV-001
+    bucket: navigation_explicit_route
+    language: zh
+    query: "从天安门怎么走到故宫？"
+    expected_intent: navigation_text
+    conflict_type: none
+    label_rationale: "明确 A 到 B 路线。"
+  - case_id: RRM-NAV-002
+    bucket: navigation_destination
+    language: zh
+    query: "去故宫怎么走？"
+    expected_intent: navigation_text
+    conflict_type: none
+    label_rationale: "目的地导航。"
+  - case_id: RRM-NAV-003
+    bucket: navigation_destination
+    language: zh
+    query: "到天坛怎么走？"
+    expected_intent: navigation_text
+    conflict_type: none
+    label_rationale: "目的地导航。"
+  - case_id: RRM-NAV-004
+    bucket: navigation_next_stop
+    language: zh
+    query: "下一站怎么去？"
+    expected_intent: navigation_text
+    conflict_type: navigation_vs_trip
+    label_rationale: "问下一站走法，不是问下一站是谁。"
+  - case_id: RRM-NAV-005
+    bucket: navigation_next_stop
+    language: zh
+    query: "接下来怎么走？"
+    expected_intent: navigation_text
+    conflict_type: navigation_vs_trip
+    label_rationale: "问行进方式。"
+  - case_id: RRM-NAV-006
+    bucket: navigation_multi_stop
+    language: zh
+    query: "去故宫再去景山怎么走？"
+    expected_intent: navigation_text
+    conflict_type: navigation_vs_trip
+    label_rationale: "多点连续导航。"
+  - case_id: RRM-NAV-007
+    bucket: navigation_mode
+    language: zh
+    query: "从故宫步行到景山怎么走？"
+    expected_intent: navigation_text
+    conflict_type: none
+    label_rationale: "步行路线。"
+  - case_id: RRM-NAV-008
+    bucket: navigation_traffic_boundary
+    language: zh
+    query: "故宫附近交通怎么走？"
+    expected_intent: navigation_text
+    conflict_type: traffic_word_vs_navigation
+    label_rationale: "虽然有交通词，但句式问走法。"
+  - case_id: RRM-NAV-009
+    bucket: navigation_text_steps
+    language: zh
+    query: "给我文字导航到正阳门"
+    expected_intent: navigation_text
+    conflict_type: none
+    label_rationale: "明确文字导航。"
+  - case_id: RRM-NAV-010
+    bucket: navigation_pivot
+    language: zh
+    raw_query: "How do I walk from Tiananmen to the Forbidden City?"
+    query: "从天安门步行到故宫怎么走？"
+    expected_intent: navigation_text
+    conflict_type: pivot_then_route
+    label_rationale: "英文经 pivot 后是路线问题。"
+  - case_id: RRM-NAV-011
+    bucket: navigation_pivot
+    language: zh
+    raw_query: "Làm sao đi bộ từ Tử Cấm Thành đến Cảnh Sơn?"
+    query: "从故宫步行到景山怎么走？"
+    expected_intent: navigation_text
+    conflict_type: pivot_then_route
+    label_rationale: "越南语经 pivot 后是路线问题。"
+  - case_id: RRM-NAV-012
+    bucket: navigation_how_to_reach
+    language: zh
+    query: "如何到达天安门广场？"
+    expected_intent: navigation_text
+    conflict_type: none
+    label_rationale: "到达问法应识别为导航。"
+
+  - case_id: RRM-TRIP-001
+    bucket: trip_next_stop
+    language: zh
+    query: "下一站去哪？"
+    expected_intent: trip_assistant
+    conflict_type: navigation_vs_trip
+    label_rationale: "问下一站目的地，不是走法。"
+  - case_id: RRM-TRIP-002
+    bucket: trip_next_stop
+    language: zh
+    query: "接下来去哪？"
+    expected_intent: trip_assistant
+    conflict_type: navigation_vs_trip
+    label_rationale: "问行程下一步。"
+  - case_id: RRM-TRIP-003
+    bucket: trip_current_stop
+    language: zh
+    query: "我现在到哪一站了？"
+    expected_intent: trip_assistant
+    conflict_type: navigation_vs_trip
+    label_rationale: "当前站状态。"
+  - case_id: RRM-TRIP-004
+    bucket: trip_current_stop
+    language: zh
+    query: "当前站是哪里？"
+    expected_intent: trip_assistant
+    conflict_type: none
+    label_rationale: "当前站状态。"
+  - case_id: RRM-TRIP-005
+    bucket: trip_remaining
+    language: zh
+    query: "行程还剩几站？"
+    expected_intent: trip_assistant
+    conflict_type: trip_vs_edit
+    label_rationale: "问行程状态，不是改行程。"
+  - case_id: RRM-TRIP-006
+    bucket: trip_progress
+    language: zh
+    query: "现在路线走到哪里了？"
+    expected_intent: trip_assistant
+    conflict_type: trip_vs_edit
+    label_rationale: "问路线进度，不是编辑路线。"
+  - case_id: RRM-TRIP-007
+    bucket: trip_advice
+    language: zh
+    query: "后面先去哪更合理？"
+    expected_intent: trip_assistant
+    conflict_type: trip_vs_edit
+    label_rationale: "问行程建议，不是人工改路线。"
+  - case_id: RRM-TRIP-008
+    bucket: trip_negative_edit
+    language: zh
+    query: "别改路线，下一站去哪？"
+    expected_intent: trip_assistant
+    conflict_type: trip_vs_edit
+    label_rationale: "否定改路线后问下一站。"
+  - case_id: RRM-TRIP-009
+    bucket: trip_pivot
+    language: zh
+    raw_query: "Saan tayo pupunta pagkatapos nito?"
+    query: "这之后我们去哪？"
+    expected_intent: trip_assistant
+    conflict_type: pivot_then_route
+    label_rationale: "菲律宾语经 pivot 后是行程下一步。"
+  - case_id: RRM-TRIP-010
+    bucket: trip_pivot
+    language: zh
+    raw_query: "Where are we on the route now?"
+    query: "现在路线走到哪里了？"
+    expected_intent: trip_assistant
+    conflict_type: pivot_then_route
+    label_rationale: "英文经 pivot 后是当前路线状态。"
+
+  - case_id: RRM-EDIT-001
+    bucket: route_edit_remove
+    language: zh
+    query: "把景山去掉"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "明确删除路线点。"
+  - case_id: RRM-EDIT-002
+    bucket: route_edit_remove
+    language: zh
+    query: "不要去天坛了"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "明确取消某站。"
+  - case_id: RRM-EDIT-003
+    bucket: route_edit_reorder
+    language: zh
+    query: "把故宫提前一点"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "调整站点顺序。"
+  - case_id: RRM-EDIT-004
+    bucket: route_edit_reorder
+    language: zh
+    query: "把天坛放到最后"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "调整站点顺序。"
+  - case_id: RRM-EDIT-005
+    bucket: route_edit_replace
+    language: zh
+    query: "把景山换成北海公园"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "替换路线点。"
+  - case_id: RRM-EDIT-006
+    bucket: route_edit_route
+    language: zh
+    query: "帮我调整路线，少走一点"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "明确请求路线编辑。"
+  - case_id: RRM-EDIT-007
+    bucket: route_edit_route
+    language: zh
+    query: "这条路线能不能轻松一点？"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "请求改路线强度。"
+  - case_id: RRM-EDIT-008
+    bucket: route_edit_route
+    language: zh
+    query: "重新排一下今天行程"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: trip_vs_edit
+    label_rationale: "明确重排行程。"
+  - case_id: RRM-EDIT-009
+    bucket: route_edit_pivot
+    language: zh
+    raw_query: "Can you remove Jingshan from my route?"
+    query: "能把景山从我的路线里去掉吗？"
+    expected_intent: manual_route_edit_redirect
+    conflict_type: pivot_then_route
+    label_rationale: "英文经 pivot 后是删除路线点。"
+  - case_id: RRM-EDIT-010
+    bucket: route_edit_negative
+    language: zh
+    query: "不要改路线，我只是想知道下一站去哪"
+    expected_intent: trip_assistant
+    conflict_type: trip_vs_edit
+    label_rationale: "否定 route edit，应按行程状态处理。"
+
+  - case_id: RRM-TRANS-001
+    bucket: translation_to_zh
+    language: zh
+    query: "把“Where is the restroom?”翻成中文"
+    expected_intent: translation
+    conflict_type: none
+    label_rationale: "显式翻译引号内容。"
+  - case_id: RRM-TRANS-002
+    bucket: translation_show_staff
+    language: zh
+    query: "帮我把“请问入口在哪里”翻给工作人员看"
+    expected_intent: translation
+    conflict_type: none
+    label_rationale: "给工作人员看的显式翻译。"
+  - case_id: RRM-TRANS-003
+    bucket: translation_to_zh
+    language: zh
+    query: "这句话用中文怎么说：Where can I buy tickets?"
+    expected_intent: translation
+    conflict_type: none
+    label_rationale: "冒号后文本需要翻译。"
+  - case_id: RRM-TRANS-004
+    bucket: translation_bilingual
+    language: zh
+    query: "把这句做成双语展示：Please take a photo for me"
+    expected_intent: translation
+    conflict_type: none
+    label_rationale: "显式双语展示。"
+  - case_id: RRM-TRANS-005
+    bucket: translation_show_staff
+    language: zh
+    query: "翻译这句话给本地人看：我想去故宫"
+    expected_intent: translation
+    conflict_type: none
+    label_rationale: "明确翻译对象和文本。"
+  - case_id: RRM-TRANS-006
+    bucket: translation_negative_explain
+    language: zh
+    query: "用中文介绍一下故宫"
+    expected_intent: attraction_explain
+    conflict_type: translation_vs_explain
+    label_rationale: "不是翻译，是中文景点介绍。"
+  - case_id: RRM-TRANS-007
+    bucket: translation_negative_explain
+    language: zh
+    query: "翻译介绍故宫"
+    expected_intent: attraction_explain
+    conflict_type: translation_vs_explain
+    label_rationale: "无待翻译文本，更接近景点讲解或应 fallback。"
+  - case_id: RRM-TRANS-008
+    bucket: translation_pivot
+    language: zh
+    raw_query: "Translate this into Chinese: Where can I buy tickets?"
+    query: "把这句话翻成中文：Where can I buy tickets?"
+    expected_intent: translation
+    conflict_type: pivot_then_route
+    label_rationale: "英文指令经 pivot 后仍是显式翻译。"
+  - case_id: RRM-TRANS-009
+    bucket: translation_pivot
+    language: zh
+    raw_query: "Tolong terjemahkan kalimat ini ke bahasa Mandarin: where is the exit?"
+    query: "请把这句话翻成中文：where is the exit?"
+    expected_intent: translation
+    conflict_type: pivot_then_route
+    label_rationale: "马来语经 pivot 后是翻译请求。"
+  - case_id: RRM-TRANS-010
+    bucket: translation_live_negative
+    language: zh
+    query: "帮我把“故宫今天开放吗”翻成中文"
+    expected_intent: translation
+    conflict_type: translation_vs_live
+    label_rationale: "引号内容虽是 live 问句，但用户意图是翻译。"
+  - case_id: RRM-TRANS-011
+    bucket: translation_object_marker
+    language: zh
+    query: "这句翻成中文：Can I enter now?"
+    expected_intent: translation
+    conflict_type: none
+    label_rationale: "对象标记 + 翻译动作。"
+  - case_id: RRM-TRANS-012
+    bucket: translation_negative_route
+    language: zh
+    query: "中文路线步骤给我看"
+    expected_intent: navigation_text
+    conflict_type: translation_vs_navigation
+    label_rationale: "中文只是输出形式，核心是路线步骤。"
+
+  - case_id: RRM-OOS-001
+    bucket: out_of_scope_hard_deny
+    language: zh
+    query: "帮我写一个排序算法"
+    expected_intent: out_of_scope
+    conflict_type: hard_deny
+    label_rationale: "非旅游编程问题。"
+  - case_id: RRM-OOS-002
+    bucket: out_of_scope_hard_deny
+    language: zh
+    query: "给我股票投资建议"
+    expected_intent: out_of_scope
+    conflict_type: hard_deny
+    label_rationale: "金融投资建议。"
+  - case_id: RRM-OOS-003
+    bucket: out_of_scope_hard_deny
+    language: zh
+    query: "这个药怎么吃"
+    expected_intent: out_of_scope
+    conflict_type: hard_deny
+    label_rationale: "医疗用药建议。"
+  - case_id: RRM-OOS-004
+    bucket: out_of_scope_hard_deny
+    language: zh
+    query: "帮我写一份法律诉讼材料"
+    expected_intent: out_of_scope
+    conflict_type: hard_deny
+    label_rationale: "法律诉讼材料。"
+  - case_id: RRM-OOS-005
+    bucket: out_of_scope_boundary_crowd
+    language: zh
+    query: "故宫现在排队多久？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "当前排队时长不在支持范围。"
+  - case_id: RRM-OOS-006
+    bucket: out_of_scope_boundary_crowd
+    language: zh
+    query: "天坛现在人多吗？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "实时拥挤度不支持。"
+  - case_id: RRM-OOS-007
+    bucket: out_of_scope_boundary_traffic
+    language: zh
+    query: "故宫附近现在堵车吗？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "实时路况不支持。"
+  - case_id: RRM-OOS-008
+    bucket: out_of_scope_boundary_transit
+    language: zh
+    query: "去天坛坐地铁几号线？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "公共交通换乘边界。"
+  - case_id: RRM-OOS-009
+    bucket: out_of_scope_boundary_parking
+    language: zh
+    query: "故宫附近停车场还有车位吗？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "停车实时信息不支持。"
+  - case_id: RRM-OOS-010
+    bucket: out_of_scope_boundary_food
+    language: zh
+    query: "故宫附近有什么火锅店推荐？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "餐饮推荐不在当前 QA 范围。"
+  - case_id: RRM-OOS-011
+    bucket: out_of_scope_boundary_air
+    language: zh
+    query: "今天北京空气质量怎么样？"
+    expected_intent: out_of_scope
+    conflict_type: unsupported_boundary
+    label_rationale: "空气质量边界。"
+  - case_id: RRM-OOS-012
+    bucket: out_of_scope_boundary_crowd_negative
+    language: zh
+    query: "故宫为什么总让人觉得震撼？"
+    expected_intent: attraction_explain
+    conflict_type: crowd_word_negative
+    label_rationale: "含“人”但不是人流拥挤度。"
+  - case_id: RRM-OOS-013
+    bucket: out_of_scope_hard_deny_pivot
+    language: zh
+    raw_query: "Can you write Python code for me?"
+    query: "帮我写 Python 代码"
+    expected_intent: out_of_scope
+    conflict_type: pivot_then_route
+    label_rationale: "英文经 pivot 后仍是域外编程。"
+  - case_id: RRM-OOS-014
+    bucket: out_of_scope_boundary_pivot
+    language: zh
+    raw_query: "How crowded is the Forbidden City right now?"
+    query: "故宫现在人多吗？"
+    expected_intent: out_of_scope
+    conflict_type: pivot_then_route
+    label_rationale: "英文经 pivot 后是实时拥挤度边界。"

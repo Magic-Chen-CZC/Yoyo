@@ -1,0 +1,301 @@
+queries:
+- id: BENCH-OOS-001
+  category: out_of_scope
+  language: en
+  prompt: "Write me a sorting algorithm in Python."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-002
+  category: out_of_scope
+  language: en
+  prompt: "Can you explain how to file corporate taxes in California?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-003
+  category: out_of_scope
+  language: en
+  prompt: "What stock should I buy this week?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-004
+  category: out_of_scope
+  language: en
+  prompt: "Help me diagnose my chest pain symptoms."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-005
+  category: out_of_scope
+  language: en
+  prompt: "Write a romantic poem for my partner."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-006
+  category: out_of_scope
+  language: en
+  prompt: "How do I solve this linear algebra homework question?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-007
+  category: out_of_scope
+  language: en
+  prompt: "Give me a legal template for firing an employee."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-008
+  category: out_of_scope
+  language: en
+  prompt: "Can you design a Kubernetes deployment strategy for my startup?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-009
+  category: out_of_scope
+  language: en
+  prompt: "What is the best recipe for sourdough bread?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-010
+  category: out_of_scope
+  language: en
+  prompt: "How should I negotiate my salary in a finance job interview?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-011
+  category: out_of_scope
+  language: zh
+  prompt: "帮我写一个快速排序算法。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-012
+  category: out_of_scope
+  language: zh
+  prompt: "你能给我一份离婚协议模板吗？"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-013
+  category: out_of_scope
+  language: zh
+  prompt: "帮我分析今天应该买哪只股票。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-014
+  category: out_of_scope
+  language: zh
+  prompt: "我胸口疼，你帮我判断是不是心脏病。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-015
+  category: out_of_scope
+  language: zh
+  prompt: "教我怎么做提拉米苏。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-016
+  category: out_of_scope
+  language: en
+  prompt: "What is the derivative of x squared plus 3x?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-017
+  category: out_of_scope
+  language: en
+  prompt: "Can you review my SQL schema design for a payments app?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-018
+  category: out_of_scope
+  language: en
+  prompt: "Write a resignation email for my boss."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-019
+  category: out_of_scope
+  language: en
+  prompt: "How do I fix my MacBook battery drain issue?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-020
+  category: out_of_scope
+  language: en
+  prompt: "Please summarize this neuroscience paper for me."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-021
+  category: out_of_scope
+  language: en
+  prompt: "Should I lease or buy a car next year?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-022
+  category: out_of_scope
+  language: en
+  prompt: "Give me a workout plan for marathon training."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-023
+  category: out_of_scope
+  language: zh
+  prompt: "帮我做一份一周减脂餐计划。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-024
+  category: out_of_scope
+  language: zh
+  prompt: "你能帮我写一份简历吗？"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-025
+  category: out_of_scope
+  language: en
+  prompt: "What is the best way to prepare for the GRE?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-026
+  category: out_of_scope
+  language: en
+  prompt: "Can you explain Rust ownership with examples?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-027
+  category: out_of_scope
+  language: en
+  prompt: "How should I price my freelance design package?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-028
+  category: out_of_scope
+  language: zh
+  prompt: "告诉我怎么报税最省钱。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-029
+  category: out_of_scope
+  language: en
+  prompt: "Please create a meal plan for a diabetic patient."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-030
+  category: out_of_scope
+  language: en
+  prompt: "What is the fastest way to learn machine learning?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"

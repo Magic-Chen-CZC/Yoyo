@@ -38,6 +38,14 @@ class GuideGenerationJobRead(BaseModel):
     error_message: str | None
 
 
+class GuideAssetJobMetaRead(BaseModel):
+    id: str | None = None
+    status: str | None = None
+    asset_status: str | None = None
+    error_code: str | None = None
+    error_message: str | None = None
+
+
 class GuideAssetRead(BaseModel):
     guide_session_id: str
     playback_state: str
@@ -45,6 +53,7 @@ class GuideAssetRead(BaseModel):
     summary: str | None
     stops: list[str] = Field(default_factory=list)
     result: dict[str, Any] | None = None
+    job: GuideAssetJobMetaRead | None = None
 
 
 class GuidePlaybackUpdateRequest(BaseModel):

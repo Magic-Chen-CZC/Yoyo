@@ -1,0 +1,524 @@
+queries:
+- id: G2-PH-001
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace Jingshan Park with a more scenic stop and make the route easier."
+  metadata:
+    title: "Replace scenic and easier"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-002
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Remove the last stop after the Forbidden City and make the plan shorter."
+  metadata:
+    title: "Remove last stop and shorten"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "remove_stop"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-003
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Please reorder the route so the scenic stop comes later."
+  metadata:
+    title: "Reorder scenic later"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "reorder_stops"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-004
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Shorten the route and avoid crowded places."
+  metadata:
+    title: "Shorten and avoid crowds"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "shorten_route"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-005
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace the next stop with something better for architecture and lighter"
+  metadata:
+    title: "Replace next stop with architecture focus"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "sql_with_profile"
+    operation_type: "replace_stop"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-006
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Change the route to make it better."
+  metadata:
+    title: "Ambiguous route-edit clarification"
+    mode: "single_turn"
+    scenario_type: "clarification"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vague"
+    grounding_requirement: "clarify_if_missing"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-007
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Make the route better for a family and also reduce stairs."
+  metadata:
+    title: "Family and reduced stairs"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-008
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Swap Jingshan Park for a stop with better views."
+  metadata:
+    title: "Swap for better views"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-009
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Move the scenic part of the route later in the day."
+  metadata:
+    title: "Move scenic later"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "reorder_stops"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-010
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "I want a calmer route with fewer people and less walking."
+  metadata:
+    title: "Calmer route with fewer people"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "calm"
+    grounding_requirement: "sql_with_profile"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-011
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace Jingshan Park with something easier."
+  metadata:
+    title: "Replace with easier stop"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-012
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "把景山公园换成一个更轻松、风景更好的点。"
+  metadata:
+    title: "中文替换景山公园"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-013
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "把路线缩短一点，尽量避开人多的地方。"
+  metadata:
+    title: "中文缩短并避开人多"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "strict_sql"
+    operation_type: "shorten_route"
+    constraints: ""
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-014
+  category: manual_route_edit_redirect
+  language: es
+  prompt: "Reemplaza Jingshan Park por una parada más escénica y más fácil para caminar."
+  metadata:
+    title: "Spanish replace scenic stop"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-015
+  category: manual_route_edit_redirect
+  language: mixed
+  prompt: "把 next stop 换成一个更 scenic、而且更不累的地方。"
+  metadata:
+    title: "Mixed-language replace next stop"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    constraints: ""
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-016
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "'Turn 1: Replace Jingshan Park with a more scenic stop. Turn 2: Also make"
+  metadata:
+    title: "Route-edit follow-up continuity"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_history"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-017
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "'Turn 1: Remove the last stop after the Forbidden City. Turn 2: Also make"
+  metadata:
+    title: "Remove + shorten follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_history"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    operation_type: "remove_stop"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-018
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "'Turn 1: Make the route less tiring. Turn 2: Also keep the scenic part later"
+  metadata:
+    title: "Less tiring + later scenic follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_history"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-019
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Please make the route more practical and structured after Tiananmen Square."
+  metadata:
+    title: "Practical structured route change"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-020
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Please make the route more vivid and experience-focused after Tiananmen"
+  metadata:
+    title: "Experience-focused route change"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "manual_route_edit_redirect"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vivid"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: BENCH-MR-021
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace the next stop with something more scenic."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-022
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Remove the last stop and make the route shorter."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-023
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Can you change the route to make it easier for light walking?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-024
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Swap this stop for somewhere less crowded."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-025
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Reorder the route so I can do the easiest stop first."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-026
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "把下一站换成一个更轻松、更适合拍照的地方。"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-027
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "帮我把路线缩短一点，去掉最后一站。"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-028
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Can you make the itinerary better for a family with a child?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-029
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Change the route so there is less walking after lunch."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-030
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Move the most scenic stop earlier in the itinerary."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"

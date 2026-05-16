@@ -71,7 +71,9 @@ async def _create_guide_job(
     summary: str | None,
     created_at: datetime,
     finished_at: datetime | None,
-) -> None:
+    error_code: str | None = None,
+    error_message: str | None = None,
+) -> GuideGenerationJob:
     result_json = None
     if summary is not None:
         result_json = {
@@ -83,19 +85,22 @@ async def _create_guide_job(
             "audio": {"status": "not_generated", "url": None},
         }
 
-    db_session.add(
-        GuideGenerationJob(
-            itinerary_version_id=itinerary_version_id,
-            job_type=GuideGenerationJobType.GUIDE_BUNDLE,
-            status=status,
-            asset_status=asset_status,
-            payload_json={"requested_by": "test"},
-            result_json=result_json,
-            created_at=created_at,
-            finished_at=finished_at,
-        )
+    job = GuideGenerationJob(
+        itinerary_version_id=itinerary_version_id,
+        job_type=GuideGenerationJobType.GUIDE_BUNDLE,
+        status=status,
+        asset_status=asset_status,
+        payload_json={"requested_by": "test"},
+        result_json=result_json,
+        error_code=error_code,
+        error_message=error_message,
+        created_at=created_at,
+        finished_at=finished_at,
     )
+    db_session.add(job)
     await db_session.commit()
+    await db_session.refresh(job)
+    return job
 
 
 @pytest.mark.asyncio
@@ -140,6 +145,9 @@ async def test_active_guide_asset_uses_latest_ready_successful_job(
     assert body["data"]["asset_status"] == "ready"
     assert body["data"]["summary"] == "Latest guide asset"
     assert body["data"]["result"]["card"]["headline"] == "Latest guide asset"
+    assert body["data"]["job"]["status"] == "succeeded"
+    assert body["data"]["job"]["asset_status"] == "ready"
+    assert body["data"]["job"]["error_code"] is None
 
 
 @pytest.mark.asyncio
@@ -174,10 +182,12 @@ async def test_active_guide_asset_ignores_newer_pending_job(
     body = asset_response.json()
     assert body["data"]["asset_status"] == "ready"
     assert body["data"]["summary"] == "Stable guide asset"
+    assert body["data"]["job"]["status"] == "succeeded"
+    assert body["data"]["job"]["asset_status"] == "ready"
 
 
 @pytest.mark.asyncio
-async def test_active_guide_asset_returns_missing_without_ready_success(
+async def test_active_guide_asset_returns_pending_without_ready_success(
     client: AsyncClient, db_session: AsyncSession
 ) -> None:
     guide_session_id, itinerary_version_id = await _create_guide_session(db_session)
@@ -206,6 +216,57 @@ async def test_active_guide_asset_returns_missing_without_ready_success(
 
     assert asset_response.status_code == 200
     body = asset_response.json()
+    assert body["data"]["asset_status"] == "pending"
+    assert body["data"]["summary"] is None
+    assert body["data"]["result"] is None
+    assert body["data"]["job"]["status"] == "queued"
+    assert body["data"]["job"]["asset_status"] == "pending"
+    assert body["data"]["job"]["error_message"] is None
+
+
+@pytest.mark.asyncio
+async def test_active_guide_asset_returns_failed_when_latest_job_failed(
+    client: AsyncClient, db_session: AsyncSession
+) -> None:
+    guide_session_id, itinerary_version_id = await _create_guide_session(db_session)
+    now = datetime.now(timezone.utc)
+
+    await _create_guide_job(
+        db_session,
+        itinerary_version_id,
+        status=GuideGenerationJobStatus.FAILED,
+        asset_status=AssetStatus.FAILED,
+        summary=None,
+        created_at=now,
+        finished_at=now,
+        error_code="generation_failed",
+        error_message="llm timeout",
+    )
+
+    asset_response = await client.get(f"/api/v1/guide/asset/{guide_session_id}")
+
+    assert asset_response.status_code == 200
+    body = asset_response.json()
+    assert body["data"]["asset_status"] == "failed"
+    assert body["data"]["summary"] is None
+    assert body["data"]["result"] is None
+    assert body["data"]["job"]["status"] == "failed"
+    assert body["data"]["job"]["asset_status"] == "failed"
+    assert body["data"]["job"]["error_code"] == "generation_failed"
+    assert body["data"]["job"]["error_message"] == "llm timeout"
+
+
+@pytest.mark.asyncio
+async def test_active_guide_asset_returns_missing_without_jobs(
+    client: AsyncClient, db_session: AsyncSession
+) -> None:
+    guide_session_id, _itinerary_version_id = await _create_guide_session(db_session)
+
+    asset_response = await client.get(f"/api/v1/guide/asset/{guide_session_id}")
+
+    assert asset_response.status_code == 200
+    body = asset_response.json()
     assert body["data"]["asset_status"] == "missing"
     assert body["data"]["summary"] is None
     assert body["data"]["result"] is None
+    assert body["data"]["job"] is None

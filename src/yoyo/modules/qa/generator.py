@@ -15,6 +15,7 @@ from yoyo.modules.qa.schemas import (
     LiveInfoStructuredAnswer,
     TranslationStructuredAnswer,
     TripAssistantStructuredAnswer,
+    WeatherInfoStructuredAnswer,
 )
 
 
@@ -93,6 +94,27 @@ async def generate_qa_answer(
         metadata["llm"]["structured_output"] = structured.model_dump()
         return structured.answer, metadata
 
+    if intent == "weather_info":
+        structured = _parse_weather_info_structured_answer(response.text)
+        if structured is None:
+            metadata["llm"]["structured_output_valid"] = False
+            metadata["llm"]["structured_output_type"] = "weather_info"
+            return None, metadata
+        if looks_like_malformed_wrapper(structured.answer):
+            metadata["llm"]["structured_output_valid"] = False
+            metadata["llm"]["structured_output_type"] = "weather_info"
+            return None, metadata
+        sanitized_answer = sanitize_llm_text(structured.answer)
+        if sanitized_answer is None:
+            metadata["llm"]["structured_output_valid"] = False
+            metadata["llm"]["structured_output_type"] = "weather_info"
+            return None, metadata
+        structured.answer = sanitized_answer
+        metadata["llm"]["structured_output_valid"] = True
+        metadata["llm"]["structured_output_type"] = "weather_info"
+        metadata["llm"]["structured_output"] = structured.model_dump()
+        return structured.answer, metadata
+
     if intent == "trip_assistant":
         structured = _parse_trip_assistant_structured_answer(response.text)
         if structured is None:
@@ -167,10 +189,25 @@ def _parse_live_info_structured_answer(text: str) -> LiveInfoStructuredAnswer | 
 
 
 
+def _parse_weather_info_structured_answer(text: str) -> WeatherInfoStructuredAnswer | None:
+    payload = _load_json_object(text)
+    if payload is None:
+        return None
+    try:
+        structured = WeatherInfoStructuredAnswer.model_validate(payload)
+    except Exception:
+        return None
+    if not structured.answer.strip():
+        return None
+    return structured
+
+
+
 def _parse_trip_assistant_structured_answer(text: str) -> TripAssistantStructuredAnswer | None:
     payload = _load_json_object(text)
     if payload is None:
         return None
+    payload = _normalize_trip_assistant_payload(payload)
     try:
         structured = TripAssistantStructuredAnswer.model_validate(payload)
     except Exception:
@@ -178,6 +215,27 @@ def _parse_trip_assistant_structured_answer(text: str) -> TripAssistantStructure
     if not structured.answer.strip():
         return None
     return structured
+
+
+
+def _normalize_trip_assistant_payload(payload: dict[str, object]) -> dict[str, object]:
+    normalized = dict(payload)
+    for key in ("answer", "status", "reason", "route_focus"):
+        value = normalized.get(key)
+        if isinstance(value, str):
+            normalized[key] = value.strip()
+    if "reason" not in normalized:
+        normalized["reason"] = None
+    for key in ("references_current_stop", "references_next_stop"):
+        value = normalized.get(key)
+        if not isinstance(value, str):
+            continue
+        lowered = value.strip().lower()
+        if lowered == "true":
+            normalized[key] = True
+        elif lowered == "false":
+            normalized[key] = False
+    return normalized
 
 
 

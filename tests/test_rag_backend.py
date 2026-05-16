@@ -1,7 +1,11 @@
 import pytest
 
 from yoyo.modules.knowledge.rag_backend import get_rag_backend_status
-from yoyo.modules.knowledge.rag_index_service import build_pgvector_index, query_pgvector_documents
+from yoyo.modules.knowledge.rag_index_service import (
+    _metadata_matches_filter,
+    build_pgvector_index,
+    query_pgvector_documents,
+)
 
 
 def test_rag_backend_status_reports_missing_embedding_key(monkeypatch) -> None:
@@ -34,6 +38,14 @@ def test_rag_backend_status_defaults_to_disabled(monkeypatch) -> None:
     assert status["enabled"] is False
     assert status["availability"] == "disabled"
     assert status["reason"] == "rag_disabled"
+
+
+def test_metadata_matches_filter_supports_scalar_and_list_values() -> None:
+    assert _metadata_matches_filter("history", "history") is True
+    assert _metadata_matches_filter("history", ["history", "architecture"]) is True
+    assert _metadata_matches_filter(["故宫", "紫禁城"], "紫禁城") is True
+    assert _metadata_matches_filter("en", ["zh", "en"]) is True
+    assert _metadata_matches_filter("photo_spot_notes", ["history", "family_notes"]) is False
 
 
 @pytest.mark.asyncio

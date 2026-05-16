@@ -14,7 +14,7 @@ async def test_route_edit_query_redirects_to_manual_planning_flow(client: AsyncC
 
     assert response.status_code == 200
     body = response.json()
-    assert body["data"]["intent"] == "trip_assistant"
+    assert body["data"]["intent"] == "manual_route_edit_redirect"
     assert body["data"]["metadata"]["manual_route_edit_redirect"] is True
-    assert "manual itinerary editing flow" in body["data"]["answer"]
+    assert "itinerary editor" in body["data"]["answer"].lower()
     assert "planner_handoff" not in body["data"]["metadata"]

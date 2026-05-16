@@ -1,0 +1,855 @@
+{
+  "dataset_name": "e2e_qa_fullchain_multilingual",
+  "dataset_version": "2026-05-15-v1",
+  "description": "Full-chain multilingual QA E2E benchmark for intent accuracy and per-stage latency. Run with qwen-turbo and doubao-seed-2-0-mini-260428 through /api/v1/qa/ask.",
+  "models_under_test": [
+    {
+      "label": "qwen-turbo",
+      "provider": "dashscope",
+      "model": "qwen-turbo"
+    },
+    {
+      "label": "doubao-seed-mini",
+      "provider": "volcengine",
+      "model": "doubao-seed-2-0-mini-260428"
+    }
+  ],
+  "language_matrix": {
+    "base": [
+      "zh",
+      "en"
+    ],
+    "southeast_asia": [
+      "th",
+      "vi",
+      "id",
+      "ms",
+      "fil",
+      "my",
+      "km",
+      "lo"
+    ]
+  },
+  "latency_stages": [
+    "preprocess_ms",
+    "routing_ms",
+    "context_build_ms",
+    "generation_ms",
+    "postprocess_ms",
+    "total_ms"
+  ],
+  "cases": [
+    {
+      "case_id": "FULL-ZH-SMALLTALK-001",
+      "category": "smalltalk",
+      "title": "Chinese greeting short-circuit",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "short_circuit",
+      "query_zh": "你好",
+      "reality_level": "chain_validity",
+      "expected_intent": "smalltalk",
+      "expected_data_source": "none",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "none",
+      "variant_group": "short-circuit-latency",
+      "assertions": {
+        "must_include_any": [
+          "你好",
+          "我在"
+        ],
+        "must_not_depend_on": [
+          "live_info",
+          "RAG"
+        ],
+        "check_metadata": [
+          "latency_ms.preprocess_ms",
+          "latency_ms.routing_ms",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "你好",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-HARD-DENY-001",
+      "category": "out_of_scope",
+      "title": "Chinese hard deny programming request",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "hard_deny",
+      "query_zh": "给我写个 Python 排序算法。",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "boundary_guard",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "none",
+      "variant_group": "hard-deny-latency",
+      "assertions": {
+        "must_include_any": [
+          "北京旅游",
+          "旅游相关"
+        ],
+        "must_not_depend_on": [
+          "代码",
+          "def "
+        ],
+        "check_metadata": [
+          "domain_guard.hard_deny",
+          "latency_ms.total_ms"
+        ]
+      },
+      "request": {
+        "query": "给我写个 Python 排序算法。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-EN-HARD-DENY-001",
+      "category": "out_of_scope",
+      "title": "English hard deny through routing preprocess",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "preprocess_then_hard_deny",
+      "query_zh": "给我写个排序算法。",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "boundary_guard",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "none",
+      "variant_group": "translation-preprocess-latency",
+      "assertions": {
+        "must_include_any": [
+          "北京旅游",
+          "Beijing"
+        ],
+        "must_not_depend_on": [
+          "sorting algorithm"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "latency_ms.preprocess_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "Write me a sorting algorithm.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-ATTRACTION-SQL-001",
+      "category": "attraction_explain",
+      "title": "Chinese SQL-first attraction explanation",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "sql_grounded_generation",
+      "query_zh": "请向第一次来北京的游客介绍一下故宫。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-history-zh",
+      "fixture_mode": "structured_data",
+      "variant_group": "sql-generation-zh",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "short_intro",
+          "history",
+          "visitor_tips"
+        ]
+      },
+      "assertions": {
+        "must_include_any": [
+          "故宫",
+          "宫殿",
+          "历史",
+          "北京"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "retrieval_strategy",
+          "latency_ms.generation_ms",
+          "latency_ms.context_build_breakdown_ms.attraction_lookup_ms"
+        ]
+      },
+      "request": {
+        "query": "请向第一次来北京的游客介绍一下故宫。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-EN-ATTRACTION-SQL-001",
+      "category": "attraction_explain",
+      "title": "English SQL-first attraction explanation with answer translation",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "preprocess_sql_generation_postprocess",
+      "query_zh": "请向第一次来北京的游客介绍一下故宫。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-history-en",
+      "fixture_mode": "structured_data",
+      "variant_group": "sql-generation-en",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "short_intro",
+          "history",
+          "visitor_tips"
+        ]
+      },
+      "assertions": {
+        "must_include_any": [
+          "Forbidden City",
+          "palace",
+          "imperial",
+          "history"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "answer_translation.used_answer_translation",
+          "latency_ms.preprocess_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "Tell me about the Forbidden City for a first-time visitor.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "FULL-TH-ATTRACTION-SQL-001",
+      "category": "attraction_explain",
+      "title": "Thai attraction explanation through pivot and answer translation",
+      "language": "th",
+      "mode": "single_turn",
+      "operation": "sea_preprocess_sql_generation_postprocess",
+      "query_zh": "请介绍天坛为什么重要。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-history-en",
+      "fixture_mode": "structured_data",
+      "variant_group": "sea-sql-generation",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "answer_translation.used_answer_translation",
+          "latency_ms.preprocess_ms",
+          "latency_ms.generation_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "ช่วยบอกหน่อยว่าทำไม Temple of Heaven ถึงสำคัญ",
+        "language": "th"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-RAG-001",
+      "category": "attraction_explain",
+      "title": "Chinese deeper attraction explanation with SQL then RAG",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "sql_then_rag_generation",
+      "query_zh": "请深入讲讲故宫的历史背景和象征意义。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql_then_rag",
+      "session_required": false,
+      "profile_id": "bench-user-history-zh",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "rag-latency",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "rag_doc_types": [
+          "history",
+          "practical_notes",
+          "photo_spot_notes",
+          "family_notes"
+        ]
+      },
+      "assertions": {
+        "must_include_any": [
+          "故宫",
+          "历史",
+          "象征"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "rag_query_status",
+          "retrieval_strategy",
+          "latency_ms.context_build_breakdown_ms.rag_lookup_ms"
+        ]
+      },
+      "request": {
+        "query": "请深入讲讲故宫的历史背景和象征意义。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-EN-RAG-001",
+      "category": "attraction_explain",
+      "title": "English deeper attraction explanation with SQL then RAG",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "preprocess_sql_then_rag_postprocess",
+      "query_zh": "请深入解释故宫的宫门、庭院和中轴线规划背后的政治象征。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql_then_rag",
+      "session_required": false,
+      "profile_id": "bench-user-history-en",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "rag-latency",
+      "assertions": {
+        "must_include_any": [
+          "Forbidden City",
+          "axis",
+          "symbol",
+          "courtyard"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "rag_query_status",
+          "latency_ms.context_build_breakdown_ms.rag_lookup_ms",
+          "answer_translation.used_answer_translation"
+        ]
+      },
+      "request": {
+        "query": "Please unpack the Forbidden City's gates, courtyards, and axial planning as a political symbol.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-LIVE-001",
+      "category": "live_info",
+      "title": "Chinese live official information",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "live_info_context_generation",
+      "query_zh": "故宫今天开放吗？",
+      "reality_level": "chain_validity",
+      "expected_intent": "live_info",
+      "expected_data_source": "live_info",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "provider_or_degraded",
+      "variant_group": "live-info-latency",
+      "assertions": {
+        "must_include_any": [
+          "故宫",
+          "开放",
+          "暂时"
+        ],
+        "must_not_depend_on": [
+          "天气"
+        ],
+        "check_metadata": [
+          "latency_ms.context_build_breakdown_ms.live_info_lookup_ms",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "故宫今天开放吗？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-VI-LIVE-001",
+      "category": "live_info",
+      "title": "Vietnamese live official information through pivot",
+      "language": "vi",
+      "mode": "single_turn",
+      "operation": "sea_preprocess_live_info_postprocess",
+      "query_zh": "故宫今天开放吗？",
+      "reality_level": "chain_validity",
+      "expected_intent": "live_info",
+      "expected_data_source": "live_info",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "provider_or_degraded",
+      "variant_group": "sea-live-info-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "weather"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "latency_ms.preprocess_ms",
+          "latency_ms.context_build_breakdown_ms.live_info_lookup_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "Hôm nay Forbidden City có mở cửa không?",
+        "language": "vi"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-WEATHER-001",
+      "category": "weather_info",
+      "title": "Chinese weather with Amap provider",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "weather_context_generation",
+      "query_zh": "北京今天会不会下雨？",
+      "reality_level": "chain_validity",
+      "expected_intent": "weather_info",
+      "expected_data_source": "weather",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "provider_or_degraded",
+      "variant_group": "weather-latency",
+      "assertions": {
+        "must_include_any": [
+          "天气",
+          "下雨",
+          "暂时",
+          "北京"
+        ],
+        "must_not_depend_on": [
+          "拥挤"
+        ],
+        "check_metadata": [
+          "weather",
+          "latency_ms.context_build_breakdown_ms.weather_target_resolution_ms",
+          "latency_ms.context_build_breakdown_ms.weather_lookup_ms"
+        ]
+      },
+      "request": {
+        "query": "北京今天会不会下雨？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-ID-WEATHER-001",
+      "category": "weather_info",
+      "title": "Indonesian weather through pivot and answer translation",
+      "language": "id",
+      "mode": "single_turn",
+      "operation": "sea_preprocess_weather_postprocess",
+      "query_zh": "北京今天会不会下雨？",
+      "reality_level": "chain_validity",
+      "expected_intent": "weather_info",
+      "expected_data_source": "weather",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "provider_or_degraded",
+      "variant_group": "sea-weather-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "crowd"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "weather",
+          "latency_ms.context_build_breakdown_ms.weather_lookup_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "Apakah hari ini akan hujan di Beijing?",
+        "language": "id"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-NAV-001",
+      "category": "navigation_text",
+      "title": "Chinese explicit text navigation",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "navigation_context_formatter",
+      "query_zh": "从天安门怎么走到故宫？",
+      "reality_level": "chain_validity",
+      "expected_intent": "navigation_text",
+      "expected_data_source": "navigation",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "provider_or_degraded",
+      "variant_group": "navigation-latency",
+      "assertions": {
+        "must_include_any": [
+          "天安门",
+          "故宫",
+          "路线",
+          "出发点"
+        ],
+        "must_not_depend_on": [
+          "改路线"
+        ],
+        "check_metadata": [
+          "navigation",
+          "latency_ms.context_build_breakdown_ms.navigation_slot_resolution_ms",
+          "latency_ms.context_build_breakdown_ms.navigation_lookup_ms"
+        ]
+      },
+      "request": {
+        "query": "从天安门怎么走到故宫？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-MS-NAV-001",
+      "category": "navigation_text",
+      "title": "Malay navigation through pivot",
+      "language": "ms",
+      "mode": "single_turn",
+      "operation": "sea_preprocess_navigation_postprocess",
+      "query_zh": "从天安门到故宫怎么走？",
+      "reality_level": "chain_validity",
+      "expected_intent": "navigation_text",
+      "expected_data_source": "navigation",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "provider_or_degraded",
+      "variant_group": "sea-navigation-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "ubah laluan"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "navigation",
+          "latency_ms.context_build_breakdown_ms.navigation_lookup_ms"
+        ]
+      },
+      "request": {
+        "query": "Bagaimana hendak berjalan dari Tiananmen ke Forbidden City?",
+        "language": "ms"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-TRIP-001",
+      "category": "trip_assistant",
+      "title": "Chinese session-aware next stop",
+      "language": "zh",
+      "mode": "session_aware",
+      "operation": "session_context_generation",
+      "query_zh": "我下一站去哪？",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "session_context",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-zh",
+      "fixture_mode": "session_context",
+      "variant_group": "trip-session-latency",
+      "assertions": {
+        "must_include_any": [
+          "下一站",
+          "故宫",
+          "天安门",
+          "路线"
+        ],
+        "must_not_depend_on": [
+          "已帮你修改"
+        ],
+        "check_metadata": [
+          "latency_ms.context_build_breakdown_ms.profile_lookup_ms",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "我下一站去哪？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-EN-TRIP-001",
+      "category": "trip_assistant",
+      "title": "English session-aware next stop",
+      "language": "en",
+      "mode": "session_aware",
+      "operation": "preprocess_session_generation_postprocess",
+      "query_zh": "我下一站要去哪里？",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "session_context",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-en",
+      "fixture_mode": "session_context",
+      "variant_group": "trip-session-latency",
+      "assertions": {
+        "must_include_any": [
+          "next",
+          "stop",
+          "route",
+          "Forbidden City"
+        ],
+        "must_not_depend_on": [
+          "I changed"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "latency_ms.preprocess_ms",
+          "latency_ms.generation_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "What is my next route stop?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "FULL-FIL-TRIP-001",
+      "category": "trip_assistant",
+      "title": "Filipino session-aware next stop through pivot",
+      "language": "fil",
+      "mode": "session_aware",
+      "operation": "sea_preprocess_session_generation_postprocess",
+      "query_zh": "我们接下来去哪里？",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "session_context",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-en",
+      "fixture_mode": "session_context",
+      "variant_group": "sea-trip-session-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "modified route"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "latency_ms.preprocess_ms",
+          "latency_ms.generation_ms",
+          "latency_ms.postprocess_ms"
+        ]
+      },
+      "request": {
+        "query": "Saan tayo pupunta pagkatapos nito?",
+        "language": "fil"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-ROUTE-EDIT-001",
+      "category": "manual_route_edit_redirect",
+      "title": "Chinese route edit redirect",
+      "language": "zh",
+      "mode": "session_aware",
+      "operation": "manual_route_edit_short_circuit",
+      "query_zh": "把景山去掉，路线轻松一点。",
+      "reality_level": "chain_validity",
+      "expected_intent": "manual_route_edit_redirect",
+      "expected_data_source": "product_redirect",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-zh",
+      "fixture_mode": "session_context",
+      "variant_group": "route-edit-latency",
+      "assertions": {
+        "must_include_any": [
+          "路线",
+          "手动",
+          "调整"
+        ],
+        "must_not_depend_on": [
+          "已删除",
+          "已经修改"
+        ],
+        "check_metadata": [
+          "manual_route_edit_redirect",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "把景山去掉，路线轻松一点。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-MY-ROUTE-EDIT-001",
+      "category": "manual_route_edit_redirect",
+      "title": "Burmese route edit redirect through pivot",
+      "language": "my",
+      "mode": "session_aware",
+      "operation": "sea_preprocess_manual_route_edit",
+      "query_zh": "请把下一站换成更轻松的地方。",
+      "reality_level": "chain_validity",
+      "expected_intent": "manual_route_edit_redirect",
+      "expected_data_source": "product_redirect",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-en",
+      "fixture_mode": "session_context",
+      "variant_group": "sea-route-edit-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "already changed"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "manual_route_edit_redirect",
+          "latency_ms.preprocess_ms",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "နောက်ထပ်ရပ်နားမည့်နေရာကို ပိုလွယ်တဲ့နေရာနဲ့ ပြောင်းပေးပါ။",
+        "language": "my"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-TRANSLATION-001",
+      "category": "translation",
+      "title": "Chinese explicit show-to-local translation",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "explicit_translation_plain_mt",
+      "query_zh": "帮我把 Where is the restroom? 翻给工作人员看。",
+      "reality_level": "chain_validity",
+      "expected_intent": "translation",
+      "expected_data_source": "translation",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "translation_provider",
+      "variant_group": "translation-latency",
+      "assertions": {
+        "must_include_any": [
+          "洗手间",
+          "厕所",
+          "restroom"
+        ],
+        "must_not_depend_on": [
+          "out_of_scope"
+        ],
+        "check_metadata": [
+          "translation.execution_path",
+          "translation.latency_ms",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "帮我把“Where is the restroom?”翻给工作人员看",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-KM-TRANSLATION-001",
+      "category": "translation",
+      "title": "Khmer explicit translation through pivot",
+      "language": "km",
+      "mode": "single_turn",
+      "operation": "sea_preprocess_explicit_translation",
+      "query_zh": "请翻译：请帮我拍张照片。",
+      "reality_level": "chain_validity",
+      "expected_intent": "translation",
+      "expected_data_source": "translation",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "translation_provider",
+      "variant_group": "sea-translation-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "out_of_scope"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "translation.execution_path",
+          "latency_ms.preprocess_ms",
+          "latency_ms.generation_ms"
+        ]
+      },
+      "request": {
+        "query": "សូមបកប្រែ៖ 请帮我拍张照片",
+        "language": "km"
+      }
+    },
+    {
+      "case_id": "FULL-ZH-CROWD-BOUNDARY-001",
+      "category": "out_of_scope",
+      "title": "Chinese crowd boundary",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "boundary_short_circuit",
+      "query_zh": "现在故宫排队大概要多久？",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "boundary_guard",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "none",
+      "variant_group": "boundary-latency",
+      "assertions": {
+        "must_include_any": [
+          "实时服务",
+          "暂时",
+          "不能稳定确认"
+        ],
+        "must_not_depend_on": [
+          "天气"
+        ],
+        "check_metadata": [
+          "boundary_topic",
+          "out_of_scope_subtype",
+          "latency_ms.routing_ms"
+        ]
+      },
+      "request": {
+        "query": "现在故宫排队大概要多久？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "FULL-LO-BOUNDARY-001",
+      "category": "out_of_scope",
+      "title": "Lao traffic boundary through pivot",
+      "language": "lo",
+      "mode": "single_turn",
+      "operation": "sea_preprocess_boundary",
+      "query_zh": "今天去故宫的交通堵不堵？",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "boundary_guard",
+      "session_required": false,
+      "profile_id": null,
+      "fixture_mode": "none",
+      "variant_group": "sea-boundary-latency",
+      "assertions": {
+        "must_include_any": [],
+        "must_not_depend_on": [
+          "weather"
+        ],
+        "check_metadata": [
+          "resolved_query.used_translation_pivot",
+          "boundary_topic",
+          "latency_ms.preprocess_ms",
+          "latency_ms.routing_ms"
+        ]
+      },
+      "request": {
+        "query": "ມື້ນີ້ການຈະລາຈອນໄປ Forbidden City ຈະຕິດຂັດບໍ?",
+        "language": "lo"
+      }
+    }
+  ]
+}

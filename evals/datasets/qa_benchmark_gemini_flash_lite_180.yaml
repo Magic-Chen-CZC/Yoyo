@@ -1,0 +1,2633 @@
+queries:
+- id: G2-AT-001
+  category: attraction_explain
+  language: en
+  prompt: "Explain why the Forbidden City matters for first-time visitors to Beijing."
+  metadata:
+    title: "Forbidden City first-time visitor explanation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-002
+  category: attraction_explain
+  language: en
+  prompt: "Give me a short historical introduction to Tiananmen Square."
+  metadata:
+    title: "Tiananmen short historical intro"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-003
+  category: attraction_explain
+  language: en
+  prompt: "Why is Jingshan Park worth visiting if I prefer practical sightseeing advice?"
+  metadata:
+    title: "Practical Jingshan explanation"
+    mode: "single_turn"
+    scenario_type: "strict_sql_grounding"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-004
+  category: attraction_explain
+  language: en
+  prompt: "Explain the Temple of Heaven in simple English for tourists."
+  metadata:
+    title: "Temple of Heaven simple English"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-005
+  category: attraction_explain
+  language: en
+  prompt: "What makes the Summer Palace special for visitors who like scenic routes?"
+  metadata:
+    title: "Summer Palace scenic angle"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    interests: ""
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-006
+  category: attraction_explain
+  language: en
+  prompt: "Please explain why the Forbidden City matters, but keep the answer emotionally"
+  metadata:
+    title: "Forbidden City NF style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "expressive"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NF"
+    interests: ""
+    style_bucket: "NF"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-007
+  category: attraction_explain
+  language: en
+  prompt: "Explain the Forbidden City in a more analytical way for someone interested"
+  metadata:
+    title: "Forbidden City NT style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NT"
+    interests: ""
+    style_bucket: "NT"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-008
+  category: attraction_explain
+  language: en
+  prompt: "Explain Tiananmen Square in a practical, orderly, and easy-to-follow way."
+  metadata:
+    title: "Tiananmen SJ style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "orderly"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-009
+  category: attraction_explain
+  language: en
+  prompt: "Describe Jingshan Park in a vivid, immediate, experience-focused way."
+  metadata:
+    title: "Jingshan SP style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vivid"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-010
+  category: attraction_explain
+  language: en
+  prompt: "Tell me more about the Temple of Heaven and why it matters for first-time"
+  metadata:
+    title: "Temple of Heaven first-time visitor explanation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-011
+  category: attraction_explain
+  language: zh
+  prompt: "请简要介绍故宫为什么值得第一次来北京的游客去看。"
+  metadata:
+    title: "故宫中文首访介绍"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-012
+  category: attraction_explain
+  language: zh
+  prompt: "请用更感性的方式讲一讲天坛的意义。"
+  metadata:
+    title: "天坛中文感性风格"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "expressive"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NF"
+    style_bucket: "NF"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-013
+  category: attraction_explain
+  language: zh
+  prompt: "请用理性一点的方式介绍故宫，重点说结构和逻辑。"
+  metadata:
+    title: "故宫中文理性风格"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NT"
+    style_bucket: "NT"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-014
+  category: attraction_explain
+  language: zh
+  prompt: "请用简洁、实用的方式介绍景山公园。"
+  metadata:
+    title: "景山公园中文实用风格"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-015
+  category: attraction_explain
+  language: es
+  prompt: "Explica por qué la Ciudad Prohibida vale la pena para alguien que visita"
+  metadata:
+    title: "Forbidden City Spanish explanation"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-AT-016
+  category: attraction_explain
+  language: mixed
+  prompt: "请用 English explain why Jingshan Park is worth visiting, but keep it practical."
+  metadata:
+    title: "Mixed-language practical Jingshan explanation"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "strict_sql"
+    input_language: "mixed"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-017
+  category: attraction_explain
+  language: en
+  prompt: "Why is the Temple of Heaven culturally significant, and what should a first-time"
+  metadata:
+    title: "Temple of Heaven cultural significance"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-018
+  category: attraction_explain
+  language: en
+  prompt: "Summarize the Summer Palace for a traveler who wants calm scenic value rather"
+  metadata:
+    title: "Summer Palace calm scenic summary"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "calm"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    interests: ""
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-019
+  category: attraction_explain
+  language: en
+  prompt: "Explain Tiananmen Square for someone who wants a structured, fact-first"
+  metadata:
+    title: "Tiananmen fact-first answer"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-020
+  category: attraction_explain
+  language: en
+  prompt: "Tell me why the Forbidden City matters, but avoid overclaiming beyond what"
+  metadata:
+    title: "Forbidden City anti-hallucination grounding"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "cautious"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-AT-021
+  category: attraction_explain
+  language: en
+  prompt: "Explain why the Temple of Heaven matters for first-time Beijing visitors in simple English."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-022
+  category: attraction_explain
+  language: en
+  prompt: "Give me a practical explanation of the Summer Palace for a tourist who prefers scenic routes."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-023
+  category: attraction_explain
+  language: en
+  prompt: "Why is Jingshan Park often paired with the Forbidden City on Beijing routes?"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-024
+  category: attraction_explain
+  language: en
+  prompt: "Explain Tiananmen Square in a family-friendly way."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-025
+  category: attraction_explain
+  language: en
+  prompt: "What should a photography-focused tourist notice first at Jingshan Park?"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-026
+  category: attraction_explain
+  language: zh
+  prompt: "请用中文简单介绍天坛为什么值得第一次来北京的人去看。"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-AT-027
+  category: attraction_explain
+  language: zh
+  prompt: "请用中文解释为什么故宫不只是一个拍照景点。"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-AT-028
+  category: attraction_explain
+  language: zh
+  prompt: "如果我更关心实用游览建议，景山公园为什么值得去？"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-AT-029
+  category: attraction_explain
+  language: en
+  prompt: "Give me a 30-second audio-guide style introduction to the Forbidden City."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-030
+  category: attraction_explain
+  language: en
+  prompt: "Explain the Temple of Heaven without using academic language."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: G2-TR-001
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into English: 这个景点几点关门'"
+  metadata:
+    title: "Basic travel phrase translation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-002
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into polite English: 请帮我拍张照片'"
+  metadata:
+    title: "Polite English translation"
+    mode: "single_turn"
+    scenario_type: "tone_control"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "polite"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-003
+  category: translation
+  language: en
+  prompt: "'Rewrite this travel phrase in simpler English: Could you tell me whether"
+  metadata:
+    title: "Simpler English rewrite"
+    mode: "single_turn"
+    scenario_type: "rewrite"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-004
+  category: translation
+  language: en
+  prompt: "'Turn this into natural tourist English: 我下一站怎么走'"
+  metadata:
+    title: "Tourist English phrasing"
+    mode: "single_turn"
+    scenario_type: "rewrite"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-005
+  category: translation
+  language: en
+  prompt: "Can you translate this for me?"
+  metadata:
+    title: "Ambiguous translation clarification"
+    mode: "single_turn"
+    scenario_type: "clarification"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vague"
+    grounding_requirement: "clarify_if_missing"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-006
+  category: translation
+  language: zh
+  prompt: "把这句话翻成礼貌英文：这个景点今天还开放吗"
+  metadata:
+    title: "中文到礼貌英文询问"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "polite"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-007
+  category: translation
+  language: es
+  prompt: "'Translate this into friendly English: ¿Dónde está mi próxima parada?'"
+  metadata:
+    title: "Spanish to English travel translation"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "friendly"
+    grounding_requirement: "minimal"
+    input_language: "es"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-008
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into English: 帮我找一个不那么累的路线'"
+  metadata:
+    title: "Route comfort phrase translation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-009
+  category: translation
+  language: mixed
+  prompt: "请用 polite English 改写：我想换一个更轻松的景点。"
+  metadata:
+    title: "Mixed-language polite rewrite"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "minimal"
+    input_language: "mixed"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-010
+  category: translation
+  language: en
+  prompt: "'Rewrite this for a tourist who sounds nervous: Where do I need to go next?'"
+  metadata:
+    title: "Nervous tourist rewrite"
+    mode: "single_turn"
+    scenario_type: "tone_control"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "supportive"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-011
+  category: translation
+  language: en
+  prompt: "'Translate this travel phrase into English, but keep it very short: 我想休息一下再走'"
+  metadata:
+    title: "Very short translation"
+    mode: "single_turn"
+    scenario_type: "constrained_length"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "minimal"
+    answer_length_target: "short"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-012
+  category: translation
+  language: en
+  prompt: "'Help me say this in English: 这个地方适合拍照吗'"
+  metadata:
+    title: "Photo-friendly translation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-013
+  category: translation
+  language: zh
+  prompt: "把这句话改成更简单的英文：Could you share the current official guidance for visiting"
+  metadata:
+    title: "英文简化表达（中文说明）"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-014
+  category: translation
+  language: es
+  prompt: "'Translate this into polite English: ¿Me puede decir a qué hora cierra este"
+  metadata:
+    title: "Spanish polite translation"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "polite"
+    grounding_requirement: "minimal"
+    input_language: "es"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-015
+  category: translation
+  language: mixed
+  prompt: "'Translate this into simple English: 这个景点 today 开放吗？'"
+  metadata:
+    title: "Mixed-language opening question"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "minimal"
+    input_language: "mixed"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-016
+  category: translation
+  language: en
+  prompt: "'Turn this into a friendlier travel sentence: Please proceed to the next"
+  metadata:
+    title: "Friendlier travel rewrite"
+    mode: "single_turn"
+    scenario_type: "rewrite"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "friendly"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-017
+  category: translation
+  language: zh
+  prompt: "请把这句话翻成自然的英文：我想先去风景更好的地方。"
+  metadata:
+    title: "自然英文路线偏好表达"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "minimal"
+    input_language: "zh"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-018
+  category: translation
+  language: en
+  prompt: "Could you translate this? I forgot to paste the text."
+  metadata:
+    title: "Missing source text clarification"
+    mode: "single_turn"
+    scenario_type: "clarification"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vague"
+    grounding_requirement: "clarify_if_missing"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-019
+  category: translation
+  language: en
+  prompt: "'Rewrite this for a child-friendly travel context: Please stay close to"
+  metadata:
+    title: "Child-friendly travel rewrite"
+    mode: "single_turn"
+    scenario_type: "tone_control"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "child_friendly"
+    grounding_requirement: "minimal"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TR-020
+  category: translation
+  language: es
+  prompt: "'Reescribe esta frase en inglés más simple para turistas: How do I get to"
+  metadata:
+    title: "Spanish instruction, English simplified output"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "translation"
+    expected_data_source: "none"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "minimal"
+    input_language: "es"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-TR-021
+  category: translation
+  language: en
+  prompt: "Translate this into natural English: 可以帮我拍一张合影吗"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-022
+  category: translation
+  language: en
+  prompt: "Translate this into polite English: 我们现在应该往哪边走"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-023
+  category: translation
+  language: en
+  prompt: "Rewrite this in simpler English: Could you please tell me where the nearest restroom is?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-024
+  category: translation
+  language: en
+  prompt: "Rewrite this for a nervous tourist: Do I need to show my passport here?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-025
+  category: translation
+  language: zh
+  prompt: "把这句话翻译成自然中文：Where is the ticket entrance?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TR-026
+  category: translation
+  language: en
+  prompt: "Translate this into concise English: 这个地方适合小朋友吗"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-027
+  category: translation
+  language: en
+  prompt: "Translate this into polite English: 我可以在这里休息十分钟吗"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-028
+  category: translation
+  language: en
+  prompt: "Rewrite this in warmer tourist English: Is the line usually long?"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TR-029
+  category: translation
+  language: zh
+  prompt: "把这句话翻译成自然中文：Please verify today's opening hours before you go."
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TR-030
+  category: translation
+  language: en
+  prompt: "Translate this into natural English: 需要提前预约还是现场买票就可以"
+  metadata:
+    expected_intent: "translation"
+    expected_output_language: "en"
+    source: "new"
+- id: G2-LI-001
+  category: live_info
+  language: en
+  prompt: "What should I verify today before going to the Forbidden City?"
+  metadata:
+    title: "Forbidden City same-day verification"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-002
+  category: live_info
+  language: en
+  prompt: "Is the Temple of Heaven likely to have any same-day access issues today?"
+  metadata:
+    title: "Temple of Heaven same-day access"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-003
+  category: live_info
+  language: en
+  prompt: "Give me the latest real-time guidance for visiting Jingshan Park right now."
+  metadata:
+    title: "Jingshan real-time guidance"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-004
+  category: live_info
+  language: en
+  prompt: "Should I check ticket and reservation details again today before going to"
+  metadata:
+    title: "Summer Palace ticket/reservation verification"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-005
+  category: live_info
+  language: en
+  prompt: "Could weather or transport change my plan for the Temple of Heaven today?"
+  metadata:
+    title: "Weather or transport impact"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-006
+  category: live_info
+  language: en
+  prompt: "Tell me the current official guidance for the Forbidden City, but be careful"
+  metadata:
+    title: "Official guidance cautious mode"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "cautious"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-007
+  category: live_info
+  language: zh
+  prompt: "今天去故宫之前，我最应该核实什么信息？"
+  metadata:
+    title: "故宫中文同日核实"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-008
+  category: live_info
+  language: zh
+  prompt: "景山公园现在有什么需要特别注意的实时情况吗？"
+  metadata:
+    title: "景山公园中文实时情况"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-009
+  category: live_info
+  language: es
+  prompt: "¿Qué debería verificar hoy antes de ir a la Ciudad Prohibida?"
+  metadata:
+    title: "Spanish same-day verification"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-LI-010
+  category: live_info
+  language: mixed
+  prompt: "请告诉我 today 去 Temple of Heaven 前最需要核实什么。"
+  metadata:
+    title: "Mixed-language live info"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "live_uncertain"
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-011
+  category: live_info
+  language: en
+  prompt: "Should I worry about queue or reservation issues today before going to the"
+  metadata:
+    title: "Queue or reservation concern"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-012
+  category: live_info
+  language: en
+  prompt: "Is it enough to rely on yesterday's opening-hours information for the Summer"
+  metadata:
+    title: "Yesterday info is not enough"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-013
+  category: live_info
+  language: en
+  prompt: "What official sources should I check today before entering the Temple of"
+  metadata:
+    title: "Official sources mention"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-014
+  category: live_info
+  language: en
+  prompt: "Give me a short, cautious summary of what might change today before I visit"
+  metadata:
+    title: "Short cautious live summary"
+    mode: "single_turn"
+    scenario_type: "constrained_length"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "live_uncertain"
+    answer_length_target: "short"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-015
+  category: live_info
+  language: zh
+  prompt: "如果我今天行程很紧，去天坛前应该特别确认什么？"
+  metadata:
+    title: "中文紧凑行程实时确认"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "live_uncertain"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-016
+  category: live_info
+  language: en
+  prompt: "Before I go to the Summer Palace today, what should I confirm if weather"
+  metadata:
+    title: "Weather-change contingency"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-017
+  category: live_info
+  language: en
+  prompt: "Tell me what might affect access today at the Forbidden City without pretending"
+  metadata:
+    title: "Explicit no-fake-certainty live answer"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "cautious"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-018
+  category: live_info
+  language: mixed
+  prompt: "Temple of Heaven 今天如果有排队或者 closure 风险，我最该查什么？"
+  metadata:
+    title: "Mixed-language queue or closure risk"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "live_uncertain"
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-019
+  category: live_info
+  language: es
+  prompt: "¿Qué cambios de última hora debería confirmar hoy antes de visitar Jingshan"
+  metadata:
+    title: "Spanish last-minute verification"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-LI-020
+  category: live_info
+  language: en
+  prompt: "What same-day information matters most before I go to the Temple of Heaven?"
+  metadata:
+    title: "Temple of Heaven same-day essentials"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-LI-021
+  category: live_info
+  language: en
+  prompt: "What should I verify today before visiting the Summer Palace?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-022
+  category: live_info
+  language: en
+  prompt: "What same-day checks matter before going to the Temple of Heaven this afternoon?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-023
+  category: live_info
+  language: en
+  prompt: "What should I confirm today before going to Jingshan Park at sunset?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-024
+  category: live_info
+  language: en
+  prompt: "If I want to visit the Forbidden City today, what live details should I check first?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-025
+  category: live_info
+  language: en
+  prompt: "What real-time travel factors should I verify before Tiananmen Square this morning?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-026
+  category: live_info
+  language: zh
+  prompt: "如果我今天去故宫，出发前最该确认哪些实时信息？"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-LI-027
+  category: live_info
+  language: zh
+  prompt: "今天下午去颐和园前，我应该先确认什么当日信息？"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-LI-028
+  category: live_info
+  language: en
+  prompt: "What should I check today about reservations, queues, or weather before the Temple of Heaven?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-029
+  category: live_info
+  language: en
+  prompt: "Before visiting Jingshan Park right now, what official or same-day information should I check?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-030
+  category: live_info
+  language: en
+  prompt: "What should I verify today if I want a smooth visit to the Forbidden City with kids?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: G2-TA-001
+  category: trip_assistant
+  language: en
+  prompt: "What is my next stop after Tiananmen Square?"
+  metadata:
+    title: "Basic next stop"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-002
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next after Tiananmen Square if I want to keep walking light?"
+  metadata:
+    title: "Next step with light walking"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-003
+  category: trip_assistant
+  language: en
+  prompt: "I am at the Forbidden City now. What should I pay attention to before moving"
+  metadata:
+    title: "Current stop practical guidance"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-004
+  category: trip_assistant
+  language: en
+  prompt: "What is my next stop after Tiananmen Square if I only want a short route"
+  metadata:
+    title: "Next stop with shorter route preference"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-005
+  category: trip_assistant
+  language: en
+  prompt: "What is my next stop after Tiananmen Square? I care more about architecture"
+  metadata:
+    title: "Architecture-focused next step"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    interests: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-006
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: What is my next stop after Tiananmen Square? Turn 2: What should"
+  metadata:
+    title: "Follow-up next stop continuity"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-007
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: What is my next stop after Tiananmen Square? Turn 2: And after"
+  metadata:
+    title: "Second-step route continuity"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-008
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: I am at Tiananmen Square. Turn 2: What should I do next if I am"
+  metadata:
+    title: "Tired traveler follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-009
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next after the Forbidden City if I want a scenic stop?"
+  metadata:
+    title: "Scenic next step"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "scenic"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-010
+  category: trip_assistant
+  language: zh
+  prompt: "我从天安门广场之后下一站去哪？"
+  metadata:
+    title: "中文下一站"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-011
+  category: trip_assistant
+  language: zh
+  prompt: "如果我现在有点累，故宫之后应该怎么安排更合适？"
+  metadata:
+    title: "中文疲劳场景路线建议"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-012
+  category: trip_assistant
+  language: es
+  prompt: "¿Cuál debería ser mi siguiente parada después de Tiananmen Square?"
+  metadata:
+    title: "Spanish next stop"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-TA-013
+  category: trip_assistant
+  language: mixed
+  prompt: "我在 Tiananmen Square，现在 next stop 应该去哪里？"
+  metadata:
+    title: "Mixed-language next stop"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "strict_sql"
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-014
+  category: trip_assistant
+  language: en
+  prompt: "If I only have a little time left, what should I do after Tiananmen Square?"
+  metadata:
+    title: "Little time left"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-015
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next if I care about photography more than history?"
+  metadata:
+    title: "Photography-focused next step"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    interests: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-016
+  category: trip_assistant
+  language: en
+  prompt: "After the Forbidden City, should I continue to a scenic stop or end the"
+  metadata:
+    title: "Scenic or end route tradeoff"
+    mode: "single_turn"
+    scenario_type: "constraint_balancing"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "balanced"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-017
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: I just finished the Forbidden City. Turn 2: What should I do after"
+  metadata:
+    title: "Scenic route follow-up after Forbidden City"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-018
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: I am at Tiananmen Square. Turn 2: And if I want something more"
+  metadata:
+    title: "Structured practical follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-019
+  category: trip_assistant
+  language: zh
+  prompt: "如果我更喜欢有条理、实用一点的讲解风格，下一站该怎么安排？"
+  metadata:
+    title: "中文条理型路线安排"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-020
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next after Tiananmen Square if I want a vivid, experience-focused"
+  metadata:
+    title: "Experience-focused route guidance"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vivid"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-TA-021
+  category: trip_assistant
+  language: en
+  prompt: "What should I do after the Forbidden City if I want a shorter walking stretch?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-022
+  category: trip_assistant
+  language: en
+  prompt: "I am tired. What is the easiest next move on my Beijing route?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-023
+  category: trip_assistant
+  language: en
+  prompt: "If I only have 30 more minutes, what should I focus on in this route?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-024
+  category: trip_assistant
+  language: en
+  prompt: "What is the most practical next step after Tiananmen Square right now?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-025
+  category: trip_assistant
+  language: en
+  prompt: "Can you summarize my next route move in one sentence?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-026
+  category: trip_assistant
+  language: zh
+  prompt: "我现在这一站结束后，下一步最合适做什么？"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TA-027
+  category: trip_assistant
+  language: zh
+  prompt: "如果我不想走太远，接下来怎么安排更轻松？"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TA-028
+  category: trip_assistant
+  language: en
+  prompt: "What should I pay attention to when I reach my next stop?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-029
+  category: trip_assistant
+  language: en
+  prompt: "What is my current active stop and what should I do there?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-030
+  category: trip_assistant
+  language: en
+  prompt: "If I want to keep a balanced pace, what should I do after this stop?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: G2-PH-001
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace Jingshan Park with a more scenic stop and make the route easier."
+  metadata:
+    title: "Replace scenic and easier"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-002
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Remove the last stop after the Forbidden City and make the plan shorter."
+  metadata:
+    title: "Remove last stop and shorten"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "remove_stop"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-003
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Please reorder the route so the scenic stop comes later."
+  metadata:
+    title: "Reorder scenic later"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "reorder_stops"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-004
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Shorten the route and avoid crowded places."
+  metadata:
+    title: "Shorten and avoid crowds"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "shorten_route"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-005
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace the next stop with something better for architecture and lighter"
+  metadata:
+    title: "Replace next stop with architecture focus"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "sql_with_profile"
+    operation_type: "replace_stop"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-006
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Change the route to make it better."
+  metadata:
+    title: "Ambiguous route-edit clarification"
+    mode: "single_turn"
+    scenario_type: "clarification"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vague"
+    grounding_requirement: "clarify_if_missing"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-007
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Make the route better for a family and also reduce stairs."
+  metadata:
+    title: "Family and reduced stairs"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-008
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Swap Jingshan Park for a stop with better views."
+  metadata:
+    title: "Swap for better views"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-009
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Move the scenic part of the route later in the day."
+  metadata:
+    title: "Move scenic later"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "reorder_stops"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-010
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "I want a calmer route with fewer people and less walking."
+  metadata:
+    title: "Calmer route with fewer people"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "calm"
+    grounding_requirement: "sql_with_profile"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-011
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace Jingshan Park with something easier."
+  metadata:
+    title: "Replace with easier stop"
+    mode: "single_turn"
+    scenario_type: "route_edit_extraction"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-012
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "把景山公园换成一个更轻松、风景更好的点。"
+  metadata:
+    title: "中文替换景山公园"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-013
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "把路线缩短一点，尽量避开人多的地方。"
+  metadata:
+    title: "中文缩短并避开人多"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "strict_sql"
+    operation_type: "shorten_route"
+    constraints: ""
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-014
+  category: manual_route_edit_redirect
+  language: es
+  prompt: "Reemplaza Jingshan Park por una parada más escénica y más fácil para caminar."
+  metadata:
+    title: "Spanish replace scenic stop"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-015
+  category: manual_route_edit_redirect
+  language: mixed
+  prompt: "把 next stop 换成一个更 scenic、而且更不累的地方。"
+  metadata:
+    title: "Mixed-language replace next stop"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "strict_sql"
+    operation_type: "replace_stop"
+    constraints: ""
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-016
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "'Turn 1: Replace Jingshan Park with a more scenic stop. Turn 2: Also make"
+  metadata:
+    title: "Route-edit follow-up continuity"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_history"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    operation_type: "replace_stop"
+    target_poi: "Jingshan Park"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-017
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "'Turn 1: Remove the last stop after the Forbidden City. Turn 2: Also make"
+  metadata:
+    title: "Remove + shorten follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_history"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    operation_type: "remove_stop"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-018
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "'Turn 1: Make the route less tiring. Turn 2: Also keep the scenic part later"
+  metadata:
+    title: "Less tiring + later scenic follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_history"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    constraints: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-019
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Please make the route more practical and structured after Tiananmen Square."
+  metadata:
+    title: "Practical structured route change"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: G2-PH-020
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Please make the route more vivid and experience-focused after Tiananmen"
+  metadata:
+    title: "Experience-focused route change"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "planner_handoff"
+    expected_data_source: "sql_profile"
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vivid"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+    expected_redirect: true
+- id: BENCH-MR-021
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Replace the next stop with something more scenic."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-022
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Remove the last stop and make the route shorter."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-023
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Can you change the route to make it easier for light walking?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-024
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Swap this stop for somewhere less crowded."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-025
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Reorder the route so I can do the easiest stop first."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-026
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "把下一站换成一个更轻松、更适合拍照的地方。"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-027
+  category: manual_route_edit_redirect
+  language: zh
+  prompt: "帮我把路线缩短一点，去掉最后一站。"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-028
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Can you make the itinerary better for a family with a child?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-029
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Change the route so there is less walking after lunch."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-MR-030
+  category: manual_route_edit_redirect
+  language: en
+  prompt: "Move the most scenic stop earlier in the itinerary."
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+    expected_redirect: true
+    expected_behavior: "redirect user to itinerary editor instead of editing route in QA"
+- id: BENCH-OOS-001
+  category: out_of_scope
+  language: en
+  prompt: "Write me a sorting algorithm in Python."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-002
+  category: out_of_scope
+  language: en
+  prompt: "Can you explain how to file corporate taxes in California?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-003
+  category: out_of_scope
+  language: en
+  prompt: "What stock should I buy this week?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-004
+  category: out_of_scope
+  language: en
+  prompt: "Help me diagnose my chest pain symptoms."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-005
+  category: out_of_scope
+  language: en
+  prompt: "Write a romantic poem for my partner."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-006
+  category: out_of_scope
+  language: en
+  prompt: "How do I solve this linear algebra homework question?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-007
+  category: out_of_scope
+  language: en
+  prompt: "Give me a legal template for firing an employee."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-008
+  category: out_of_scope
+  language: en
+  prompt: "Can you design a Kubernetes deployment strategy for my startup?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-009
+  category: out_of_scope
+  language: en
+  prompt: "What is the best recipe for sourdough bread?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-010
+  category: out_of_scope
+  language: en
+  prompt: "How should I negotiate my salary in a finance job interview?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-011
+  category: out_of_scope
+  language: zh
+  prompt: "帮我写一个快速排序算法。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-012
+  category: out_of_scope
+  language: zh
+  prompt: "你能给我一份离婚协议模板吗？"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-013
+  category: out_of_scope
+  language: zh
+  prompt: "帮我分析今天应该买哪只股票。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-014
+  category: out_of_scope
+  language: zh
+  prompt: "我胸口疼，你帮我判断是不是心脏病。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-015
+  category: out_of_scope
+  language: zh
+  prompt: "教我怎么做提拉米苏。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-016
+  category: out_of_scope
+  language: en
+  prompt: "What is the derivative of x squared plus 3x?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-017
+  category: out_of_scope
+  language: en
+  prompt: "Can you review my SQL schema design for a payments app?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-018
+  category: out_of_scope
+  language: en
+  prompt: "Write a resignation email for my boss."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-019
+  category: out_of_scope
+  language: en
+  prompt: "How do I fix my MacBook battery drain issue?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-020
+  category: out_of_scope
+  language: en
+  prompt: "Please summarize this neuroscience paper for me."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-021
+  category: out_of_scope
+  language: en
+  prompt: "Should I lease or buy a car next year?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-022
+  category: out_of_scope
+  language: en
+  prompt: "Give me a workout plan for marathon training."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-023
+  category: out_of_scope
+  language: zh
+  prompt: "帮我做一份一周减脂餐计划。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-024
+  category: out_of_scope
+  language: zh
+  prompt: "你能帮我写一份简历吗？"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-025
+  category: out_of_scope
+  language: en
+  prompt: "What is the best way to prepare for the GRE?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-026
+  category: out_of_scope
+  language: en
+  prompt: "Can you explain Rust ownership with examples?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-027
+  category: out_of_scope
+  language: en
+  prompt: "How should I price my freelance design package?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-028
+  category: out_of_scope
+  language: zh
+  prompt: "告诉我怎么报税最省钱。"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "zh"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-029
+  category: out_of_scope
+  language: en
+  prompt: "Please create a meal plan for a diabetic patient."
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"
+- id: BENCH-OOS-030
+  category: out_of_scope
+  language: en
+  prompt: "What is the fastest way to learn machine learning?"
+  metadata:
+    expected_intent: "out_of_scope"
+    expected_output_language: "en"
+    source: "new"
+    expected_supported: false
+    expected_behavior: "refuse non-Beijing-tour request and restate scope briefly"

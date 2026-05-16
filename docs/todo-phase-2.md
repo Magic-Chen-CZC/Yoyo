@@ -21,6 +21,7 @@
 - [x] 更新 `AGENTS.md` / `README.md` 相关入口，让新 session 优先读取第二阶段文档
 - [x] 更新 `README.md`，让主文档索引优先指向第二阶段文档
 - [x] 新增 `docs/README.md` 与 QA / routing / intent-rules / navigation / testing / evals 等专题索引，先不移动原文档，降低链接破坏风险
+- [x] 代码提交前补跑 QA/导航/翻译/RAG/playground/E2E runner 定向回归，并修复英文 answer translation 降级时中英混排答案未触发语言兜底的问题
 - [x] 将 `docs/todo.md` 重新标记为上一阶段归档，而不是当前活动 todo
 - [x] 将 `docs/current-session-summary.md` 重新标记为历史 session 日志，而不是当前阶段总结
 

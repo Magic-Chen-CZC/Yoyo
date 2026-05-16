@@ -1,0 +1,442 @@
+queries:
+- id: G2-LI-001
+  category: live_info
+  language: en
+  prompt: "What should I verify today before going to the Forbidden City?"
+  metadata:
+    title: "Forbidden City same-day verification"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-002
+  category: live_info
+  language: en
+  prompt: "Is the Temple of Heaven likely to have any same-day access issues today?"
+  metadata:
+    title: "Temple of Heaven same-day access"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-003
+  category: live_info
+  language: en
+  prompt: "Give me the latest real-time guidance for visiting Jingshan Park right now."
+  metadata:
+    title: "Jingshan real-time guidance"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-004
+  category: live_info
+  language: en
+  prompt: "Should I check ticket and reservation details again today before going to"
+  metadata:
+    title: "Summer Palace ticket/reservation verification"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-005
+  category: live_info
+  language: en
+  prompt: "Could weather or transport change my plan for the Temple of Heaven today?"
+  metadata:
+    title: "Weather or transport impact"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-006
+  category: live_info
+  language: en
+  prompt: "Tell me the current official guidance for the Forbidden City, but be careful"
+  metadata:
+    title: "Official guidance cautious mode"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "cautious"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-007
+  category: live_info
+  language: zh
+  prompt: "今天去故宫之前，我最应该核实什么信息？"
+  metadata:
+    title: "故宫中文同日核实"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-008
+  category: live_info
+  language: zh
+  prompt: "景山公园现在有什么需要特别注意的实时情况吗？"
+  metadata:
+    title: "景山公园中文实时情况"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-009
+  category: live_info
+  language: es
+  prompt: "¿Qué debería verificar hoy antes de ir a la Ciudad Prohibida?"
+  metadata:
+    title: "Spanish same-day verification"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-LI-010
+  category: live_info
+  language: mixed
+  prompt: "请告诉我 today 去 Temple of Heaven 前最需要核实什么。"
+  metadata:
+    title: "Mixed-language live info"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "live_uncertain"
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-011
+  category: live_info
+  language: en
+  prompt: "Should I worry about queue or reservation issues today before going to the"
+  metadata:
+    title: "Queue or reservation concern"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-012
+  category: live_info
+  language: en
+  prompt: "Is it enough to rely on yesterday's opening-hours information for the Summer"
+  metadata:
+    title: "Yesterday info is not enough"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-013
+  category: live_info
+  language: en
+  prompt: "What official sources should I check today before entering the Temple of"
+  metadata:
+    title: "Official sources mention"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-014
+  category: live_info
+  language: en
+  prompt: "Give me a short, cautious summary of what might change today before I visit"
+  metadata:
+    title: "Short cautious live summary"
+    mode: "single_turn"
+    scenario_type: "constrained_length"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "live_uncertain"
+    answer_length_target: "short"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-015
+  category: live_info
+  language: zh
+  prompt: "如果我今天行程很紧，去天坛前应该特别确认什么？"
+  metadata:
+    title: "中文紧凑行程实时确认"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "live_uncertain"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-016
+  category: live_info
+  language: en
+  prompt: "Before I go to the Summer Palace today, what should I confirm if weather"
+  metadata:
+    title: "Weather-change contingency"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-017
+  category: live_info
+  language: en
+  prompt: "Tell me what might affect access today at the Forbidden City without pretending"
+  metadata:
+    title: "Explicit no-fake-certainty live answer"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "cautious"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-LI-018
+  category: live_info
+  language: mixed
+  prompt: "Temple of Heaven 今天如果有排队或者 closure 风险，我最该查什么？"
+  metadata:
+    title: "Mixed-language queue or closure risk"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "live_uncertain"
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-LI-019
+  category: live_info
+  language: es
+  prompt: "¿Qué cambios de última hora debería confirmar hoy antes de visitar Jingshan"
+  metadata:
+    title: "Spanish last-minute verification"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-LI-020
+  category: live_info
+  language: en
+  prompt: "What same-day information matters most before I go to the Temple of Heaven?"
+  metadata:
+    title: "Temple of Heaven same-day essentials"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "live_info"
+    expected_data_source: "live_search"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "live_uncertain"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-LI-021
+  category: live_info
+  language: en
+  prompt: "What should I verify today before visiting the Summer Palace?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-022
+  category: live_info
+  language: en
+  prompt: "What same-day checks matter before going to the Temple of Heaven this afternoon?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-023
+  category: live_info
+  language: en
+  prompt: "What should I confirm today before going to Jingshan Park at sunset?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-024
+  category: live_info
+  language: en
+  prompt: "If I want to visit the Forbidden City today, what live details should I check first?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-025
+  category: live_info
+  language: en
+  prompt: "What real-time travel factors should I verify before Tiananmen Square this morning?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-026
+  category: live_info
+  language: zh
+  prompt: "如果我今天去故宫，出发前最该确认哪些实时信息？"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-LI-027
+  category: live_info
+  language: zh
+  prompt: "今天下午去颐和园前，我应该先确认什么当日信息？"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-LI-028
+  category: live_info
+  language: en
+  prompt: "What should I check today about reservations, queues, or weather before the Temple of Heaven?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-029
+  category: live_info
+  language: en
+  prompt: "Before visiting Jingshan Park right now, what official or same-day information should I check?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-LI-030
+  category: live_info
+  language: en
+  prompt: "What should I verify today if I want a smooth visit to the Forbidden City with kids?"
+  metadata:
+    expected_intent: "live_info"
+    expected_output_language: "en"
+    source: "new"

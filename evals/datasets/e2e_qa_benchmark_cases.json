@@ -1,0 +1,1255 @@
+{
+  "dataset_name": "e2e_qa_benchmark_cases",
+  "dataset_version": "v3",
+  "models": [
+    "openai/gpt-5.4-nano",
+    "google/gemini-2.5-flash",
+    "google/gemini-2.5-flash-lite"
+  ],
+  "data_sources": {
+    "profiles": "evals/datasets/benchmark_profiles_v1.json",
+    "rag_runtime_index": "src/yoyo/modules/knowledge/rag_documents.py + src/yoyo/modules/knowledge/rag_admin_service.py",
+    "rag_corpus_reference_only": "evals/datasets/real_rag_corpus_v1_zh.json",
+    "structured_attractions": "evals/datasets/beijing_attractions_structured_v1.json"
+  },
+  "cases": [
+    {
+      "case_id": "E2E-SQL-001",
+      "category": "attraction_explain",
+      "title": "Forbidden City first-time visitor intro",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "grounded_qa",
+      "query_zh": "请向第一次来北京的游客介绍一下故宫。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-history-en",
+      "fixture_mode": "structured_data",
+      "variant_group": "forbidden-city-grounding",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "short_intro",
+          "history",
+          "visitor_tips"
+        ],
+        "profile_id": "bench-user-history-en",
+        "notes": "回答应贴近结构化景点数据，不要求验证真实世界准确性。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "imperial",
+          "palace",
+          "history",
+          "first-time visitor"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Tell me about the Forbidden City for a first-time visitor.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-SQL-002",
+      "category": "attraction_explain",
+      "title": "Jingshan Park photo-oriented answer",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "grounded_qa",
+      "query_zh": "如果我主要想拍照和看视野，景山公园为什么值得去？",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-photo-en",
+      "fixture_mode": "structured_data",
+      "variant_group": "jingshan-photo",
+      "data_anchor": {
+        "poi_name": "景山公园",
+        "fields": [
+          "short_intro",
+          "highlights",
+          "photo_spot_notes"
+        ],
+        "profile_id": "bench-user-photo-en",
+        "notes": "应强调视野和拍照价值。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "views",
+          "photos",
+          "panoramic",
+          "summit"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Why is Jingshan Park worth visiting if I care about views and photos?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-SQL-003",
+      "category": "attraction_explain",
+      "title": "Temple of Heaven family-friendly pacing",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "grounded_qa",
+      "query_zh": "如果带家人去天坛，应该怎么安排会更轻松？",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-family-zh",
+      "fixture_mode": "structured_data",
+      "variant_group": "temple-family",
+      "data_anchor": {
+        "poi_name": "天坛",
+        "fields": [
+          "family_friendly_notes",
+          "practical_notes",
+          "visitor_tips"
+        ],
+        "profile_id": "bench-user-family-zh",
+        "notes": "应包含亲子节奏与园区步行安排。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "家庭",
+          "休息",
+          "节奏",
+          "步行"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "如果带家人去天坛，应该怎么安排会更轻松？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-SQL-004",
+      "category": "attraction_explain",
+      "title": "Tiananmen practical planning answer",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "grounded_qa",
+      "query_zh": "去天安门前，有哪些实用注意事项？",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-route-walk-zh",
+      "fixture_mode": "structured_data",
+      "variant_group": "tiananmen-practical",
+      "data_anchor": {
+        "poi_name": "天安门",
+        "fields": [
+          "practical_notes",
+          "visitor_tips"
+        ],
+        "profile_id": "bench-user-route-walk-zh",
+        "notes": "应落到门票、节奏或当天安排注意点。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "门票",
+          "安排",
+          "节奏",
+          "游览"
+        ],
+        "must_not_depend_on": [
+          "live_info"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "去天安门前，有哪些实用注意事项？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-PROFILE-001",
+      "category": "attraction_explain",
+      "title": "History-focused user asks about Forbidden City",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "grounded_qa",
+      "query_zh": "历史兴趣用户询问故宫介绍。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-history-en",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "fc-personalization-1",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "history",
+          "highlights"
+        ],
+        "profile_id": "bench-user-history-en",
+        "notes": "同题比较里应更偏历史和建筑。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "history",
+          "imperial",
+          "dynasty",
+          "architecture"
+        ],
+        "must_not_include": [
+          "I cannot tell"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Tell me about the Forbidden City.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-PROFILE-002",
+      "category": "attraction_explain",
+      "title": "Photo-focused user asks about Forbidden City",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "grounded_qa",
+      "query_zh": "摄影兴趣用户询问故宫介绍。",
+      "reality_level": "seed_plausibility",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql",
+      "session_required": false,
+      "profile_id": "bench-user-photo-en",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "fc-personalization-1",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "photo_spot_notes",
+          "highlights"
+        ],
+        "profile_id": "bench-user-photo-en",
+        "notes": "与同组历史型 case 对比，应更偏拍照和视角。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "photo",
+          "view",
+          "courtyard",
+          "symmetry"
+        ],
+        "must_not_include": [
+          "I cannot tell"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Tell me about the Forbidden City.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-PROFILE-003",
+      "category": "trip_assistant",
+      "title": "Short family-style Palace Museum suggestion",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "summarize",
+      "query_zh": "带家人去故宫，给我一个简短建议。",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "profile_plus_sql",
+      "session_required": false,
+      "profile_id": "bench-user-family-zh",
+      "fixture_mode": "profile_only",
+      "variant_group": "family-short-advice",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "family_friendly_notes",
+          "visitor_tips"
+        ],
+        "profile_id": "bench-user-family-zh",
+        "notes": "应体现短答、家庭、轻松节奏。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "简短",
+          "家人",
+          "轻松",
+          "节奏"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported",
+          "route_focus"
+        ]
+      },
+      "request": {
+        "query": "带家人去故宫，给我一个简短建议。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-PROFILE-004",
+      "category": "trip_assistant",
+      "title": "Fast-walking user asks for practical route tone",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "summarize",
+      "query_zh": "高步行偏好用户想要简洁务实的路线建议。",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "profile_plus_sql",
+      "session_required": false,
+      "profile_id": "bench-user-logic-en",
+      "fixture_mode": "profile_only",
+      "variant_group": "pace-route-tone",
+      "data_anchor": {
+        "poi_name": "景山公园",
+        "fields": [
+          "walking_preference",
+          "answer_length_preference"
+        ],
+        "profile_id": "bench-user-logic-en",
+        "notes": "应偏简洁、务实，不要拉长叙述。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "short",
+          "practical",
+          "next",
+          "walk"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Give me a short practical suggestion for visiting Jingshan Park.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-RAG-001",
+      "category": "deep_attraction_ask_sql_then_rag",
+      "title": "Forbidden City deeper history uses current runtime RAG scaffold",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "multi_hop",
+      "query_zh": "请不要只给我简介，详细讲讲故宫更深的历史和象征意义。",
+      "reality_level": "chain_validity",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql_then_rag",
+      "session_required": false,
+      "profile_id": "bench-user-history-en",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "rag-depth-1",
+      "data_anchor": {
+        "poi_name": "Forbidden City",
+        "fields": [
+          "history"
+        ],
+        "rag_doc_types": [
+          "history"
+        ],
+        "profile_id": "bench-user-history-en",
+        "notes": "当前 runtime RAG 只保证 history/practical/photo/family 四类文档；本题以 history scaffold 为准。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "history",
+          "imperial",
+          "dynasty",
+          "palace"
+        ],
+        "check_metadata": [
+          "intent",
+          "retrieval_strategy",
+          "rag_backend_ready",
+          "rag_query_status"
+        ]
+      },
+      "request": {
+        "query": "Please give me a deeper historical and symbolic explanation of the Forbidden City, not just a short intro.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-RAG-002",
+      "category": "deep_attraction_ask_sql_then_rag",
+      "title": "天安门中文深问验证当前 runtime RAG history scaffold",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "multi_hop",
+      "query_zh": "不要只给我简介，详细讲讲天安门背后的历史背景。",
+      "reality_level": "chain_validity",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql_then_rag",
+      "session_required": false,
+      "profile_id": "bench-user-history-zh",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "rag-depth-zh-1",
+      "data_anchor": {
+        "poi_name": "Tiananmen Square",
+        "fields": [
+          "history"
+        ],
+        "rag_doc_types": [
+          "history"
+        ],
+        "profile_id": "bench-user-history-zh",
+        "notes": "当前 runtime RAG 尚未接入 external corpus 的 architecture chunk，本题只以 history scaffold 为准。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "历史",
+          "背景",
+          "城楼",
+          "脉络"
+        ],
+        "check_metadata": [
+          "intent",
+          "retrieval_strategy",
+          "rag_backend_ready",
+          "rag_query_status"
+        ]
+      },
+      "request": {
+        "query": "不要只给我简介，详细讲讲天安门背后的历史背景。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-RAG-003",
+      "category": "deep_attraction_ask_sql_then_rag",
+      "title": "天坛深问验证当前 runtime RAG history scaffold",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "multi_hop",
+      "query_zh": "不要只给我概览，详细讲讲天坛背后的礼制历史。",
+      "reality_level": "chain_validity",
+      "expected_intent": "attraction_explain",
+      "expected_data_source": "sql_then_rag",
+      "session_required": false,
+      "profile_id": "bench-user-history-zh",
+      "fixture_mode": "profile_plus_rag",
+      "variant_group": "rag-depth-zh-2",
+      "data_anchor": {
+        "poi_name": "Temple of Heaven",
+        "fields": [
+          "history"
+        ],
+        "rag_doc_types": [
+          "history"
+        ],
+        "profile_id": "bench-user-history-zh",
+        "notes": "当前 runtime RAG 尚未真实挂载中轴线/城市空间专门语料，因此本题改为天坛礼制历史深问。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "历史",
+          "礼制",
+          "祭祀",
+          "天坛"
+        ],
+        "check_metadata": [
+          "intent",
+          "retrieval_strategy",
+          "rag_backend_ready",
+          "rag_query_status"
+        ]
+      },
+      "request": {
+        "query": "不要只给我概览，详细讲讲天坛背后的礼制历史。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-LIVE-001",
+      "category": "live_info",
+      "title": "Official same-day visit check",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "我今天去故宫前应该确认哪些官方信息？",
+      "reality_level": "chain_validity",
+      "expected_intent": "live_info",
+      "expected_data_source": "live_search",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "live-info-forbidden-city",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "live_info.status",
+          "live_info.sources",
+          "live_info.confidence"
+        ],
+        "notes": "只测官网/官方通知类 same-day 信息。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "opening",
+          "reservation",
+          "official",
+          "today"
+        ],
+        "check_metadata": [
+          "intent",
+          "status",
+          "sources",
+          "confidence"
+        ]
+      },
+      "request": {
+        "query": "What should I check before visiting the Forbidden City today?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-LIVE-002",
+      "category": "live_info_provider_missing",
+      "title": "Live info degraded when provider config is missing",
+      "language": "en",
+      "mode": "degraded_env",
+      "operation": "retrieve",
+      "query_zh": "当实时 provider 缺失时，故宫 same-day 查询应受控降级。",
+      "reality_level": "chain_validity",
+      "expected_intent": "live_info",
+      "expected_data_source": "live_search_degraded",
+      "session_required": false,
+      "fixture_mode": "degraded",
+      "variant_group": "live-info-forbidden-city",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [
+          "live_info.status",
+          "live_info.reason",
+          "live_info.sources",
+          "live_info.confidence"
+        ],
+        "notes": "缺少 key 时应返回 unavailable / missing_provider_config。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "unavailable",
+          "real-time",
+          "official",
+          "cannot"
+        ],
+        "check_metadata": [
+          "intent",
+          "degraded",
+          "degraded_reason",
+          "confidence"
+        ]
+      },
+      "request": {
+        "query": "What should I check before visiting the Forbidden City today?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-LIVE-003",
+      "category": "live_info_boundary",
+      "title": "Crowd question is outside current live_info scope",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "boundary_check",
+      "query_zh": "故宫今天人多不多不属于当前 live_info 定义域。",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "boundary_guard",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "live-info-boundary",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [],
+        "notes": "天气/交通/拥挤度当前不走普通 live_info。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "official",
+          "cannot confirm",
+          "check official sources",
+          "not available"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "How crowded is the Forbidden City today?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-LIVE-004",
+      "category": "live_info_boundary",
+      "title": "Traffic question should stay as boundary out of scope",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "boundary_check",
+      "query_zh": "去故宫的交通拥堵情况不应被当成当前 live_info 的支持范围。",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "boundary_guard",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "live-info-boundary",
+      "data_anchor": {
+        "poi_name": "故宫博物院",
+        "fields": [],
+        "notes": "交通问题应提示使用专门渠道，不应伪装成官网通知结果。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "官方",
+          "当前不支持",
+          "交通",
+          "专门"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "今天去故宫的交通会不会很堵？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-SESSION-001",
+      "category": "trip_assistant",
+      "title": "Session-aware next stop guidance",
+      "language": "en",
+      "mode": "session_aware",
+      "operation": "retrieve",
+      "query_zh": "会话内询问天安门之后的下一站。",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "session_context",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-en",
+      "fixture_mode": "profile_only",
+      "variant_group": "session-next-stop",
+      "data_anchor": {
+        "poi_name": "天安门",
+        "fields": [
+          "current_stop_name",
+          "next_stop_name",
+          "plan_summary"
+        ],
+        "profile_id": "bench-user-route-walk-en",
+        "notes": "应基于真实 session current/next stop。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "next stop",
+          "after",
+          "route",
+          "session"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported",
+          "references_next_stop"
+        ]
+      },
+      "request_template": {
+        "query": "What is my next stop after Tiananmen Square?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-SESSION-002",
+      "category": "session_mutation_follow_through",
+      "title": "QA follows mutated session state after GPS and playback",
+      "language": "en",
+      "mode": "session_mutation",
+      "operation": "compare",
+      "query_zh": "GPS 和播放状态变化后，QA 应跟随新的当前站点。",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "session_context",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-en",
+      "fixture_mode": "profile_only",
+      "variant_group": "session-mutation",
+      "data_anchor": {
+        "fields": [
+          "current_stop_index",
+          "current_stop_name",
+          "next_stop_name",
+          "playback_state"
+        ],
+        "profile_id": "bench-user-route-walk-en",
+        "notes": "适合验证 GPS arrival + playback complete 之后的问答跟随。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "current stop",
+          "now",
+          "next",
+          "route"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported",
+          "references_current_stop"
+        ]
+      },
+      "request_template": {
+        "query": "What is my current route stop in Beijing itinerary now?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-SESSION-003",
+      "category": "trip_assistant",
+      "title": "Chinese session-aware next action guidance",
+      "language": "zh",
+      "mode": "session_aware",
+      "operation": "retrieve",
+      "query_zh": "会话中询问接下来该做什么。",
+      "reality_level": "chain_validity",
+      "expected_intent": "trip_assistant",
+      "expected_data_source": "session_context",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-zh",
+      "fixture_mode": "profile_only",
+      "variant_group": "session-next-action",
+      "data_anchor": {
+        "fields": [
+          "current_stop_name",
+          "next_stop_name",
+          "session_context"
+        ],
+        "profile_id": "bench-user-route-walk-zh",
+        "notes": "应能根据真实 session 给出下一步建议。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "下一站",
+          "接下来",
+          "当前",
+          "路线"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported",
+          "references_current_stop"
+        ]
+      },
+      "request_template": {
+        "query": "我接下来应该去哪里，或者先做什么？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-BOUNDARY-001",
+      "category": "manual_route_edit_redirect",
+      "title": "QA should redirect route-edit request instead of changing route",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "redirect",
+      "query_zh": "把景山公园换掉，帮我把路线改轻松一点。",
+      "reality_level": "chain_validity",
+      "expected_intent": "manual_route_edit_redirect",
+      "expected_data_source": "product_redirect",
+      "session_required": false,
+      "fixture_mode": "structured_data",
+      "variant_group": "route-edit-redirect",
+      "data_anchor": {
+        "fields": [
+          "manual_route_edit_redirect",
+          "route_focus",
+          "reason"
+        ],
+        "notes": "应给出人工 route edit 入口提示，而不是直接执行修改。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "修改路线",
+          "手动",
+          "编辑",
+          "入口"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported",
+          "manual_route_edit_redirect"
+        ]
+      },
+      "request": {
+        "query": "把景山公园换掉，帮我把路线改轻松一点。",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-OOS-001",
+      "category": "out_of_scope",
+      "title": "Programming request should be rejected",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "boundary_check",
+      "query_zh": "写一个排序算法的请求应被拒绝。",
+      "reality_level": "chain_validity",
+      "expected_intent": "out_of_scope",
+      "expected_data_source": "none",
+      "session_required": false,
+      "fixture_mode": "none",
+      "variant_group": "out-of-scope-general",
+      "data_anchor": {
+        "fields": [],
+        "notes": "无数据库依赖。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "Beijing",
+          "tour",
+          "attractions",
+          "itinerary"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Write me a sorting algorithm.",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-OOS-002",
+      "category": "weather_info",
+      "title": "Temperature question should use weather chain",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "北京今天大概多少度应走 weather_info 链路。",
+      "reality_level": "chain_validity",
+      "expected_intent": "weather_info",
+      "expected_data_source": "weather",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "weather-basic",
+      "data_anchor": {
+        "fields": [
+          "weather.location_name",
+          "weather.weather",
+          "weather.report_time"
+        ],
+        "notes": "天气当前应通过 weather_info 处理；这里改成温度问法，避免与降雨问法重复。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "天气",
+          "温度",
+          "度",
+          "weather"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "北京今天大概多少度？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-TR-001",
+      "category": "translation",
+      "title": "Simple travel phrase translation",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "translate",
+      "query_zh": "请把“这个景点几点关门”翻译成礼貌英文。",
+      "reality_level": "chain_validity",
+      "expected_intent": "translation",
+      "expected_data_source": "none",
+      "session_required": false,
+      "fixture_mode": "none",
+      "variant_group": "translation-basic",
+      "data_anchor": {
+        "fields": [],
+        "notes": "不依赖数据库，只测翻译链路。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "What time",
+          "close"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "Translate this into polite English: 这个景点几点关门",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-TR-002",
+      "category": "translation",
+      "title": "Polite Chinese translation for opening-hours question",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "translate",
+      "query_zh": "请把“Could you tell me when this attraction opens?” 翻译成礼貌中文。",
+      "reality_level": "chain_validity",
+      "expected_intent": "translation",
+      "expected_data_source": "none",
+      "session_required": false,
+      "fixture_mode": "none",
+      "variant_group": "translation-basic",
+      "data_anchor": {
+        "fields": [],
+        "notes": "中文礼貌表达，不测景点知识。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "请问",
+          "景点",
+          "几点",
+          "开放"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "请把这句话翻译成礼貌中文：Could you tell me when this attraction opens?",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-WEATHER-001",
+      "category": "weather_info",
+      "title": "Chinese weather question stays on weather_info chain",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "北京今天会不会下雨。",
+      "reality_level": "chain_validity",
+      "expected_intent": "weather_info",
+      "expected_data_source": "weather",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "weather-basic",
+      "data_anchor": {
+        "fields": [
+          "weather.location_name",
+          "weather.weather",
+          "weather.report_time"
+        ],
+        "notes": "检查天气链路是否命中 weather_info。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "天气",
+          "温度",
+          "下雨",
+          "weather"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "北京今天会不会下雨？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-WEATHER-002",
+      "category": "weather_info",
+      "title": "English weather question stays on weather_info chain",
+      "language": "en",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "英文天气问句应命中 weather_info。",
+      "reality_level": "chain_validity",
+      "expected_intent": "weather_info",
+      "expected_data_source": "weather",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "weather-basic",
+      "data_anchor": {
+        "fields": [
+          "weather.location_name",
+          "weather.weather",
+          "weather.report_time"
+        ],
+        "notes": "检查英文天气问句也能走 weather_info。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "weather",
+          "temperature",
+          "rain",
+          "forecast"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "What's the weather like today in Beijing?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-NAV-001",
+      "category": "navigation_text",
+      "title": "Explicit route navigation answer",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "从天安门到故宫怎么走。",
+      "reality_level": "chain_validity",
+      "expected_intent": "navigation_text",
+      "expected_data_source": "navigation",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "navigation-basic",
+      "data_anchor": {
+        "fields": [
+          "navigation.origin_name",
+          "navigation.destination_name",
+          "navigation.steps"
+        ],
+        "notes": "检查显式起终点导航。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "1.",
+          "步行",
+          "导航",
+          "Leg"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "从天安门到故宫怎么走？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-NAV-002",
+      "category": "navigation_text",
+      "title": "Destination-only navigation answer",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "去景山公园怎么走。",
+      "reality_level": "chain_validity",
+      "expected_intent": "navigation_text",
+      "expected_data_source": "navigation",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "navigation-basic",
+      "data_anchor": {
+        "fields": [
+          "navigation.destination_name",
+          "navigation.steps"
+        ],
+        "notes": "检查 destination-only 导航。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "1.",
+          "步行",
+          "导航",
+          "路线"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "去景山公园怎么走？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-NAV-003",
+      "category": "navigation_text",
+      "title": "Session-aware next-stop navigation answer",
+      "language": "en",
+      "mode": "session_aware",
+      "operation": "retrieve",
+      "query_zh": "会话内询问下一站怎么去。",
+      "reality_level": "chain_validity",
+      "expected_intent": "navigation_text",
+      "expected_data_source": "navigation",
+      "session_required": true,
+      "profile_id": "bench-user-route-walk-en",
+      "fixture_mode": "profile_only",
+      "variant_group": "navigation-session",
+      "data_anchor": {
+        "fields": [
+          "current_stop_name",
+          "next_stop_name",
+          "navigation.steps"
+        ],
+        "profile_id": "bench-user-route-walk-en",
+        "notes": "检查 next-stop 导航在 session 下的表现。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "1.",
+          "walk",
+          "next stop",
+          "route"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request_template": {
+        "query": "How do I get to my next stop?",
+        "language": "en"
+      }
+    },
+    {
+      "case_id": "E2E-NAV-004",
+      "category": "navigation_text",
+      "title": "Multi-leg navigation answer",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "retrieve",
+      "query_zh": "从天安门到故宫再到景山怎么走。",
+      "reality_level": "chain_validity",
+      "expected_intent": "navigation_text",
+      "expected_data_source": "navigation",
+      "session_required": false,
+      "fixture_mode": "real",
+      "variant_group": "navigation-multi-leg",
+      "data_anchor": {
+        "fields": [
+          "navigation.legs",
+          "navigation.destination_name",
+          "navigation.steps"
+        ],
+        "notes": "检查 multi-leg 导航输出。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "Leg 1",
+          "Leg 2",
+          "步行",
+          "导航"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported"
+        ]
+      },
+      "request": {
+        "query": "从天安门到故宫再到景山怎么走？",
+        "language": "zh"
+      }
+    },
+    {
+      "case_id": "E2E-BOUNDARY-002",
+      "category": "manual_route_edit_redirect",
+      "title": "Soft route-edit request should redirect",
+      "language": "zh",
+      "mode": "single_turn",
+      "operation": "redirect",
+      "query_zh": "我想把后面路线改得轻松一点。",
+      "reality_level": "chain_validity",
+      "expected_intent": "manual_route_edit_redirect",
+      "expected_data_source": "product_redirect",
+      "session_required": false,
+      "fixture_mode": "structured_data",
+      "variant_group": "route-edit-redirect",
+      "data_anchor": {
+        "fields": [
+          "manual_route_edit_redirect",
+          "route_focus",
+          "reason"
+        ],
+        "notes": "检查 soft route-edit 仍走 redirect。"
+      },
+      "assertions": {
+        "must_include_any": [
+          "修改路线",
+          "手动",
+          "编辑",
+          "入口"
+        ],
+        "check_metadata": [
+          "intent",
+          "supported",
+          "manual_route_edit_redirect"
+        ]
+      },
+      "request": {
+        "query": "我想把后面路线改得轻松一点。",
+        "language": "zh"
+      }
+    }
+  ],
+  "grounding_scope": {
+    "sql_truth_source": "current sql_retriever attraction fields served from PostgreSQL rows or local seed/mock bundle",
+    "rag_truth_source": "current runtime RAG scaffold built from rag_documents.py and reindexed via rag_admin_service",
+    "rag_supported_doc_types_now": [
+      "history",
+      "practical_notes",
+      "photo_spot_notes",
+      "family_notes"
+    ],
+    "external_corpus_status": "real_rag_corpus_v1_zh.json is reference-only until runtime ingestion is wired"
+  }
+}

@@ -1,0 +1,454 @@
+queries:
+- id: G2-TA-001
+  category: trip_assistant
+  language: en
+  prompt: "What is my next stop after Tiananmen Square?"
+  metadata:
+    title: "Basic next stop"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-002
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next after Tiananmen Square if I want to keep walking light?"
+  metadata:
+    title: "Next step with light walking"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-003
+  category: trip_assistant
+  language: en
+  prompt: "I am at the Forbidden City now. What should I pay attention to before moving"
+  metadata:
+    title: "Current stop practical guidance"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-004
+  category: trip_assistant
+  language: en
+  prompt: "What is my next stop after Tiananmen Square if I only want a short route"
+  metadata:
+    title: "Next stop with shorter route preference"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-005
+  category: trip_assistant
+  language: en
+  prompt: "What is my next stop after Tiananmen Square? I care more about architecture"
+  metadata:
+    title: "Architecture-focused next step"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    interests: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-006
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: What is my next stop after Tiananmen Square? Turn 2: What should"
+  metadata:
+    title: "Follow-up next stop continuity"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-007
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: What is my next stop after Tiananmen Square? Turn 2: And after"
+  metadata:
+    title: "Second-step route continuity"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-008
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: I am at Tiananmen Square. Turn 2: What should I do next if I am"
+  metadata:
+    title: "Tired traveler follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-009
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next after the Forbidden City if I want a scenic stop?"
+  metadata:
+    title: "Scenic next step"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "scenic"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-010
+  category: trip_assistant
+  language: zh
+  prompt: "我从天安门广场之后下一站去哪？"
+  metadata:
+    title: "中文下一站"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-011
+  category: trip_assistant
+  language: zh
+  prompt: "如果我现在有点累，故宫之后应该怎么安排更合适？"
+  metadata:
+    title: "中文疲劳场景路线建议"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-012
+  category: trip_assistant
+  language: es
+  prompt: "¿Cuál debería ser mi siguiente parada después de Tiananmen Square?"
+  metadata:
+    title: "Spanish next stop"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-TA-013
+  category: trip_assistant
+  language: mixed
+  prompt: "我在 Tiananmen Square，现在 next stop 应该去哪里？"
+  metadata:
+    title: "Mixed-language next stop"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "strict_sql"
+    input_language: "mixed"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-014
+  category: trip_assistant
+  language: en
+  prompt: "If I only have a little time left, what should I do after Tiananmen Square?"
+  metadata:
+    title: "Little time left"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-015
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next if I care about photography more than history?"
+  metadata:
+    title: "Photography-focused next step"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    interests: ""
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-016
+  category: trip_assistant
+  language: en
+  prompt: "After the Forbidden City, should I continue to a scenic stop or end the"
+  metadata:
+    title: "Scenic or end route tradeoff"
+    mode: "single_turn"
+    scenario_type: "constraint_balancing"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "balanced"
+    grounding_requirement: "sql_with_profile"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-017
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: I just finished the Forbidden City. Turn 2: What should I do after"
+  metadata:
+    title: "Scenic route follow-up after Forbidden City"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-018
+  category: trip_assistant
+  language: en
+  prompt: "'Turn 1: I am at Tiananmen Square. Turn 2: And if I want something more"
+  metadata:
+    title: "Structured practical follow-up"
+    mode: "multi_turn"
+    scenario_type: "memory_followup"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_history_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "follow_up"
+    grounding_requirement: "history_dependent"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-TA-019
+  category: trip_assistant
+  language: zh
+  prompt: "如果我更喜欢有条理、实用一点的讲解风格，下一站该怎么安排？"
+  metadata:
+    title: "中文条理型路线安排"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-TA-020
+  category: trip_assistant
+  language: en
+  prompt: "What should I do next after Tiananmen Square if I want a vivid, experience-focused"
+  metadata:
+    title: "Experience-focused route guidance"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "trip_assistant"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vivid"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-TA-021
+  category: trip_assistant
+  language: en
+  prompt: "What should I do after the Forbidden City if I want a shorter walking stretch?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-022
+  category: trip_assistant
+  language: en
+  prompt: "I am tired. What is the easiest next move on my Beijing route?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-023
+  category: trip_assistant
+  language: en
+  prompt: "If I only have 30 more minutes, what should I focus on in this route?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-024
+  category: trip_assistant
+  language: en
+  prompt: "What is the most practical next step after Tiananmen Square right now?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-025
+  category: trip_assistant
+  language: en
+  prompt: "Can you summarize my next route move in one sentence?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-026
+  category: trip_assistant
+  language: zh
+  prompt: "我现在这一站结束后，下一步最合适做什么？"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TA-027
+  category: trip_assistant
+  language: zh
+  prompt: "如果我不想走太远，接下来怎么安排更轻松？"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-TA-028
+  category: trip_assistant
+  language: en
+  prompt: "What should I pay attention to when I reach my next stop?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-029
+  category: trip_assistant
+  language: en
+  prompt: "What is my current active stop and what should I do there?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-TA-030
+  category: trip_assistant
+  language: en
+  prompt: "If I want to keep a balanced pace, what should I do after this stop?"
+  metadata:
+    expected_intent: "trip_assistant"
+    expected_output_language: "en"
+    source: "new"

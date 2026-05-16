@@ -130,7 +130,7 @@ async def query_pgvector_documents(
     filters = metadata_filters or {}
     for index_position, node in enumerate(nodes):
         metadata = dict(getattr(node, "metadata", {}) or {})
-        if filters and any(metadata.get(key) != value for key, value in filters.items()):
+        if filters and any(not _metadata_matches_filter(metadata.get(key), value) for key, value in filters.items()):
             continue
         text = str(getattr(node, "text", "") or "")
         documents.append(
@@ -147,6 +147,15 @@ async def query_pgvector_documents(
         "availability": "ready",
         "documents": documents,
     }
+
+
+
+def _metadata_matches_filter(metadata_value: object, filter_value: object) -> bool:
+    if isinstance(filter_value, list):
+        return any(_metadata_matches_filter(metadata_value, item) for item in filter_value)
+    if isinstance(metadata_value, list):
+        return any(_metadata_matches_filter(item, filter_value) for item in metadata_value)
+    return metadata_value == filter_value
 
 
 

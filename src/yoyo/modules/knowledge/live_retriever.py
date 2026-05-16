@@ -15,4 +15,9 @@ async def get_live_info_context(query: str, attraction_name: str | None) -> Live
         source="live_search",
         status=str(payload.get("status") or "available"),
         reason=payload.get("reason"),
+        cache_hit=bool(payload.get("cache_hit")),
+        cache_key=payload.get("cache_key"),
+        cached_at=payload.get("cached_at"),
+        cache_ttl_seconds=payload.get("cache_ttl_seconds"),
+        info_type=payload.get("info_type"),
     )

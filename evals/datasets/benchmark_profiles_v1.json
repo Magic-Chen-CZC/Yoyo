@@ -1,0 +1,322 @@
+[
+  {
+    "user_id": "bench-user-history-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "history",
+      "culture"
+    ],
+    "travel_style": "focused",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "general",
+    "answer_length_preference": "long",
+    "guide_style_preference": "SJ",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-history-en",
+    "preferred_language": "en",
+    "interests": [
+      "history",
+      "architecture"
+    ],
+    "travel_style": "focused",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "solo",
+    "answer_length_preference": "medium",
+    "guide_style_preference": "NT",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-photo-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "photography",
+      "views"
+    ],
+    "travel_style": "scenic",
+    "walking_preference": "light",
+    "pace_preference": "slow",
+    "audience_type": "general",
+    "answer_length_preference": "short",
+    "guide_style_preference": "SP",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-photo-en",
+    "preferred_language": "en",
+    "interests": [
+      "photography",
+      "walking"
+    ],
+    "travel_style": "scenic",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "solo",
+    "answer_length_preference": "medium",
+    "guide_style_preference": "SP",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-family-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "family",
+      "culture"
+    ],
+    "travel_style": "relaxed",
+    "walking_preference": "light",
+    "pace_preference": "slow",
+    "audience_type": "family",
+    "answer_length_preference": "short",
+    "guide_style_preference": "SJ",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-family-en",
+    "preferred_language": "en",
+    "interests": [
+      "family",
+      "views"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "light",
+    "pace_preference": "slow",
+    "audience_type": "family",
+    "answer_length_preference": "medium",
+    "guide_style_preference": "NF",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-food-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "food",
+      "culture"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "couple",
+    "answer_length_preference": "medium",
+    "guide_style_preference": "SP",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-logic-en",
+    "preferred_language": "en",
+    "interests": [
+      "history",
+      "architecture"
+    ],
+    "travel_style": "focused",
+    "walking_preference": "high",
+    "pace_preference": "fast",
+    "audience_type": "general",
+    "answer_length_preference": "short",
+    "guide_style_preference": "NT",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-curious-family-en",
+    "preferred_language": "en",
+    "interests": [
+      "food",
+      "photography"
+    ],
+    "travel_style": "scenic",
+    "walking_preference": "light",
+    "pace_preference": "balanced",
+    "audience_type": "general",
+    "answer_length_preference": "short",
+    "guide_style_preference": "SJ",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-story-architecture-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "walking",
+      "food"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "general",
+    "answer_length_preference": "medium",
+    "guide_style_preference": "SJ",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-route-walk-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "relaxed",
+      "views",
+      "history"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "light",
+    "pace_preference": "balanced",
+    "audience_type": "general",
+    "answer_length_preference": "short",
+    "guide_style_preference": "NF",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-classic-culture-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "culture"
+    ],
+    "travel_style": "relaxed",
+    "walking_preference": "moderate",
+    "pace_preference": "slow",
+    "audience_type": "general",
+    "answer_length_preference": "long",
+    "guide_style_preference": "SP",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-curious-family-en-2",
+    "preferred_language": "en",
+    "interests": [
+      "history",
+      "views"
+    ],
+    "travel_style": "scenic",
+    "walking_preference": "moderate",
+    "pace_preference": "slow",
+    "audience_type": "solo",
+    "answer_length_preference": "short",
+    "guide_style_preference": "NT",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-slow-walk-en",
+    "preferred_language": "en",
+    "interests": [
+      "food"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "solo",
+    "answer_length_preference": "short",
+    "guide_style_preference": "NT",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-slow-food-en",
+    "preferred_language": "en",
+    "interests": [
+      "views"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "light",
+    "pace_preference": "balanced",
+    "audience_type": "couple",
+    "answer_length_preference": "short",
+    "guide_style_preference": "SP",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-route-walk-en",
+    "preferred_language": "en",
+    "interests": [
+      "history"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "moderate",
+    "pace_preference": "fast",
+    "audience_type": "couple",
+    "answer_length_preference": "long",
+    "guide_style_preference": "SJ",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-active-view-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "architecture",
+      "views",
+      "walking"
+    ],
+    "travel_style": "scenic",
+    "walking_preference": "moderate",
+    "pace_preference": "balanced",
+    "audience_type": "solo",
+    "answer_length_preference": "short",
+    "guide_style_preference": "NF",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-city-architecture-zh",
+    "preferred_language": "zh",
+    "interests": [
+      "history",
+      "walking",
+      "culture"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "high",
+    "pace_preference": "balanced",
+    "audience_type": "solo",
+    "answer_length_preference": "long",
+    "guide_style_preference": "SJ",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-story-architecture-zh-2",
+    "preferred_language": "zh",
+    "interests": [
+      "history",
+      "family"
+    ],
+    "travel_style": "relaxed",
+    "walking_preference": "moderate",
+    "pace_preference": "slow",
+    "audience_type": "family",
+    "answer_length_preference": "short",
+    "guide_style_preference": "SP",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  },
+  {
+    "user_id": "bench-user-active-view-en",
+    "preferred_language": "en",
+    "interests": [
+      "history",
+      "views",
+      "family"
+    ],
+    "travel_style": "balanced",
+    "walking_preference": "light",
+    "pace_preference": "balanced",
+    "audience_type": "family",
+    "answer_length_preference": "medium",
+    "guide_style_preference": "NT",
+    "source": "benchmark_profile_v1",
+    "profile_version": "v1"
+  }
+]

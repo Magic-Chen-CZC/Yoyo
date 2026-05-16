@@ -21,3 +21,6 @@ build/
 .local/agent-debug/
 .claude*.py
 .claude-*.log
+.generated_tts/
+evals/results/
+benchmark_profiles_v1.xlsx

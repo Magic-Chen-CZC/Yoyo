@@ -1,0 +1,9 @@
+dataset_name: routing_rule_all_800_cases
+dataset_version: "2026-05-15"
+notes: >
+  Combined QA intent routing hard-case suite. It includes the previous 300-case
+  rule maintenance suite and the new 500-case hard suite.
+include_datasets:
+  - routing_rule_all_300_cases.yaml
+  - routing_rule_hard_500_cases.yaml
+cases: []

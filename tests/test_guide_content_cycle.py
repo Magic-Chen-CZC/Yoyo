@@ -127,6 +127,40 @@ async def test_cycle_content_rotates_segments_without_finishing_stop(
 
 
 @pytest.mark.asyncio
+async def test_cycle_content_returns_conflict_when_asset_not_ready(client: AsyncClient, monkeypatch) -> None:
+    class FakeRedis:
+        async def enqueue_job(self, function_name: str, job_id: str) -> None:
+            return None
+
+    async def fake_get_job_pool() -> FakeRedis:
+        return FakeRedis()
+
+    monkeypatch.setattr("yoyo.modules.planner.service.get_job_pool", fake_get_job_pool)
+
+    itinerary_response = await client.post(
+        "/api/v1/planning/itineraries",
+        json={"user_id": "user-not-ready", "title": "Not ready trip", "preferences": {"preferred_poi_count": 1}},
+    )
+    itinerary_data = itinerary_response.json()["data"]
+    guide_session_response = await client.post(
+        "/api/v1/session/guide",
+        json={
+            "itinerary_id": itinerary_data["id"],
+            "itinerary_version_id": itinerary_data["version"]["id"],
+            "context": {},
+        },
+    )
+    guide_session_id = guide_session_response.json()["data"]["id"]
+
+    response = await client.post(
+        f"/api/v1/guide/content/{guide_session_id}",
+        json={"action": "cycle_content"},
+    )
+    assert response.status_code == 409
+    assert response.json()["detail"] == "guide asset not ready"
+
+
+@pytest.mark.asyncio
 async def test_finished_session_cannot_cycle_guide_content(client: AsyncClient, monkeypatch) -> None:
     class FakeRedis:
         async def enqueue_job(self, function_name: str, job_id: str) -> None:
@@ -157,7 +191,8 @@ async def test_finished_session_cannot_cycle_guide_content(client: AsyncClient, 
         f"/api/v1/guide/content/{guide_session_id}",
         json={"action": "cycle_content"},
     )
-    assert response.status_code == 404
+    assert response.status_code == 409
+    assert response.json()["detail"] == "guide session finished"
 
 
 @pytest.mark.asyncio
@@ -228,3 +263,37 @@ async def test_cycle_content_degrades_safely_when_tts_provider_fails(
     data = response.json()["data"]
     assert data["segments"]
     assert {item["status"] for item in data["audio_segments"]} == {"unavailable"}
+
+
+@pytest.mark.asyncio
+async def test_cycle_content_rejects_unsupported_action(client: AsyncClient, monkeypatch) -> None:
+    class FakeRedis:
+        async def enqueue_job(self, function_name: str, job_id: str) -> None:
+            return None
+
+    async def fake_get_job_pool() -> FakeRedis:
+        return FakeRedis()
+
+    monkeypatch.setattr("yoyo.modules.planner.service.get_job_pool", fake_get_job_pool)
+
+    itinerary_response = await client.post(
+        "/api/v1/planning/itineraries",
+        json={"user_id": "user-bad-action", "title": "Bad action trip", "preferences": {"preferred_poi_count": 1}},
+    )
+    itinerary_data = itinerary_response.json()["data"]
+    guide_session_response = await client.post(
+        "/api/v1/session/guide",
+        json={
+            "itinerary_id": itinerary_data["id"],
+            "itinerary_version_id": itinerary_data["version"]["id"],
+            "context": {},
+        },
+    )
+    guide_session_id = guide_session_response.json()["data"]["id"]
+
+    response = await client.post(
+        f"/api/v1/guide/content/{guide_session_id}",
+        json={"action": "play"},
+    )
+    assert response.status_code == 400
+    assert response.json()["detail"] == "unsupported guide content action"

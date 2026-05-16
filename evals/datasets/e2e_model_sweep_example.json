@@ -1,0 +1,19 @@
+{
+  "models": [
+    {
+      "label": "gemini-2.5-flash-lite",
+      "provider": "openrouter",
+      "model": "google/gemini-2.5-flash-lite"
+    },
+    {
+      "label": "qwen-plus",
+      "provider": "dashscope",
+      "model": "qwen-plus"
+    },
+    {
+      "label": "doubao-seed-mini",
+      "provider": "volcengine",
+      "model": "doubao-seed-2-0-mini-260428"
+    }
+  ]
+}

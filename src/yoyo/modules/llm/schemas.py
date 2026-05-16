@@ -35,6 +35,8 @@ class LLMError(BaseModel):
     error_type: str
     message: str
     retryable: bool = False
+    status_code: int | None = None
+    provider_error_code: str | None = None
 
 
 class LLMResponse(BaseModel):

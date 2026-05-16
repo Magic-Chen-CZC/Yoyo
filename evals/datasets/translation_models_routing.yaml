@@ -1,0 +1,556 @@
+dataset_name: translation_routing_sea_v1
+dataset_version: '2026-05-07'
+languages:
+- th
+- vi
+- id
+- ms
+- fil
+- my
+- km
+- lo
+question_types:
+- trip_assistant
+- live_info
+- attraction_explain
+- translation
+- manual_route_edit_redirect
+- out_of_scope
+cases:
+- id: routing-001
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: th_to_zh
+  query: เราควรไปที่ไหนต่อ
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: &id001 []
+  must_preserve_temporal_signal: &id002
+  - 下一
+  - 接下来
+- id: routing-002
+  question_type: live_info
+  category: live_info
+  direction: th_to_zh
+  query: Forbidden City วันนี้เปิดไหม
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: &id003
+  - 故宫
+  must_preserve_temporal_signal: &id004
+  - 今天
+- id: routing-003
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: th_to_zh
+  query: ช่วยบอกหน่อยว่าทำไม Temple of Heaven ถึงสำคัญ
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: &id005
+  - 天坛
+  must_preserve_temporal_signal: &id006 []
+- id: routing-004
+  question_type: translation
+  category: translation
+  direction: th_to_zh
+  query: 'ช่วยแปล: 请帮我拍张照片'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: &id007 []
+  must_preserve_temporal_signal: &id008 []
+- id: routing-005
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: th_to_zh
+  query: ช่วยเปลี่ยนจุดแวะถัดไปให้เป็นที่ที่ง่ายกว่านี้ได้ไหม
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: &id009 []
+  must_preserve_temporal_signal: &id010
+  - 下一
+- id: routing-006
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: th_to_zh
+  query: บ่ายนี้ที่ Beijing ฝนจะตกไหม
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: &id011
+  - 北京
+  must_preserve_temporal_signal: &id012
+  - 今天
+  - 下午
+- id: routing-007
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: vi_to_zh
+  query: Chúng ta nên đi đâu tiếp theo?
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-008
+  question_type: live_info
+  category: live_info
+  direction: vi_to_zh
+  query: Hôm nay Forbidden City có mở cửa không?
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-009
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: vi_to_zh
+  query: Hãy nói cho tôi biết vì sao Temple of Heaven quan trọng.
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-010
+  question_type: translation
+  category: translation
+  direction: vi_to_zh
+  query: 'Hãy dịch: 请帮我拍张照片'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-011
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: vi_to_zh
+  query: Bạn có thể đổi điểm dừng tiếp theo thành chỗ dễ hơn không?
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-012
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: vi_to_zh
+  query: Chiều nay ở Beijing có mưa không?
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012
+- id: routing-013
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: id_to_zh
+  query: Kita harus pergi ke mana selanjutnya?
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-014
+  question_type: live_info
+  category: live_info
+  direction: id_to_zh
+  query: Apakah Forbidden City buka hari ini?
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-015
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: id_to_zh
+  query: Tolong beri tahu saya mengapa Temple of Heaven penting.
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-016
+  question_type: translation
+  category: translation
+  direction: id_to_zh
+  query: 'Tolong terjemahkan: 请帮我拍张照片'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-017
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: id_to_zh
+  query: Bisakah kamu mengganti pemberhentian berikutnya dengan yang lebih mudah?
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-018
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: id_to_zh
+  query: Apakah sore ini akan hujan di Beijing?
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012
+- id: routing-019
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: ms_to_zh
+  query: Kita patut pergi ke mana seterusnya?
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-020
+  question_type: live_info
+  category: live_info
+  direction: ms_to_zh
+  query: Adakah Forbidden City dibuka hari ini?
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-021
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: ms_to_zh
+  query: Tolong beritahu saya mengapa Temple of Heaven penting.
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-022
+  question_type: translation
+  category: translation
+  direction: ms_to_zh
+  query: 'Tolong terjemahkan: 请帮我拍张照片'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-023
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: ms_to_zh
+  query: Bolehkah anda tukar hentian seterusnya kepada yang lebih mudah?
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-024
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: ms_to_zh
+  query: Adakah petang ini akan hujan di Beijing?
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012
+- id: routing-025
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: fil_to_zh
+  query: Saan tayo pupunta pagkatapos nito?
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-026
+  question_type: live_info
+  category: live_info
+  direction: fil_to_zh
+  query: Bukas ba ang Forbidden City ngayon?
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-027
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: fil_to_zh
+  query: Sabihin mo sa akin kung bakit mahalaga ang Temple of Heaven.
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-028
+  question_type: translation
+  category: translation
+  direction: fil_to_zh
+  query: 'Paki salin: 请帮我拍张照片'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-029
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: fil_to_zh
+  query: Pwede mo bang palitan ang susunod na hintuan ng mas madaling puntahan?
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-030
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: fil_to_zh
+  query: Uulan ba sa Beijing ngayong hapon?
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012
+- id: routing-031
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: my_to_zh
+  query: နောက်တစ်နေရာ ဘယ်ကို သွားရမလဲ။
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-032
+  question_type: live_info
+  category: live_info
+  direction: my_to_zh
+  query: Forbidden City ဒီနေ့ ဖွင့်လား။
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-033
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: my_to_zh
+  query: ဘာကြောင့် Temple of Heaven အရေးကြီးလဲ ပြောပြပါ။
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-034
+  question_type: translation
+  category: translation
+  direction: my_to_zh
+  query: 'ကျေးဇူးပြု၍ ဘာသာပြန်ပါ: 请帮我拍张照片'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-035
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: my_to_zh
+  query: နောက်တစ်နေရာကို ပိုလွယ်တဲ့နေရာနဲ့ ပြောင်းပေးလို့ရမလား။
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-036
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: my_to_zh
+  query: ဒီနေ့မွန်းလွဲပိုင်း Beijing မှာ မိုးရွာမလား။
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012
+- id: routing-037
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: km_to_zh
+  query: បន្ទាប់ពីនេះយើងគួរទៅណា?
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-038
+  question_type: live_info
+  category: live_info
+  direction: km_to_zh
+  query: ថ្ងៃនេះ Forbidden City បើកទេ?
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-039
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: km_to_zh
+  query: សូមប្រាប់ខ្ញុំថា ហេតុអ្វីបានជា Temple of Heaven សំខាន់។
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-040
+  question_type: translation
+  category: translation
+  direction: km_to_zh
+  query: សូមបកប្រែ៖ 请帮我拍张照片
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-041
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: km_to_zh
+  query: តើអ្នកអាចប្តូរកន្លែងឈប់បន្ទាប់ទៅកន្លែងដែលងាយស្រួលជាងនេះបានទេ?
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-042
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: km_to_zh
+  query: រសៀលនេះនៅ Beijing នឹងភ្លៀងទេ?
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012
+- id: routing-043
+  question_type: trip_assistant
+  category: trip_assistant
+  direction: lo_to_zh
+  query: ພວກເຮົາຄວນໄປໃສຕໍ່?
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_intent: trip_assistant
+  must_preserve_entities: *id001
+  must_preserve_temporal_signal: *id002
+- id: routing-044
+  question_type: live_info
+  category: live_info
+  direction: lo_to_zh
+  query: ມື້ນີ້ Forbidden City ເປີດບໍ?
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_intent: live_info
+  must_preserve_entities: *id003
+  must_preserve_temporal_signal: *id004
+- id: routing-045
+  question_type: attraction_explain
+  category: attraction_explain
+  direction: lo_to_zh
+  query: ຊ່ວຍບອກຂ້ອຍແນ່ວ່າເປັນຫຍັງ Temple of Heaven ຈຶ່ງສຳຄັນ
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_intent: attraction_explain
+  must_preserve_entities: *id005
+  must_preserve_temporal_signal: *id006
+- id: routing-046
+  question_type: translation
+  category: translation
+  direction: lo_to_zh
+  query: 'ກະລຸນາແປ: 请帮我拍张照片'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_intent: translation
+  must_preserve_entities: *id007
+  must_preserve_temporal_signal: *id008
+- id: routing-047
+  question_type: manual_route_edit_redirect
+  category: manual_route_edit_redirect
+  direction: lo_to_zh
+  query: ຊ່ວຍປ່ຽນຈຸດແວະຖັດໄປໃຫ້ງ່າຍກວ່ານີ້ໄດ້ບໍ?
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_intent: manual_route_edit_redirect
+  must_preserve_entities: *id009
+  must_preserve_temporal_signal: *id010
+- id: routing-048
+  question_type: out_of_scope
+  category: out_of_scope
+  direction: lo_to_zh
+  query: ບ່າຍນີ້ຢູ່ Beijing ຝົນຈະຕົກບໍ?
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_intent: out_of_scope
+  must_preserve_entities: *id011
+  must_preserve_temporal_signal: *id012

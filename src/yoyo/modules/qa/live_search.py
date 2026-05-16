@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-# live_search.py 负责真正对接外部实时搜索服务。
+# live_search.py 负责真正对接景点官网/官方公告类搜索服务。
 # 当前接的是 Tavily，但通过 provider 这一层做了隔离，后续更换供应商会更容易。
 from typing import Protocol
 

@@ -7,7 +7,13 @@ from yoyo.db.models.guide import GuideGenerationJob
 from yoyo.db.models.itinerary import ItineraryVersion
 from yoyo.db.models.session import GuideSession
 from yoyo.modules.guide.playback import next_playback_state
-from yoyo.modules.guide.schemas import GuideAssetRead, GuideAudioSegmentRead, GuidePlaybackUpdateRead, GuideSegmentCycleRead
+from yoyo.modules.guide.schemas import (
+    GuideAssetJobMetaRead,
+    GuideAssetRead,
+    GuideAudioSegmentRead,
+    GuidePlaybackUpdateRead,
+    GuideSegmentCycleRead,
+)
 from yoyo.modules.guide.tts import synthesize_text_segment
 from yoyo.modules.knowledge.attraction_retriever import get_attraction_context
 from yoyo.modules.knowledge.profile_retriever import get_profile_context
@@ -18,6 +24,12 @@ from yoyo.modules.session.runtime import (
     get_stops,
 )
 from yoyo.modules.shared.enums import AssetStatus, GuideGenerationJobStatus, GuidePlaybackState, GuideSessionStatus
+
+
+class GuideContentUnavailableError(ValueError):
+    def __init__(self, code: str):
+        super().__init__(code)
+        self.code = code
 
 
 async def get_active_guide_asset(
@@ -41,13 +53,25 @@ async def get_active_guide_asset(
     job = result.scalar_one_or_none()
 
     if job is None:
+        latest_job_result = await session.execute(
+            select(GuideGenerationJob)
+            .where(GuideGenerationJob.itinerary_version_id == guide_session.itinerary_version_id)
+            .order_by(
+                func.coalesce(GuideGenerationJob.finished_at, GuideGenerationJob.created_at).desc(),
+                GuideGenerationJob.created_at.desc(),
+            )
+            .limit(1)
+        )
+        latest_job = latest_job_result.scalar_one_or_none()
+        asset_status = _resolve_unready_asset_status(latest_job)
         return GuideAssetRead(
             guide_session_id=guide_session.id,
             playback_state=guide_session.playback_state.value,
-            asset_status=AssetStatus.MISSING.value,
+            asset_status=asset_status.value,
             summary=None,
             stops=[],
             result=None,
+            job=_serialize_asset_job_meta(latest_job),
         )
 
     result_json = job.result_json or {}
@@ -58,6 +82,7 @@ async def get_active_guide_asset(
         summary=result_json.get("summary"),
         stops=result_json.get("stops", []),
         result=result_json,
+        job=_serialize_asset_job_meta(job),
     )
 
 
@@ -113,9 +138,14 @@ async def cycle_guide_segments(
     guide_session_id: str,
     action: str,
 ) -> GuideSegmentCycleRead | None:
+    if action != "cycle_content":
+        raise GuideContentUnavailableError("unsupported_action")
+
     guide_session = await session.get(GuideSession, guide_session_id)
-    if guide_session is None or guide_session.status == GuideSessionStatus.FINISHED:
-        return None
+    if guide_session is None:
+        raise GuideContentUnavailableError("guide_session_not_found")
+    if guide_session.status == GuideSessionStatus.FINISHED:
+        raise GuideContentUnavailableError("guide_session_finished")
 
     context = get_runtime_context(guide_session.context_json)
     version = await session.get(ItineraryVersion, guide_session.itinerary_version_id)
@@ -126,7 +156,11 @@ async def cycle_guide_segments(
         return None
 
     active_asset = await get_active_guide_asset(session, guide_session_id)
-    if active_asset is None or active_asset.result is None:
+    if active_asset is None:
+        raise GuideContentUnavailableError("guide_session_not_found")
+    if active_asset.result is None:
+        if active_asset.asset_status != AssetStatus.READY.value:
+            raise GuideContentUnavailableError("guide_asset_not_ready")
         return None
 
     stop_payload = _find_stop_payload(active_asset.result, current_stop.get("id"), current_stop.get("name"))
@@ -152,9 +186,6 @@ async def cycle_guide_segments(
     cursor = int(cursor_map.get(stop_id) or 0)
     played_indices = [int(item) for item in list(played_map.get(stop_id) or [])]
     batch_size = 2
-
-    if action != "cycle_content":
-        return None
 
     start = min(cursor, len(segments))
     selected_indices = list(range(start, min(start + batch_size, len(segments))))
@@ -204,6 +235,34 @@ async def cycle_guide_segments(
         more_content_available=len(set(played_indices)) < segment_count,
         guide_style=str(guide_style) if guide_style else None,
     )
+
+
+
+def _serialize_asset_job_meta(job: GuideGenerationJob | None) -> GuideAssetJobMetaRead | None:
+    if job is None:
+        return None
+    return GuideAssetJobMetaRead(
+        id=job.id,
+        status=job.status.value,
+        asset_status=job.asset_status.value,
+        error_code=job.error_code,
+        error_message=job.error_message,
+    )
+
+
+
+def _resolve_unready_asset_status(job: GuideGenerationJob | None) -> AssetStatus:
+    if job is None:
+        return AssetStatus.MISSING
+    if job.asset_status == AssetStatus.FAILED or job.status == GuideGenerationJobStatus.FAILED:
+        return AssetStatus.FAILED
+    if job.asset_status == AssetStatus.PENDING or job.status in {
+        GuideGenerationJobStatus.PENDING,
+        GuideGenerationJobStatus.QUEUED,
+        GuideGenerationJobStatus.RUNNING,
+    }:
+        return AssetStatus.PENDING
+    return AssetStatus.MISSING
 
 
 

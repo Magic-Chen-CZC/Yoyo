@@ -1,0 +1,2326 @@
+{
+  "dataset_name": "navigation_slot_100_cases",
+  "dataset_version": "2026-05-15",
+  "notes": "Navigation intent slot benchmark covering next-stop, destination-only, explicit route, multi-leg, Beijing place disambiguation, and boundary negatives.",
+  "cases": [
+    {
+      "case_id": "NAV100-NS-001",
+      "category": "next_stop",
+      "query": "下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-002",
+      "category": "next_stop",
+      "query": "下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.905100000000004,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-003",
+      "category": "next_stop",
+      "query": "接下来怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9052,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-004",
+      "category": "next_stop",
+      "query": "接下来怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.905300000000004,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-005",
+      "category": "next_stop",
+      "query": "去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9054,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-006",
+      "category": "next_stop",
+      "query": "下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9055,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-007",
+      "category": "next_stop",
+      "query": "下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9056,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-008",
+      "category": "next_stop",
+      "query": "接下来怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing",
+        "current_position": {
+          "latitude": 39.9057,
+          "longitude": 116.3976
+        }
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-009",
+      "category": "next_stop",
+      "query": "接下来怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-010",
+      "category": "next_stop",
+      "query": "去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-011",
+      "category": "next_stop",
+      "query": "下一站怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-012",
+      "category": "next_stop",
+      "query": "下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-013",
+      "category": "next_stop",
+      "query": "接下来怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-014",
+      "category": "next_stop",
+      "query": "接下来怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-NS-015",
+      "category": "next_stop",
+      "query": "去下一站怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "next_stop",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "下一站问法，优先 GPS，否则 current_stop。"
+    },
+    {
+      "case_id": "NAV100-DGPS-001",
+      "category": "destination_only_gps",
+      "query": "去故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=forbidden_city。"
+    },
+    {
+      "case_id": "NAV100-DGPS-002",
+      "category": "destination_only_gps",
+      "query": "到景山怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=jingshan_park。"
+    },
+    {
+      "case_id": "NAV100-DGPS-003",
+      "category": "destination_only_gps",
+      "query": "导航到天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=temple_of_heaven。"
+    },
+    {
+      "case_id": "NAV100-DGPS-004",
+      "category": "destination_only_gps",
+      "query": "我想去颐和园，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Summer Palace"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "summer_palace"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=summer_palace。"
+    },
+    {
+      "case_id": "NAV100-DGPS-005",
+      "category": "destination_only_gps",
+      "query": "带我导航到圆明园入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=yuanmingyuan_park。"
+    },
+    {
+      "case_id": "NAV100-DGPS-006",
+      "category": "destination_only_gps",
+      "query": "去北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=beihai_park。"
+    },
+    {
+      "case_id": "NAV100-DGPS-007",
+      "category": "destination_only_gps",
+      "query": "到什刹海怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=shichahai。"
+    },
+    {
+      "case_id": "NAV100-DGPS-008",
+      "category": "destination_only_gps",
+      "query": "导航到南锣鼓巷怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=nanluoguxiang。"
+    },
+    {
+      "case_id": "NAV100-DGPS-009",
+      "category": "destination_only_gps",
+      "query": "我想去雍和宫，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=yonghe_temple。"
+    },
+    {
+      "case_id": "NAV100-DGPS-010",
+      "category": "destination_only_gps",
+      "query": "带我导航到恭王府入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Prince Gong's Mansion"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "prince_gong_mansion"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=prince_gong_mansion。"
+    },
+    {
+      "case_id": "NAV100-DGPS-011",
+      "category": "destination_only_gps",
+      "query": "去正阳门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=zhengyangmen。"
+    },
+    {
+      "case_id": "NAV100-DGPS-012",
+      "category": "destination_only_gps",
+      "query": "到天安门怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=tiananmen_square。"
+    },
+    {
+      "case_id": "NAV100-DGPS-013",
+      "category": "destination_only_gps",
+      "query": "导航到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=forbidden_city。"
+    },
+    {
+      "case_id": "NAV100-DGPS-014",
+      "category": "destination_only_gps",
+      "query": "我想去景山，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=jingshan_park。"
+    },
+    {
+      "case_id": "NAV100-DGPS-015",
+      "category": "destination_only_gps",
+      "query": "带我导航到天坛入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "目的地型导航，GPS 起点，目的地=temple_of_heaven。"
+    },
+    {
+      "case_id": "NAV100-DCTX-001",
+      "category": "destination_only_current_stop",
+      "query": "导航到天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=temple_of_heaven。"
+    },
+    {
+      "case_id": "NAV100-DCTX-002",
+      "category": "destination_only_current_stop",
+      "query": "我想去颐和园，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Summer Palace"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "summer_palace"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=summer_palace。"
+    },
+    {
+      "case_id": "NAV100-DCTX-003",
+      "category": "destination_only_current_stop",
+      "query": "带我导航到圆明园入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=yuanmingyuan_park。"
+    },
+    {
+      "case_id": "NAV100-DCTX-004",
+      "category": "destination_only_current_stop",
+      "query": "去北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=beihai_park。"
+    },
+    {
+      "case_id": "NAV100-DCTX-005",
+      "category": "destination_only_current_stop",
+      "query": "到什刹海怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=shichahai。"
+    },
+    {
+      "case_id": "NAV100-DCTX-006",
+      "category": "destination_only_current_stop",
+      "query": "导航到南锣鼓巷怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=nanluoguxiang。"
+    },
+    {
+      "case_id": "NAV100-DCTX-007",
+      "category": "destination_only_current_stop",
+      "query": "我想去雍和宫，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=yonghe_temple。"
+    },
+    {
+      "case_id": "NAV100-DCTX-008",
+      "category": "destination_only_current_stop",
+      "query": "带我导航到恭王府入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Prince Gong's Mansion"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "prince_gong_mansion"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=prince_gong_mansion。"
+    },
+    {
+      "case_id": "NAV100-DCTX-009",
+      "category": "destination_only_current_stop",
+      "query": "去正阳门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=zhengyangmen。"
+    },
+    {
+      "case_id": "NAV100-DCTX-010",
+      "category": "destination_only_current_stop",
+      "query": "到天安门怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=tiananmen_square。"
+    },
+    {
+      "case_id": "NAV100-DCTX-011",
+      "category": "destination_only_current_stop",
+      "query": "导航到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=forbidden_city。"
+    },
+    {
+      "case_id": "NAV100-DCTX-012",
+      "category": "destination_only_current_stop",
+      "query": "我想去景山，怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=jingshan_park。"
+    },
+    {
+      "case_id": "NAV100-DCTX-013",
+      "category": "destination_only_current_stop",
+      "query": "带我导航到天坛入口怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=temple_of_heaven。"
+    },
+    {
+      "case_id": "NAV100-DCTX-014",
+      "category": "destination_only_current_stop",
+      "query": "去颐和园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Summer Palace"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "summer_palace"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=summer_palace。"
+    },
+    {
+      "case_id": "NAV100-DCTX-015",
+      "category": "destination_only_current_stop",
+      "query": "到圆明园怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Forbidden City",
+        "next_stop_name": "Jingshan Park",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "目的地型导航，无 GPS，用 current_stop 起点，目的地=yuanmingyuan_park。"
+    },
+    {
+      "case_id": "NAV100-EXP-001",
+      "category": "explicit_route",
+      "query": "从天安门到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-002",
+      "category": "explicit_route",
+      "query": "从故宫怎么走到景山？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-003",
+      "category": "explicit_route",
+      "query": "请给我从天坛到正阳门的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-004",
+      "category": "explicit_route",
+      "query": "从北海公园前往什刹海怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-005",
+      "category": "explicit_route",
+      "query": "从南锣鼓巷到雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Nanluoguxiang",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "nanluoguxiang",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-006",
+      "category": "explicit_route",
+      "query": "从颐和园怎么走到圆明园？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-007",
+      "category": "explicit_route",
+      "query": "请给我从正阳门到天安门的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Zhengyangmen",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "zhengyangmen",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-008",
+      "category": "explicit_route",
+      "query": "从恭王府前往北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-009",
+      "category": "explicit_route",
+      "query": "从什刹海到南锣鼓巷怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Shichahai",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "shichahai",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-010",
+      "category": "explicit_route",
+      "query": "从雍和宫怎么走到天坛？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Yonghe Temple",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "yonghe_temple",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-011",
+      "category": "explicit_route",
+      "query": "请给我从天安门到故宫的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-012",
+      "category": "explicit_route",
+      "query": "从故宫前往景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "jingshan_park"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-013",
+      "category": "explicit_route",
+      "query": "从天坛到正阳门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-014",
+      "category": "explicit_route",
+      "query": "从北海公园怎么走到什刹海？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-015",
+      "category": "explicit_route",
+      "query": "请给我从南锣鼓巷到雍和宫的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Nanluoguxiang",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "nanluoguxiang",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-016",
+      "category": "explicit_route",
+      "query": "从颐和园前往圆明园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-017",
+      "category": "explicit_route",
+      "query": "从正阳门到天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Zhengyangmen",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "zhengyangmen",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-018",
+      "category": "explicit_route",
+      "query": "从恭王府怎么走到北海公园？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-019",
+      "category": "explicit_route",
+      "query": "请给我从什刹海到南锣鼓巷的文字路线。",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Shichahai",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "shichahai",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-EXP-020",
+      "category": "explicit_route",
+      "query": "从雍和宫前往天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Yonghe Temple",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "yonghe_temple",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "显式起终点，不应使用 GPS/current_stop 覆盖。"
+    },
+    {
+      "case_id": "NAV100-MULTI-001",
+      "category": "multi_leg",
+      "query": "从天安门到故宫再到景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-002",
+      "category": "multi_leg",
+      "query": "从天坛到正阳门再去天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-003",
+      "category": "multi_leg",
+      "query": "从北海公园到什刹海再到南锣鼓巷再到雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-004",
+      "category": "multi_leg",
+      "query": "从颐和园到圆明园再去北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-005",
+      "category": "multi_leg",
+      "query": "从恭王府到北海公园再到景山再到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-006",
+      "category": "multi_leg",
+      "query": "从天安门到故宫再去景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-007",
+      "category": "multi_leg",
+      "query": "从天坛到正阳门再到天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-008",
+      "category": "multi_leg",
+      "query": "从北海公园到什刹海再去南锣鼓巷再去雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-009",
+      "category": "multi_leg",
+      "query": "从颐和园到圆明园再到北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-010",
+      "category": "multi_leg",
+      "query": "从恭王府到北海公园再去景山再去故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-011",
+      "category": "multi_leg",
+      "query": "从天安门到故宫再到景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-012",
+      "category": "multi_leg",
+      "query": "从天坛到正阳门再去天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-013",
+      "category": "multi_leg",
+      "query": "从北海公园到什刹海再到南锣鼓巷再到雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-014",
+      "category": "multi_leg",
+      "query": "从颐和园到圆明园再去北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-015",
+      "category": "multi_leg",
+      "query": "从恭王府到北海公园再到景山再到故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-016",
+      "category": "multi_leg",
+      "query": "从天安门到故宫再去景山怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Forbidden City",
+        "Jingshan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "forbidden_city",
+        "jingshan_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-017",
+      "category": "multi_leg",
+      "query": "从天坛到正阳门再到天安门怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Temple of Heaven",
+      "expected_destinations": [
+        "Zhengyangmen",
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "temple_of_heaven",
+      "expected_destination_place_ids": [
+        "zhengyangmen",
+        "tiananmen_square"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-018",
+      "category": "multi_leg",
+      "query": "从北海公园到什刹海再去南锣鼓巷再去雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Beihai Park",
+      "expected_destinations": [
+        "Shichahai",
+        "Nanluoguxiang",
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "beihai_park",
+      "expected_destination_place_ids": [
+        "shichahai",
+        "nanluoguxiang",
+        "yonghe_temple"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-019",
+      "category": "multi_leg",
+      "query": "从颐和园到圆明园再到北海公园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park",
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park",
+        "beihai_park"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-MULTI-020",
+      "category": "multi_leg",
+      "query": "从恭王府到北海公园再去景山再去故宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "multi_leg",
+      "expected_origin": "Prince Gong's Mansion",
+      "expected_destinations": [
+        "Beihai Park",
+        "Jingshan Park",
+        "Forbidden City"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "prince_gong_mansion",
+      "expected_destination_place_ids": [
+        "beihai_park",
+        "jingshan_park",
+        "forbidden_city"
+      ],
+      "notes": "多段路线按用户顺序拆成连续 legs。"
+    },
+    {
+      "case_id": "NAV100-BJ-001",
+      "category": "beijing_disambiguation",
+      "query": "到天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-002",
+      "category": "beijing_disambiguation",
+      "query": "从故宫到天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Forbidden City",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "forbidden_city",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-003",
+      "category": "beijing_disambiguation",
+      "query": "导航到祈年殿怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-004",
+      "category": "beijing_disambiguation",
+      "query": "从前门到天坛怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Zhengyangmen",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "zhengyangmen",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-005",
+      "category": "beijing_disambiguation",
+      "query": "去圆明园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-006",
+      "category": "beijing_disambiguation",
+      "query": "从颐和园到圆明园怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Summer Palace",
+      "expected_destinations": [
+        "Yuanmingyuan Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "summer_palace",
+      "expected_destination_place_ids": [
+        "yuanmingyuan_park"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-007",
+      "category": "beijing_disambiguation",
+      "query": "到北海怎么去？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Beihai Park"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "beihai_park"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-008",
+      "category": "beijing_disambiguation",
+      "query": "从后海到南锣鼓巷怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Shichahai",
+      "expected_destinations": [
+        "Nanluoguxiang"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "shichahai",
+      "expected_destination_place_ids": [
+        "nanluoguxiang"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-009",
+      "category": "beijing_disambiguation",
+      "query": "到雍和宫怎么走？",
+      "language": "zh",
+      "session_context": {
+        "current_position": {
+          "latitude": 39.905,
+          "longitude": 116.3976
+        },
+        "city_code": "beijing",
+        "current_stop_name": "Tiananmen Square"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "destination_only",
+      "expected_origin": "当前位置",
+      "expected_destinations": [
+        "Yonghe Temple"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "gps_current_position",
+      "expected_destination_place_ids": [
+        "yonghe_temple"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BJ-010",
+      "category": "beijing_disambiguation",
+      "query": "从正阳门到天安门广场怎么走？",
+      "language": "zh",
+      "session_context": {
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Zhengyangmen",
+      "expected_destinations": [
+        "Tiananmen Square"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "zhengyangmen",
+      "expected_destination_place_ids": [
+        "tiananmen_square"
+      ],
+      "notes": "北京景点同名/别名消歧，尤其天坛不能漂到外地。"
+    },
+    {
+      "case_id": "NAV100-BND-001",
+      "category": "boundary_negative",
+      "query": "把下一站删掉。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "manual_route_edit_redirect",
+      "notes": "删点是改路线，不是导航。"
+    },
+    {
+      "case_id": "NAV100-BND-002",
+      "category": "boundary_negative",
+      "query": "把后面路线改轻松一点。",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "manual_route_edit_redirect",
+      "notes": "调整路线是人工改路线。"
+    },
+    {
+      "case_id": "NAV100-BND-003",
+      "category": "boundary_negative",
+      "query": "接下来怎么安排？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "trip_assistant",
+      "notes": "问安排，不是点到点导航。"
+    },
+    {
+      "case_id": "NAV100-BND-004",
+      "category": "boundary_negative",
+      "query": "故宫之后去哪会比较顺？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "trip_assistant",
+      "notes": "问下一站策略，不是导航步骤。"
+    },
+    {
+      "case_id": "NAV100-BND-005",
+      "category": "boundary_negative",
+      "query": "从天安门到天坛坐几号线换乘？",
+      "language": "zh",
+      "session_context": {
+        "current_stop_name": "Tiananmen Square",
+        "next_stop_name": "Forbidden City",
+        "city_code": "beijing"
+      },
+      "expected_intent": "navigation_text",
+      "expected_request_kind": "explicit_route",
+      "expected_origin": "Tiananmen Square",
+      "expected_destinations": [
+        "Temple of Heaven"
+      ],
+      "expected_source": "rule",
+      "expected_origin_place_id": "tiananmen_square",
+      "expected_destination_place_ids": [
+        "temple_of_heaven"
+      ],
+      "notes": "公交/地铁换乘已支持，应进入公共交通文字导航。",
+      "expected_mode": "transit"
+    }
+  ]
+}

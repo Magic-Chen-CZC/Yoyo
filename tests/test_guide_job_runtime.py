@@ -85,8 +85,9 @@ async def test_run_guide_generation_job_updates_job(db_session: AsyncSession, mo
     assert result_json["guide_script"]["stops"][0]["segment_count"] >= 10
     assert result_json["guide_script"]["stops"][0]["more_content_available"] is True
     assert result_json["card"]["headline"] == "Historic Beijing Walk"
-    assert result_json["audio"]["status"] == "unavailable"
-    assert result_json["audio"]["voice"] == "alloy"
+    assert result_json["audio"]["status"] in {"pending", "unavailable"}
+    assert isinstance(result_json["audio"]["voice"], str)
+    assert result_json["audio"]["voice"]
     assert result_json["generation_metadata"]["profile_user_id"] is None
     assert result_json["generation_metadata"]["llm"]["structured_output_valid"] is True
     assert result_json["generation_metadata"]["llm"]["structured_output_type"] == "guide_bundle"

@@ -28,18 +28,17 @@ Build the backend for the Yoyo Beijing-tour intelligent guide product.
 When starting a new session, read in this order:
 1. `CLAUDE.md`
 2. `README.md`
-3. `docs/architecture.md`
-4. `docs/contracts.md`
-5. `docs/collaboration.md`
-6. `docs/todo.md`
-7. `docs/b-stack-implementation-overview.md`
-8. `docs/model-evaluation.md`
-9. `docs/round1-model-selection-summary.md`
-10. `docs/gemini-round2-summary.md`
+3. `docs/todo-phase-2.md`
+4. `docs/phase-2-summary.md`
+5. `docs/dev-retrospective.md`
 
-The repository is now on an integrated A+B path rather than the earlier split-phase plan.
+README must remain the main document index for current architectural and implementation work. Whenever architecture, framework, routing strategy, evaluation direction, testing strategy, or phase-entry structure changes, update the relevant docs and add or refresh the README entry in the same pass so future sessions can resume from the current phase documents.
+Also keep `docs/current-session-summary.md` as a historical session log when needed, but use `docs/phase-2-summary.md` as the active continuation summary for the current phase.
+After each meaningful development or debugging pass, also append a short issue record to `docs/dev-retrospective.md` using the format: problem / cause / improvement.
+
+The repository is now past the earlier split-phase build stage and is in the next-phase documentation, testing, and QA-hardening cycle.
 A track is already complete on the integration branch.
-When continuing, inspect the current code and continue the next unchecked item in `docs/todo.md`, focusing on B-side follow-up work such as real data integration, evaluation hardening, prompt optimization, and final test coverage.
+When continuing, inspect the current code and continue the next unchecked item in `docs/todo-phase-2.md`, using `docs/phase-2-summary.md` as the current continuation summary and `docs/feature-test-guide.md` as the feature-level testing overview.
 
 ## Model strategy
 - Initial default model target for product experiments: Claude Sonnet 4.6
@@ -50,7 +49,9 @@ When continuing, inspect the current code and continue the next unchecked item i
 ## Current continuation point
 - Shared overlap contracts are already stabilized in `docs/contracts.md`
 - A track has been merged and completed on the integration branch
-- Continue from `docs/todo.md`, focusing on the remaining unchecked B-side follow-up items
+- Continue from `docs/todo-phase-2.md`, focusing on documentation entrypoint reset, feature-level testing documentation, and QA-hardening preparation
+- Use `docs/phase-2-summary.md` as the active continuation summary
+- Use `docs/feature-test-guide.md` as the feature-by-feature testing overview
 - Round 1 benchmark artifacts are available in `evals/results_round1_real/`
 - Gemini round 2 artifacts are available in `evals/results_gemini_round2_200/`
 - Excel exports exist at project root, including `benchmark_results_round1_real.xlsx` and `benchmark_results_gemini_round2_200.xlsx`

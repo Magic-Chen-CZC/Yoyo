@@ -16,6 +16,21 @@ MODEL_METADATA: dict[tuple[str, str], dict[str, str | float]] = {
         "estimated_input_cost_per_1k": 0.000325,
         "estimated_output_cost_per_1k": 0.00195,
     },
+    ("dashscope", "qwen-flash"): {
+        "parameter_size": "not_public",
+        "estimated_input_cost_per_1k": 0.00015,
+        "estimated_output_cost_per_1k": 0.0015,
+    },
+    ("dashscope", "qwen3.5-flash-2026-02-23"): {
+        "parameter_size": "not_public",
+        "estimated_input_cost_per_1k": 0.0002,
+        "estimated_output_cost_per_1k": 0.002,
+    },
+    ("dashscope", "qwen-turbo"): {
+        "parameter_size": "not_public",
+        "estimated_input_cost_per_1k": 0.0003,
+        "estimated_output_cost_per_1k": 0.0006,
+    },
     ("openrouter", "google/gemini-3.1-pro-preview"): {
         "parameter_size": "not_public",
         "estimated_input_cost_per_1k": 0.002,

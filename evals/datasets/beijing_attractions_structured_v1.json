@@ -1,0 +1,1993 @@
+[
+  {
+    "id": "beijing-s001",
+    "city_code": "beijing",
+    "name": "永定门",
+    "aliases": [],
+    "category": "landmark",
+    "latitude": 39.871054,
+    "longitude": 116.393113,
+    "recommended_duration_minutes": 60,
+    "short_intro": "永定门是明清北京外城城墙的正门",
+    "history": "永定门处于北京中轴线上，1950年开始为便利交通逐步拆除，于2004年重建，是北京第一座复建的城门。其门洞上方所嵌匾额上的“永定门”三个字是复建时临摹明代“永定门”始建之初的原配石匾的石刻字，复建城墙所用的城砖，是当时拆除永定门时修建危险品仓库的砖石。",
+    "highlights": [
+      "建筑主体",
+      "历史轴线",
+      "外观细节"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面与轴线透视构图。"
+    ],
+    "guide_segments": [
+      "永定门位于北京，属于landmark类景点。永定门是明清北京外城城墙的正门",
+      "从历史脉络看，永定门处于北京中轴线上，1950年开始为便利交通逐步拆除，于2004年重建，是北京第一座复建的城门。其门洞上方所嵌匾额上的“永定门”三个字是复建时临摹明代“永定门”始建之初的原配石匾的石刻字，复建城墙所用的城砖，是当时拆除永定门时修建危险品仓库的砖石。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s002",
+    "city_code": "beijing",
+    "name": "正阳门",
+    "aliases": [
+      "前门",
+      "前门楼子"
+    ],
+    "category": "landmark",
+    "latitude": 39.899214,
+    "longitude": 116.391617,
+    "recommended_duration_minutes": 120,
+    "short_intro": "前门大街是北京著名的商业街之一，位于北京的中轴线上，北起正阳门箭楼，南至天桥路口，当年曾是皇帝出城去往天坛、山川坛的御路。",
+    "history": "另一处是她的历史，前门经过了1900年和义和团事件收到了严重破坏，她的重建由负责设计市政大厅和总统府的罗克格设计，复建后的前门褒贬参半，具体的历史细节还需要去附近的北京市规划展览馆探寻。",
+    "highlights": [
+      "建筑主体",
+      "历史轴线",
+      "外观细节"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：试运行期间采取全员实名制免收费预约参观。",
+      "开放时间：每周二至周日9:00-17:00（16:30停止入馆，17:00闭馆），周一闭馆（法定节假日除外）。",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面与轴线透视构图。"
+    ],
+    "guide_segments": [
+      "正阳门位于北京，属于landmark类景点。前门大街是北京著名的商业街之一，位于北京的中轴线上，北起正阳门箭楼，南至天桥路口，当年曾是皇帝出城去往天坛、山川坛的御路。",
+      "从历史脉络看，另一处是她的历史，前门经过了1900年和义和团事件收到了严重破坏，她的重建由负责设计市政大厅和总统府的罗克格设计，复建后的前门褒贬参半，具体的历史细节还需要去附近的北京市规划展览馆探寻。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s035",
+    "city_code": "beijing",
+    "name": "天安门",
+    "aliases": [
+      "天安门城楼"
+    ],
+    "category": "landmark",
+    "latitude": 39.907359,
+    "longitude": 116.391263,
+    "recommended_duration_minutes": 120,
+    "short_intro": "天安门城楼是中国古代最壮丽的城楼之一，以杰出的建筑艺术和特殊的政治地位为世人所瞩目。",
+    "history": "天安门城楼位于中华人民共和国首都北京的天安门广场北端，东城区、西城区两个区的分界点，面临长安街。1949年10月1日，毛泽东主席在这里庄严宣告：“中华人民共和国中央人民政府成立了!”。",
+    "highlights": [
+      "建筑主体",
+      "历史轴线",
+      "外观细节"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：成人票：15元；学生、老人票：5元；现役军人免费。",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面与轴线透视构图。"
+    ],
+    "guide_segments": [
+      "天安门位于北京，属于landmark类景点。天安门城楼是中国古代最壮丽的城楼之一，以杰出的建筑艺术和特殊的政治地位为世人所瞩目。",
+      "从历史脉络看，天安门城楼位于中华人民共和国首都北京的天安门广场北端，东城区、西城区两个区的分界点，面临长安街。1949年10月1日，毛泽东主席在这里庄严宣告：“中华人民共和国中央人民政府成立了!”。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s003",
+    "city_code": "beijing",
+    "name": "故宫博物院",
+    "aliases": [
+      "故宫",
+      "紫禁城",
+      "The Palace Museum"
+    ],
+    "category": "museum",
+    "latitude": 39.917431,
+    "longitude": 116.390782,
+    "recommended_duration_minutes": 180,
+    "short_intro": "故宫博物院是世界上规模最大、保存最完整的木结构宫殿建筑群。",
+    "history": "紫禁城南北长961m，东西宽753m，四面围有高10m的城墙，城外有宽52m的护城河,真可谓有金城汤池之固。紫禁城有四座城门，南面为午门，北面为神武门，东面为东华门，西面为西华门。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：每年4月1日至10月31日为旺季，大门票60元/人；",
+      "开放时间：旺季（4月1日至10月31日）：8:30-17:00，16:00停止入馆；珍宝馆、钟表馆16:10停止入馆；",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 180 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "故宫博物院位于北京，属于museum类景点。故宫博物院是世界上规模最大、保存最完整的木结构宫殿建筑群。",
+      "从历史脉络看，紫禁城南北长961m，东西宽753m，四面围有高10m的城墙，城外有宽52m的护城河,真可谓有金城汤池之固。紫禁城有四座城门，南面为午门，北面为神武门，东面为东华门，西面为西华门。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s004",
+    "city_code": "beijing",
+    "name": "景山公园",
+    "aliases": [
+      "景山"
+    ],
+    "category": "park",
+    "latitude": 39.924459,
+    "longitude": 116.390397,
+    "recommended_duration_minutes": 60,
+    "short_intro": "景山公园是一座环境优美的皇家园林，也是北京最大的牡丹观赏园...",
+    "history": "景山始建于辽金时期，距今已有近千年的历史。景山位于北京城的中心，公园占地23万平方米，景山相对高度45.7米，海拔高度94.2米。",
+    "highlights": [
+      "园林景观",
+      "步道视野",
+      "季节景观"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：2元；半价：1元。",
+      "开放时间：11月-03月：早6:30-晚20:00，晚19:30止票",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "景山公园位于北京，属于park类景点。景山公园是一座环境优美的皇家园林，也是北京最大的牡丹观赏园...",
+      "从历史脉络看，景山始建于辽金时期，距今已有近千年的历史。景山位于北京城的中心，公园占地23万平方米，景山相对高度45.7米，海拔高度94.2米。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s005",
+    "city_code": "beijing",
+    "name": "钟鼓楼",
+    "aliases": [
+      "北京钟鼓楼",
+      "鼓楼和钟楼"
+    ],
+    "category": "landmark",
+    "latitude": 39.939318,
+    "longitude": 116.389745,
+    "recommended_duration_minutes": 60,
+    "short_intro": "钟鼓楼是中国古代城市报时建筑群，位于北京市中心中轴线北端。",
+    "history": "钟鼓楼是坐落在北京南北中轴线北端的一组古代建筑，位于北京东城区地安门外大街北端，是全国重点文物保护单位。钟鼓楼作为元、明、清代都城的报时中心。",
+    "highlights": [
+      "建筑主体",
+      "历史轴线",
+      "外观细节"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：成人：10元",
+      "开放时间：开放时间:09:00-16:30",
+      "最佳游览时间：9月 10月",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面与轴线透视构图。"
+    ],
+    "guide_segments": [
+      "钟鼓楼位于北京，属于landmark类景点。钟鼓楼是中国古代城市报时建筑群，位于北京市中心中轴线北端。",
+      "从历史脉络看，钟鼓楼是坐落在北京南北中轴线北端的一组古代建筑，位于北京东城区地安门外大街北端，是全国重点文物保护单位。钟鼓楼作为元、明、清代都城的报时中心。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s006",
+    "city_code": "beijing",
+    "name": "天坛公园",
+    "aliases": [
+      "天坛"
+    ],
+    "category": "historic_site",
+    "latitude": 39.879907,
+    "longitude": 116.402872,
+    "recommended_duration_minutes": 120,
+    "short_intro": "天坛是中国现存最大的古代祭祀性建筑群，是明清两朝皇帝祭天的地方，是北京一日游的必选景点。",
+    "history": "天坛位于北京市崇文区在永定门内大街路东。原是明清两代皇帝祭祀皇天上帝的场所，始建于明永乐十八年 (1420年), 以后经过不断的改扩建，至清乾隆年间最终建成。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：旺季:(每年4月1日至当年10月31日)",
+      "开放时间：旺季：(每年4月1日至当年10月31日)",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "天坛公园位于北京，属于historic_site类景点。天坛是中国现存最大的古代祭祀性建筑群，是明清两朝皇帝祭天的地方，是北京一日游的必选景点。",
+      "从历史脉络看，天坛位于北京市崇文区在永定门内大街路东。原是明清两代皇帝祭祀皇天上帝的场所，始建于明永乐十八年 (1420年), 以后经过不断的改扩建，至清乾隆年间最终建成。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s007",
+    "city_code": "beijing",
+    "name": "龙潭公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": 39.87668,
+    "longitude": 116.43513,
+    "recommended_duration_minutes": 240,
+    "short_intro": "龙潭湖公园以水景为主，突出龙和潭的特点，湖边有龙山，龙字碑林、百龙亭，古典建筑龙吟阁、龙形石雕和龙桥等，每年春节期间的龙潭庙会是这里的一大亮点。",
+    "history": "龙潭公园是国家AAAA级旅游景区、北京市首批十大精品公园，位于北京城东南二环内，总面积42.3公顷，其中水域面积19.47公顷，绿地面积12.86公顷。",
+    "highlights": [
+      "湖景步道",
+      "园林景观",
+      "季节花木"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：2元",
+      "开放时间：旺季（4月至10月）每日开放时间为6:00-22:30，22:00停止入园;",
+      "最佳游览时间：5月-10月",
+      "推荐停留约 240 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "龙潭公园位于北京，属于park类景点。龙潭湖公园以水景为主，突出龙和潭的特点，湖边有龙山，龙字碑林、百龙亭，古典建筑龙吟阁、龙形石雕和龙桥等，每年春节期间的龙潭庙会是这里的一大亮点。",
+      "从历史脉络看，龙潭公园是国家AAAA级旅游景区、北京市首批十大精品公园，位于北京城东南二环内，总面积42.3公顷，其中水域面积19.47公顷，绿地面积12.86公顷。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s008",
+    "city_code": "beijing",
+    "name": "明城墙遗址",
+    "aliases": [
+      "北京明城墙遗址公园"
+    ],
+    "category": "historic_site",
+    "latitude": 39.900167,
+    "longitude": 116.427767,
+    "recommended_duration_minutes": 90,
+    "short_intro": "明城墙遗址是原北京内城城垣的组成部分，是仅存的一段，其城东南角楼是全国仅存的规模最大的城垣转角角楼。",
+    "history": "历史上明城墙全长40公里，始建于明永乐17年（公元1419年），距今已有580多年的历史。现存的崇文门至城东南角楼一线的城墙遗址全长1.5公里，是原北京内城城垣的组成部分，是仅存的一段，也是北京城的标志。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：全价票：10元人民币/人次；半价票：5元人民币/人次。",
+      "开放时间：8:30-17:00(16:30停止售票及验票、停止进入），每周一闭馆（法定节假日除外）。",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 90 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 90 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "明城墙遗址位于北京，属于historic_site类景点。明城墙遗址是原北京内城城垣的组成部分，是仅存的一段，其城东南角楼是全国仅存的规模最大的城垣转角角楼。",
+      "从历史脉络看，历史上明城墙全长40公里，始建于明永乐17年（公元1419年），距今已有580多年的历史。现存的崇文门至城东南角楼一线的城墙遗址全长1.5公里，是原北京内城城垣的组成部分，是仅存的一段，也是北京城的标志。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s009",
+    "city_code": "beijing",
+    "name": "皇城根遗址公园",
+    "aliases": [
+      "皇城根公园"
+    ],
+    "category": "historic_site",
+    "latitude": 39.927423,
+    "longitude": 116.400103,
+    "recommended_duration_minutes": 120,
+    "short_intro": "不论是春夏秋冬，这里总会有老年人锻炼身体、夏季这里的小广场上还有舞会、秋天这里别有秋韵、春天这里百花齐放。",
+    "history": "皇城根遗址公园，建在明清北京城的第二重城垣之“东皇城根”遗址上，西邻南北河沿大街，东依晨光街，南起东长安街，北至平安大街，全长2.4公里，平均宽度为29米，宛如一条连接紫禁城和王府井商业区的绿色飘带。皇城根遗址公园南起长安街，北至平安大街，西邻北河沿大街，东到东皇城根北街、南街。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "皇城根遗址公园位于北京，属于historic_site类景点。不论是春夏秋冬，这里总会有老年人锻炼身体、夏季这里的小广场上还有舞会、秋天这里别有秋韵、春天这里百花齐放。",
+      "从历史脉络看，皇城根遗址公园，建在明清北京城的第二重城垣之“东皇城根”遗址上，西邻南北河沿大街，东依晨光街，南起东长安街，北至平安大街，全长2.4公里，平均宽度为29米，宛如一条连接紫禁城和王府井商业区的绿色飘带。皇城根遗址公园南起长安街，北至平安大街，西邻北河沿大街，东到东皇城根北街、南街。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s011",
+    "city_code": "beijing",
+    "name": "智化寺",
+    "aliases": [],
+    "category": "temple",
+    "latitude": 39.916347,
+    "longitude": 116.426097,
+    "recommended_duration_minutes": 60,
+    "short_intro": "智化寺是位于北京东城区的明代皇家寺院建筑群，被视为北京城区保存最完整的一组明代木结构寺庙，也是重要的佛教文化与古建筑研究对象。",
+    "history": "智化寺建于明英宗正统年间，相传与宦官王振有关，具有明显的皇家背景与政治色彩。20世纪后，历经战乱和城市变迁，整体建筑群依旧较为完整，成为研究明代宫廷宗教与城市史的重要实物。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "智化寺位于北京，属于temple类景点。智化寺是位于北京东城区的明代皇家寺院建筑群，被视为北京城区保存最完整的一组明代木结构寺庙，也是重要的佛教文化与古建筑研究对象。",
+      "从历史脉络看，智化寺建于明英宗正统年间，相传与宦官王振有关，具有明显的皇家背景与政治色彩。20世纪后，历经战乱和城市变迁，整体建筑群依旧较为完整，成为研究明代宫廷宗教与城市史的重要实物。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s012",
+    "city_code": "beijing",
+    "name": "南锣鼓巷",
+    "aliases": [],
+    "category": "historic_street",
+    "latitude": 39.932309,
+    "longitude": 116.397689,
+    "recommended_duration_minutes": 180,
+    "short_intro": "北京东城区著名的历史文化街区、胡同群和旅游景点，以元代胡同格局、老北京风情和潮流小店集中而闻名。",
+    "history": "南锣鼓巷所在地的胡同体系形成于元代，是北京少数仍保留较完整棋盘式胡同—四合院格局的地区之一。",
+    "highlights": [
+      "胡同街景",
+      "老城风貌",
+      "街区细节"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "推荐停留约 180 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "南锣鼓巷位于北京，属于historic_street类景点。北京东城区著名的历史文化街区、胡同群和旅游景点，以元代胡同格局、老北京风情和潮流小店集中而闻名。",
+      "从历史脉络看，南锣鼓巷所在地的胡同体系形成于元代，是北京少数仍保留较完整棋盘式胡同—四合院格局的地区之一。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s013",
+    "city_code": "beijing",
+    "name": "孔庙",
+    "aliases": [
+      "北京孔庙"
+    ],
+    "category": "temple",
+    "latitude": 39.945117,
+    "longitude": 116.408307,
+    "recommended_duration_minutes": 120,
+    "short_intro": "北京孔庙位于北京东城区国子监街，为中国元、明、清三朝祭祀孔子的场所，与南京夫子庙、吉林孔庙和曲阜文庙并称为中国四大文庙，是仅次于曲阜的全国第二大孔庙。",
+    "history": "北京孔庙位于北京东城区国子监街，为中国元、明、清三朝祭祀孔子的场所，与南京夫子庙、吉林孔庙和曲阜文庙并称为中国四大文庙，是仅次于曲阜的全国第二大孔庙。始建于元大德六年(1302)，大德十年(1306)建成，明永乐九年(1411)重建。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：30元（此价格仅供参考，如有变动，请以景区实价为标准）",
+      "开放时间：旺季开放时间：08：30—18：00",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "孔庙位于北京，属于temple类景点。北京孔庙位于北京东城区国子监街，为中国元、明、清三朝祭祀孔子的场所，与南京夫子庙、吉林孔庙和曲阜文庙并称为中国四大文庙，是仅次于曲阜的全国第二大孔庙。",
+      "从历史脉络看，北京孔庙位于北京东城区国子监街，为中国元、明、清三朝祭祀孔子的场所，与南京夫子庙、吉林孔庙和曲阜文庙并称为中国四大文庙，是仅次于曲阜的全国第二大孔庙。始建于元大德六年(1302)，大德十年(1306)建成，明永乐九年(1411)重建。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s014",
+    "city_code": "beijing",
+    "name": "国子监",
+    "aliases": [
+      "北京国子监"
+    ],
+    "category": "historic_site",
+    "latitude": 39.944585,
+    "longitude": 116.410472,
+    "recommended_duration_minutes": 60,
+    "short_intro": "国子监是中国古代最高学府与教育行政机关，位于北京市东城区安定门内国子监街。",
+    "history": "国子监最早建于元代，为全国最高学府和管理教育的机构。清代乾隆年间进行大规模修缮扩建，形成今日格局。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "国子监位于北京，属于historic_site类景点。国子监是中国古代最高学府与教育行政机关，位于北京市东城区安定门内国子监街。",
+      "从历史脉络看，国子监最早建于元代，为全国最高学府和管理教育的机构。清代乾隆年间进行大规模修缮扩建，形成今日格局。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s042",
+    "city_code": "beijing",
+    "name": "五道营胡同",
+    "aliases": [
+      "五道营"
+    ],
+    "category": "historic_street",
+    "latitude": 39.946989,
+    "longitude": 116.406362,
+    "recommended_duration_minutes": 60,
+    "short_intro": "五道营胡同是位于北京东城区、紧邻雍和宫的一条东西走向胡同街区，以传统四合院与文艺小店并存而闻名。",
+    "history": "五道营胡同原是普通居民胡同，保留了大量传统院落和老式民居。随着北京旧城改造节奏放缓与“胡同保护”意识加强，该区域没有被高强度开发，而是逐渐在原有肌理上植入小型商业，形成如今“老街新用”的格局。",
+    "highlights": [
+      "胡同街景",
+      "老城风貌",
+      "街区细节"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "五道营胡同位于北京，属于historic_street类景点。五道营胡同是位于北京东城区、紧邻雍和宫的一条东西走向胡同街区，以传统四合院与文艺小店并存而闻名。",
+      "从历史脉络看，五道营胡同原是普通居民胡同，保留了大量传统院落和老式民居。随着北京旧城改造节奏放缓与“胡同保护”意识加强，该区域没有被高强度开发，而是逐渐在原有肌理上植入小型商业，形成如今“老街新用”的格局。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s015",
+    "city_code": "beijing",
+    "name": "雍和宫",
+    "aliases": [
+      "雍和宫喇嘛庙",
+      "Lama Temple"
+    ],
+    "category": "temple",
+    "latitude": 39.945579,
+    "longitude": 116.411005,
+    "recommended_duration_minutes": 120,
+    "short_intro": "雍正皇帝，宽仁治国，笃信佛教的他留给了我们一座藏传佛教的圣地，传道后人。",
+    "history": "雍和宫(The Lama Temple)位于北京市区东北角，清康熙三十三年(1694年)，康熙帝在此建造府邸、赐予四子雍亲王，称雍亲王府。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票25元（半价票12元）",
+      "开放时间：夏秋季：4月1日至10月31日，09:00—17:00（16:30止票，停止入园。17:00清场）；",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "雍和宫位于北京，属于temple类景点。雍正皇帝，宽仁治国，笃信佛教的他留给了我们一座藏传佛教的圣地，传道后人。",
+      "从历史脉络看，雍和宫(The Lama Temple)位于北京市区东北角，清康熙三十三年(1694年)，康熙帝在此建造府邸、赐予四子雍亲王，称雍亲王府。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s016",
+    "city_code": "beijing",
+    "name": "簋街",
+    "aliases": [
+      "东直门内大街美食街"
+    ],
+    "category": "food_street",
+    "latitude": 39.939704,
+    "longitude": 116.423202,
+    "recommended_duration_minutes": 180,
+    "short_intro": "簋街——夜食者的天堂。",
+    "history": "1980 年代，这一带原本只是“东直门内大街”，两侧多为平房民居。改革开放后餐馆逐渐聚集，夜间生意尤其兴旺，形成独特的“夜宵街”。",
+    "highlights": [
+      "餐饮街区",
+      "夜间氛围",
+      "城市街景"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：无",
+      "最佳游览时间：全年",
+      "推荐停留约 180 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "簋街位于北京，属于food_street类景点。簋街——夜食者的天堂。",
+      "从历史脉络看，1980 年代，这一带原本只是“东直门内大街”，两侧多为平房民居。改革开放后餐馆逐渐聚集，夜间生意尤其兴旺，形成独特的“夜宵街”。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s017",
+    "city_code": "beijing",
+    "name": "陶然亭公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": 39.873917,
+    "longitude": 116.377065,
+    "recommended_duration_minutes": 120,
+    "short_intro": "陶然亭是中国四大名亭之，每年的风筝节是人们放风筝的好去处，这里的“雪山”大滑梯，是很多孩子的童年记忆，一年一度的庙会也是妙趣横生。",
+    "history": "园内慈悲庵始创于元代，又称观音庵，清康熙三十四年(1695年)监管窑厂的工部侍郎江藻在慈悲庵内建亭,并取唐代诗人白居易“更待菊黄家酿熟,与君一醉一陶然”诗意,为亭题名“陶然”。",
+    "highlights": [
+      "园林景观",
+      "步道视野",
+      "季节景观"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：2元",
+      "开放时间：旺季（4月1日-10月31日）：6:00开园，21:00停止入园，22:00闭园。",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "陶然亭公园位于北京，属于park类景点。陶然亭是中国四大名亭之，每年的风筝节是人们放风筝的好去处，这里的“雪山”大滑梯，是很多孩子的童年记忆，一年一度的庙会也是妙趣横生。",
+      "从历史脉络看，园内慈悲庵始创于元代，又称观音庵，清康熙三十四年(1695年)监管窑厂的工部侍郎江藻在慈悲庵内建亭,并取唐代诗人白居易“更待菊黄家酿熟,与君一醉一陶然”诗意,为亭题名“陶然”。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s018",
+    "city_code": "beijing",
+    "name": "万寿公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": 39.878153,
+    "longitude": 116.361816,
+    "recommended_duration_minutes": 60,
+    "short_intro": "万寿公园位于北京市西城区白纸坊东街，是一座以“寿”“孝”文化和老年活动为主题的综合性城市公园。",
+    "history": "万寿公园前身为明万历年间修建的关帝庙“万寿西宫”，与已毁的万寿东宫相对应。园内至今保留部分明代殿堂建筑和碑刻遗存，主要集中在“绿竹苑”等区域，是了解北京地方宗教与宫观建筑史的一个小窗口。",
+    "highlights": [
+      "园林景观",
+      "步道视野",
+      "季节景观"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "万寿公园位于北京，属于park类景点。万寿公园位于北京市西城区白纸坊东街，是一座以“寿”“孝”文化和老年活动为主题的综合性城市公园。",
+      "从历史脉络看，万寿公园前身为明万历年间修建的关帝庙“万寿西宫”，与已毁的万寿东宫相对应。园内至今保留部分明代殿堂建筑和碑刻遗存，主要集中在“绿竹苑”等区域，是了解北京地方宗教与宫观建筑史的一个小窗口。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s019",
+    "city_code": "beijing",
+    "name": "大观园",
+    "aliases": [],
+    "category": "park",
+    "latitude": 39.866653,
+    "longitude": 116.351392,
+    "recommended_duration_minutes": 240,
+    "short_intro": "一座大观园因红楼梦而作为人们心目中的经典已经存在了二十多年。",
+    "history": "大观园是一座再现中国古典文学名著《红楼梦》中“大观园”景观的仿古园林，位于宣武区南菜园（市区西南隅护城河畔）。原址为明清两代皇家菜园，明代曾在此设“嘉疏署”。",
+    "highlights": [
+      "园林景观",
+      "步道视野",
+      "季节景观"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：一、门票价格",
+      "开放时间：开放时间：旺季（4月1日—10月31日）开园时间：7：30时—18：00时（17：30时静园）；淡季（11月1日—3月31日）开园时间7：30时—17：00时（16：30时静园）",
+      "最佳游览时间：3月-10月",
+      "推荐停留约 240 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "大观园位于北京，属于park类景点。一座大观园因红楼梦而作为人们心目中的经典已经存在了二十多年。",
+      "从历史脉络看，大观园是一座再现中国古典文学名著《红楼梦》中“大观园”景观的仿古园林，位于宣武区南菜园（市区西南隅护城河畔）。原址为明清两代皇家菜园，明代曾在此设“嘉疏署”。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s020",
+    "city_code": "beijing",
+    "name": "法源寺",
+    "aliases": [
+      "北京法源寺"
+    ],
+    "category": "temple",
+    "latitude": 39.883509,
+    "longitude": 116.363808,
+    "recommended_duration_minutes": 120,
+    "short_intro": "法源寺，寺内花木幽雅，植有许多苍松翠柏、银杏丁香。",
+    "history": "法源寺，又称悯忠寺，位于北京市西城区菜市口附近教子胡同南端，是北京城内现存历史最悠久的佛寺。2001年6月25日，法源寺作为清代古建筑，被国务院批准为第五批全国重点文物保护单位。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：5元",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "法源寺位于北京，属于temple类景点。法源寺，寺内花木幽雅，植有许多苍松翠柏、银杏丁香。",
+      "从历史脉络看，法源寺，又称悯忠寺，位于北京市西城区菜市口附近教子胡同南端，是北京城内现存历史最悠久的佛寺。2001年6月25日，法源寺作为清代古建筑，被国务院批准为第五批全国重点文物保护单位。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s021",
+    "city_code": "beijing",
+    "name": "报国寺",
+    "aliases": [],
+    "category": "temple",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "报国寺位于北京市西城区报国寺前街1号，处于北京明城墙遗址公园位于市中心地域。",
+    "history": "报国寺位于北京市西城区报国寺前街1号，处于北京明城墙遗址公园位于市中心地域，东起城东南角楼，西至崇文门，总面积约：15.5公顷，其中城墙遗址及城东南角楼占地3.3公顷，绿地面积12.2公顷。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：8元门票价格：8元",
+      "最佳游览时间：全年皆可",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "报国寺位于北京，属于temple类景点。报国寺位于北京市西城区报国寺前街1号，处于北京明城墙遗址公园位于市中心地域。",
+      "从历史脉络看，报国寺位于北京市西城区报国寺前街1号，处于北京明城墙遗址公园位于市中心地域，东起城东南角楼，西至崇文门，总面积约：15.5公顷，其中城墙遗址及城东南角楼占地3.3公顷，绿地面积12.2公顷。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s022",
+    "city_code": "beijing",
+    "name": "玄武艺园",
+    "aliases": [],
+    "category": "park",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "玄武艺园是位于中国北京市的一处文化艺术主题公园，融合了自然景观与现代艺术展示空间。",
+    "history": "玄武艺园的设计注重自然与艺术的互动，园区景观结合雕塑、装置艺术、园林建筑等多元形式，形成沉浸式艺术体验。其布局既保留了中国传统园林的曲径通幽，又融入现代美学与空间装置，展现出北京当代公共艺术的发展趋势。",
+    "highlights": [
+      "园林景观",
+      "步道视野",
+      "季节景观"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "玄武艺园位于北京，属于park类景点。玄武艺园是位于中国北京市的一处文化艺术主题公园，融合了自然景观与现代艺术展示空间。",
+      "从历史脉络看，玄武艺园的设计注重自然与艺术的互动，园区景观结合雕塑、装置艺术、园林建筑等多元形式，形成沉浸式艺术体验。其布局既保留了中国传统园林的曲径通幽，又融入现代美学与空间装置，展现出北京当代公共艺术的发展趋势。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s023",
+    "city_code": "beijing",
+    "name": "宣武门教堂",
+    "aliases": [
+      "宣武门天主堂",
+      "南堂"
+    ],
+    "category": "church",
+    "latitude": 39.899513,
+    "longitude": 116.369213,
+    "recommended_duration_minutes": 60,
+    "short_intro": "南堂位于北京市宣武门前门西大街141号，是一座历史悠久的天主堂。",
+    "history": "联系方式:0110-66087238/66025221最佳游览时间:常年推荐游览时长:1小时门票价格:免费免费",
+    "highlights": [
+      "教堂立面",
+      "宗教建筑细部",
+      "历史空间"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "宣武门教堂位于北京，属于church类景点。南堂位于北京市宣武门前门西大街141号，是一座历史悠久的天主堂。",
+      "从历史脉络看，联系方式:0110-66087238/66025221最佳游览时间:常年推荐游览时长:1小时门票价格:免费免费"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s024",
+    "city_code": "beijing",
+    "name": "广济寺",
+    "aliases": [
+      "北京广济寺"
+    ],
+    "category": "temple",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "北京著名的\"内八刹\"之一。",
+    "history": "位于北京城内西城区阜成门内大街25号。始建于宋朝末年，名西刘村寺。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：免费免费",
+      "最佳游览时间：常年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "广济寺位于北京，属于temple类景点。北京著名的\"内八刹\"之一。",
+      "从历史脉络看，位于北京城内西城区阜成门内大街25号。始建于宋朝末年，名西刘村寺。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s025",
+    "city_code": "beijing",
+    "name": "北海公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 240,
+    "short_intro": "北海公园位是我国现存最悠久、保存最完整的皇家园林之一。",
+    "history": "北海公园(Beihai Park)，位于北京市中心区，城内景山西侧，在故宫的西北面，与中海、南海合称三海。琼岛上有高67米的藏式白塔（建于1651年），还有清乾隆帝所题燕京八景之一的琼岛春阴碑石及假山、邃洞等。",
+    "highlights": [
+      "湖景步道",
+      "园林景观",
+      "季节花木"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：旺季:（4月1日至10月31日）",
+      "开放时间：旺季（4月1日-10月31日）：",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 240 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "北海公园位于北京，属于park类景点。北海公园位是我国现存最悠久、保存最完整的皇家园林之一。",
+      "从历史脉络看，北海公园(Beihai Park)，位于北京市中心区，城内景山西侧，在故宫的西北面，与中海、南海合称三海。琼岛上有高67米的藏式白塔（建于1651年），还有清乾隆帝所题燕京八景之一的琼岛春阴碑石及假山、邃洞等。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s026",
+    "city_code": "beijing",
+    "name": "恭王府",
+    "aliases": [
+      "恭王府博物馆"
+    ],
+    "category": "historic_site",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "恭王府位于中国北京市西城区什刹海地区，是一座保存极为完整的清代王府建筑群。",
+    "history": "恭王府被誉为“北京王府之冠”，集中体现了清代贵族生活的审美与制度特征。府邸区严格遵循清代王府规制，中轴线对称，建筑庄重典雅；花园区则融合北方皇家园林与南方私家园林的特色，亭台楼阁错落有致，尤以“西洋门”“蝠池”和镶嵌“天下第一福”石碑最为著名。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "恭王府位于北京，属于historic_site类景点。恭王府位于中国北京市西城区什刹海地区，是一座保存极为完整的清代王府建筑群。",
+      "从历史脉络看，恭王府被誉为“北京王府之冠”，集中体现了清代贵族生活的审美与制度特征。府邸区严格遵循清代王府规制，中轴线对称，建筑庄重典雅；花园区则融合北方皇家园林与南方私家园林的特色，亭台楼阁错落有致，尤以“西洋门”“蝠池”和镶嵌“天下第一福”石碑最为著名。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s043",
+    "city_code": "beijing",
+    "name": "烟袋斜街",
+    "aliases": [],
+    "category": "historic_street",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "其由来正是因为这条斜街曾经都是烟袋铺而得名，而它现在的兴起完全是因为后海与鼓楼地区的繁华有极大关系。",
+    "history": "烟袋斜街位于地安门外大街鼓楼前，什刹海前海北侧，东起地安门大街，西至小石碑胡同与鸦儿胡同相连，北起大石碑胡同，南至前海北沿，街区占地14公顷。烟袋斜街出现于元代，与元大都的建设休戚与共。",
+    "highlights": [
+      "胡同街景",
+      "老城风貌",
+      "街区细节"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：无",
+      "开放时间：开放时间:全天",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "烟袋斜街位于北京，属于historic_street类景点。其由来正是因为这条斜街曾经都是烟袋铺而得名，而它现在的兴起完全是因为后海与鼓楼地区的繁华有极大关系。",
+      "从历史脉络看，烟袋斜街位于地安门外大街鼓楼前，什刹海前海北侧，东起地安门大街，西至小石碑胡同与鸦儿胡同相连，北起大石碑胡同，南至前海北沿，街区占地14公顷。烟袋斜街出现于元代，与元大都的建设休戚与共。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s044",
+    "city_code": "beijing",
+    "name": "灵境胡同",
+    "aliases": [],
+    "category": "historic_street",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "灵境胡同是北京市西城区东南部的一条著名胡同，也是北京少见的“宽胡同”，连接传统老城街区与现代商业区。",
+    "history": "灵境胡同呈东西走向，自东向西依次与府右街、西皇城根大街以及西单北大街等南北向主干道相交，是西城区路网中的一条重要小街。与北京大多数狭窄、蜿蜒的胡同不同，这里路面宽阔平直，车辆通行量较大，在出行高峰时常作为往来西单、西四一带的“绕行通道”。",
+    "highlights": [
+      "胡同街景",
+      "老城风貌",
+      "街区细节"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "灵境胡同位于北京，属于historic_street类景点。灵境胡同是北京市西城区东南部的一条著名胡同，也是北京少见的“宽胡同”，连接传统老城街区与现代商业区。",
+      "从历史脉络看，灵境胡同呈东西走向，自东向西依次与府右街、西皇城根大街以及西单北大街等南北向主干道相交，是西城区路网中的一条重要小街。与北京大多数狭窄、蜿蜒的胡同不同，这里路面宽阔平直，车辆通行量较大，在出行高峰时常作为往来西单、西四一带的“绕行通道”。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s046",
+    "city_code": "beijing",
+    "name": "白塔寺",
+    "aliases": [
+      "妙应寺",
+      "妙应寺白塔"
+    ],
+    "category": "temple",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "因寺内有一座白色古塔而名。",
+    "history": "妙应寺，俗称白塔寺，位于北京市西城区阜成门内大街上。它始建于元代，原名「大圣寿万安寺」，寺内的白塔是中国现存年代最早、规模最大的喇嘛塔。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：20元",
+      "开放时间：周二至周日9:00—17:00（16:30停止售票入馆）；周一闭馆。国家法定节假日、其它重要活动开放时间将提前在白塔寺官方微博、微信公众号公示。",
+      "最佳游览时间：4月-10月",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "白塔寺位于北京，属于temple类景点。因寺内有一座白色古塔而名。",
+      "从历史脉络看，妙应寺，俗称白塔寺，位于北京市西城区阜成门内大街上。它始建于元代，原名「大圣寿万安寺」，寺内的白塔是中国现存年代最早、规模最大的喇嘛塔。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s045",
+    "city_code": "beijing",
+    "name": "大栅栏胡同群",
+    "aliases": [
+      "大栅栏",
+      "大栅栏街区"
+    ],
+    "category": "historic_street",
+    "latitude": 39.894498,
+    "longitude": 116.390172,
+    "recommended_duration_minutes": 60,
+    "short_intro": "大栅栏是北京最古老、最繁华的传统商业街之一，以其悠久的历史、老字号商铺和浓厚的京味文化而闻名。",
+    "history": "街区保留了大量明清风格的传统四合院和砖木结构建筑。石板路、青砖墙、雕花窗棂构成典型的老北京街景。",
+    "highlights": [
+      "胡同街景",
+      "老城风貌",
+      "街区细节"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "大栅栏胡同群位于北京，属于historic_street类景点。大栅栏是北京最古老、最繁华的传统商业街之一，以其悠久的历史、老字号商铺和浓厚的京味文化而闻名。",
+      "从历史脉络看，街区保留了大量明清风格的传统四合院和砖木结构建筑。石板路、青砖墙、雕花窗棂构成典型的老北京街景。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s036",
+    "city_code": "beijing",
+    "name": "中国美术馆",
+    "aliases": [],
+    "category": "art_museum",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "中国美术馆是中国规模最大、藏品最丰富的美术馆之一，也是中国现代与当代艺术的重要展示平台。",
+    "history": "中国美术馆始建于1958年，于1963年正式开放，是为庆祝新中国成立十周年的重点文化工程之一。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "中国美术馆位于北京，属于art_museum类景点。中国美术馆是中国规模最大、藏品最丰富的美术馆之一，也是中国现代与当代艺术的重要展示平台。",
+      "从历史脉络看，中国美术馆始建于1958年，于1963年正式开放，是为庆祝新中国成立十周年的重点文化工程之一。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s027",
+    "city_code": "beijing",
+    "name": "地坛",
+    "aliases": [
+      "地坛公园"
+    ],
+    "category": "historic_site",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "地坛公园的银杏到深秋，银杏叶也变得金黄，最是一年绚烂时。",
+    "history": "始建于明代嘉靖九年(公元1530年)是明清两朝帝王祭祀“皇地祇神”的场所，也是我国现存的最大的祭地之坛。地坛公园位于北京市安定门外大街东侧,依邻北二环与雍和宫隔河相望。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：2元 ；皇祇室票价：5元/人",
+      "开放时间：06:00-21:30 (5月1日-10月31日 周一-周日)",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "地坛位于北京，属于historic_site类景点。地坛公园的银杏到深秋，银杏叶也变得金黄，最是一年绚烂时。",
+      "从历史脉络看，始建于明代嘉靖九年(公元1530年)是明清两朝帝王祭祀“皇地祇神”的场所，也是我国现存的最大的祭地之坛。地坛公园位于北京市安定门外大街东侧,依邻北二环与雍和宫隔河相望。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s028",
+    "city_code": "beijing",
+    "name": "青年湖公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "青年湖公园位于北京东城区安定门外大街西侧、北中轴线以东，是一座以湖面景观和休闲娱乐设施见长的综合性城市公园。",
+    "history": "公园前身是一片天然积水洼地，1958 年在东城区政府和共青团组织发动下，由大批团员青年义务挖湖筑堤，湖因而得名“青年湖”。之后陆续堆山、修路、建桥造亭，逐渐形成今天格局，也是北京较早一批“黄土不露天”的达标公园之一。",
+    "highlights": [
+      "湖景步道",
+      "园林景观",
+      "季节花木"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "青年湖公园位于北京，属于park类景点。青年湖公园位于北京东城区安定门外大街西侧、北中轴线以东，是一座以湖面景观和休闲娱乐设施见长的综合性城市公园。",
+      "从历史脉络看，公园前身是一片天然积水洼地，1958 年在东城区政府和共青团组织发动下，由大批团员青年义务挖湖筑堤，湖因而得名“青年湖”。之后陆续堆山、修路、建桥造亭，逐渐形成今天格局，也是北京较早一批“黄土不露天”的达标公园之一。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s029",
+    "city_code": "beijing",
+    "name": "柳荫公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "柳荫公园是北京市内唯一具有田园风光的山村野趣公园。",
+    "history": "柳荫公园是北京市内唯一具有田园风光的山村野趣公园。园内建有春、夏、秋、冬四个景区从不同的季节体现出自然、朴素的风光特色。",
+    "highlights": [
+      "园林景观",
+      "步道视野",
+      "季节景观"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "开放时间：旺季：6：00—21：00（止票）--22：00（静园）",
+      "最佳游览时间：4、5、9、10月份",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "柳荫公园位于北京，属于park类景点。柳荫公园是北京市内唯一具有田园风光的山村野趣公园。",
+      "从历史脉络看，柳荫公园是北京市内唯一具有田园风光的山村野趣公园。园内建有春、夏、秋、冬四个景区从不同的季节体现出自然、朴素的风光特色。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s030",
+    "city_code": "beijing",
+    "name": "北京工人体育场",
+    "aliases": [],
+    "category": "stadium",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "北京国安联赛主场地，工体一直是国安的福地，当年的“工体不败”神话至今让人难忘。",
+    "history": "北京工人体育场位于北京朝阳区工人体育场北路，与工人体育馆、新老使馆区相邻。工人体育场的中心运动场可以容纳8万名观众，它是新中国成立十周年大庆时期北京十大建筑之一。",
+    "highlights": [
+      "体育场建筑",
+      "赛事氛围",
+      "城市地标"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：根据活动而定门票价格：根据活动而定",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "北京工人体育场位于北京，属于stadium类景点。北京国安联赛主场地，工体一直是国安的福地，当年的“工体不败”神话至今让人难忘。",
+      "从历史脉络看，北京工人体育场位于北京朝阳区工人体育场北路，与工人体育馆、新老使馆区相邻。工人体育场的中心运动场可以容纳8万名观众，它是新中国成立十周年大庆时期北京十大建筑之一。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s031",
+    "city_code": "beijing",
+    "name": "月坛",
+    "aliases": [],
+    "category": "historic_site",
+    "latitude": 39.915311,
+    "longitude": 116.346092,
+    "recommended_duration_minutes": 60,
+    "short_intro": "北京著名的五坛八庙之一，是明清两代帝王祭祀月神的地方。",
+    "history": "目前仅存的月坛地处北京城西，始建于明朝嘉靖九年（1530年），清代重修，是北京九坛八庙之一，到民国初年废弃。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：1元",
+      "开放时间：冬令时 06:00-21:00开放（20:00停止入园）",
+      "最佳游览时间：5-10月",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "月坛位于北京，属于historic_site类景点。北京著名的五坛八庙之一，是明清两代帝王祭祀月神的地方。",
+      "从历史脉络看，目前仅存的月坛地处北京城西，始建于明朝嘉靖九年（1530年），清代重修，是北京九坛八庙之一，到民国初年废弃。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s032",
+    "city_code": "beijing",
+    "name": "北京动物园",
+    "aliases": [
+      "北动"
+    ],
+    "category": "zoo",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "北京动物园位于中国北京市西城区，是中国历史最悠久、规模最大的动物园之一。",
+    "history": "北京动物园始建于清末，是中国最早对公众开放的动物园之一。新中国成立后，动物园得到大规模扩建和科学化管理，逐步成为国内外动物交流与科研的重要基地。",
+    "highlights": [
+      "动物展区",
+      "园区步道",
+      "亲子游览"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "北京动物园位于北京，属于zoo类景点。北京动物园位于中国北京市西城区，是中国历史最悠久、规模最大的动物园之一。",
+      "从历史脉络看，北京动物园始建于清末，是中国最早对公众开放的动物园之一。新中国成立后，动物园得到大规模扩建和科学化管理，逐步成为国内外动物交流与科研的重要基地。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s051",
+    "city_code": "beijing",
+    "name": "北京天文馆",
+    "aliases": [
+      "天文馆"
+    ],
+    "category": "science_museum",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "浩瀚宇宙中有着无数未解之谜，仰望苍穹不如来到天文馆一解心中那暗藏多年的困惑。",
+    "history": "位于北京西直门外。位于北京东城建国门立交桥西南的北京古观象台归北京天文馆管理，为全国重点文物保护单位。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：10元",
+      "开放时间：周一、周三至周日开放9:00-16:30（16:00停止入馆），周二例行闭馆（国家法定节假日除外）。",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "北京天文馆位于北京，属于science_museum类景点。浩瀚宇宙中有着无数未解之谜，仰望苍穹不如来到天文馆一解心中那暗藏多年的困惑。",
+      "从历史脉络看，位于北京西直门外。位于北京东城建国门立交桥西南的北京古观象台归北京天文馆管理，为全国重点文物保护单位。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s052",
+    "city_code": "beijing",
+    "name": "北京展览馆",
+    "aliases": [],
+    "category": "exhibition_hall",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "北京展览馆建成于1954年，是毛泽东主席亲笔题字、周恩来总理主持剪彩的新中国第一家专业展览馆。",
+    "history": "北京展览馆建成于1954年，是毛泽东主席亲笔题字、周恩来总理主持剪彩的新中国第一家专业展览馆。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "开放时间：开放时间:8：00-18：00",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "北京展览馆位于北京，属于exhibition_hall类景点。北京展览馆建成于1954年，是毛泽东主席亲笔题字、周恩来总理主持剪彩的新中国第一家专业展览馆。",
+      "从历史脉络看，北京展览馆建成于1954年，是毛泽东主席亲笔题字、周恩来总理主持剪彩的新中国第一家专业展览馆。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s033",
+    "city_code": "beijing",
+    "name": "人定湖公园",
+    "aliases": [],
+    "category": "park",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "据说名字来源于“人定胜天”这一个具有气魄的词，但是里面的建筑风格确实优美的欧式风格，是拍艺术照和婚纱照的好去处。",
+    "history": "人定湖公园是一座欧洲风格的园林，位于西城区六铺炕街25号，黄寺大街南侧，是1958年发动群众建造的公园，1994年4月进行改造，1996年6月全面竣工。",
+    "highlights": [
+      "湖景步道",
+      "园林景观",
+      "季节花木"
+    ],
+    "visitor_tips": [
+      "建议穿舒适鞋，步行为主。",
+      "可结合季节景观安排游览时间。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "开放时间：开放时间:6:00-21:30",
+      "最佳游览时间：5月-10月",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄湖景、树影、园林步道和季节植物。"
+    ],
+    "guide_segments": [
+      "人定湖公园位于北京，属于park类景点。据说名字来源于“人定胜天”这一个具有气魄的词，但是里面的建筑风格确实优美的欧式风格，是拍艺术照和婚纱照的好去处。",
+      "从历史脉络看，人定湖公园是一座欧洲风格的园林，位于西城区六铺炕街25号，黄寺大街南侧，是1958年发动群众建造的公园，1994年4月进行改造，1996年6月全面竣工。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s034",
+    "city_code": "beijing",
+    "name": "中国地质博物馆",
+    "aliases": [],
+    "category": "science_museum",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "我国地大物博、资源丰富，在这里你可以将其一网打尽，饱览各色名贵宝石和了解众多地质知识，游览一趟获益匪浅。",
+    "history": "中国地质博物馆创建于1916年，在与中国现代科学同步发端、发展的历程中，积淀了丰厚的自然精华和文化遗存，以典藏系统、成果丰硕、陈列精美称雄于亚洲同类博物馆，并在世界范围内享有盛誉。该馆前身为原农商部地质调查所地质矿产博物馆，现馆大楼位于北京市西城区西四羊肉胡同15号，1958年竣工，为这一地区的标志性建筑。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：成人票：15元",
+      "开放时间：9:00-16:30，16:00停止入场，周一闭馆",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "中国地质博物馆位于北京，属于science_museum类景点。我国地大物博、资源丰富，在这里你可以将其一网打尽，饱览各色名贵宝石和了解众多地质知识，游览一趟获益匪浅。",
+      "从历史脉络看，中国地质博物馆创建于1916年，在与中国现代科学同步发端、发展的历程中，积淀了丰厚的自然精华和文化遗存，以典藏系统、成果丰硕、陈列精美称雄于亚洲同类博物馆，并在世界范围内享有盛誉。该馆前身为原农商部地质调查所地质矿产博物馆，现馆大楼位于北京市西城区西四羊肉胡同15号，1958年竣工，为这一地区的标志性建筑。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s047",
+    "city_code": "beijing",
+    "name": "金融街",
+    "aliases": [
+      "北京金融街"
+    ],
+    "category": "business_district",
+    "latitude": 39.91453,
+    "longitude": 116.355396,
+    "recommended_duration_minutes": 120,
+    "short_intro": "金融街是北京市第一个大规模整体定向开发的金融产业功能区",
+    "history": "2008年，在全金融总体规划中，进一步确定了金融街在首都金融业中的核心地位，提出要将金融街建成首都金融主中心。",
+    "highlights": [
+      "现代商务街区",
+      "城市天际线",
+      "步行界面"
+    ],
+    "visitor_tips": [
+      "适合与周边街区串联步行游览。",
+      "建议避开高峰时段以获得更好的通行体验。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：无",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "以步行为主，带儿童时建议预留休息和补水时间。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄街景界面、招牌细节和胡同纵深。"
+    ],
+    "guide_segments": [
+      "金融街位于北京，属于business_district类景点。金融街是北京市第一个大规模整体定向开发的金融产业功能区",
+      "从历史脉络看，2008年，在全金融总体规划中，进一步确定了金融街在首都金融业中的核心地位，提出要将金融街建成首都金融主中心。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s037",
+    "city_code": "beijing",
+    "name": "梅兰芳纪念馆",
+    "aliases": [
+      "北京梅兰芳纪念馆"
+    ],
+    "category": "museum",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 120,
+    "short_intro": "1961年梅兰芳逝世前，曾在这幽静、安适的四合院内，度过了他人生的最后10年。",
+    "history": "新中国成立后，梅兰芳当选为全国文联、剧协的副主席，并担任中国戏剧研究院院长等职，为我国文艺事业的繁荣与发展做了大量的工作。会客厅内摆放着梅先生使用过的硬木家具及练功用的穿衣镜、鸽子哨等、西墙上挂着清代画家沈蓉圃的《同光十三绝》，客厅的里间是起居室，东耳房是卧室，西耳房是书房，西厢房也辟为陈列室，主要展示梅先生的文化业绩。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：成人票：10元/人。",
+      "开放时间：旺季开放时间：5月1日至10月31日，每日开放时间：9:00至17:00（16:30停止检票，17:00闭馆）。",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "梅兰芳纪念馆位于北京，属于museum类景点。1961年梅兰芳逝世前，曾在这幽静、安适的四合院内，度过了他人生的最后10年。",
+      "从历史脉络看，新中国成立后，梅兰芳当选为全国文联、剧协的副主席，并担任中国戏剧研究院院长等职，为我国文艺事业的繁荣与发展做了大量的工作。会客厅内摆放着梅先生使用过的硬木家具及练功用的穿衣镜、鸽子哨等、西墙上挂着清代画家沈蓉圃的《同光十三绝》，客厅的里间是起居室，东耳房是卧室，西耳房是书房，西厢房也辟为陈列室，主要展示梅先生的文化业绩。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s038",
+    "city_code": "beijing",
+    "name": "北京喜剧院（百老汇音乐剧场）",
+    "aliases": [
+      "北京喜剧院",
+      "百老汇音乐剧场"
+    ],
+    "category": "theater",
+    "latitude": 39.92882,
+    "longitude": 116.42665,
+    "recommended_duration_minutes": 60,
+    "short_intro": "北京喜剧院是一座位于北京市的专业剧场，主要用于话剧、喜剧、小剧场戏剧等舞台演出，属于城市文化演艺空间之一。",
+    "history": "北京喜剧院通常以话剧、都市题材戏剧以及风格较轻松的舞台作品为主，注重演出内容的可看性和娱乐性，同时保留一定艺术性。剧场规模一般中等，视线和音效相对集中，适合人物对白为主、情节推动明显的戏剧演出，让观众更容易沉浸在故事之中。",
+    "highlights": [
+      "剧场空间",
+      "演出氛围",
+      "城市文化地标"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "北京喜剧院（百老汇音乐剧场）位于北京，属于theater类景点。北京喜剧院是一座位于北京市的专业剧场，主要用于话剧、喜剧、小剧场戏剧等舞台演出，属于城市文化演艺空间之一。",
+      "从历史脉络看，北京喜剧院通常以话剧、都市题材戏剧以及风格较轻松的舞台作品为主，注重演出内容的可看性和娱乐性，同时保留一定艺术性。剧场规模一般中等，视线和音效相对集中，适合人物对白为主、情节推动明显的戏剧演出，让观众更容易沉浸在故事之中。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s039",
+    "city_code": "beijing",
+    "name": "中国国家博物院",
+    "aliases": [
+      "中国国家博物馆",
+      "国家博物馆",
+      "National Museum of China"
+    ],
+    "category": "museum",
+    "latitude": 39.903746,
+    "longitude": 116.39539,
+    "recommended_duration_minutes": 60,
+    "short_intro": "中国国家博物馆位于北京市东长安街，天安门广场东侧，是中国最大的综合性历史与艺术博物馆之一。",
+    "history": "中国国家博物馆的前身是1959年建成的中国历史博物馆与中国革命博物馆，两馆并列于天安门广场东侧。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "中国国家博物院位于北京，属于museum类景点。中国国家博物馆位于北京市东长安街，天安门广场东侧，是中国最大的综合性历史与艺术博物馆之一。",
+      "从历史脉络看，中国国家博物馆的前身是1959年建成的中国历史博物馆与中国革命博物馆，两馆并列于天安门广场东侧。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s040",
+    "city_code": "beijing",
+    "name": "毛主席纪念堂",
+    "aliases": [],
+    "category": "memorial",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "毛主席纪念堂是为纪念领袖毛泽东而建造的是天安门广场中最受重视的建筑物之一，那里躺着一位老人。",
+    "history": "毛主席纪念堂位于天安门广场，占地面积5.72公顷，总建筑面积33867平方米，始建于1976年11月，1977年9月9日举行落成典礼并对外开放。",
+    "highlights": [
+      "纪念空间",
+      "礼仪秩序",
+      "历史象征"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：免费但需预约。请提前1- 6天登录毛主席纪念堂微信公众号、毛主席纪念堂预约微信小程序、人民网毛主席纪念堂专题网页进行预约。",
+      "开放时间：星期二至星期日8:00-12:00（国家法定节假日、有关纪念日开放时间另行通知）。",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "毛主席纪念堂位于北京，属于memorial类景点。毛主席纪念堂是为纪念领袖毛泽东而建造的是天安门广场中最受重视的建筑物之一，那里躺着一位老人。",
+      "从历史脉络看，毛主席纪念堂位于天安门广场，占地面积5.72公顷，总建筑面积33867平方米，始建于1976年11月，1977年9月9日举行落成典礼并对外开放。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s041",
+    "city_code": "beijing",
+    "name": "西什库教堂",
+    "aliases": [
+      "西什库天主堂",
+      "北堂"
+    ],
+    "category": "church",
+    "latitude": 39.923929,
+    "longitude": 116.372527,
+    "recommended_duration_minutes": 120,
+    "short_intro": "这曾经是长期作为天主教北京教区的主教座堂，是目前北京最大和最古老的教堂之一。",
+    "history": "西什库教堂，也称北堂，位于西什库大街33号，建于清初，时称“救世主堂”。最初由法国耶稣传教士于清康熙三十二年（1693）在西安门内蚕池口修建，1703年建成。",
+    "highlights": [
+      "教堂立面",
+      "宗教建筑细部",
+      "历史空间"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "最佳游览时间：全年",
+      "推荐停留约 120 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 120 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "西什库教堂位于北京，属于church类景点。这曾经是长期作为天主教北京教区的主教座堂，是目前北京最大和最古老的教堂之一。",
+      "从历史脉络看，西什库教堂，也称北堂，位于西什库大街33号，建于清初，时称“救世主堂”。最初由法国耶稣传教士于清康熙三十二年（1693）在西安门内蚕池口修建，1703年建成。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s048",
+    "city_code": "beijing",
+    "name": "先农坛",
+    "aliases": [
+      "北京先农坛"
+    ],
+    "category": "historic_site",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 180,
+    "short_intro": "初到先农坛的总摸不着这里的布局，看不到中国传统的按中轴线安排的建筑布局， 这里的建筑有点无规律可循。",
+    "history": "位于宣武区东南部，永定门内大街西侧。始建于明永乐十八年（1420），初名山川坛，合祀先农、太岁、风云、雷雨、五岳、五镇、四海、四渎和钟山诸神，并在钟山之下加祀天寿山神。",
+    "highlights": [
+      "历史遗存",
+      "建筑空间",
+      "城市景观"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：免费",
+      "最佳游览时间：全年",
+      "推荐停留约 180 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 180 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "先农坛位于北京，属于historic_site类景点。初到先农坛的总摸不着这里的布局，看不到中国传统的按中轴线安排的建筑布局， 这里的建筑有点无规律可循。",
+      "从历史脉络看，位于宣武区东南部，永定门内大街西侧。始建于明永乐十八年（1420），初名山川坛，合祀先农、太岁、风云、雷雨、五岳、五镇、四海、四渎和钟山诸神，并在钟山之下加祀天寿山神。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s049",
+    "city_code": "beijing",
+    "name": "白云观",
+    "aliases": [
+      "北京白云观"
+    ],
+    "category": "temple",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 180,
+    "short_intro": "白云观是了解中国道教文化与传统习俗的重要窗口，每年春节民俗庙会游人如织，以独特的魅力吸引着香客游人。",
+    "history": "道教全真第一丛林——北京白云观，位于西便门外二里许，是道教全真三大祖庭之一；自元以降，久为全真“第一丛林”。新中国成立后，中国道教协会、中国道教学院及中国道教文化研究所等全国性道教组织、院校和研究机构先后设在这里。",
+    "highlights": [
+      "殿宇建筑",
+      "宗教氛围",
+      "历史遗存"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：10元",
+      "最佳游览时间：全年",
+      "推荐停留约 180 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 180 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面、门窗细部和院落空间。"
+    ],
+    "guide_segments": [
+      "白云观位于北京，属于temple类景点。白云观是了解中国道教文化与传统习俗的重要窗口，每年春节民俗庙会游人如织，以独特的魅力吸引着香客游人。",
+      "从历史脉络看，道教全真第一丛林——北京白云观，位于西便门外二里许，是道教全真三大祖庭之一；自元以降，久为全真“第一丛林”。新中国成立后，中国道教协会、中国道教学院及中国道教文化研究所等全国性道教组织、院校和研究机构先后设在这里。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s050",
+    "city_code": "beijing",
+    "name": "天宁寺塔",
+    "aliases": [
+      "北京天宁寺塔"
+    ],
+    "category": "historic_site",
+    "latitude": 39.893738,
+    "longitude": 116.339783,
+    "recommended_duration_minutes": 60,
+    "short_intro": "天宁寺塔上过去每层还悬挂有铜塔铃，迎风作响，悠扬悦耳，声闻数里，到清代铜铃渐落。",
+    "history": "天宁寺塔上过去每层还悬挂有铜塔铃，迎风作响，悠扬悦耳，声闻数里，到清代铜铃渐落。",
+    "highlights": [
+      "建筑主体",
+      "历史轴线",
+      "外观细节"
+    ],
+    "visitor_tips": [
+      "适合与周边北京中轴线或核心区景点连线游览。",
+      "建议结合当天开放安排和客流情况调整节奏。"
+    ],
+    "practical_notes": [
+      "门票信息：门票价格：无",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "建议按约 60 分钟的节奏分段游览，带儿童时注意步行强度。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄建筑正立面与轴线透视构图。"
+    ],
+    "guide_segments": [
+      "天宁寺塔位于北京，属于historic_site类景点。天宁寺塔上过去每层还悬挂有铜塔铃，迎风作响，悠扬悦耳，声闻数里，到清代铜铃渐落。",
+      "从历史脉络看，天宁寺塔上过去每层还悬挂有铜塔铃，迎风作响，悠扬悦耳，声闻数里，到清代铜铃渐落。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  },
+  {
+    "id": "beijing-s053",
+    "city_code": "beijing",
+    "name": "北京市规划展览馆",
+    "aliases": [
+      "北京规划展览馆"
+    ],
+    "category": "museum",
+    "latitude": null,
+    "longitude": null,
+    "recommended_duration_minutes": 60,
+    "short_intro": "北京市规划展览馆",
+    "history": "北京市规划展览馆位于北京前门东大街(老北京火车站东侧)的北京市规划展览馆是在原有建筑基础上改造而成。当代北京城市规划展区，主要包括北京历次总体规划介绍；北京市十八个区县及北京经济技术开发区规划建设展览；北京城市交通、环保、水务、节能专项展区和北京奥运场馆规划建设展区等，回顾了新中国成立后，各个时期北京总体规划方案的制定和调整情况。",
+    "highlights": [
+      "主题展陈",
+      "馆舍建筑",
+      "专题内容"
+    ],
+    "visitor_tips": [
+      "建议提前确认开放时间或预约要求。",
+      "参观时尽量预留完整时段，避免匆忙。"
+    ],
+    "practical_notes": [
+      "门票信息：免费开放免费开放",
+      "最佳游览时间：全年",
+      "推荐停留约 60 分钟。"
+    ],
+    "family_friendly_notes": [
+      "游览节奏相对灵活，适合安排亲子短线或半日行程。"
+    ],
+    "photo_spot_notes": [
+      "适合拍摄主体建筑外观与周边环境关系。"
+    ],
+    "guide_segments": [
+      "北京市规划展览馆位于北京，属于museum类景点。北京市规划展览馆",
+      "从历史脉络看，北京市规划展览馆位于北京前门东大街(老北京火车站东侧)的北京市规划展览馆是在原有建筑基础上改造而成。当代北京城市规划展区，主要包括北京历次总体规划介绍；北京市十八个区县及北京经济技术开发区规划建设展览；北京城市交通、环保、水务、节能专项展区和北京奥运场馆规划建设展区等，回顾了新中国成立后，各个时期北京总体规划方案的制定和调整情况。"
+    ],
+    "source": "feishu_main_sheet + reference_csv + OpenStreetMap Nominatim + selective public web verification"
+  }
+]

@@ -1,0 +1,15 @@
+candidates:
+  - name: rules_only
+    fallback_enabled: false
+  - name: rules_plus_fallback_qwen_flash
+    fallback_enabled: true
+    fallback_provider: dashscope
+    fallback_model: qwen-flash
+  - name: rules_plus_fallback_qwen35_flash_0223
+    fallback_enabled: true
+    fallback_provider: dashscope
+    fallback_model: qwen3.5-flash-2026-02-23
+  - name: rules_plus_fallback_qwen_turbo
+    fallback_enabled: true
+    fallback_provider: dashscope
+    fallback_model: qwen-turbo

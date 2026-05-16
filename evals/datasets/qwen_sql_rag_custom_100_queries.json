@@ -1,0 +1,904 @@
+{
+  "cases": [
+    {
+      "case_id": "SQL-001",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果我第一次去故宫，但更关注建筑细节而不是皇帝故事，你会怎么介绍它的看点？",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-002",
+      "group": "sql",
+      "language": "zh",
+      "query": "要是我只打算在景山公园停留四十分钟，你会怎么说服我这个地方仍然值得去？",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-003",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果同行的人平时不爱逛景点，只喜欢拍照，天坛最值得强调的吸引力是什么？",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-004",
+      "group": "sql",
+      "language": "zh",
+      "query": "去颐和园之前，如果游客问这个地方到底特别在哪，而不是“就是一个大公园”，你会怎么回答？",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-005",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果我想找一个既有历史感又不至于太压迫的皇家景点，北海公园适合怎么介绍？",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-006",
+      "group": "sql",
+      "language": "zh",
+      "query": "雍和宫如果不从宗教信仰角度讲，而是从空间氛围和文化体验角度讲，你会怎么介绍？",
+      "attraction": "雍和宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-007",
+      "group": "sql",
+      "language": "zh",
+      "query": "什刹海对第一次来北京的人来说，除了“可以逛逛”，还有什么更具体的吸引力？",
+      "attraction": "什刹海",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-008",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果游客白天已经走了很多路，傍晚再去景山公园，你会怎么描述它的价值才不显得重复？",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-009",
+      "group": "sql",
+      "language": "zh",
+      "query": "天安门广场如果不谈政治口号，只谈游客体验和城市空间感，它值得看什么？",
+      "attraction": "天安门广场",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-010",
+      "group": "sql",
+      "language": "zh",
+      "query": "钟鼓楼适合怎么介绍给一个对北京城市节奏和老城气质感兴趣的人？",
+      "attraction": "钟鼓楼",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-011",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果朋友问故宫和天坛哪个更能代表北京的古都气质，你先怎么讲故宫这一边？",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-012",
+      "group": "sql",
+      "language": "zh",
+      "query": "有人嫌颐和园“太大太散”，如果你要用几句话改变这个印象，你会怎么说？",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-013",
+      "group": "sql",
+      "language": "zh",
+      "query": "北海公园适合怎么推荐给一个不想赶景点、只想慢慢感受北京的人？",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-014",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果带长辈去天坛，不强调知识点，单从节奏舒服和环境感受上该怎么介绍？",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-015",
+      "group": "sql",
+      "language": "zh",
+      "query": "雍和宫对于不熟悉藏传佛教的人来说，最容易感受到的魅力应该怎么表达？",
+      "attraction": "雍和宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-016",
+      "group": "sql",
+      "language": "zh",
+      "query": "什刹海如果不是去酒吧和夜生活，而是白天逛，它最值得被讲出来的特点是什么？",
+      "attraction": "什刹海",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-017",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果我喜欢从高处看城市而不是钻展馆，景山公园该怎么被描述得更有吸引力？",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-018",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果游客已经看过很多中国古建筑了，故宫还能靠什么打动他？",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-019",
+      "group": "sql",
+      "language": "zh",
+      "query": "颐和园如果只给我一个核心理由去，你会选自然景观、皇家历史还是空间尺度来讲？请直接说。",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-020",
+      "group": "sql",
+      "language": "zh",
+      "query": "北海公园和故宫挨得很近，如果时间不够，北海公园本身最独立的看点怎么概括？",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-021",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you describe the Forbidden City to a first-time visitor who cares more about spatial design than imperial anecdotes?",
+      "attraction": "Forbidden City",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-022",
+      "group": "sql",
+      "language": "en",
+      "query": "If I only have about 45 minutes for Jingshan Park, what makes it still worth a stop beyond just “good views”?",
+      "attraction": "Jingshan Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-023",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you pitch the Temple of Heaven to someone who likes symbolism and atmosphere but not dense museum-style narration?",
+      "attraction": "Temple of Heaven",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-024",
+      "group": "sql",
+      "language": "en",
+      "query": "What is the most compelling way to explain the Summer Palace to a visitor who worries it will feel like just another huge park?",
+      "attraction": "Summer Palace",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-025",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you introduce Beihai Park to someone who wants a slower, more reflective Beijing experience rather than a checklist stop?",
+      "attraction": "Beihai Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-026",
+      "group": "sql",
+      "language": "en",
+      "query": "If I am not religious, how would you explain why Lama Temple can still feel memorable as a cultural visit?",
+      "attraction": "Lama Temple",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-027",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you explain what makes Shichahai distinctive for a traveler who wants local texture rather than just a famous name?",
+      "attraction": "Shichahai",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-028",
+      "group": "sql",
+      "language": "en",
+      "query": "If someone has already spent hours in the Forbidden City, how would you describe Jingshan Park without making it sound redundant?",
+      "attraction": "Jingshan Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-029",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you present Tiananmen Square to a visitor interested in urban scale and public space rather than slogans or ceremonies?",
+      "attraction": "Tiananmen Square",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-030",
+      "group": "sql",
+      "language": "en",
+      "query": "What is the best way to introduce the Bell and Drum Towers to someone curious about old Beijing’s rhythm and city life?",
+      "attraction": "Bell and Drum Towers",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-031",
+      "group": "sql",
+      "language": "en",
+      "query": "If I enjoy architecture but dislike crowded interiors, what part of the Forbidden City experience would you emphasize?",
+      "attraction": "Forbidden City",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-032",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you explain the appeal of the Summer Palace to a traveler who values long sightlines, water, and movement through space?",
+      "attraction": "Summer Palace",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-033",
+      "group": "sql",
+      "language": "en",
+      "query": "What would you say is the most underrated quality of Beihai Park for someone who has already seen the headline attractions in Beijing?",
+      "attraction": "Beihai Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-034",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you recommend the Temple of Heaven to someone traveling with older family members and looking for a calmer pace?",
+      "attraction": "Temple of Heaven",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-035",
+      "group": "sql",
+      "language": "en",
+      "query": "If a visitor wants a place that feels spiritual without requiring deep background knowledge, how would you frame Lama Temple?",
+      "attraction": "Lama Temple",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-036",
+      "group": "sql",
+      "language": "en",
+      "query": "How would you describe daytime Shichahai to someone who is not interested in bars but does want atmosphere and texture?",
+      "attraction": "Shichahai",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-037",
+      "group": "sql",
+      "language": "en",
+      "query": "If I love elevated viewpoints and city composition, how would you make Jingshan Park sound essential rather than optional?",
+      "attraction": "Jingshan Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-038",
+      "group": "sql",
+      "language": "en",
+      "query": "For a traveler who has seen many historic palaces before, what still makes the Forbidden City feel distinctive?",
+      "attraction": "Forbidden City",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-039",
+      "group": "sql",
+      "language": "en",
+      "query": "If you had to choose one core reason to visit the Summer Palace, would you frame it around landscape, imperial life, or scale?",
+      "attraction": "Summer Palace",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-040",
+      "group": "sql",
+      "language": "en",
+      "query": "If time is tight and Beihai Park is competing with nearby major sights, what is its strongest standalone appeal?",
+      "attraction": "Beihai Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-041",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果一个游客对“皇家园林”这几个字已经有点审美疲劳，颐和园还能用什么角度打动他？",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-042",
+      "group": "sql",
+      "language": "zh",
+      "query": "故宫最适合怎么介绍给一个看重“秩序感”和“中轴线”这种城市设计感受的人？",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-043",
+      "group": "sql",
+      "language": "zh",
+      "query": "北海公园如果不是为了划船拍照，而是为了体验北京的古典松弛感，应该怎么讲？",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-044",
+      "group": "sql",
+      "language": "zh",
+      "query": "雍和宫该怎么介绍给一个对香火热闹有兴趣，但又怕自己看不懂的人？",
+      "attraction": "雍和宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-045",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果游客只愿意在什刹海待一个小时，什么特质最值得优先讲出来？",
+      "attraction": "什刹海",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-046",
+      "group": "sql",
+      "language": "zh",
+      "query": "钟鼓楼如果不是为了打卡，而是为了理解老北京生活节奏，该怎么介绍得更有画面感？",
+      "attraction": "钟鼓楼",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-047",
+      "group": "sql",
+      "language": "zh",
+      "query": "天安门广场怎样介绍给一个在意“到此一游会不会太空”的游客，才能让他觉得值得？",
+      "attraction": "天安门广场",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-048",
+      "group": "sql",
+      "language": "zh",
+      "query": "景山公园除了俯瞰故宫之外，还有没有更能体现它价值的说法？",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-049",
+      "group": "sql",
+      "language": "zh",
+      "query": "天坛如果不从“世界遗产”这种标签讲，而是从游客真实感受讲，最值得强调什么？",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "SQL-050",
+      "group": "sql",
+      "language": "zh",
+      "query": "如果有人问故宫到底是“必须去”还是“名气大于体验”，你会怎么回答得更有说服力？",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": false
+    },
+    {
+      "case_id": "RAG-001",
+      "group": "rag",
+      "language": "zh",
+      "query": "不要只给我概览，详细讲讲故宫为什么会被看作权力秩序的建筑化表达。",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-002",
+      "group": "rag",
+      "language": "zh",
+      "query": "我不要旅游手册式简介，想听更深入的天坛礼制含义，以及建筑和祭祀之间怎么互相对应。",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-003",
+      "group": "rag",
+      "language": "zh",
+      "query": "请详细解释天安门广场为什么不仅是地标，而且承载了现代中国政治象征意义。",
+      "attraction": "天安门广场",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-004",
+      "group": "rag",
+      "language": "zh",
+      "query": "景山公园不只是看风景吧？详细讲讲它和北京中轴线、皇城空间关系之间更深的意义。",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-005",
+      "group": "rag",
+      "language": "zh",
+      "query": "我想深入理解颐和园，不是看景色层面，而是它如何体现晚清皇家审美和空间政治。",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-006",
+      "group": "rag",
+      "language": "zh",
+      "query": "别只说北海公园风景好，详细讲讲它在皇家园林传统里的位置，以及历史层次。",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-007",
+      "group": "rag",
+      "language": "zh",
+      "query": "如果从宗教、民族关系和城市文化交汇的角度看，雍和宫为什么重要？请展开讲。",
+      "attraction": "雍和宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-008",
+      "group": "rag",
+      "language": "zh",
+      "query": "什刹海为什么能代表北京老城生活的某种精神气质？不要泛泛而谈，详细解释。",
+      "attraction": "什刹海",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-009",
+      "group": "rag",
+      "language": "zh",
+      "query": "钟鼓楼除了“报时”这个常识之外，还有哪些更深的城市治理和生活秩序意义？",
+      "attraction": "钟鼓楼",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-010",
+      "group": "rag",
+      "language": "zh",
+      "query": "请详细讲讲故宫中轴线、院落层层递进和权力等级之间的关系，不要只说宏伟。",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-011",
+      "group": "rag",
+      "language": "zh",
+      "query": "天坛的圆形、方形、台基、色彩这些设计元素，各自背后体现了什么宇宙观？",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-012",
+      "group": "rag",
+      "language": "zh",
+      "query": "天安门广场为什么会成为国家记忆和公共仪式的核心场域？想听更完整的历史脉络。",
+      "attraction": "天安门广场",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-013",
+      "group": "rag",
+      "language": "zh",
+      "query": "景山为什么经常被说是理解北京城市格局的一个关键点？请从历史和空间两方面讲清楚。",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-014",
+      "group": "rag",
+      "language": "zh",
+      "query": "颐和园如果放到中国园林史里看，它到底是一个什么级别、什么风格的存在？请细讲。",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-015",
+      "group": "rag",
+      "language": "zh",
+      "query": "我想知道北海公园背后更老的历史层累，不只是清代那一层，请你详细展开。",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-016",
+      "group": "rag",
+      "language": "zh",
+      "query": "雍和宫为什么会在北京宗教空间里这么特殊？请把它的历史转变和文化含义一起讲。",
+      "attraction": "雍和宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-017",
+      "group": "rag",
+      "language": "zh",
+      "query": "什刹海为何常被视为“老北京生活肌理”的缩影？请讲得具体一点，不要只是文艺描述。",
+      "attraction": "什刹海",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-018",
+      "group": "rag",
+      "language": "zh",
+      "query": "如果从皇权、礼制和城市展示角度看故宫，它最核心的象征意义是什么？请深入解释。",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-019",
+      "group": "rag",
+      "language": "zh",
+      "query": "天坛为什么会让人觉得庄严感特别强？这种感受在建筑结构和祭天礼制里是怎么被制造出来的？",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-020",
+      "group": "rag",
+      "language": "zh",
+      "query": "天安门广场从空间尺度到纪念意义，为什么会给游客一种“国家舞台”的感觉？详细讲讲。",
+      "attraction": "天安门广场",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-021",
+      "group": "rag",
+      "language": "en",
+      "query": "Do not give me a short overview. Explain in depth why the Forbidden City is often read as an architectural expression of hierarchy and imperial order.",
+      "attraction": "Forbidden City",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-022",
+      "group": "rag",
+      "language": "en",
+      "query": "I want a deeper explanation of the Temple of Heaven as a ritual landscape, especially how the architecture maps onto ideas of cosmos and legitimacy.",
+      "attraction": "Temple of Heaven",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-023",
+      "group": "rag",
+      "language": "en",
+      "query": "Please go beyond tourist basics and explain why Tiananmen Square carries such concentrated political and symbolic meaning in modern China.",
+      "attraction": "Tiananmen Square",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-024",
+      "group": "rag",
+      "language": "en",
+      "query": "Jingshan Park seems more than just a viewpoint. Explain its deeper relationship to the imperial city and Beijing’s central axis.",
+      "attraction": "Jingshan Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-025",
+      "group": "rag",
+      "language": "en",
+      "query": "I am not asking for scenery tips. Explain the Summer Palace as a political and aesthetic statement of late imperial power.",
+      "attraction": "Summer Palace",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-026",
+      "group": "rag",
+      "language": "en",
+      "query": "Go deeper than “beautiful park” and explain where Beihai Park sits within the longer history of imperial garden culture in Beijing.",
+      "attraction": "Beihai Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-027",
+      "group": "rag",
+      "language": "en",
+      "query": "Why is Lama Temple historically significant if we look at religion, empire, and ethnic relations together rather than as separate topics?",
+      "attraction": "Lama Temple",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-028",
+      "group": "rag",
+      "language": "en",
+      "query": "Explain in detail why Shichahai is often treated as a distilled image of old Beijing urban life rather than just a pleasant area to stroll.",
+      "attraction": "Shichahai",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-029",
+      "group": "rag",
+      "language": "en",
+      "query": "Beyond the simple fact that they marked time, what deeper role did the Bell and Drum Towers play in structuring the life of the city?",
+      "attraction": "Bell and Drum Towers",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-030",
+      "group": "rag",
+      "language": "en",
+      "query": "Please unpack the Forbidden City’s sequence of gates, courtyards, and axial planning as a system of political theater, not just architecture.",
+      "attraction": "Forbidden City",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-031",
+      "group": "rag",
+      "language": "en",
+      "query": "What do the forms, platforms, geometry, and ceremonial routes at the Temple of Heaven reveal about classical Chinese cosmology?",
+      "attraction": "Temple of Heaven",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-032",
+      "group": "rag",
+      "language": "en",
+      "query": "Why did Tiananmen Square become such a dense site of national memory and public ritual? I want the historical layers, not a quick answer.",
+      "attraction": "Tiananmen Square",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-033",
+      "group": "rag",
+      "language": "en",
+      "query": "Explain why Jingshan is such a key interpretive point for understanding Beijing’s planned urban form and imperial visual logic.",
+      "attraction": "Jingshan Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-034",
+      "group": "rag",
+      "language": "en",
+      "query": "Place the Summer Palace within the broader history of Chinese garden design and imperial self-fashioning, with more detail than a normal guidebook.",
+      "attraction": "Summer Palace",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-035",
+      "group": "rag",
+      "language": "en",
+      "query": "I want the older historical layers of Beihai Park, not just Qing-era anecdotes. What deeper continuity should I understand?",
+      "attraction": "Beihai Park",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-036",
+      "group": "rag",
+      "language": "en",
+      "query": "Explain why Lama Temple is unusual in Beijing if we trace its shifts in status, function, and symbolic role over time.",
+      "attraction": "Lama Temple",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-037",
+      "group": "rag",
+      "language": "en",
+      "query": "Why does Shichahai feel like a living archive of old Beijing rather than just a preserved district? Please answer with depth.",
+      "attraction": "Shichahai",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-038",
+      "group": "rag",
+      "language": "en",
+      "query": "If the Forbidden City is read as a machine for staging authority, what are the most important design choices that make that possible?",
+      "attraction": "Forbidden City",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-039",
+      "group": "rag",
+      "language": "en",
+      "query": "Why does the Temple of Heaven produce such an intense sense of solemnity? Explain the ritual, symbolic, and architectural mechanisms behind that feeling.",
+      "attraction": "Temple of Heaven",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-040",
+      "group": "rag",
+      "language": "en",
+      "query": "From scale to ceremony to memory, why does Tiananmen Square feel like a national stage rather than just an open plaza?",
+      "attraction": "Tiananmen Square",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-041",
+      "group": "rag",
+      "language": "zh",
+      "query": "故宫为什么会让人产生一种“秩序压倒个人”的感受？请从空间组织和仪式逻辑上细讲。",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-042",
+      "group": "rag",
+      "language": "zh",
+      "query": "请不要只讲天坛“祭天”，而是详细说明它如何把抽象礼制变成可被身体感受到的空间经验。",
+      "attraction": "天坛",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-043",
+      "group": "rag",
+      "language": "zh",
+      "query": "天安门广场为什么常被视作观察现代中国国家叙事的入口？我想听完整一点的解释。",
+      "attraction": "天安门广场",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-044",
+      "group": "rag",
+      "language": "zh",
+      "query": "景山公园如果放到皇城整体里看，它到底承担了什么角色？请不要只回答“可以俯瞰故宫”。",
+      "attraction": "景山公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-045",
+      "group": "rag",
+      "language": "zh",
+      "query": "颐和园为什么既像园林又像权力展示舞台？请从路线、视线和建筑布置层面讲讲。",
+      "attraction": "颐和园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-046",
+      "group": "rag",
+      "language": "zh",
+      "query": "北海公园背后有哪些比游客直观看到的景色更重要的历史文化层次？请展开。",
+      "attraction": "北海公园",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-047",
+      "group": "rag",
+      "language": "zh",
+      "query": "雍和宫为什么常常同时被放进宗教史、清代政治史和北京城市文化里一起讨论？",
+      "attraction": "雍和宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-048",
+      "group": "rag",
+      "language": "zh",
+      "query": "什刹海为什么会给人一种“北京生活传统还在这里呼吸”的感觉？请具体解释这种感觉从哪来。",
+      "attraction": "什刹海",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-049",
+      "group": "rag",
+      "language": "zh",
+      "query": "钟鼓楼作为城市时间装置，为什么不仅是功能建筑，也是权力和秩序的象征？",
+      "attraction": "钟鼓楼",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    },
+    {
+      "case_id": "RAG-050",
+      "group": "rag",
+      "language": "zh",
+      "query": "如果要把故宫讲成一套关于世界观、权力观和身体经验的系统，而不是单个景点，你会怎么详细解释？",
+      "attraction": "故宫",
+      "expected_intent": "attraction_explain",
+      "expected_rag": true
+    }
+  ]
+}

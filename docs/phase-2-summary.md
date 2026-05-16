@@ -54,6 +54,7 @@
 - `AGENTS.md` 与 `README.md` 已经优先指向第二阶段工作集
 - 2026-05-16 已继续做一轮文档入口治理：根 `README.md` 收敛为短总入口，新增 `docs/README.md`、`docs/qa/README.md`、`docs/qa/routing/README.md`、`docs/qa/intent-rules/README.md`、`docs/qa/navigation/README.md`、`docs/evals/README.md`、`docs/testing/README.md` 等专题索引。当前先不移动原始文档，避免破坏旧链接；后续可按索引目录逐步物理迁移。
 - 2026-05-16 已明确保留自动记录方式：每轮实质开发 / 调试 / benchmark / 规则调整都要同步刷新 `phase-2-summary` 和 `todo-phase-2`；`dev-retrospective` 只记录策略变化、问题归因和解决方案，普通小测试不写。
+- 2026-05-16 代码提交前回归中发现并修复英文 answer translation 降级兜底问题：中文确定性行程回答中如果混有英文景点名，现在仍会触发英文语言对齐兜底，并保留 current/next stop 信息。
 - `docs/todo.md` 与 `docs/current-session-summary.md` 已被明确标记为 archive / history 文档
 - 次级入口文档现在也已经引用第二阶段工作集和功能级测试说明文档
 - 当前给用户阅读的第二阶段文档已切换为中文表达，必要术语保留英文

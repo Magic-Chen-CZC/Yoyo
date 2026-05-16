@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "label": "qwen-turbo",
+      "provider": "dashscope",
+      "model": "qwen-turbo"
+    },
+    {
+      "label": "doubao-seed-mini",
+      "provider": "volcengine",
+      "model": "doubao-seed-2-0-mini-260428"
+    }
+  ]
+}

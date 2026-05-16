@@ -1,0 +1,9 @@
+dataset_name: routing_rule_all_300_cases
+dataset_version: "2026-05-15"
+notes: >
+  Combined QA intent rule maintenance suite. It includes the original 100-case
+  maintenance baseline and the additional 200 complex hard cases.
+include_datasets:
+  - routing_rule_maintenance_100_cases.yaml
+  - routing_rule_complex_200_cases.yaml
+cases: []

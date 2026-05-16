@@ -1,0 +1,475 @@
+queries:
+- id: G2-AT-001
+  category: attraction_explain
+  language: en
+  prompt: "Explain why the Forbidden City matters for first-time visitors to Beijing."
+  metadata:
+    title: "Forbidden City first-time visitor explanation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-002
+  category: attraction_explain
+  language: en
+  prompt: "Give me a short historical introduction to Tiananmen Square."
+  metadata:
+    title: "Tiananmen short historical intro"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "concise"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-003
+  category: attraction_explain
+  language: en
+  prompt: "Why is Jingshan Park worth visiting if I prefer practical sightseeing advice?"
+  metadata:
+    title: "Practical Jingshan explanation"
+    mode: "single_turn"
+    scenario_type: "strict_sql_grounding"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-004
+  category: attraction_explain
+  language: en
+  prompt: "Explain the Temple of Heaven in simple English for tourists."
+  metadata:
+    title: "Temple of Heaven simple English"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "simple"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-005
+  category: attraction_explain
+  language: en
+  prompt: "What makes the Summer Palace special for visitors who like scenic routes?"
+  metadata:
+    title: "Summer Palace scenic angle"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    interests: ""
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-006
+  category: attraction_explain
+  language: en
+  prompt: "Please explain why the Forbidden City matters, but keep the answer emotionally"
+  metadata:
+    title: "Forbidden City NF style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "expressive"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NF"
+    interests: ""
+    style_bucket: "NF"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-007
+  category: attraction_explain
+  language: en
+  prompt: "Explain the Forbidden City in a more analytical way for someone interested"
+  metadata:
+    title: "Forbidden City NT style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NT"
+    interests: ""
+    style_bucket: "NT"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-008
+  category: attraction_explain
+  language: en
+  prompt: "Explain Tiananmen Square in a practical, orderly, and easy-to-follow way."
+  metadata:
+    title: "Tiananmen SJ style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "orderly"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-009
+  category: attraction_explain
+  language: en
+  prompt: "Describe Jingshan Park in a vivid, immediate, experience-focused way."
+  metadata:
+    title: "Jingshan SP style"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "vivid"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-010
+  category: attraction_explain
+  language: en
+  prompt: "Tell me more about the Temple of Heaven and why it matters for first-time"
+  metadata:
+    title: "Temple of Heaven first-time visitor explanation"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-011
+  category: attraction_explain
+  language: zh
+  prompt: "请简要介绍故宫为什么值得第一次来北京的游客去看。"
+  metadata:
+    title: "故宫中文首访介绍"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-012
+  category: attraction_explain
+  language: zh
+  prompt: "请用更感性的方式讲一讲天坛的意义。"
+  metadata:
+    title: "天坛中文感性风格"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "expressive"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NF"
+    style_bucket: "NF"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-013
+  category: attraction_explain
+  language: zh
+  prompt: "请用理性一点的方式介绍故宫，重点说结构和逻辑。"
+  metadata:
+    title: "故宫中文理性风格"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "NT"
+    style_bucket: "NT"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-014
+  category: attraction_explain
+  language: zh
+  prompt: "请用简洁、实用的方式介绍景山公园。"
+  metadata:
+    title: "景山公园中文实用风格"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "practical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "zh"
+    expected_output_language: "zh"
+    source: "reused"
+- id: G2-AT-015
+  category: attraction_explain
+  language: es
+  prompt: "Explica por qué la Ciudad Prohibida vale la pena para alguien que visita"
+  metadata:
+    title: "Forbidden City Spanish explanation"
+    mode: "single_turn"
+    scenario_type: "multilingual"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "es"
+    expected_output_language: "es"
+    source: "reused"
+- id: G2-AT-016
+  category: attraction_explain
+  language: mixed
+  prompt: "请用 English explain why Jingshan Park is worth visiting, but keep it practical."
+  metadata:
+    title: "Mixed-language practical Jingshan explanation"
+    mode: "single_turn"
+    scenario_type: "mixed_language"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "mixed_language"
+    grounding_requirement: "strict_sql"
+    input_language: "mixed"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-017
+  category: attraction_explain
+  language: en
+  prompt: "Why is the Temple of Heaven culturally significant, and what should a first-time"
+  metadata:
+    title: "Temple of Heaven cultural significance"
+    mode: "single_turn"
+    scenario_type: "standard_qa"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "direct"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-018
+  category: attraction_explain
+  language: en
+  prompt: "Summarize the Summer Palace for a traveler who wants calm scenic value rather"
+  metadata:
+    title: "Summer Palace calm scenic summary"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "calm"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SP"
+    interests: ""
+    style_bucket: "SP"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-019
+  category: attraction_explain
+  language: en
+  prompt: "Explain Tiananmen Square for someone who wants a structured, fact-first"
+  metadata:
+    title: "Tiananmen fact-first answer"
+    mode: "single_turn"
+    scenario_type: "profile_style_control"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql_profile"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "analytical"
+    grounding_requirement: "sql_with_profile"
+    profile_hint: ""
+    guide_style_preference: "SJ"
+    style_bucket: "SJ"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: G2-AT-020
+  category: attraction_explain
+  language: en
+  prompt: "Tell me why the Forbidden City matters, but avoid overclaiming beyond what"
+  metadata:
+    title: "Forbidden City anti-hallucination grounding"
+    mode: "single_turn"
+    scenario_type: "anti_hallucination_boundary"
+    expected_intent: "attraction_explain"
+    expected_data_source: "sql"
+    expected_behavior: ""
+    failure_signals: ""
+    scoring_focus: ""
+    prompt_style: "cautious"
+    grounding_requirement: "strict_sql"
+    input_language: "en"
+    expected_output_language: "en"
+    source: "reused"
+- id: BENCH-AT-021
+  category: attraction_explain
+  language: en
+  prompt: "Explain why the Temple of Heaven matters for first-time Beijing visitors in simple English."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-022
+  category: attraction_explain
+  language: en
+  prompt: "Give me a practical explanation of the Summer Palace for a tourist who prefers scenic routes."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-023
+  category: attraction_explain
+  language: en
+  prompt: "Why is Jingshan Park often paired with the Forbidden City on Beijing routes?"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-024
+  category: attraction_explain
+  language: en
+  prompt: "Explain Tiananmen Square in a family-friendly way."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-025
+  category: attraction_explain
+  language: en
+  prompt: "What should a photography-focused tourist notice first at Jingshan Park?"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-026
+  category: attraction_explain
+  language: zh
+  prompt: "请用中文简单介绍天坛为什么值得第一次来北京的人去看。"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-AT-027
+  category: attraction_explain
+  language: zh
+  prompt: "请用中文解释为什么故宫不只是一个拍照景点。"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-AT-028
+  category: attraction_explain
+  language: zh
+  prompt: "如果我更关心实用游览建议，景山公园为什么值得去？"
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "zh"
+    source: "new"
+- id: BENCH-AT-029
+  category: attraction_explain
+  language: en
+  prompt: "Give me a 30-second audio-guide style introduction to the Forbidden City."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"
+- id: BENCH-AT-030
+  category: attraction_explain
+  language: en
+  prompt: "Explain the Temple of Heaven without using academic language."
+  metadata:
+    expected_intent: "attraction_explain"
+    expected_output_language: "en"
+    source: "new"

@@ -1,0 +1,1524 @@
+dataset_name: translation_product_sea_v1
+dataset_version: '2026-05-07'
+languages:
+- th
+- vi
+- id
+- ms
+- fil
+- my
+- km
+- lo
+- zh
+question_types:
+- ask_location
+- ask_opening_hours
+- ask_ticketing
+- ask_restroom
+- ask_photo_help
+- ask_next_stop
+- ask_rest_break
+- ask_queue_or_entrance
+cases:
+- id: product-001
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ศูนย์บริการ
+  - ที่ไหน
+  must_preserve_entities: []
+- id: product-002
+  question_type: ask_location
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: ศูนย์บริการนักท่องเที่ยวอยู่ที่ไหน'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id002
+  - 游客中心
+  must_preserve_entities: []
+- id: product-003
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ปิด
+  - กี่โมง
+  must_preserve_entities: []
+- id: product-004
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: สถานที่ท่องเที่ยวนี้วันนี้ปิดกี่โมง'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id003
+  - 今天
+  - 关门
+  must_preserve_entities: []
+- id: product-005
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ค่าเข้าชม
+  - เท่าไร
+  must_preserve_entities: []
+- id: product-006
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: ค่าเข้าชมเท่าไร'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id004
+  - 票价
+  - 多少
+  must_preserve_entities: []
+- id: product-007
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ห้องน้ำ
+  must_preserve_entities: []
+- id: product-008
+  question_type: ask_restroom
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: ห้องน้ำอยู่ที่ไหน'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id001
+  - 卫生间
+  - 洗手间
+  must_preserve_entities: []
+- id: product-009
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ถ่ายรูป
+  must_preserve_entities: []
+- id: product-010
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: ช่วยถ่ายรูปให้ฉันหน่อย'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id005
+  - 拍张照片
+  - 照片
+  must_preserve_entities: []
+- id: product-011
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ต่อ
+  - ไปที่ไหน
+  must_preserve_entities: []
+- id: product-012
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: เราควรไปที่ไหนต่อ'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id006
+  - 下一站
+  - 去哪里
+  must_preserve_entities: []
+- id: product-013
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - สิบนาที
+  - พัก
+  must_preserve_entities: []
+- id: product-014
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: ฉันพักที่นี่สิบนาทีได้ไหม'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id007
+  - 休息
+  - 十分钟
+  must_preserve_entities: []
+- id: product-015
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_th
+  query: 'Translate this into Thai: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: th
+  expected_phrases:
+  - ทางเข้า
+  - ต่อแถว
+  must_preserve_entities: []
+- id: product-016
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: th_to_zh
+  query: 'Translate this into Chinese: ตอนนี้ควรไปต่อแถวที่ทางเข้าไหน'
+  user_language: th
+  source_language: th
+  target_language: zh
+  expected_phrases: &id008
+  - 入口
+  - 排队
+  must_preserve_entities: []
+- id: product-017
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: th_to_zh_display
+  query: 'show this to local staff: ห้องน้ำอยู่ที่ไหน'
+  user_language: th
+  source_language: th
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-018
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - trung tâm
+  - ở đâu
+  must_preserve_entities: []
+- id: product-019
+  question_type: ask_location
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Trung tâm du khách ở đâu?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-020
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - hôm nay
+  - đóng cửa
+  must_preserve_entities: []
+- id: product-021
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Hôm nay điểm tham quan này đóng cửa lúc mấy
+    giờ?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-022
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - vé
+  - bao nhiêu
+  must_preserve_entities: []
+- id: product-023
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Vé vào cửa bao nhiêu tiền?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-024
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - nhà vệ sinh
+  must_preserve_entities: []
+- id: product-025
+  question_type: ask_restroom
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Nhà vệ sinh ở đâu?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-026
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - chụp
+  - ảnh
+  must_preserve_entities: []
+- id: product-027
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Làm ơn chụp giúp tôi một bức ảnh.'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-028
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - đâu
+  - tiếp
+  must_preserve_entities: []
+- id: product-029
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Chúng ta nên đi đâu tiếp theo?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-030
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - mười phút
+  - nghỉ
+  must_preserve_entities: []
+- id: product-031
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Tôi có thể nghỉ ở đây mười phút không?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-032
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_vi
+  query: 'Translate this into Vietnamese: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: vi
+  expected_phrases:
+  - cổng
+  - xếp hàng
+  must_preserve_entities: []
+- id: product-033
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: vi_to_zh
+  query: 'Translate this into Chinese: Bây giờ nên xếp hàng vào cổng nào?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-034
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: vi_to_zh_display
+  query: 'show this to local staff: Nhà vệ sinh ở đâu?'
+  user_language: vi
+  source_language: vi
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-035
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - pusat
+  - di mana
+  must_preserve_entities: []
+- id: product-036
+  question_type: ask_location
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Pusat informasi wisata ada di mana?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-037
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - tutup
+  - hari ini
+  must_preserve_entities: []
+- id: product-038
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Tempat wisata ini tutup jam berapa hari ini?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-039
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - harga
+  - tiket
+  must_preserve_entities: []
+- id: product-040
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Harga tiket masuk berapa?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-041
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - toilet
+  must_preserve_entities: []
+- id: product-042
+  question_type: ask_restroom
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Toilet ada di mana?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-043
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - foto
+  must_preserve_entities: []
+- id: product-044
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Tolong bantu saya ambil foto.'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-045
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - selanjutnya
+  - ke mana
+  must_preserve_entities: []
+- id: product-046
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Kita harus pergi ke mana selanjutnya?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-047
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - istirahat
+  - sepuluh menit
+  must_preserve_entities: []
+- id: product-048
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Bolehkah saya istirahat di sini selama sepuluh
+    menit?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-049
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_id
+  query: 'Translate this into Indonesian: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: id
+  expected_phrases:
+  - pintu
+  - antre
+  must_preserve_entities: []
+- id: product-050
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: id_to_zh
+  query: 'Translate this into Chinese: Sekarang harus antre masuk dari pintu yang
+    mana?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-051
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: id_to_zh_display
+  query: 'show this to local staff: Toilet ada di mana?'
+  user_language: id
+  source_language: id
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-052
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - pusat
+  - di mana
+  must_preserve_entities: []
+- id: product-053
+  question_type: ask_location
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Pusat pelawat di mana?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-054
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - tutup
+  - hari ini
+  must_preserve_entities: []
+- id: product-055
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Tempat ini tutup pukul berapa hari ini?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-056
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - harga
+  - tiket
+  must_preserve_entities: []
+- id: product-057
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Harga tiket masuk berapa?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-058
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - tandas
+  must_preserve_entities: []
+- id: product-059
+  question_type: ask_restroom
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Tandas di mana?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-060
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - gambar
+  must_preserve_entities: []
+- id: product-061
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Tolong ambilkan saya gambar.'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-062
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - seterusnya
+  - ke mana
+  must_preserve_entities: []
+- id: product-063
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Kita patut pergi ke mana seterusnya?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-064
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - berehat
+  - sepuluh minit
+  must_preserve_entities: []
+- id: product-065
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Bolehkah saya berehat di sini selama sepuluh
+    minit?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-066
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_ms
+  query: 'Translate this into Malay: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: ms
+  expected_phrases:
+  - pintu
+  - beratur
+  must_preserve_entities: []
+- id: product-067
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: ms_to_zh
+  query: 'Translate this into Chinese: Sekarang perlu beratur masuk melalui pintu
+    mana?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-068
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: ms_to_zh_display
+  query: 'show this to local staff: Tandas di mana?'
+  user_language: ms
+  source_language: ms
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-069
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - sentro
+  - nasaan
+  must_preserve_entities: []
+- id: product-070
+  question_type: ask_location
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Nasaan ang sentro ng mga bisita?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-071
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - oras
+  - ngayon
+  must_preserve_entities: []
+- id: product-072
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Anong oras nagsasara ang lugar na ito ngayon?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-073
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - magkano
+  - tiket
+  must_preserve_entities: []
+- id: product-074
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Magkano ang tiket sa pagpasok?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-075
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - banyo
+  must_preserve_entities: []
+- id: product-076
+  question_type: ask_restroom
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Nasaan ang banyo?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-077
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - litrato
+  must_preserve_entities: []
+- id: product-078
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Paki kuhanan mo ako ng litrato.'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-079
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - pagkatapos
+  - saan
+  must_preserve_entities: []
+- id: product-080
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Saan tayo pupunta pagkatapos nito?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-081
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - magpahinga
+  - sampung minuto
+  must_preserve_entities: []
+- id: product-082
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Pwede ba akong magpahinga rito nang sampung
+    minuto?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-083
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_fil
+  query: 'Translate this into Filipino: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: fil
+  expected_phrases:
+  - entrada
+  - pumila
+  must_preserve_entities: []
+- id: product-084
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: fil_to_zh
+  query: 'Translate this into Chinese: Saang entrada dapat pumila ngayon?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-085
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: fil_to_zh_display
+  query: 'show this to local staff: Nasaan ang banyo?'
+  user_language: fil
+  source_language: fil
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-086
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - စင်တာ
+  - ဘယ်မှာ
+  must_preserve_entities: []
+- id: product-087
+  question_type: ask_location
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: ဧည့်သည်များအတွက် အချက်အလက်စင်တာ ဘယ်မှာလဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-088
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - ဒီနေ့
+  - ပိတ်
+  must_preserve_entities: []
+- id: product-089
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: ဒီနေရာက ဒီနေ့ ဘယ်နှနာရီပိတ်လဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-090
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - လက်မှတ်
+  - ဘယ်လောက်
+  must_preserve_entities: []
+- id: product-091
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: ဝင်ခလက်မှတ် ဘယ်လောက်လဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-092
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - အိမ်သာ
+  must_preserve_entities: []
+- id: product-093
+  question_type: ask_restroom
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: အိမ်သာ ဘယ်မှာလဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-094
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - ဓာတ်ပုံ
+  must_preserve_entities: []
+- id: product-095
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: ကျွန်တော့်ကို ဓာတ်ပုံတစ်ပုံ ရိုက်ပေးပါ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-096
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - နောက်
+  - ဘယ်ကို
+  must_preserve_entities: []
+- id: product-097
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: နောက်တစ်နေရာ ဘယ်ကို သွားရမလဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-098
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - ဆယ်မိနစ်
+  - နား
+  must_preserve_entities: []
+- id: product-099
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: ဒီမှာ ဆယ်မိနစ်လောက် နားလို့ရမလား။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-100
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_my
+  query: 'Translate this into Burmese: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: my
+  expected_phrases:
+  - ဝင်ပေါက်
+  - တန်းစီ
+  must_preserve_entities: []
+- id: product-101
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: my_to_zh
+  query: 'Translate this into Chinese: အခု ဘယ်ဝင်ပေါက်ကနေ တန်းစီဝင်ရမလဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-102
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: my_to_zh_display
+  query: 'show this to local staff: အိမ်သာ ဘယ်မှာလဲ။'
+  user_language: my
+  source_language: my
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-103
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - មជ្ឈមណ្ឌល
+  - នៅឯណា
+  must_preserve_entities: []
+- id: product-104
+  question_type: ask_location
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: មជ្ឈមណ្ឌលភ្ញៀវនៅឯណា?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-105
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - ថ្ងៃនេះ
+  - បិទ
+  must_preserve_entities: []
+- id: product-106
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: ថ្ងៃនេះកន្លែងទេសចរណ៍នេះបិទម៉ោងប៉ុន្មាន?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-107
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - សំបុត្រ
+  - ប៉ុន្មាន
+  must_preserve_entities: []
+- id: product-108
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: សំបុត្រចូលថ្លៃប៉ុន្មាន?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-109
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - បង្គន់
+  must_preserve_entities: []
+- id: product-110
+  question_type: ask_restroom
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: បង្គន់នៅឯណា?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-111
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - ថតរូប
+  must_preserve_entities: []
+- id: product-112
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: សូមជួយថតរូបឱ្យខ្ញុំមួយសន្លឹក។'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-113
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - បន្ទាប់
+  - ទៅណា
+  must_preserve_entities: []
+- id: product-114
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: បន្ទាប់ពីនេះយើងគួរទៅណា?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-115
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - ដប់នាទី
+  - សម្រាក
+  must_preserve_entities: []
+- id: product-116
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: ខ្ញុំអាចសម្រាកនៅទីនេះដប់នាទីបានទេ?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-117
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_km
+  query: 'Translate this into Khmer: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: km
+  expected_phrases:
+  - ច្រក
+  - ជួរ
+  must_preserve_entities: []
+- id: product-118
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: km_to_zh
+  query: 'Translate this into Chinese: ឥឡូវនេះគួរតម្រៀបជួរចូលតាមច្រកណា?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-119
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: km_to_zh_display
+  query: 'show this to local staff: បង្គន់នៅឯណា?'
+  user_language: km
+  source_language: km
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-120
+  question_type: ask_location
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 游客中心在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ສູນ
+  - ຢູ່ໃສ
+  must_preserve_entities: []
+- id: product-121
+  question_type: ask_location
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ສູນຂໍ້ມູນນັກທ່ອງທ່ຽວຢູ່ໃສ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id002
+  must_preserve_entities: []
+- id: product-122
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 这个景点今天几点关门？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ມື້ນີ້
+  - ປິດ
+  must_preserve_entities: []
+- id: product-123
+  question_type: ask_opening_hours
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ມື້ນີ້ສະຖານທີ່ທ່ອງທ່ຽວນີ້ປິດຈັກໂມງ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id003
+  must_preserve_entities: []
+- id: product-124
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 票价是多少？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ປີ້
+  - ລາຄາ
+  must_preserve_entities: []
+- id: product-125
+  question_type: ask_ticketing
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ປີ້ເຂົ້າລາຄາເທົ່າໃດ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id004
+  must_preserve_entities: []
+- id: product-126
+  question_type: ask_restroom
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 卫生间在哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ຫ້ອງນ້ຳ
+  must_preserve_entities: []
+- id: product-127
+  question_type: ask_restroom
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ຫ້ອງນ້ຳຢູ່ໃສ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id001
+  must_preserve_entities: []
+- id: product-128
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 请帮我拍张照片'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ຖ່າຍຮູບ
+  must_preserve_entities: []
+- id: product-129
+  question_type: ask_photo_help
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ກະລຸນາຊ່ວຍຖ່າຍຮູບໃຫ້ຂ້ອຍແນ່.'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id005
+  must_preserve_entities: []
+- id: product-130
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 我们下一站去哪里？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ຕໍ່
+  - ໄປໃສ
+  must_preserve_entities: []
+- id: product-131
+  question_type: ask_next_stop
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ພວກເຮົາຄວນໄປໃສຕໍ່?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id006
+  must_preserve_entities: []
+- id: product-132
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 我可以在这里休息十分钟吗？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ສິບນາທີ
+  - ພັກ
+  must_preserve_entities: []
+- id: product-133
+  question_type: ask_rest_break
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ຂ້ອຍພັກຢູ່ນີ້ສິບນາທີໄດ້ບໍ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id007
+  must_preserve_entities: []
+- id: product-134
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: zh_to_lo
+  query: 'Translate this into Lao: 现在从哪个入口进去排队？'
+  user_language: zh
+  source_language: zh
+  target_language: lo
+  expected_phrases:
+  - ປະຕູ
+  - ແຖວ
+  must_preserve_entities: []
+- id: product-135
+  question_type: ask_queue_or_entrance
+  category: direct_translation
+  direction: lo_to_zh
+  query: 'Translate this into Chinese: ຕອນນີ້ຄວນເຂົ້າແຖວທາງປະຕູໃດ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  expected_phrases: *id008
+  must_preserve_entities: []
+- id: product-136
+  question_type: ask_restroom
+  category: bilingual_display
+  direction: lo_to_zh_display
+  query: 'show this to local staff: ຫ້ອງນ້ຳຢູ່ໃສ?'
+  user_language: lo
+  source_language: lo
+  target_language: zh
+  bilingual_for_display: true
+  expected_phrases: *id001
+  must_preserve_entities: []
