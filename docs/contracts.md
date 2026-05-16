@@ -2,6 +2,8 @@
 
 This file defines the overlap between A and B. These contracts should be treated as the shared boundary to finish first before broader parallel development continues.
 
+For frontend-consumed request/response fields, examples, and endpoint-level semantics, use `docs/api-contracts-fullstack.md` as the source of truth. This file focuses on shared ownership, state boundaries, and cross-module rules.
+
 ---
 
 ## Goal

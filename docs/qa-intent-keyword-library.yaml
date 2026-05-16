@@ -1,0 +1,739 @@
+version: 2026-05-15
+description: >
+  QA intent keyword and phrase library. This file is a maintenance asset for the
+  rule router design; it is not wired into runtime routing yet.
+
+routing_policy:
+  scoring_language: zh
+  preprocess: translate_non_zh_to_zh_before_routing
+  note: >
+    Runtime rule scoring should only use Chinese pivot text and Chinese
+    keyword/pattern assets. Non-Chinese entries in this document are retained as
+    historical/reference examples for translation-pivot debugging and should not
+    be expanded into a second routing lexicon.
+
+global:
+  politeness_prefix:
+    zh:
+      - 你好
+      - 您好
+      - 哈喽
+      - 嗨
+      - 请问
+      - 麻烦问一下
+      - 想问一下
+      - 帮我看看
+      - 可以问一下吗
+      - 不好意思
+      - 打扰一下
+      - 谢谢
+      - 多谢
+    en:
+      - hello
+      - hi
+      - hey
+      - please
+      - excuse me
+      - may i ask
+      - can you help
+      - thanks
+      - thank you
+    routing_effect: strip_prefix_only
+    note: >
+      Politeness phrases must not score smalltalk when task evidence remains.
+
+  attraction_entities:
+    zh:
+      - 故宫
+      - 故宫博物院
+      - 紫禁城
+      - 天安门
+      - 天安门广场
+      - 景山
+      - 景山公园
+      - 天坛
+      - 祈年殿
+      - 正阳门
+      - 前门
+      - 颐和园
+      - 圆明园
+      - 北海公园
+      - 什刹海
+      - 南锣鼓巷
+      - 雍和宫
+      - 恭王府
+      - 国家博物馆
+      - 北京动物园
+      - 八达岭长城
+      - 慕田峪长城
+    en:
+      - forbidden city
+      - palace museum
+      - imperial palace
+      - tiananmen
+      - tiananmen square
+      - jingshan
+      - jingshan park
+      - temple of heaven
+      - hall of prayer for good harvests
+      - zhengyangmen
+      - qianmen
+      - summer palace
+      - old summer palace
+      - beihai park
+      - shichahai
+      - nanluoguxiang
+      - lama temple
+      - prince gong mansion
+      - national museum of china
+      - beijing zoo
+      - badaling great wall
+      - mutianyu great wall
+
+  time_same_day:
+    zh:
+      - 今天
+      - 今日
+      - 现在
+      - 当前
+      - 这会儿
+      - 此刻
+      - 目前
+      - 今晚
+      - 今天晚上
+      - 今天下午
+      - 今天上午
+      - 今天还能
+      - 今天是否
+    en:
+      - today
+      - right now
+      - now
+      - currently
+      - this morning
+      - this afternoon
+      - tonight
+      - same-day
+      - today still
+
+intents:
+  smalltalk:
+    direct_phrases:
+      zh:
+        - 你好
+        - 您好
+        - 哈喽
+        - 嗨
+        - 早上好
+        - 中午好
+        - 下午好
+        - 晚上好
+        - 谢谢
+        - 多谢
+        - 再见
+        - 拜拜
+        - 你是谁
+        - 你能做什么
+      en:
+        - hello
+        - hi
+        - hey
+        - good morning
+        - good afternoon
+        - good evening
+        - thanks
+        - thank you
+        - bye
+        - goodbye
+        - who are you
+        - what can you do
+    required:
+      any:
+        - content_empty_after_politeness_strip
+        - exact_smalltalk_phrase
+    deny_if:
+      - attraction_entity
+      - explain_action
+      - live_operation
+      - weather_query
+      - navigation_action
+      - trip_progress
+      - route_edit_action
+      - translation_action
+    examples:
+      positive:
+        - 你好
+        - 谢谢
+        - hello
+      negative:
+        - 你好，请问故宫有什么历史
+        - hi, how do I get to Forbidden City?
+        - 谢谢，下一站去哪？
+
+  attraction_explain:
+    direct_phrases:
+      zh:
+        - 为什么值得去
+        - 有什么特别
+        - 有什么看点
+        - 值得看什么
+        - 适合第一次去吗
+        - 讲讲历史
+        - 介绍一下
+        - 简单介绍
+        - 深入讲讲
+      en:
+        - tell me about
+        - introduce
+        - explain
+        - why is it important
+        - why is it worth visiting
+        - what is special
+        - what should I see
+        - historical background
+        - cultural meaning
+    action_keywords:
+      zh:
+        - 讲讲
+        - 介绍
+        - 解释
+        - 历史
+        - 背景
+        - 来历
+        - 看点
+        - 亮点
+        - 重点
+        - 特色
+        - 为什么
+        - 值得
+        - 重要
+        - 意义
+        - 象征
+        - 建筑
+        - 中轴线
+        - 仪式
+        - 文化
+        - 故事
+        - 典故
+        - 游览建议
+        - 第一次来
+      en:
+        - history
+        - background
+        - story
+        - meaning
+        - symbol
+        - symbolism
+        - architecture
+        - axis
+        - axial
+        - ritual
+        - political
+        - culture
+        - highlights
+        - why
+        - important
+        - worth
+        - first-time visitor
+        - unpack
+    required:
+      all:
+        - attraction_entity
+      any:
+        - explain_action
+        - attraction_direct_phrase
+    conflict_if:
+      - same_day_time + live_operation
+      - navigation_action + route_slot
+      - translation_action + translation_object
+
+  live_info:
+    direct_phrases:
+      zh:
+        - 今天开放吗
+        - 今天开门吗
+        - 现在开放吗
+        - 现在能进吗
+        - 今天还能去吗
+        - 几点关门
+        - 开放时间
+        - 营业时间
+        - 闭馆通知
+        - 临时关闭
+        - 需要预约吗
+        - 还能买票吗
+      en:
+        - is it open today
+        - open today
+        - open now
+        - opening hours today
+        - closing time today
+        - do I need a reservation
+        - ticket today
+        - temporary closure
+        - official notice
+    operation_keywords:
+      zh:
+        - 开放
+        - 开门
+        - 营业
+        - 关门
+        - 闭馆
+        - 关闭
+        - 停开
+        - 暂停开放
+        - 预约
+        - 预订
+        - 门票
+        - 买票
+        - 购票
+        - 检票
+        - 入园
+        - 入场
+        - 公告
+        - 通知
+        - 临时
+        - 限流
+      en:
+        - open
+        - opening
+        - closed
+        - closure
+        - closing
+        - hours
+        - ticket
+        - reservation
+        - booking
+        - entry
+        - admission
+        - notice
+        - announcement
+        - temporary
+    required:
+      all:
+        - attraction_entity
+        - same_day_time
+      any:
+        - live_operation
+        - live_direct_phrase
+    deny_if:
+      - weather_query
+      - traffic_status
+      - crowd_status
+    conflict_if:
+      - explain_action_without_live_operation
+
+  weather_info:
+    direct_phrases:
+      zh:
+        - 今天天气怎么样
+        - 现在天气怎么样
+        - 会不会下雨
+        - 今天会下雨吗
+        - 天气预报
+        - 实时天气
+        - 多少度
+        - 几度
+        - 冷不冷
+        - 热不热
+        - 要不要带伞
+      en:
+        - weather today
+        - is it raining
+        - will it rain
+        - temperature
+        - forecast
+        - should I bring an umbrella
+        - is it cold
+        - is it hot
+    query_keywords:
+      zh:
+        - 天气
+        - 下雨
+        - 雨
+        - 气温
+        - 温度
+        - 多少度
+        - 几度
+        - 冷
+        - 热
+        - 晴
+        - 阴
+        - 多云
+        - 风
+        - 湿度
+        - 带伞
+        - 预报
+      en:
+        - weather
+        - rain
+        - raining
+        - temperature
+        - forecast
+        - cold
+        - hot
+        - sunny
+        - cloudy
+        - windy
+        - umbrella
+    required:
+      any:
+        - weather_query
+      location:
+        - explicit_location
+        - session_location
+        - default_city
+    deny_if:
+      - traffic_status
+      - crowd_status
+      - live_operation_without_weather_query
+
+  navigation_text:
+    direct_phrases:
+      zh:
+        - 文字导航
+        - 路线步骤
+        - 怎么走到
+        - 到哪里怎么走
+        - 从哪里到哪里
+        - 从天安门怎么走到故宫
+        - 去故宫怎么走
+        - 到故宫怎么走
+        - 下一站怎么去
+        - 下一站怎么走
+        - 接下来怎么去
+        - 接下来怎么走
+      en:
+        - how do I get to
+        - how to walk to
+        - directions to
+        - walking directions
+        - route steps
+        - navigate to
+        - how do we go from
+    action_keywords:
+      zh:
+        - 怎么走
+        - 怎么去
+        - 去
+        - 到
+        - 导航
+        - 带路
+        - 走到
+        - 步行
+        - 开车
+        - 打车
+        - 路线
+        - 路径
+        - 方向
+        - 出发
+      en:
+        - how to get
+        - how do i get
+        - directions
+        - navigate
+        - walk
+        - walking
+        - drive
+        - driving
+        - route
+        - path
+    required:
+      any:
+        - route_slot
+        - navigation_direct_phrase
+        - navigation_action + destination_entity
+    conflict_if:
+      - next_stop_status_without_navigation_action
+      - route_edit_action
+
+  trip_assistant:
+    direct_phrases:
+      zh:
+        - 接下来去哪
+        - 下一站去哪
+        - 之后去哪
+        - 我下一站去哪
+        - 我现在到哪一站了
+        - 我现在在哪一站
+        - 现在到哪一站了
+        - 现在在哪一站
+        - 行程还剩几站
+        - 今天路线怎么安排
+        - 有点累怎么办
+        - 能不能休息一下
+      en:
+        - what is my next stop
+        - where do we go next
+        - after this
+        - current stop
+        - where are we now
+        - how many stops left
+        - I am tired
+        - can we take a break
+    progress_keywords:
+      zh:
+        - 下一站
+        - 接下来
+        - 之后
+        - 当前站
+        - 现在到哪
+        - 现在在哪
+        - 还剩
+        - 已经走到
+        - 路线里
+        - 行程里
+      en:
+        - next stop
+        - after this
+        - current stop
+        - where are we now
+        - stops left
+        - itinerary
+        - route
+    arrangement_keywords:
+      zh:
+        - 安排
+        - 顺序
+        - 节奏
+        - 累
+        - 休息
+        - 轻松
+        - 赶
+        - 省体力
+        - 适合
+      en:
+        - arrange
+        - order
+        - pace
+        - tired
+        - rest
+        - easier
+        - relaxed
+    required:
+      any:
+        - trip_direct_phrase
+        - trip_progress
+        - trip_arrangement + session_context
+    deny_if:
+      - route_edit_action + route_edit_object
+
+  manual_route_edit_redirect:
+    direct_phrases:
+      zh:
+        - 改路线
+        - 调整路线
+        - 改行程
+        - 重排行程
+        - 重新排行程
+        - 把景山去掉
+        - 换一个景点
+        - 下一站换成
+        - 不去这个了
+      en:
+        - change the route
+        - edit the itinerary
+        - remove this stop
+        - replace this stop
+        - swap the next stop
+        - make the route easier
+    action_keywords:
+      zh:
+        - 改
+        - 改成
+        - 修改
+        - 调整
+        - 重排
+        - 重新排
+        - 删掉
+        - 去掉
+        - 删除
+        - 不去
+        - 换成
+        - 替换
+        - 加上
+        - 增加
+        - 提前
+        - 延后
+      en:
+        - change
+        - edit
+        - modify
+        - adjust
+        - remove
+        - delete
+        - replace
+        - swap
+        - add
+        - move earlier
+        - move later
+    object_keywords:
+      zh:
+        - 路线
+        - 行程
+        - 安排
+        - 这一站
+        - 下一站
+        - 这个景点
+        - 站点
+      en:
+        - route
+        - itinerary
+        - stop
+        - next stop
+        - attraction
+    negation:
+      zh:
+        - 别改路线
+        - 不要改路线
+        - 先别改路线
+        - 不用改路线
+        - 先不要改路线
+      en:
+        - do not change the route
+        - don't change the route
+        - no need to edit
+    required:
+      all:
+        - route_edit_action
+      any:
+        - route_edit_object
+        - specific_stop_entity
+        - soft_route_edit_goal
+    deny_if:
+      - route_edit_negation
+
+  translation:
+    direct_phrases:
+      zh:
+        - 翻译成中文
+        - 翻成中文
+        - 译成中文
+        - 用中文怎么说
+        - 给工作人员看
+        - 翻给工作人员看
+        - 双语展示
+        - 双语显示
+      en:
+        - translate into chinese
+        - translate this
+        - how do I say
+        - show this to staff
+        - bilingual display
+    action_keywords:
+      zh:
+        - 翻译
+        - 翻成
+        - 译成
+        - 译
+        - 怎么说
+        - 表达
+        - 双语
+        - 给工作人员
+        - 给本地人
+      en:
+        - translate
+        - say this
+        - how to say
+        - show to staff
+        - bilingual
+    object_markers:
+      zh:
+        - 这句
+        - 这句话
+        - 这段
+        - 这段话
+        - 原文
+        - 句子
+        - 文本
+        - 引号内容
+      en:
+        - this sentence
+        - this phrase
+        - this text
+        - quoted text
+    required:
+      all:
+        - translation_action
+      any:
+        - quoted_text
+        - explicit_translation_text
+        - object_marker
+        - show_to_local_person
+    conflict_if:
+      - attraction_entity + explain_action + no_quoted_text
+
+  out_of_scope:
+    hard_deny_keywords:
+      zh:
+        - 写代码
+        - 排序算法
+        - 股票
+        - 投资建议
+        - 诊断
+        - 药物剂量
+        - 法律意见
+        - 政治立场
+      en:
+        - write code
+        - sorting algorithm
+        - stock advice
+        - investment advice
+        - medical diagnosis
+        - dosage
+        - legal advice
+    boundary_topics:
+      crowd:
+        zh:
+          - 人多
+          - 拥挤
+          - 排队多久
+          - 队伍多长
+          - 等多久
+          - 客流
+        en:
+          - crowded
+          - crowd
+          - queue time
+          - waiting time
+          - busy right now
+      traffic:
+        zh:
+          - 交通拥堵
+          - 堵车
+          - 路况
+          - 车流
+        en:
+          - traffic jam
+          - congestion
+          - road traffic
+    required:
+      any:
+        - hard_deny_keyword
+        - unsupported_boundary_topic
+
+conflict_policy:
+  smalltalk_vs_task:
+    rule: task_intent_wins
+    condition: politeness_prefix + any_task_evidence
+    example: 你好，请问故宫有什么历史 -> attraction_explain
+  live_info_vs_attraction_explain:
+    live_info_wins_if: same_day_time + live_operation
+    attraction_explain_wins_if: attraction_entity + explain_action + no_live_operation
+    fallback_if: both_have_strong_evidence
+  weather_info_vs_live_info:
+    weather_wins_if: weather_query
+    live_info_wins_if: live_operation + no_weather_query
+    fallback_if: broad_query_like_today_is_it_good_to_visit
+  navigation_text_vs_trip_assistant:
+    navigation_wins_if: navigation_action + route_slot
+    trip_wins_if: next_stop_status_without_navigation_action
+    fallback_if: next_stop + ambiguous_go_or_walk
+  trip_assistant_vs_manual_route_edit_redirect:
+    edit_wins_if: route_edit_action + route_edit_object
+    trip_wins_if: route_edit_negation or advice_only
+    fallback_if: soft_goal_without_clear_action
+  translation_vs_attraction_explain:
+    translation_wins_if: translation_action + quoted_text
+    attraction_wins_if: attraction_entity + explain_action + no_translation_object
+    fallback_if: translation_action + attraction_entity + no_quoted_text

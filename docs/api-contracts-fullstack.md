@@ -2,7 +2,50 @@
 
 This document is the working frontend/backend integration contract for the current first-phase product.
 
+It is the single source of truth for frontend-consumed API fields, request/response examples, route-edit semantics, and runtime state meanings.
+
 It covers the current `/api/v1` surface, the common response envelope, major request/response shapes, key runtime semantics, and the intended integration order for frontend development.
+
+## Frontend core API list
+
+### Onboarding
+- `POST /api/v1/guest/sessions`
+- `GET /api/v1/questionnaire/flows/current`
+- `POST /api/v1/questionnaire/submissions`
+
+### Planning and itinerary
+- `GET /api/v1/planning/templates`
+- `POST /api/v1/planning/recommendations`
+- `POST /api/v1/planning/itineraries`
+- `GET /api/v1/planning/itineraries/{itinerary_id}`
+- `GET /api/v1/planning/itineraries/{itinerary_id}/versions`
+- `POST /api/v1/planning/itineraries/{itinerary_id}/edits`
+
+### Trip runtime
+- `POST /api/v1/session/guide`
+- `GET /api/v1/session/guide/{guide_session_id}`
+- `POST /api/v1/session/guide/{guide_session_id}/start`
+- `POST /api/v1/session/guide/{guide_session_id}/finish`
+- `GET /api/v1/session/{guide_session_id}/current`
+
+### Guide, GPS, and map
+- `POST /api/v1/gps/update/{guide_session_id}`
+- `GET /api/v1/guide/asset/{guide_session_id}`
+- `POST /api/v1/guide/playback/{guide_session_id}`
+- `POST /api/v1/guide/content/{guide_session_id}`
+- `GET /api/v1/map/session/{guide_session_id}`
+
+### Social and assistant
+- `GET /api/v1/comments/stops/{stop_id}`
+- `POST /api/v1/comments/stops/{stop_id}`
+- `GET /api/v1/share-card/session/{guide_session_id}`
+- `POST /api/v1/qa/ask`
+- `POST /api/v1/qa/preview` (QA 调试预览接口)
+- `GET /api/v1/qa/playground` (QA 手动联调页面)
+
+### Admin / internal-facing
+- `GET /api/v1/rag/index-runs/latest`
+- `POST /api/v1/rag/index-runs/rebuild`
 
 ## Current product boundary
 - Route changes are currently **manual only**.
@@ -529,23 +572,24 @@ Current stable response shape:
     "longitude": 116.3976
   },
   "stop_count": 2,
+  "completed_stop_count": 0,
+  "editable_from_stop_index": 0,
+  "frozen_stop_ids": [],
+  "editable_stop_ids": ["stop-tiananmen-square", "stop-forbidden-city"],
   "plan_summary": "Starter Beijing itinerary"
 }
 ```
 
 Current route-edit boundary semantics for frontend:
-- `current_stop_index` is the route progress boundary
-- stops before it should be treated as completed/frozen
-- the stop at `current_stop_index` is still editable
-- later stops are editable
+- `current_stop_index` remains the current route position reference.
+- `completed_stop_count` is the completed/frozen prefix length.
+- `editable_from_stop_index` is the current frontend-safe edit boundary.
+- `frozen_stop_ids` lists stops that must not be edited.
+- `editable_stop_ids` lists stops that may still be edited.
 
-Planned contract extension for frontend route editing:
-- `completed_stop_count`
-- `editable_from_stop_index`
-- `frozen_stop_ids`
-- `editable_stop_ids`
-
-Until those fields land in code, frontend should derive editability from `current_stop_index`.
+Frontend rule:
+- Prefer these editability fields directly instead of inferring permissions only from `current_stop_index`.
+- `current_stop_index` is still useful for current/next stop rendering, but route-edit UI should rely on the dedicated editability fields when present.
 
 ---
 
@@ -649,9 +693,24 @@ Success response data shape:
       "status": "not_generated",
       "url": null
     }
+  },
+  "job": {
+    "id": "guide_job_xxx",
+    "status": "succeeded",
+    "asset_status": "ready",
+    "error_code": null,
+    "error_message": null
   }
 }
 ```
+
+Important semantics:
+- If there is at least one `SUCCEEDED + READY` job for the session's current `itinerary_version_id`, the endpoint returns the latest such stable asset with `asset_status = ready`.
+- A newer `pending` job must not hide an older stable ready asset.
+- If no ready asset exists yet but the latest job is still in flight, the endpoint returns `asset_status = pending`.
+- If no ready asset exists and the latest job failed, the endpoint returns `asset_status = failed`.
+- If no jobs exist for the current session version, the endpoint returns `asset_status = missing`.
+- The `job` field is a lightweight diagnostic view of the job that explains the current asset state; it is present for `ready`, `pending`, and `failed`, and `null` when the session version has no jobs.
 
 ### `POST /api/v1/guide/playback/{guide_session_id}`
 Purpose:
@@ -701,6 +760,15 @@ Success response data shape:
   "stop_name": "Tiananmen Square",
   "action": "cycle_content",
   "segments": ["segment 1", "segment 2"],
+  "audio_segments": [
+    {
+      "stop_id": "stop-tiananmen-square",
+      "stop_name": "Tiananmen Square",
+      "segment_index": 0,
+      "status": "ready",
+      "url": "/generated_tts/segment-0.mp3"
+    }
+  ],
   "segment_count": 10,
   "more_content_available": true,
   "guide_style": "SJ"
@@ -709,7 +777,9 @@ Success response data shape:
 
 Important semantics:
 - This endpoint does **not** advance route state.
-- Finished sessions reject content cycling.
+- `audio_segments` is the current-batch audio payload aligned with returned text segments.
+- Finished sessions reject content cycling with `409 guide session finished`.
+- If the active guide asset is not ready yet, this endpoint returns `409 guide asset not ready`.
 
 ---
 
@@ -733,6 +803,8 @@ Current response data shape:
       "order": 0,
       "is_current": true,
       "is_next": false,
+      "is_completed": false,
+      "is_editable": true,
       "short_intro": "...",
       "highlights": ["..."],
       "visitor_tip": "...",
@@ -753,6 +825,8 @@ Current response data shape:
     "current_stop_index": 0,
     "stop_count": 2,
     "remaining_stop_count": 1,
+    "completed_stop_count": 0,
+    "editable_from_stop_index": 0,
     "has_next_stop": true
   },
   "current_position": {
@@ -767,14 +841,10 @@ Current response data shape:
 Current frontend semantics:
 - Use `markers[].order` for route ordering.
 - Use `is_current` / `is_next` for current navigation emphasis.
-- Use `navigation_summary.current_stop_index` as the current route progress boundary.
+- Use `markers[].is_completed` and `markers[].is_editable` directly when rendering route-edit affordances.
+- Use `navigation_summary.current_stop_index` for runtime progress display.
+- Use `navigation_summary.completed_stop_count` and `editable_from_stop_index` for edit boundary summaries.
 - Combine map payload with session current when rendering route edit UI.
-
-Planned contract extension for route editing UI:
-- `markers[].is_completed`
-- `markers[].is_editable`
-- `navigation_summary.completed_stop_count`
-- `navigation_summary.editable_from_stop_index`
 
 ---
 
@@ -1033,11 +1103,13 @@ Notes:
 
 ## 15. Route-edit frontend checklist
 - Always read `session current` before opening route-edit UI.
-- Disable edits for stops before `current_stop_index`.
-- Keep current stop editable.
+- Prefer `completed_stop_count`, `editable_from_stop_index`, `frozen_stop_ids`, and `editable_stop_ids` from `session current`.
+- Prefer `markers[].is_completed`, `markers[].is_editable`, `navigation_summary.completed_stop_count`, and `navigation_summary.editable_from_stop_index` from `map session`.
+- Use `current_stop_index` for runtime progress display, not as the only source of edit permissions.
 - After any successful route edit:
   - refresh session current
   - refresh map session
   - refresh route details from itinerary if needed
+  - refresh guide asset if your UI displays regenerated guide content state
 - Do not treat GPS arrival as completion.
 - Treat playback `complete` / `skip` as the progression trigger that moves the route boundary forward.

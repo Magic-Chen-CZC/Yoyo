@@ -13,7 +13,7 @@ This minimizes conflicts and matches the current module layout.
 
 ## Current execution order
 1. Finish the shared overlap contracts in `docs/contracts.md`
-2. Freeze the Shared / coordination items in `docs/todo.md`
+2. Freeze the Shared / coordination items in `docs/todo-phase-2.md`
 3. Let A and B proceed in parallel on their own tracks
 4. Run broader QA verification only after the overlap contracts are stable
 
@@ -75,10 +75,20 @@ Suggested stop shape:
 ```
 
 ### A caution
-Avoid changing these contracts without updating `docs/architecture.md` and notifying B:
+Avoid changing these contracts without updating `docs/architecture.md`, `README.md`, and notifying B:
 - `itinerary_version.plan_json`
 - `guide_session.context_json`
 - session current response shape
+
+### Documentation rule for framework or architecture changes
+When the team changes framework direction, routing strategy, evaluation strategy, testing strategy, or any other project-level architecture decision, do not update only one local note.
+At minimum, update:
+- the relevant topic doc(s)
+- `docs/todo-phase-2.md`
+- `docs/phase-2-summary.md`
+- `README.md`
+
+The goal is to keep `CLAUDE.md`, `README.md`, `docs/todo-phase-2.md`, and `docs/phase-2-summary.md` sufficient as the current minimum handoff set for a fresh session.
 
 ---
 
@@ -153,7 +163,7 @@ These are high-conflict files. Do not both edit them casually at the same time:
 - `src/yoyo/db/models/session.py`
 - `src/yoyo/db/models/itinerary.py`
 - `alembic/versions/*`
-- `docs/todo.md`
+- `docs/todo-phase-2.md`
 - `docs/architecture.md`
 
 ### Rule for migrations

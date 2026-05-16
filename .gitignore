@@ -16,3 +16,8 @@ tests/reports/
 alembic/versions/*.pyc
 dist/
 build/
+
+# Local agent/debug scratch artifacts
+.local/agent-debug/
+.claude*.py
+.claude-*.log

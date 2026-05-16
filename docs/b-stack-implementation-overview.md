@@ -25,12 +25,17 @@ It explicitly does **not** take over A-side responsibilities such as route-edit 
 ## 2. What was changed
 
 ## 2.1 Documentation updates
-The following documents were updated to reflect the SQL-first direction:
+The following documents were updated in the previous phase to reflect the SQL-first direction:
 - `docs/todo.md`
 - `docs/architecture.md`
 - `docs/collaboration.md`
 - `docs/model-evaluation.md`
 - `README.md`
+
+For the current active working set, use:
+- `docs/todo-phase-2.md`
+- `docs/phase-2-summary.md`
+- `docs/feature-test-guide.md`
 
 A new preparation document was added:
 - `docs/b-stack-preparation-checklist.md`

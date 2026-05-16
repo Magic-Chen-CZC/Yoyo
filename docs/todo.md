@@ -1,5 +1,9 @@
 # Yoyo Todo
 
+> Archive note: this file is now the previous-phase todo archive.
+> For the current active working set, read `docs/todo-phase-2.md`.
+> For the current phase summary, read `docs/phase-2-summary.md`.
+
 This is the active implementation plan for the current integrated branch.
 
 It replaces the older A/B split checklist as the primary working todo.
@@ -240,6 +244,59 @@ Current scope is no longer “build missing modules from scratch”; it is:
 - [x] Add integration flow: session-aware QA after route/session state changes
 - [x] Make benchmark runs fail fast or mark invalid when required API keys are missing
   - missing-key behavior is now explicit in eval providers/batch execution; broader benchmark test redesign is deferred to a later pass
+- [x] Refresh demo testing docs for current product boundary
+  - updated `docs/test-readiness-checklist.md` and `docs/demo-test-plan.md` with guide jobs, RAG latest 404 semantics, finished-session boundaries, QA out-of-scope, route-edit 422, and share-card consistency checks
+- [x] Prepare Feishu-facing demo test explanation doc
+  - added `docs/feishu-demo-test-cases.md` and imported it to Feishu for product/test use
+- [x] Resolve current regression failures found by the refreshed P0 pytest suite
+  - aligned guide/QA tests with current runtime semantics (TTS pending vs unavailable, configurable voice, provider-driven QA wording, and session-context assertions) and re-ran the consolidated regression suite successfully
+- [x] Run real API smoke verification against local service stack
+  - verified `health`, `rag latest/rebuild/latest`, real itinerary/session/map/qa/share-card flow, and real guide worker -> job -> asset -> content path; also documented the new operational prerequisite that guide asset/content smoke tests require the worker process (`.venv/bin/arq yoyo.jobs.worker.WorkerSettings`) in addition to the API server
+- [x] Harden weather target fallback coverage
+  - added/validated targeted QA coverage for `weather_info` fallback extraction and itinerary-city defaulting, including builder-level `rule -> fallback -> default city` behavior and API-level session-aware fallback to itinerary `city_code`; current targeted run is `pytest tests/test_qa.py -k "weather" -v` -> `3 passed`
+- [x] Run real degraded-mode smoke verification
+  - verified `RAG_ENABLED=false` returns `rebuild -> skipped/rag_disabled`; QA can still answer from SQL grounding with `rag_backend_ready = false` and `rag_query_status = skipped`; documented that degraded guide validation requires API and worker to share the same env, otherwise asset-level audio state can reflect worker config rather than the API instance under test
+- [x] Run real live-info provider-failure smoke verification
+  - verified that missing Tavily config yields `live_info -> status=unavailable`, `reason=missing_provider_config`, `degraded=true`, `confidence=low`, source marker `tavily_missing_key`, and a user-facing answer that explicitly redirects users to official/reliable same-day sources
+- [x] Refresh Feishu-facing demo test explanation with real verification findings
+  - re-imported the Feishu doc after adding real smoke/degraded findings for guide worker prerequisite, asset/content audio semantics, RAG disabled behavior, and live_info provider-failure behavior
+- [x] Design the next test round as a pre-release risk pass
+  - documented the next-round focus in `docs/demo-test-plan.md` and `docs/test-readiness-checklist.md`: deployment consistency, external dependency fault injection, state-transition regressions, and performance/latency checks
+- [x] Build and run a QA benchmark for `google/gemini-2.5-flash-lite`
+  - added a 180-question QA benchmark dataset under `evals/datasets/qa_benchmark_gemini_flash_lite_180.yaml` (6 buckets × 30 questions) plus per-bucket part files and a 30-question smoke subset; ran the benchmark via OpenRouter using `google/gemini-2.5-flash-lite`, generated results/scores/summary JSON, and exported the accumulated eval workbook to `evals/results/benchmark_results.xlsx`
+- [x] Persist test rounds as Excel + Feishu documentation
+  - added `docs/test-rounds-log.md`, created `/Users/czc/vscode/Yoyo/evals/results/test_rounds.xlsx` as a round-level test ledger, and imported a dedicated Feishu test-rounds document for ongoing recording
+- [x] Re-run the 180-question QA benchmark for additional candidate models in parallel
+  - completed parallel runs for `openai/gpt-5.4-nano` and `google/gemini-2.5-flash` via OpenRouter, refreshed `evals/results/benchmark_results.xlsx`, and appended the detailed latency/cost/completion findings to `docs/test-rounds-log.md`
+- [x] Add a true E2E QA benchmark track
+  - added `docs/e2e-qa-benchmark.md`, extended `docs/eval-fields.md`, clarified benchmark layering in readiness/demo docs, created `evals/results/e2e_qa_benchmark.xlsx`, executed baseline `/api/v1/qa/ask` runs in standard and degraded environments, and created a dedicated Feishu E2E QA benchmark ledger
+- [x] Reframe E2E QA case design around current seed-backed data reality
+  - updated `evals/datasets/e2e_qa_benchmark_cases.json` and `docs/e2e-qa-benchmark.md` so current cases are explicitly tagged as `chain_validity` or `seed_plausibility`, avoiding accidental claims about real-world content accuracy while attraction/profile/RAG data is still seed/mock based
+- [x] Narrow live-info scope to official attraction-site information only
+  - updated routing and documentation so current `live_info` covers official attraction notices, opening/booking/closure information only; weather, traffic, and crowd conditions are explicitly deferred to dedicated APIs and excluded from ordinary web search
+- [x] Consolidate E2E benchmark assets and enrich the case dataset
+  - moved benchmark fixtures into `evals/datasets`, moved benchmark reports into `evals/results`, expanded `evals/datasets/e2e_qa_benchmark_cases.json` with operation/query_zh/profile/fixture/assertion fields, and extended `evals/export_excel.py` to export `e2e_cases` and `e2e_summary` sheets
+- [x] Run the new three-model E2E QA benchmark and export Excel
+  - added `evals/run_e2e_qa_benchmark.py`, added `src/yoyo/scripts/seed_benchmark_fixtures.py`, seeded benchmark fixtures into PostgreSQL, ran E2E QA benchmark for `openai/gpt-5.4-nano`, `google/gemini-2.5-flash`, and `google/gemini-2.5-flash-lite`, and exported the combined workbook to `evals/results/e2e_qa_benchmark_run_v2.xlsx`
+- [x] Upgrade QA prompt to v2 and add a prompt debugging note
+  - rewrote `src/yoyo/modules/qa/prompts.py` to better separate attraction explain / live_info / out_of_scope boundaries, allow light travel-adjacent chit-chat, switch prompt versioning to `qa-{intent}-v2`, and added `docs/qa-prompt-debugging.md` for continued prompt iteration
+- [x] Re-run the three-model E2E benchmark after prompt v2
+  - restarted dedicated API instances for `openai/gpt-5.4-nano`, `google/gemini-2.5-flash`, and `google/gemini-2.5-flash-lite` on fresh ports, re-ran the same 23-case E2E QA dataset, and exported the new workbook to `evals/results/e2e_qa_benchmark_run_v3_prompt_v2.xlsx`
+- [x] Fix QA routing root causes and document the attribution
+  - repaired `domain_guard`, `intent_router`, and `orchestrator` so Chinese attraction queries and travel-adjacent boundary questions are no longer over-blocked or uniformly rejected, added focused regression tests, and documented the root cause in `docs/qa-routing-root-cause-and-fix.md`
+- [x] Re-run the three-model E2E benchmark after system-layer fixes
+  - restarted dedicated API instances for `openai/gpt-5.4-nano`, `google/gemini-2.5-flash`, and `google/gemini-2.5-flash-lite` on fresh ports, re-ran the same 23-case E2E QA dataset after routing fixes, and exported the new workbook to `evals/results/e2e_qa_benchmark_run_v4_system_fix.xlsx`
+- [x] Add hybrid routing plan: rules first + small-model fallback
+  - implemented the rule-layer contract in QA routing: `domain_guard` now acts as hard-deny-only, `intent_router` now returns full routing metadata (`intent`, `margin`, `needs_fallback`, `fallback_reason`, boundary subtype), and `manual_route_edit_redirect` is now a first-class intent instead of a trip_assistant sub-branch
+- [x] Design a routing-model benchmark and candidate sweep
+  - added `evals/datasets/routing_benchmark_cases.json`, `evals/run_routing_benchmark.py`, `evals/run_routing_candidate_sweep.py`, and `evals/routing_candidates.yaml` for router-only evaluation of `domain_guard -> intent_router -> optional router_fallback`; smoke outputs now land under `evals/results/routing_*`, Excel export includes routing sheets, and the old `planner_handoff` benchmark label was normalized to `manual_route_edit_redirect` in the active route-edit benchmark part file
+  - completed a first lexicon-expansion pass in `src/yoyo/modules/qa/intent_router.py` with paired regression/benchmark cases for translation, route-edit, trip-assistant, and attraction-explain phrase variants; the rule layer was kept intentionally looser so ambiguous queries can still fall through to fallback, and the updated rules-only router benchmark improved from 11/14 to 18/22 while keeping boundary accuracy at 1.0
+  - added `evals/datasets/routing_benchmark_100_cases.json` as a broader end-to-end router-only test set with 100 labeled cases (including easy/confusable/out-of-scope samples), then ran full-module routing evaluation: `rules_only_100` reached 75/100 = 0.75 accuracy and `rules_plus_fallback_gpt54nano_100` reached 85/100 = 0.85 accuracy, showing clear gains from the looser-rules-plus-fallback strategy
+  - later phase-2 routing hardening continued in `docs/todo-phase-2.md`; latest keyed zh-hard v2 rerun there has reached `rules_plus_fallback_qwen_flash=1.0` and `rules_plus_fallback_qwen_turbo=0.9861`, with same-round `routing_pure_fallback_qwen_turbo=0.9861` as the control
+- [x] Add Southeast Asia multilingual routing evaluation plan
+  - current plan is to cover Thai, Vietnamese, Indonesian, Malay, and Filipino first, but the working product decision is now to send all queries through a translator first, normalize them into Chinese, and then run the same rules + classifier intent module before downstream pipeline routing
+- [x] Align the minimum handoff docs and README entrypoint rule
+  - updated `CLAUDE.md`, `README.md`, `docs/todo.md`, `docs/collaboration.md`, and `docs/current-session-summary.md` so the default minimum resume set is now `CLAUDE.md`, `README.md`, and `docs/todo.md`, with README acting as the canonical entrypoint for architecture/framework/routing/evaluation docs
 
 ---
 
@@ -247,6 +304,11 @@ Current scope is no longer “build missing modules from scratch”; it is:
 - [ ] Replace the fixed starter planner source with a more realistic planner source when planning scope resumes
 - [ ] Decide whether multi-turn QA should remain recent-turn-only or add conversation summaries
 - [ ] Revisit whether route-edit assistance should return to QA later as a new scoped feature, only after manual route editing is stable and fully verified
+
+## 7.1 Current documentation consolidation
+- [x] Add a dedicated frontend docs entry under `docs/frontend/`
+- [x] Refresh `docs/api-contracts-fullstack.md` so implemented frontend fields match current code
+- [x] Update `README.md` and related docs to point frontend development to the consolidated entry and avoid duplicate contract details
 
 ---
 
@@ -262,6 +324,12 @@ Current scope is no longer “build missing modules from scratch”; it is:
 ---
 
 ## 9. Working rule for future sessions
-- Read `CLAUDE.md`, `README.md`, `docs/architecture.md`, `docs/contracts.md`, and this file before continuing implementation.
+- The default minimum resume set should be: `CLAUDE.md`, `README.md`, and `docs/todo.md`.
+- README must remain the canonical entrypoint for current architecture/framework/routing/evaluation documents.
+- Whenever architecture, framework, routing strategy, or evaluation direction changes, update the relevant docs and refresh the README entry in the same pass.
+- Also update `docs/current-session-summary.md` whenever major discussions, decisions, or implementation-direction changes happen, so the session log stays current even though it is not part of the minimum resume set.
+- Use `docs/demo-test-plan.md` when preparing product/demo validation instead of reconstructing a new test matrix from scratch.
 - Do not reintroduce QA route-edit execution into the current product path unless the product decision changes.
 - After each completed implementation part, update this todo before continuing.
+- 2026-05-15 补记：QA `context_build_ms` 已拆出 `context_build_breakdown_ms`，当前可直接观察 attraction/profile/live/weather/navigation/rag/prompt projection 等子步骤耗时，用于继续排查天气与导航链路的额外时延。
+- 2026-05-15 再补记：天气链路已收口为“规则先判天气且成功抽到地点才跳过 fallback；否则由 router fallback 一次同时产出 intent + `weather_location_name`，context build 直接复用该地点，不再额外发起第二次 weather slot fallback 模型调用”。对应定向回归：`pytest tests/test_qa.py -k "weather or router_fallback" -vv`（9 passed）、`pytest tests/test_routing_benchmark.py -vv`（6 passed）。

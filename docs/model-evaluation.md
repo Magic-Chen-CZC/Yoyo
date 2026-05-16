@@ -88,9 +88,36 @@ We now have:
 
 ## Next improvements
 - further strengthen rubrics beyond rule-based heuristics
-- expand tourism-specific multilingual datasets
 - deepen route-edit and planner extraction coverage
 - add richer report exports if needed
+- add a dedicated routing-model benchmark instead of evaluating routing quality only through final answer quality
+- compare a hybrid router design (rules first + small-model fallback) against pure rules
+- run a small-model routing sweep before locking production fallback behavior
+
+## Routing-model evaluation direction
+Current recommendation is not to replace rules entirely.
+Instead:
+- keep deterministic rules for obvious cases
+- call a small routing model only for ambiguous queries
+- benchmark routing separately from answer generation
+
+### Recommended initial routing-model baseline
+- `openai/gpt-5.4-nano`
+
+### Recommended comparison candidates
+- `google/gemini-2.5-flash-lite`
+- `google/gemini-2.5-flash`
+- later Qwen or other multilingual-capable small models if needed
+
+### Routing benchmark dimensions
+- attraction_explain vs live_info separation
+- Chinese colloquial tourism-query routing stability
+- trip_assistant vs attraction_explain separation
+- manual_route_edit_redirect recognition
+- out_of_scope precision
+- travel-adjacent boundary handling (weather / traffic / crowd)
+- cost
+- latency
 
 ## Engineering requirement
 Keep provider/model selection configurable through env and a model abstraction layer. Do not bind business logic directly to one SDK.

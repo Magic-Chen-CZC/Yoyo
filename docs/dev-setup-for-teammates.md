@@ -1,5 +1,7 @@
 # Development Setup for Teammates
 
+If you are joining for frontend integration work, start with `docs/frontend/README.md` and then come back here for local setup.
+
 ## Clone
 ```bash
 git clone https://github.com/Magic-Chen-CZC/Yoyo
@@ -44,11 +46,12 @@ docker compose up -d
 Before coding, read in this order:
 1. `CLAUDE.md`
 2. `README.md`
-3. `docs/architecture.md`
-4. `docs/contracts.md`
-5. `docs/collaboration.md`
-6. `docs/todo.md`
-7. `docs/model-evaluation.md`
+3. `docs/todo-phase-2.md`
+4. `docs/phase-2-summary.md`
+5. `docs/architecture.md`
+6. `docs/contracts.md`
+7. `docs/collaboration.md`
+8. `docs/model-evaluation.md`
 
 ## Collaboration note
 - Shared overlap contracts must stay stable.
